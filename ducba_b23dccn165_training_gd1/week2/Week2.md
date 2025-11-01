@@ -220,7 +220,8 @@ Khi trả về dữ liệu, có thể dùng các trạng thái trả về như s
 
 ## Video demo phần 1 :
 
-<video src="./video/demo_phan1.mp4" controls width="720"></video>
+<!-- <video src="./video/demo_phan1.mp4" controls width="720"></video> -->
+https://drive.google.com/file/d/1EIJp6qXgSbTI-Nu4RsuHExvTuefJjRjY/view?usp=drive_link
 
 # Phần 2: Tích hợp Database (ORM)
 
@@ -473,8 +474,5 @@ Sau khi tạo mới user, kiểm tra database đã thấy :
 </p>
 
 ## Video demo phần 2 :
-
-<video controls width="720" playsinline>
-  <source src="https://github.com/anhducwszxje/typ-training-2025/raw/feature/week01-ducba/video/demo_phan2.mp4" type="video/mp4">
-</video>
+https://drive.google.com/file/d/1T1DetaRZRbg_yYOp8SB3B6ACxDqaAAFC/view?usp=drive_link
 
