@@ -474,4 +474,7 @@ Sau khi tạo mới user, kiểm tra database đã thấy :
 
 ## Video demo phần 2 :
 
-<video src="./video/demo_phan2.mp4" controls width="720"></video>
+<video controls width="720" playsinline>
+  <source src="https://github.com/anhducwszxje/typ-training-2025/raw/feature/week01-ducba/video/demo_phan2.mp4" type="video/mp4">
+</video>
+
