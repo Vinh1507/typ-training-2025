@@ -1,4 +1,4 @@
-# Danh sách yêu cầu bài lab CI/CD với GitLab (từ cơ bản đến nâng cao)
+
 
 ## 1.
 
