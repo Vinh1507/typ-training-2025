@@ -41,4 +41,4 @@
 - Triển khai Blue/Green hoặc Canary (nếu có).
 - Thiết lập auto rollback nếu deploy thất bại.
 
-Note: Tât cả luồng ci/cd cần được thực hiện xây dựng mô phỏng hệ thống thật, đam bảo bảo mật và tính ha.
+Note: Tất cả luồng ci/cd cần được thực hiện xây dựng mô phỏng hệ thống thật, đảm bảo bảo mật và tính HA.
