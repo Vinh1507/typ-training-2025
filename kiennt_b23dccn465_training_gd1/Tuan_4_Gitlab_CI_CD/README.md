@@ -1,4 +1,4 @@
-# Phần 1 : Viết file .gitlab-ci.yml để build và test ứng dụng sử dụng Docker Compose
+# [Phần 1 : Viết file .gitlab-ci.yml để build và test ứng dụng sử dụng Docker Compose](https://gitlab.com/NguyenTuKien/typ-training-2025.git)
 ## 1. Cấu trúc và quy tắc cơ bản của file .gitlab-ci.yml
 ### a. Cấu trúc toàn cục (Global)
 - `image`: Xác định môi trường (Docker Image) để chạy các câu lệnh.
