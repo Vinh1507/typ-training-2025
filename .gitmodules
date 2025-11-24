@@ -1,6 +1,0 @@
-[submodule "kiennt_b23dccn465_training_gd1/kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD"]
-	path = kiennt_b23dccn465_training_gd1/kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD
-	url = https://gitlab.com/NguyenTuKien/typ-training-2025.git
-[submodule "kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD"]
-	path = kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD
-	url = https://gitlab.com/NguyenTuKien/typ-training-2025.git
