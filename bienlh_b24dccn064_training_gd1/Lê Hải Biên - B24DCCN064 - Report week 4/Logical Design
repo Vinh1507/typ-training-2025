@@ -1,0 +1,11 @@
+## Danh sách các mô hình quan hệ (Relational Model)
+
+# PHONGBAN(MaPhong PK, TenPhong, DiaDiem, TruongPhong FK→NHANVIEN)
+
+# NHANVIEN(MaNV PK, GioiTinh, NgaySinh, Luong, SDT, MaPhong FK→PHONGBAN, QuanLy FK→NHANVIEN)
+
+# DUAN(MaDA PK, TenDA, DiaDiem, MaPhong FK→PHONGBAN)
+
+# THAMGIADUAN(MaNV FK, MaDA FK, SoGioLam, PK(MaNV, MaDA))
+
+# NGUOIPHUTHUOC(MaNPT PK, MaNV FK, HoTen, GioiTinh, NgaySinh)

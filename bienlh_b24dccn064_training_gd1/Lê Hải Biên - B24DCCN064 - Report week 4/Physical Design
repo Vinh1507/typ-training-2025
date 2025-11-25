@@ -1,0 +1,57 @@
+## Mô tả kiểu dữ liệu + ràng buộc : 
+# MaNV, MaPhong, MaDA, MaNPT ->   kiểu DL : VARCHAR(10) ( Khóa chính)  
+#TenPhong, TenDA, HoTen -> Kiểu : VARCHAR(100) (chuỗi )
+#DiaDiem -> Kiểu : VARCHAR(100) (chuỗi )
+# Ngay sinh -> Kiểu Date
+# Gioi tinh -> Kiểu char (1)
+#Luong	 Kiểu : Decimal(12,2)	
+#SDT _-> Kiểu 	VARCHAR(15)	-
+SoGioLam	-> Kiểu INT
+
+
+## Script SQL
+ CREATE TABLE PhongBan (
+    MaPhong VARCHAR(10) PRIMARY KEY,
+    TenPhong VARCHAR(100) NOT NULL,
+    DiaDiem VARCHAR(100),
+    TruongPhong VARCHAR(10),
+    FOREIGN KEY (TruongPhong) REFERENCES NhanVien(MaNV)
+);
+
+CREATE TABLE NhanVien (
+    MaNV VARCHAR(10) PRIMARY KEY,
+    GioiTinh CHAR(1),
+    NgaySinh DATE,
+    Luong DECIMAL(12,2),
+    SDT VARCHAR(15),
+    MaPhong VARCHAR(10),
+    QuanLy VARCHAR(10),
+    FOREIGN KEY (MaPhong) REFERENCES PhongBan(MaPhong),
+    FOREIGN KEY (QuanLy) REFERENCES NhanVien(MaNV)
+);
+
+CREATE TABLE DuAn (
+    MaDA VARCHAR(10) PRIMARY KEY,
+    TenDA VARCHAR(100),
+    DiaDiem VARCHAR(100),
+    MaPhong VARCHAR(10),
+    FOREIGN KEY (MaPhong) REFERENCES PhongBan(MaPhong)
+);
+
+CREATE TABLE ThamGiaDuAn (
+    MaNV VARCHAR(10),
+    MaDA VARCHAR(10),
+    SoGioLam INT,
+    PRIMARY KEY (MaNV, MaDA),
+    FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV),
+    FOREIGN KEY (MaDA) REFERENCES DuAn(MaDA)
+);
+
+CREATE TABLE NguoiPhuThuoc (
+    MaNPT VARCHAR(10) PRIMARY KEY,
+    MaNV VARCHAR(10),
+    HoTen VARCHAR(100),
+    GioiTinh CHAR(1),
+    NgaySinh DATE,
+    FOREIGN KEY (MaNV) REFERENCES NhanVien(MaNV)
+);

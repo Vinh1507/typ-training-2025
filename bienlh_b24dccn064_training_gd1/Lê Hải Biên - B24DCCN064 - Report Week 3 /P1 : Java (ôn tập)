@@ -1,0 +1,70 @@
+#1 Ôn tập Java 
+ +  Mảng 1 chiều  : Tập các phần tử cùng được lưu 1 kiểu dữ liệu được truy cập bằng chữ số index và bắt đầu bằng [0]
+      Cú pháp khởi tạo : int[] a = { .... } ;
+    Truy cập vào duyệt mảng : System.out.println(a[i]);
+ + Mảng 2 chiều : mảng có 2 thuộc tính hàng và cột 
+     Cú pháp khởi tạo int[][] b = { ...... } ;
+    Truy cập vào duyệt mảng :  System.out.print(a[i][j] + " ");
+  + Vòng lặp : Như các ngôn ngữ khác như C hay C++ for ; while ; ...
+# 2 Sort & Comparator 
+   + Sắp xếp mảng cơ bản - > nguyên thủy 
+   + Sắp xép mảng đối tượng
+  + Sắp xếp theo list 
+   + Sắp xếp đối tượng tùy chỉnh ( comparator ) 
+#SET , MAP 
+  SET bao gồm 3 loại : handset ( nhanh ko đảm bảo thứ tự ) 
+                       treeset ( tự động tăng dần ) 
+                       LinkedHashSet ( giữ nguyên giảm vào thứ tự ) 
+   Map cũng tương tự : handmap
+                       treemap
+                       linkedmap
+# OUT PUT : Vòng lặp trong java 
+   1 Giới thiệu : Vòng lặp (Loop) trong Java được sử dụng để lặp lại một đoạn mã nhiều lần khi điều kiện còn đúng.
+Nhờ vòng lặp, lập trình viên có thể giảm số dòng mã và tăng hiệu quả của chương trình.
+   2. Các loại vòng lặp trong Java
+
+Vòng lặp for
+
+Dùng khi biết trước số lần lặp.
+
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+  return 0; 
+}
+Vòng lặp while
+
+Kiểm tra điều kiện trước khi thực hiện.
+
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+ return 0; 
+}
+
+
+Vòng lặp do...while
+
+Thực hiện ít nhất một lần, rồi mới kiểm tra điều kiện.
+
+int i = 1;
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+
+
+Vòng lặp for-each
+
+Dùng để duyệt mảng hoặc danh sách.
+
+int[] arr = {1, 2, 3};
+for (int x : arr) {
+    System.out.println(x);
+}
+
+3. Kết luận
+
+Vòng lặp là cấu trúc quan trọng trong Java, giúp chương trình ngắn gọn, dễ hiểu và tiết kiệm thời gian thực thi.
+Hiểu rõ cách hoạt động của từng loại vòng lặp sẽ giúp viết chương trình hiệu quả hơn.
+   

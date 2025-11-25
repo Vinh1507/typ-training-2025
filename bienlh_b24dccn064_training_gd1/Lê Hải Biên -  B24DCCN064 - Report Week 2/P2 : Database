@@ -1,0 +1,60 @@
+#  Phần 2: Database (Thiết kế lược đồ E-R)
+## 1.Kiến thức : 
+Khái niệm : - Entity là một đối tượng hoặc khái niệm trong thế giới thực mà ta muốn lưu trữ thông tin trong cơ sở dữ liệu. Gồm strong Entity và Weak Entyty 
+      Ví dụ : Hệ thống quản lý bảo hiểm y tế 
+            - Attribute là đặc điểm hoặc thông tin mô tả cho thực thể hoặc mối quan hệ.
+      Vd: Thuộc tính 1 người bao gôm họ tên, tuổi,..
+            -Relationship là mối liên kết giữa hai hoặc nhiều thực thể trong cơ sở dữ liệu.
+      VD : Mối quan hệ tính năm giữa năm sinh và tuổi
+            -Cardinality mô tả số lượng thực thể có thể tham gia vào một mối quan hệ.
+## 2. Relationships
+ Ví dụ : Quan hệ người mua - Giao dịch - trái cây 
+- Quan hệ 1 - N ( 1 người có thể mua được nhiều trái cây)
+- Quan hệ 1 -1 ( 1 người mua thì sẽ có 1 giao dịch )
+- quan hệ N - N ( Nhiều người mua thì sẽ có nhiều trái cây để bán ) 
+## 3. Sơ đồ E -R
++------------+          +-------------+          +-------------+
+|  NGUOIMUA  |          |  GIAODICH   |          |   TRAICAY   |
+|------------|          |-------------|          |-------------|
+| MaNM (PK)  |<-------->| MaNM (FK)   |<-------->| MaTC (PK)   |
+| HoTen      |          | MaTC (FK)   |          | TenTC       |
+| SDT        |          | SoLuong     |          | GiaBan      |
++------------+          | NgayMua     |          +-------------+
+                        +-------------+
+Giải thích 
+ 1. Các thực thể (Entities)
+a. NGUOIMUA:
+Đại diện cho người khách hàng trong hệ thống.
+Gồm cac thuộc tính:
++,MaNM (Primary Key) – Mã người mua (định danh duy nhất từng khách hàng)
++,HoTen – Họ tên người mua
++,SDT – Số điện thoại người mua
+ => Mỗi người mua có thể thực hiện nhiều giao dịch (mối quan hệ 1–N với GIAODICH).
+
+b. TRAICAY
+Đại diện cho loại trái cây được bán.
+Gồm các thuộc tính:
++,MaTC (Primary Key) – Mã trái cây
++,TenTC – Tên trái cây (ví dụ: cam, xoài, táo, v.v.)
++,GiaBan – Giá bán của mỗi loại trái cây
+ =>  Một loại trái cây có thể xuất hiện trong nhiều giao dịch (mối quan hệ 1–N với GIAODICH).
+
+c. GIAODICH
+Là thực thể trung gian (liên kết) giữa NGUOIMUA và TRAICAY.
+Gồm các thuộc tính:
++,MaNM (Foreign Key) – Mã người mua (tham chiếu tới bảng NGUOIMUA)
++,MaTC (Foreign Key) – Mã trái cây (tham chiếu tới bảng TRAICAY)
++,SoLuong – Số lượng trái cây được mua
++,NgayMua – Ngày thực hiện giao dịch
+
+=> Mỗi giao dịch ghi lại việc người mua nào mua loại trái cây nào, với số lượng bao nhiêu, vào ngày nào.
+
+🔗 2. Mối quan hệ giữa các thực thể
+Mối quan hệ	Loại quan hệ	Giải thích
+NGUOIMUA — GIAODICH	1:N	Một người mua có thể có nhiều giao dịch (mua nhiều lần).
+TRAICAY — GIAODICH	1:N	Một loại trái cây có thể được mua trong nhiều giao dịch.
+
+Tổng thể, đây là mối quan hệ N–N giữa NGUOIMUA và TRAICAY, được biểu diễn thông qua bảng trung gian GIAODICH.
+
+=> Giao dịch là loại giao dịch theo ngày 
+## Các khái niệm về Entity, Relationship đã được định nghĩa phía trên 

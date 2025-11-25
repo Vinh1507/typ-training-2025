@@ -1,0 +1,23 @@
+# Báo cáo phần 1 : Lập trình Java
+## 1.Mục tiêu : - Làm quen với ngôn ngữ  Java : Java là ngôn ngữ phục vụ cho việc lập trình game, xử lý Web từ việc xây dựng xử lý các hiệu ứng ấm thanh, hình ảnh ,...
+              - Cài đặt JDK và một IDE (IntelliJ hoặc NetBeans);
+              - Tìm hiểu các khái niệm về kiểu dữ liệu, cú pháp cơ bản và giải các bài tập về  hàm, mảng, vòng lặp.
+## 2. Cài đặt JDK và 1 IDE bất kì (Intelij, Netbeans)
+  Cài JDK 17 và IDEA Intellij Comunity
+## 3. Làm quen với kiểu dữ liệu và cú pháp 
+ có các kiểu dữ liệu :  int(nguyên), double(thập phân lấy 2 số sau , ), boolean(logic đúng / sai), String(chuỗi), kiểu mảng, System.out.println 
+## 4. Làm quen với mảng và vòng lặp 
+  -Câu lệnh điều kiện ( if – else, switch case )
+  - Toán tử logic ( &&; ||; !); Toán tử so sánh ( >, < , ==, >=,<=) 
+  - Vòng lặp ( for, while, do-while )
+  - Mảng 1 chiều, 2 chiều | duyệt mảng, tìm tổng, max, min )
+  - Hàm trong Java ( hiểu về  định nghĩa,  pp truyền tham số, trả về giá trị )
+## 5. Bài tập Codeptit
+  J01001 | Hình chữ nhật về Java cơ bản   -> Hoàn thành
+  J01002 | Tổng dãy số | Java cơ bản      -> Hoàn thành 
+  J02005 | Giao của hai dãy số | Mảng     -> Hoàn thành
+  J02006 | Hiệu của hai tập hợp | Mảng    -> Hoàn thành
+  J03004 | Chữ hoa chữ thường | Xâu ký tự -> Hoàn thành 
+  J03007 | Số đẹp 1 | Xâu ký tự           -> Hoàn thành
+  J03009 | Tập từ chung | Xâu ký tự       -> 2/4 WA
+Số lượng hoàn thành 6/7 bài 
