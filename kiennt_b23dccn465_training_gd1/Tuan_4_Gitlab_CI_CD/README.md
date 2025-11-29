@@ -1,4 +1,4 @@
-# [Phần 1 : Viết file .gitlab-ci.yml để build và test ứng dụng sử dụng Docker Compose](https://gitlab.com/NguyenTuKien/typ-training-2025.git)
+# [Phần 1 : Viết file .gitlab-ci.yml để build và test ứng dụng sử dụng Docker Compose](https://gitlab.com/NguyenTuKien/Tuan-4-Gitlab.git)
 ## 1. Cấu trúc và quy tắc cơ bản của file .gitlab-ci.yml
 ### a. Cấu trúc toàn cục (Global)
 - `image`: Xác định môi trường (Docker Image) để chạy các câu lệnh.
@@ -128,3 +128,36 @@ test_job:
   rules:
     - if: $CI_COMMIT_TAG
 ```
+___
+# Phần 2 : Tìm hiểu về GitLab Runner và cách cài đặt GitLab Runner sử dụng Docker
+## 1. Cài đặt và đăng kí GitLab Runner.
+```bash
+curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+sudo apt install gitlab-runner
+
+```
+Kiểm tra lại bằng lệnh `gitlab-runner -v`
+___
+## 2. Đăng ký GitLab Runner với GitLab
+- Quay lại project trên GitLab, vào **Settings > CI/CD > Runners > New project runner** để lấy URL và Registration token.
+- Chạy lệnh đăng ký sau đây và làm theo hướng dẫn:
+```bash
+sudo gitlab-runner register
+```
+- Các thông tin đăng kí sẽ được lưu trong file `/etc/gitlab-runner/config.toml` 
+> **Lưu ý:** Đảm bảo rằng GitLab Runner có quyền truy cập vào Docker daemon nếu bạn sử dụng Docker-in-Docker (dind) trong pipeline của mình. 
+> ```toml
+>  [[runners.docker]]
+>    ...
+>    privileged = true
+> ```
+- Khởi động lại GitLab Runner để áp dụng thay đổi:
+```bash
+sudo gitlab-runner restart
+```
+- Để chạy dự án, sử dụng lệnh:
+```bash
+sudo gitlab-runner run
+``` 
+> **Lưu ý:** Vì Gitlab Runner sẽ chiếm dụng teminal, bạn nên chuyển nó thành dịch vụ nền (service) để tránh việc tắt terminal làm dừng runner. (`nohup sudo gitlab-runner run 2>&1 &`)
+___

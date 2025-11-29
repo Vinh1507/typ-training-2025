@@ -37,12 +37,11 @@ Nếu một hook định nghĩa trước không tồn tại cho một nhu cầu 
 ![alt text](Image/hook2.png)
 ___
 ### Các chương trình eBPF được viết như thế nào?
-Trong nhiều trường hợp, eBPF không được sử dụng trực tiếp mà thông qua các dự án như **Cilium**, **bcc**, hoặc **bpftrace**. Các dự án này cung cấp một lớp trừu tượng bên trên eBPF và không yêu cầu viết chương trình trực tiếp; thay vào đó, chúng cho phép định nghĩa dựa trên mục đích (intent-based), sau đó các định nghĩa này được triển khai bằng eBPF.
+Các chương trình eBPF có thể được viết theo 2 kiểu:
+- **Thông qua lớp trừu tượng** (ví dụ: Cilium, bpftrace, ...): Các lớp trừu tượng này cung cấp các ngôn ngữ lập trình hoặc công cụ cao cấp để viết chương trình eBPF mà không cần phải lo lắng về các chi tiết thấp hơn của eBPF.
+- **Viết trực tiếp bằng C hoặc ngôn ngữ tương tự C**: Các chương trình eBPF có thể được viết trực tiếp bằng ngôn ngữ C hoặc các ngôn ngữ tương tự C. Các chương trình này sau đó được biên dịch thành bytecode eBPF sử dụng trình biên dịch LLVM hoặc GCC.
 
 ![alt text](Image/program.png)
-
-Nếu không có lớp trừu tượng cấp cao nào phù hợp, chương trình cần được viết trực tiếp. Linux kernel yêu cầu các chương trình eBPF được tải dưới dạng bytecode. Mặc dù hoàn toàn có thể viết bytecode trực tiếp, nhưng quy trình phát triển phổ biến hơn là tận dụng một bộ biên dịch như **LLVM** để biên dịch mã nguồn "pseudo-C" (giả C) thành eBPF bytecode.
-
 ___
 ### Kiến trúc Trình tải (Loader) & Xác minh (Verification)
 Khi hook mong muốn đã được xác định, chương trình eBPF có thể được tải vào Linux kernel bằng cách sử dụng system call `bpf`. Việc này thường được thực hiện thông qua một trong các thư viện eBPF có sẵn. Phần tiếp theo sẽ giới thiệu về các chuỗi công cụ (toolchains) phát triển hiện có.
@@ -51,19 +50,61 @@ Khi hook mong muốn đã được xác định, chương trình eBPF có thể 
 
 Khi chương trình được tải vào Linux kernel, nó trải qua hai bước trước khi được gắn vào hook yêu cầu:
 
-___
 #### Xác minh (Verification)
 Bước xác minh đảm bảo rằng chương trình eBPF an toàn để chạy. Nó kiểm tra xem chương trình có đáp ứng một số điều kiện hay không, ví dụ:
 
 ![alt text](Image/verify.png)
 
-* Tiến trình (process) tải chương trình eBPF phải nắm giữ các quyền hạn (capabilities) cần thiết. Trừ khi tính năng "unprivileged eBPF" (eBPF không đặc quyền) được bật, chỉ các tiến trình có đặc quyền mới có thể tải chương trình eBPF.
-* Chương trình không được gây crash hoặc làm hại hệ thống.
+* Tiến trình (process) tải chương trình eBPF phải nắm giữ các quyền hạn (capabilities) cần thiết hay không thông qua các cờ như `CAP_SYS_ADMIN`(quyền admin) hoặc `CAP_BPF` (quyền dành riêng cho eBPF trên các kernel mới). Trừ khi tính năng "unprivileged eBPF" (eBPF không đặc quyền) được bật, chỉ các tiến trình có đặc quyền mới có thể tải chương trình eBPF.
+* Chương trình không được gây crash hoặc làm hại hệ thống (bằng cách mô phỏng máy ảo, chạy giả lập, theo dõi các kiểu dữ liệu, kiểm tra ranh giới và khởi tạo, ...).
 * Chương trình luôn phải chạy đến khi hoàn thành (tức là chương trình không được rơi vào vòng lặp vô hạn, làm ngưng trệ các xử lý khác).
 
 ___
 #### Biên dịch JIT (Just-in-Time)
-Bước biên dịch JIT dịch bytecode chung của chương trình thành tập lệnh máy cụ thể để tối ưu hóa tốc độ thực thi. Điều này giúp các chương trình eBPF chạy hiệu quả tương đương với mã kernel được biên dịch native hoặc mã được tải dưới dạng kernel module.
+Trong những ngày đầu, eBPF thực sự dùng trình thông dịch.
+* **Cơ chế:** Kernel đọc từng dòng bytecode eBPF và xử lý: "À, lệnh này là cộng, mình sẽ thực hiện cộng".
+* **Vấn đề:**
+    * **Chậm:** Việc "đọc - dịch - làm" lặp đi lặp lại tốn rất nhiều tài nguyên CPU.
+    * **Bảo mật (Spectre):** Các trình thông dịch dễ bị tấn công bởi các lỗ hổng thực thi suy đoán (speculative execution) như Spectre.
+* **JIT giải quyết:** JIT chuyển đổi bytecode thành mã máy **một lần duy nhất** ngay khi nạp. Sau đó CPU chạy trực tiếp mã máy này. Tốc độ tăng lên hàng chục lần.
+
+#### Tại sao không biên dịch trước (Ahead-of-Time - AOT)?
+Có 3 lý do chí mạng khiến cách này không khả thi với eBPF:
+
+#### Lý do A: Không thể xác minh an toàn (Verification Impossible)
+Đây là lý do quan trọng nhất.
+* **Vấn đề:** Nếu bạn nạp một file mã máy (binary) vào Kernel, Kernel giống như nhận một "hộp đen". Kernel rất khó để phân tích ngược lại mã máy đó xem nó có truy cập vùng nhớ cấm hay không, hay có vòng lặp vô tận không.
+* **Giải pháp:** eBPF bắt buộc bạn nạp **Bytecode**. Bytecode có cấu trúc rõ ràng, dễ phân tích. **Verifier** chỉ có thể làm việc trên Bytecode. Sau khi Verifier gật đầu "An toàn!", lúc đó JIT mới ra tay biến nó thành mã máy.
+    * *Quy trình:* `Bytecode` -> `Verifier (Kiểm tra)` -> `JIT` -> `Machine Code (Chạy)`.
+
+#### Lý do B: Tính di động (Portability)
+* **Vấn đề:** Nếu bạn biên dịch AOT ra mã máy trên máy tính của bạn (chip Intel x86), file đó sẽ không chạy được trên máy chủ dùng chip ARM (ví dụ AWS Graviton). Bạn sẽ phải biên dịch lại nhiều bản cho từng loại chip.
+* **Giải pháp:** Với JIT, bạn chỉ cần gửi một file **eBPF Bytecode** chung (generic). Khi nạp vào máy nào, JIT của máy đó sẽ tự biết cách dịch ra tiếng nói của con chip đó (x86 dịch ra x86, ARM dịch ra ARM). Khái niệm này gọi là "Compile Once, Run Everywhere".
+
+#### Lý do C: Tối ưu hóa cục bộ
+* JIT nằm ngay trong Kernel, nó biết chính xác phiên bản CPU đang chạy có hỗ trợ các tập lệnh mới nhất hay không để tối ưu hóa tốt nhất mà trình biên dịch bên ngoài không biết được.
+
+___
+
+### An toàn trong eBPF (eBPF Safety)
+*Sức mạnh càng lớn, trách nhiệm càng cao.*
+
+eBPF là một công nghệ cực kỳ mạnh mẽ và hiện đang chạy ở trung tâm của nhiều thành phần hạ tầng phần mềm quan trọng. Trong quá trình phát triển eBPF, sự an toàn là khía cạnh quan trọng nhất được cân nhắc khi đưa eBPF vào Linux kernel. Sự an toàn của eBPF được đảm bảo qua nhiều lớp:
+
+___
+#### Đặc quyền bắt buộc (Required Privileges)
+Trừ khi unprivileged eBPF được bật, tất cả các tiến trình có ý định tải chương trình eBPF vào Linux kernel phải chạy ở chế độ đặc quyền (root) hoặc yêu cầu capability `CAP_BPF`. Điều này có nghĩa là các chương trình không tin cậy không thể tải chương trình eBPF.
+Nếu unprivileged eBPF được bật, các tiến trình không đặc quyền có thể tải một số chương trình eBPF nhất định nhưng bị giới hạn tính năng và quyền truy cập vào kernel.
+
+___
+#### Bộ xác minh (Verifier)
+Nếu một tiến trình được phép tải chương trình eBPF, tất cả các chương trình vẫn phải đi qua eBPF verifier. Verifier đảm bảo sự an toàn của chính chương trình đó. Điều này có nghĩa là, ví dụ:
+* Các chương trình được kiểm tra để đảm bảo chúng luôn chạy đến khi hoàn thành (ví dụ: chương trình eBPF không bao giờ được chặn/block hoặc lặp vô hạn). Các chương trình eBPF có thể chứa các "vòng lặp giới hạn" (bounded loops) nhưng chỉ được chấp nhận nếu verifier có thể đảm bảo rằng vòng lặp có điều kiện thoát chắc chắn sẽ xảy ra.
+* Chương trình không được sử dụng bất kỳ biến nào chưa được khởi tạo hoặc truy cập bộ nhớ ngoài phạm vi cho phép.
+* Chương trình phải nằm trong yêu cầu kích thước của hệ thống. Không thể tải các chương trình eBPF lớn tùy ý.
+* Chương trình phải có độ phức tạp hữu hạn. Verifier sẽ đánh giá tất cả các đường dẫn thực thi có thể và phải có khả năng hoàn thành việc phân tích trong giới hạn độ phức tạp cấu hình trên.
+
+Verifier được xem là một công cụ an toàn (safety tool), kiểm tra xem chương trình có an toàn để chạy hay không. Nó không phải là một công cụ bảo mật (security tool) để kiểm tra xem chương trình đang thực hiện nghiệp vụ gì.
 
 ___
 ### Maps (Cấu trúc lưu trữ)
@@ -99,29 +140,8 @@ Các chương trình eBPF có thể kết hợp với nhau thông qua khái ni�
 * **Tail calls** có thể gọi và thực thi một chương trình eBPF khác và thay thế ngữ cảnh thực thi hiện tại, tương tự như cách system call `execve()` hoạt động đối với các tiến trình thông thường.
 
 ![alt text](Image/calls.png)
-
 ___
-### An toàn trong eBPF (eBPF Safety)
-*Sức mạnh càng lớn, trách nhiệm càng cao.*
 
-eBPF là một công nghệ cực kỳ mạnh mẽ và hiện đang chạy ở trung tâm của nhiều thành phần hạ tầng phần mềm quan trọng. Trong quá trình phát triển eBPF, sự an toàn là khía cạnh quan trọng nhất được cân nhắc khi đưa eBPF vào Linux kernel. Sự an toàn của eBPF được đảm bảo qua nhiều lớp:
-
-___
-#### Đặc quyền bắt buộc (Required Privileges)
-Trừ khi unprivileged eBPF được bật, tất cả các tiến trình có ý định tải chương trình eBPF vào Linux kernel phải chạy ở chế độ đặc quyền (root) hoặc yêu cầu capability `CAP_BPF`. Điều này có nghĩa là các chương trình không tin cậy không thể tải chương trình eBPF.
-Nếu unprivileged eBPF được bật, các tiến trình không đặc quyền có thể tải một số chương trình eBPF nhất định nhưng bị giới hạn tính năng và quyền truy cập vào kernel.
-
-___
-#### Bộ xác minh (Verifier)
-Nếu một tiến trình được phép tải chương trình eBPF, tất cả các chương trình vẫn phải đi qua eBPF verifier. Verifier đảm bảo sự an toàn của chính chương trình đó. Điều này có nghĩa là, ví dụ:
-* Các chương trình được kiểm tra để đảm bảo chúng luôn chạy đến khi hoàn thành (ví dụ: chương trình eBPF không bao giờ được chặn/block hoặc lặp vô hạn). Các chương trình eBPF có thể chứa các "vòng lặp giới hạn" (bounded loops) nhưng chỉ được chấp nhận nếu verifier có thể đảm bảo rằng vòng lặp có điều kiện thoát chắc chắn sẽ xảy ra.
-* Chương trình không được sử dụng bất kỳ biến nào chưa được khởi tạo hoặc truy cập bộ nhớ ngoài phạm vi cho phép.
-* Chương trình phải nằm trong yêu cầu kích thước của hệ thống. Không thể tải các chương trình eBPF lớn tùy ý.
-* Chương trình phải có độ phức tạp hữu hạn. Verifier sẽ đánh giá tất cả các đường dẫn thực thi có thể và phải có khả năng hoàn thành việc phân tích trong giới hạn độ phức tạp cấu hình trên.
-
-Verifier được xem là một công cụ an toàn (safety tool), kiểm tra xem chương trình có an toàn để chạy hay không. Nó không phải là một công cụ bảo mật (security tool) để kiểm tra xem chương trình đang thực hiện nghiệp vụ gì.
-
-___
 #### Gia cố (Hardening)
 Sau khi hoàn tất xác minh thành công, chương trình eBPF trải qua quy trình gia cố tùy thuộc vào việc chương trình được tải từ tiến trình có đặc quyền hay không đặc quyền. Bước này bao gồm:
 * **Bảo vệ thực thi chương trình:** Bộ nhớ kernel chứa chương trình eBPF được bảo vệ và chuyển sang chế độ chỉ đọc (read-only). Nếu vì lý do nào đó (bug của kernel hay thao tác ác ý) mà chương trình eBPF bị sửa đổi, kernel sẽ crash thay vì cho phép tiếp tục thực thi chương trình đã bị hỏng/thao túng.
@@ -134,4 +154,43 @@ Các chương trình eBPF không thể truy cập trực tiếp bộ nhớ kerne
 ___
 ## 3. Cơ chế hoạt động
 ![Design](Image/design.png)
-- 
+Dưới đây là mô tả chi tiết về cách eBPF hoạt động trong kịch bản lọc gói tin mạng sử dụng Cilium để bảo vệ một ứng dụng Spring Boot chạy trong Kubernetes.
+### 1\. Giai đoạn Chuẩn bị (Bên trái - User Space)
+Trước khi việc lọc diễn ra, "bộ não" (logic lọc) phải được đưa vào hệ thống.
+
+  * **Dev viết Code / Biên dịch:** Trong trường hợp của bạn dùng Cilium, đội ngũ phát triển Cilium đã viết sẵn các đoạn code C (ví dụ: `bpf_lxc.c`) và biên dịch nó thành **eBPF Bytecode** (file `.o`).
+  * **App Quản lý / Loader (Cilium Agent):** Đây là thành phần chạy trên node Kubernetes. Khi bạn apply một file YAML Network Policy cho ứng dụng Spring, Cilium Agent sẽ đọc policy đó và chuẩn bị nạp chương trình eBPF tương ứng.
+
+### 2\. Giai đoạn Nạp vào Kernel (Mũi tên A, B, C)
+Đây là bước đưa "người bảo vệ" vào vị trí làm việc.
+  * **(A) Gọi sys\_bpf:** Cilium Agent dùng lệnh hệ thống (syscall) để đẩy đoạn Bytecode vào Kernel.
+  * **Verifier (Bộ xác thực):** Kernel cực kỳ cẩn thận. Trước khi chạy, nó kiểm tra code eBPF xem có vòng lặp vô tận không, có truy cập bộ nhớ trái phép không. Nếu an toàn -\> **(B) OK**.
+  * **JIT Compiler:** Để đạt tốc độ cực nhanh, JIT biên dịch Bytecode thành **Mã máy (Native Code)** để CPU chạy trực tiếp.
+  * **(C) Tạo thành:** Lúc này, chương trình eBPF đã sẵn sàng và nằm trong bộ nhớ Kernel.
+
+### 3\. Giai đoạn Lọc Gói Tin (Trọng tâm - Phần màu cam và vàng)
+Đây là lúc gói tin thực sự bị chặn hoặc cho qua.
+  * **(D) KÍCH HOẠT (Trigger):**
+
+      * Khi có một gói tin mạng bay vào card mạng (hoặc đi ra từ Pod Spring Boot), Kernel sẽ kích hoạt **Hook** (như XDP hoặc TC ingress/egress).
+      * Hook này gọi ngay **Chương trình eBPF** đã nạp ở bước trên.
+
+  * **(F) Tra cứu eBPF Maps (Bộ nhớ chung):**
+
+      * Chương trình eBPF cần biết IP nào bị chặn, IP nào được phép. Nó **không** chứa cứng (hardcode) các IP này.
+      * Nó sẽ đọc từ **eBPF Maps**.
+      * *Kết nối với User Space:* Cilium Agent ở bên ngoài liên tục cập nhật Map này. Ví dụ: Khi Pod Spring Boot sinh ra có IP `10.0.1.5`, Agent ghi vào Map: "IP 10.0.1.5 -\> Cho phép".
+
+  * **(E) Xử lý Logic & Phán quyết:**
+
+      * Chương trình eBPF chạy logic:
+        ```c
+        // Logic giả định
+        if (Gói tin đến từ IP nằm trong Blacklist Map) {
+            return DROP; // (Hủy)
+        } else {
+            return PASS; // (Cho qua)
+        }
+        ```
+      * Nếu **PASS**: Gói tin được đưa tiếp vào **Hàm xử lý gốc của Kernel** để đến ứng dụng Spring.
+      * Nếu **DROP**: Gói tin biến mất ngay lập tức, giải phóng tài nguyên.

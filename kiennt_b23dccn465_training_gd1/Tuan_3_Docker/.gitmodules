@@ -1,0 +1,3 @@
+[submodule "Minilab"]
+	path = Minilab
+	url = git@github.com:NguyenTuKien/StemHub.git
