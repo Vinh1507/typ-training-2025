@@ -1,6 +1,6 @@
-[submodule "Minilab"]
+[submodule "Docker"]
 	path = kiennt_b23dccn465_training_gd1/Tuan_3_Docker/Docker
 	url = git@github.com:NguyenTuKien/StemHub.git
-[submodule "kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD/Gitlab"]
+[submodule "Gitlab"]
 	path = kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab_CI_CD/Gitlab
 	url = git@gitlab.com:NguyenTuKien/tuan_4_gitlab_ci_cd.git
