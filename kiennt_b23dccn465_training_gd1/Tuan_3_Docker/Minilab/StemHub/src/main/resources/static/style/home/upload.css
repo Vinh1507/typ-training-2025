@@ -1,0 +1,399 @@
+.contributor-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #006056, #00897B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.upload-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.upload-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.upload-form {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.drag-drop-area {
+    border: 3px dashed #dee2e6;
+    border-radius: var(--border-radius);
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f8f9fa;
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.drag-drop-area:hover,
+.drag-drop-area.drag-over {
+    border-color: #006056;
+    background: rgba(0, 96, 86, 0.05);
+    transform: translateY(-2px);
+}
+
+.drag-drop-area.drag-over {
+    border-color: #005249;
+    background: rgba(0, 96, 86, 0.1);
+}
+
+.upload-icon {
+    font-size: 4rem;
+    color: #006056;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+}
+
+.drag-drop-area:hover .upload-icon {
+    transform: scale(1.1);
+    color: #005249;
+}
+
+.file-input-hidden {
+    position: absolute;
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    left: -9999px;
+    pointer-events: none;
+}
+
+.selected-file {
+    background: rgba(0, 96, 86, 0.1);
+    border: 2px solid #006056;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.file-icon {
+    font-size: 2rem;
+    color: #006056;
+}
+
+.progress-bar {
+    display: none;
+    margin-top: 1rem;
+}
+
+/* Price field styling */
+#priceField {
+    transition: all 0.3s ease;
+}
+
+#priceField.hidden {
+    display: none !important;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Status field styling */
+.form-select:focus {
+    border-color: #006056;
+    box-shadow: 0 0 0 0.2rem rgba(0, 96, 86, 0.25);
+}
+
+/* Enhanced form section styling */
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: var(--border-radius);
+    background: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.form-section:hover {
+    border-color: #006056;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.form-section h5 {
+    color: #006056;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Price validation styling */
+.price-required {
+    border-color: #dc3545 !important;
+}
+
+.price-required:focus {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+/* Enhanced button styling */
+.btn-upload {
+    background: var(--primary-gradient);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    color: white;
+    width: 100%;
+    transition: var(--transition);
+    box-shadow: var(--card-shadow);
+}
+
+.btn-upload:hover {
+    background: linear-gradient(135deg, #005249 0%, #006056 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+    color: white;
+}
+
+.btn-upload:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #006056;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.success-message {
+    color: #198754;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.thumbnail-preview {
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    display: none;
+    box-shadow: var(--card-shadow);
+}
+
+.upload-tips {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.tips-list {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.tips-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .upload-container {
+        padding: 0 1rem;
+    }
+    
+    .upload-form {
+        padding: 1.5rem;
+    }
+    
+    .drag-drop-area {
+        padding: 2rem 1rem;
+    }
+    
+    .upload-icon {
+        font-size: 3rem;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
+    
+    .btn-upload {
+        font-size: 1rem;
+        padding: 0.875rem 1.5rem;
+    }
+    
+    /* Stack price field on mobile */
+    .row .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Categories Checkbox Styling */
+.categories-checkbox-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background: #f8f9fa;
+}
+
+/* Force grid layout for any list inside */
+.categories-checkbox-container ul,
+.categories-checkbox-container .checkbox-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 0.75rem !important;
+}
+
+/* Alternative selectors in case Django renders differently */
+.categories-checkbox-container > ul,
+.categories-checkbox-container ul ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 0.75rem !important;
+}
+
+.categories-checkbox-container li,
+.categories-checkbox-container .checkbox-item {
+    margin: 0 !important;
+    padding: 0.75rem !important;
+    border-radius: 0.5rem !important;
+    transition: var(--transition) !important;
+    background: white !important;
+    border: 1px solid #e9ecef !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.categories-checkbox-container li:hover {
+    background: rgba(0, 96, 86, 0.05);
+    border-color: #006056;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 96, 86, 0.15);
+}
+
+.categories-checkbox-container label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #495057;
+    font-weight: 500;
+    min-height: 20px;
+}
+
+.categories-checkbox-container input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.categories-checkbox-container input[type="checkbox"]:checked + label {
+    color: #006056;
+    font-weight: 600;
+}
+
+/* Custom checkbox styling */
+.categories-checkbox-container input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.categories-checkbox-container input[type="checkbox"]:checked {
+    background: #006056;
+    border-color: #006056;
+}
+
+.categories-checkbox-container input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.categories-checkbox-container input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 96, 86, 0.25);
+}
+
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .categories-checkbox-container ul,
+    .categories-checkbox-container .checkbox-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+        gap: 0.5rem !important;
+    }
+    
+    .categories-checkbox-container li,
+    .categories-checkbox-container .checkbox-item {
+        padding: 0.5rem !important;
+    }
+    
+    .categories-checkbox-container label {
+        font-size: 0.85rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-checkbox-container ul,
+    .categories-checkbox-container .checkbox-list {
+        grid-template-columns: 1fr !important;
+    }
+}

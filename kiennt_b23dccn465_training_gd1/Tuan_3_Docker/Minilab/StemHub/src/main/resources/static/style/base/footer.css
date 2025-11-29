@@ -1,0 +1,322 @@
+/* Footer Styles */
+
+.main-footer {
+    margin-top: auto;
+    /* Keep the original dark background from .bg-dark on the element */
+    background-color: #212529 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+    z-index: 1;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-gradient-light {
+    background: linear-gradient(135deg, #009688 0%, #00bfa5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.footer-title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #006056;
+    transform: translateX(5px);
+}
+
+
+.footer-links a i {
+    width: 16px;
+    text-align: center;
+}
+
+/* Stats */
+.footer-stats {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    margin-bottom: 0;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    margin-bottom: 0;
+}
+
+/* Contact Info */
+.contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Newsletter */
+.newsletter-signup {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+}
+
+.newsletter-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px 0 0 8px;
+}
+
+.newsletter-form .form-control::placeholder {
+    color: #adb5bd;
+}
+
+.newsletter-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #006056;
+    box-shadow: 0 0 0 0.2rem rgba(0, 96, 86, 0.25);
+    color: #fff;
+}
+
+
+.newsletter-form .btn {
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background: var(--primary-gradient);
+}
+
+.newsletter-form .btn:hover {
+    background: linear-gradient(135deg, #005349 0%, #008f7f 100%);
+    transform: translateY(-1px);
+}
+
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.social-link:hover {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Specific social link styles */
+.social-link[aria-label="Facebook"]:hover {
+    background: linear-gradient(135deg, #1877f2 0%, #0d6efd 100%);
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.social-link[aria-label="Gmail"]:hover {
+    background: linear-gradient(135deg, #ea4335 0%, #d93025 100%);
+    box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
+}
+
+.social-link[aria-label="Zalo"]:hover {
+    background: linear-gradient(135deg, #0068ff 0%, #0052cc 100%);
+    box-shadow: 0 8px 20px rgba(0, 104, 255, 0.3);
+}
+
+.social-link[aria-label="Technical Support"]:hover {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #005349 0%, #00a693 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 96, 86, 0.4);
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .footer-stats .row {
+        text-align: center;
+    }
+    
+    .contact-info,
+    .newsletter-signup,
+    .footer-stats {
+        margin-bottom: 2rem;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Dark mode adjustments */
+[data-bs-theme="dark"] .main-footer {
+    /* Preserve dark solid background in dark mode */
+    background-color: #212529 !important;
+}
+
+/* Polished footer typography and spacing without changing background */
+.main-footer .footer-section { margin-top: .25rem; }
+.main-footer .footer-title { letter-spacing: .3px; }
+.main-footer .footer-content p,
+.main-footer .footer-content li { color: #b8c0c7; }
+.main-footer a.text-muted { color: #c7ced4 !important; }
+.main-footer a.text-muted:hover,
+.main-footer a.text-light:hover { color: #ffffff !important; text-decoration: none; }
+.main-footer .footer-bottom { border-color: rgba(255,255,255,0.12) !important; }
+.main-footer .footer-content .row { align-items: flex-start; }
+.main-footer .footer-content .list-unstyled li { margin-bottom: .5rem; }
+
+[data-bs-theme="dark"] .footer-links a:hover {
+    color: #8b9dc3;
+}
+
+/* Ensure Font Awesome icons display correctly */
+.social-link i,
+.footer-links i,
+.contact-item i,
+.back-to-top i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 5 Free", "Font Awesome 5 Pro" !important;
+}
+
+/* Social link icon specific styles */
+.social-link i {
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+.social-link .fab,
+.footer-links .fab,
+.contact-item .fab {
+    font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", "Font Awesome 6 Pro", "Font Awesome 5 Brands", "Font Awesome 5 Free", "Font Awesome 5 Pro" !important;
+}

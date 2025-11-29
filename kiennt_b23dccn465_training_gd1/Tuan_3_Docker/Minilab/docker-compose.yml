@@ -1,0 +1,51 @@
+services:
+  stemhub:
+    build: ./StemHub
+    container_name: stemhub
+    ports: ["8080:8080"]
+    volumes:
+      - ./StemHub/.m2:/root/.m2
+      - ./StemHub/logs:/app/logs
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SERVER_ADDRESS=0.0.0.0
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - CLOUDFLARE_R2_ACCOUNT_ID=${CLOUDFLARE_R2_ACCOUNT_ID}
+      - CLOUDFLARE_R2_ACCESS_KEY=${CLOUDFLARE_R2_ACCESS_KEY}
+      - CLOUDFLARE_R2_SECRET_KEY=${CLOUDFLARE_R2_SECRET_KEY}
+      - CLOUDFLARE_R2_BUCKET_NAME=${CLOUDFLARE_R2_BUCKET_NAME}
+      - CLOUDFLARE_R2_ENDPOINT_URL=${CLOUDFLARE_R2_ENDPOINT_URL}
+      - CLOUDFLARE_R2_PUBLIC_URL=${CLOUDFLARE_R2_PUBLIC_URL}
+    networks:
+      - stemhub-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      timeout: 10s
+      retries: 10
+    networks:
+      - stemhub-network
+
+volumes:
+  mysql-data:
+
+networks:
+  stemhub-network:
+    driver: bridge
