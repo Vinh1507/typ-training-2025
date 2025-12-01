@@ -1,0 +1,7 @@
+
+CREATE VIEW VDV_VietNam AS
+SELECT * FROM VDV WHERE QuocGia = N'Việt Nam';
+
+
+DROP VIEW VDV_VietNam;
+DROP TABLE ThamGia;
