@@ -1,0 +1,28 @@
+{
+  "name": "library-api",
+  "version": "1.0.0",
+  "description": "API quản lý thư viện đơn giản",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "before": "node app.before.js",
+    "after": "node app.after.js",
+    "dev:before": "nodemon app.before.js",
+    "dev:after": "nodemon app.after.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "library"
+  ],
+  "author": "DungDV - B23DCKH031",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

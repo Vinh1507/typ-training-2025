@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2: Card Component với Hover Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Card Components với Hover Effects</h1>
+        
+        <div class="cards-grid">
+            <div class="card product-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
+                    <span class="badge">Sale</span>
+                </div>
+                <div class="card-content">
+                    <h3>Wireless Headphones</h3>
+                    <p class="description">Premium sound quality with noise cancellation technology</p>
+                    <div class="price">
+                        <span class="old-price">$299</span>
+                        <span class="new-price">$199</span>
+                    </div>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card profile-card">
+                <div class="card-header">
+                    <img src="https://i.pravatar.cc/150?img=12" alt="Profile" class="profile-avatar">
+                </div>
+                <div class="card-content">
+                    <h3>John Doe</h3>
+                    <p class="role">Full Stack Developer</p>
+                    <p class="bio">Passionate about creating beautiful and functional web applications</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">GitHub</a>
+                        <a href="#" class="social-icon">LinkedIn</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                    </div>
+                    <button class="btn btn-outline">Follow</button>
+                </div>
+            </div>
+
+            <div class="card blog-card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500" alt="Coding">
+                </div>
+                <div class="card-content">
+                    <div class="meta">
+                        <span class="date">Oct 30, 2025</span>
+                        <span class="category">Web Development</span>
+                    </div>
+                    <h3>10 CSS Tips for Beginners</h3>
+                    <p class="excerpt">Learn essential CSS techniques that will help you build better websites faster...</p>
+                    <div class="card-footer">
+                        <div class="author">
+                            <img src="https://i.pravatar.cc/40?img=5" alt="Author">
+                            <span>Jane Smith</span>
+                        </div>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card feature-card">
+                <div class="icon-box">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <h3>Fast Performance</h3>
+                    <p>Lightning-fast load times and optimized for the best user experience possible</p>
+                </div>
+            </div>
+
+            <div class="card pricing-card">
+                <div class="card-header">
+                    <h3>Pro Plan</h3>
+                    <div class="price-tag">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <ul class="features">
+                        <li>✓ Unlimited Projects</li>
+                        <li>✓ 50GB Storage</li>
+                        <li>✓ Priority Support</li>
+                        <li>✓ Advanced Analytics</li>
+                        <li>✓ Custom Domain</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block">Choose Plan</button>
+                </div>
+            </div>
+
+            <div class="card stats-card">
+                <div class="card-content">
+                    <div class="stat-icon">📊</div>
+                    <h3 class="stat-number">2,543</h3>
+                    <p class="stat-label">Total Users</p>
+                    <div class="stat-change positive">
+                        <span>↑ 12.5%</span>
+                        <span class="period">vs last month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
