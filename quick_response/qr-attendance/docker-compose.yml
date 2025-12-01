@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # Backend Service
+  backend:
+    build: ./backend
+    container_name: qr-backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - QR_BASE_URL=${QR_BASE_URL}
+    volumes:
+      - ./backend/data:/app/data
+    networks:
+      - qr-network
+    restart: unless-stopped
+
+  # Frontend Service
+  frontend:
+    build: ./frontend
+    container_name: qr-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - qr-network
+    restart: unless-stopped
+    environment:
+      - REACT_APP_API_URL=${REACT_APP_API_URL}
+
+networks:
+  qr-network:
+    driver: bridge
+
+volumes:
+  data:

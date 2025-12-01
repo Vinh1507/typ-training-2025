@@ -1,0 +1,399 @@
+version: "3.8.1"
+
+services:
+  # ============= INFRASTRUCTURE =============
+
+  redis:
+    image: redis:7-alpine
+    container_name: judge-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --appendonly yes
+    networks:
+      - judge-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    restart: unless-stopped
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: judge-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    networks:
+      - judge-network
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============= TRACING =============
+
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: judge-zipkin
+    ports:
+      - "9411:9411"
+    environment:
+      - STORAGE_TYPE=mem
+    networks:
+      - judge-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost:9411/health",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============= DATABASES =============
+
+  mongo-problems:
+    image: mongo:6
+    container_name: judge-mongo-problems
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=problems
+    volumes:
+      - mongo-problems-data:/data/db
+    networks:
+      - judge-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  mongo-submissions:
+    image: mongo:6
+    container_name: judge-mongo-submissions
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=submissions
+    volumes:
+      - mongo-submissions-data:/data/db
+    networks:
+      - judge-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  mongo-users:
+    image: mongo:6
+    container_name: judge-mongo-users
+    ports:
+      - "27019:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=users
+    volumes:
+      - mongo-users-data:/data/db
+    networks:
+      - judge-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  # ============= MONGO UI - Separate instances =============
+
+  mongo-ui-problems:
+    image: mongo-express:latest
+    container_name: judge-mongo-ui-problems
+    ports:
+      - "8081:8081"
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+      - ME_CONFIG_MONGODB_URL=mongodb://admin:admin@mongo-problems:27017/problems?authSource=admin
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=admin
+      - ME_CONFIG_MONGODB_SERVER=mongo-problems
+    depends_on:
+      mongo-problems:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  mongo-ui-submissions:
+    image: mongo-express:latest
+    container_name: judge-mongo-ui-submissions
+    ports:
+      - "8082:8081"
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+      - ME_CONFIG_MONGODB_URL=mongodb://admin:admin@mongo-submissions:27017/submissions?authSource=admin
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=admin
+      - ME_CONFIG_MONGODB_SERVER=mongo-submissions
+    depends_on:
+      mongo-submissions:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  mongo-ui-users:
+    image: mongo-express:latest
+    container_name: judge-mongo-ui-users
+    ports:
+      - "8083:8081"
+    environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=admin
+      - ME_CONFIG_MONGODB_URL=mongodb://admin:admin@mongo-users:27017/users?authSource=admin
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=admin
+      - ME_CONFIG_MONGODB_SERVER=mongo-users
+    depends_on:
+      mongo-users:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  # ============= REVERSE PROXY & LOAD BALANCER =============
+
+  nginx:
+    image: nginx:alpine
+    container_name: judge-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - api-gateway
+      - frontend
+    networks:
+      - judge-network
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost/health",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # ============= MICROSERVICES =============
+
+  api-gateway:
+    build: ./server/api-gateway
+    container_name: judge-api-gateway
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - REDIS_URL=redis://redis:6379
+      - PROBLEM_SERVICE_URL=http://problem-service:3001
+      - SUBMISSION_SERVICE_URL=http://submission-service:3002
+      - USER_SERVICE_URL=http://user-service:3003
+      - RATE_LIMIT_WINDOW=60000
+      - RATE_LIMIT_MAX=100
+      - PORT=3000
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
+      - SERVICE_NAME=api-gateway
+    depends_on:
+      redis:
+        condition: service_healthy
+      zipkin:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  # Problem Service - 2 replicas
+  problem-service:
+    build: ./server/problem-service
+    expose:
+      - "3001"
+    environment:
+      - NODE_ENV=production
+      - REDIS_URL=redis://redis:6379
+      - MONGODB_URI=mongodb://admin:admin@mongo-problems:27017/problems?authSource=admin
+      - PORT=3001
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
+      - SERVICE_NAME=problem-service
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo-problems:
+        condition: service_healthy
+      zipkin:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  # Submission Service - 2 replicas
+  submission-service:
+    build: ./server/submission-service
+    deploy:
+      replicas: 2
+    expose:
+      - "3002"
+    environment:
+      - NODE_ENV=production
+      - REDIS_URL=redis://redis:6379
+      - RABBITMQ_URL=amqp://admin:admin@rabbitmq:5672
+      - MONGODB_URI=mongodb://admin:admin@mongo-submissions:27017/submissions?authSource=admin
+      - PROBLEM_SERVICE_URL=http://problem-service:3001
+      - PORT=3002
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
+      - SERVICE_NAME=submission-service
+    depends_on:
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      mongo-submissions:
+        condition: service_healthy
+      zipkin:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  # User Service - 2 replicas
+  user-service:
+    build: ./server/user-service
+    expose:
+      - "3003"
+    volumes:
+      - ./server/user-service/seed-log-instance.csv:/app/seed-log-instance.csv
+    environment:
+      - NODE_ENV=production
+      - REDIS_URL=redis://redis:6379
+      - MONGODB_URI=mongodb://admin:admin@mongo-users:27017/users?authSource=admin
+      - PORT=3003
+      - JWT_SECRET=c0737fe998f753a5d0ffb0c4514b1bad
+      - ZIPKIN_URL=http://zipkin:9411/api/v2/spans
+      - SERVICE_NAME=user-service
+      - INIT_LOCK_KEY=seed_initialized
+      - LOCK_TTL=60
+      - PROGRESS_KEY=seed_progress
+      - INSTANCE_ID=instance
+      - TOTAL_USERS=10000
+      - BATCH_SIZE=500
+    depends_on:
+      redis:
+        condition: service_healthy
+      mongo-users:
+        condition: service_healthy
+      zipkin:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+
+  # Judge Workers (Java) - 3 replicas
+  judge-worker:
+    build:
+      context: ./server/judge-worker
+    deploy:
+      replicas: 3
+    environment:
+      - SPRING_PROFILES_ACTIVE=production
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=admin
+      - RABBITMQ_PASSWORD=admin
+      - SUBMISSION_SERVICE_URL=http://submission-service:3002
+      - USER_SERVICE_URL=http://user-service:3003
+      - MAX_CONCURRENT_JOBS=5
+      - ZIPKIN_BASE_URL=http://zipkin:9411
+      - SPRING_APPLICATION_NAME=judge-worker
+    depends_on:
+      redis:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      zipkin:
+        condition: service_healthy
+    networks:
+      - judge-network
+    restart: unless-stopped
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+
+  # ============= FRONTEND =============
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: judge-frontend
+    expose:
+      - "80"
+    environment:
+      - REACT_APP_API_URL=/api
+    depends_on:
+      - api-gateway
+    networks:
+      - judge-network
+    restart: unless-stopped
+    healthcheck:
+      test:
+        ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  judge-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  rabbitmq-data:
+  mongo-problems-data:
+  mongo-submissions-data:
+  mongo-users-data:
