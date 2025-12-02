@@ -3,4 +3,4 @@
 	url = git@github.com:NguyenTuKien/StemHub.git
 [submodule "Gitlab"]
 	path = kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab/Gitlab
-	url = https://gitlab.com/NguyenTuKien/Tuan_4_Gitlab.git
+	url = git@gitlab.com:NguyenTuKien/Tuan_4_Gitlab.git
