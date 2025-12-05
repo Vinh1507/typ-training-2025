@@ -1,0 +1,214 @@
+.profile-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  margin: 0;
+  min-height: 100vh;
+
+  // HEADER
+  .profile-header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      object-fit: cover;
+    }
+
+    h1 {
+      margin: 15px 0 5px;
+      font-size: 26px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+  }
+
+  // MAIN CONTENT
+  .profile-main {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    section {
+      margin-bottom: 25px;
+
+      h2 {
+        border-left: 4px solid #4a90e2;
+        padding-left: 10px;
+        color: #4a90e2;
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        padding-left: 20px;
+        li {
+          margin-bottom: 5px;
+        }
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+
+        th,
+        td {
+          border: 1px solid #ddd;
+          padding: 8px 10px;
+          text-align: left;
+        }
+
+        th {
+          background: #f0f4f8;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input,
+        textarea,
+        button {
+          padding: 10px;
+          font-size: 15px;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+          outline: none;
+        }
+
+        textarea {
+          min-height: 100px;
+          resize: vertical;
+        }
+
+        button {
+          background-color: #4a90e2;
+          color: white;
+          border: none;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: #357ab8;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    color: #555;
+    font-size: 14px;
+    background: #f0f4f8;
+    margin-top: 40px;
+  }
+
+  /* 🌐 RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .profile-header {
+      padding: 20px 5px;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .profile-main {
+      width: 90%;
+      padding: 15px;
+
+      section {
+        h2 {
+          font-size: 18px;
+        }
+
+        p,
+        li {
+          font-size: 14px;
+        }
+
+        table {
+          font-size: 14px;
+
+          th,
+          td {
+            padding: 6px;
+          }
+        }
+
+        form {
+          input,
+          textarea,
+          button {
+            font-size: 14px;
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profile-header {
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .profile-main {
+      width: 95%;
+      margin: 20px auto;
+      padding: 12px;
+
+      section {
+        h2 {
+          font-size: 16px;
+        }
+
+        p,
+        li {
+          font-size: 13px;
+        }
+
+        table {
+          font-size: 13px;
+        }
+      }
+    }
+
+    footer {
+      font-size: 12px;
+    }
+  }
+}
