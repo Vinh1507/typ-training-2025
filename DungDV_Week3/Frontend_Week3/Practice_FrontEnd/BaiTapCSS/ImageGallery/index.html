@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4: Image Gallery với CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="gallery-header">
+            <h1>Image Gallery với CSS Grid</h1>
+            <p>Các layout khác nhau sử dụng CSS Grid</p>
+        </header>
+
+        <section class="gallery-section">
+            <h2>1. Basic Grid Gallery</h2>
+            <div class="gallery gallery-basic">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500" alt="Mountain">
+                    <div class="overlay">
+                        <h3>Mountain View</h3>
+                        <p>Beautiful landscape</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=500" alt="Beach">
+                    <div class="overlay">
+                        <h3>Beach Sunset</h3>
+                        <p>Peaceful ocean</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500" alt="Nature">
+                    <div class="overlay">
+                        <h3>Forest Path</h3>
+                        <p>Green nature</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500" alt="Lake">
+                    <div class="overlay">
+                        <h3>Lake View</h3>
+                        <p>Calm waters</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" alt="Field">
+                    <div class="overlay">
+                        <h3>Green Field</h3>
+                        <p>Open meadow</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500" alt="Valley">
+                    <div class="overlay">
+                        <h3>Valley View</h3>
+                        <p>Mountain valley</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>2. Masonry Grid Layout</h2>
+            <div class="gallery gallery-masonry">
+                <div class="gallery-item tall">
+                    <img src="https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?w=500" alt="Forest">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500" alt="Cloud">
+                </div>
+                <div class="gallery-item wide">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500" alt="Sunset">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=500" alt="Bird">
+                </div>
+                <div class="gallery-item big">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500" alt="Peak">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500" alt="Stars">
+                </div>
+                <div class="gallery-item tall">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=500" alt="Tree">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?w=500" alt="Flower">
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>3. Featured Image Layout</h2>
+            <div class="gallery gallery-featured">
+                <div class="gallery-item featured">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" alt="Featured">
+                    <div class="overlay">
+                        <h3>Featured Image</h3>
+                        <p>Main highlight photo</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=500" alt="Image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500" alt="Image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500" alt="Image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" alt="Image 4">
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>4. Pinterest Style Grid</h2>
+            <div class="gallery gallery-pinterest">
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300" alt="Pin 1">
+                    <div class="pin-info">
+                        <h4>Mountain Adventure</h4>
+                        <p>Explore the peaks</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=400&h=500" alt="Pin 2">
+                    <div class="pin-info">
+                        <h4>Ocean Waves</h4>
+                        <p>Beach vibes</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250" alt="Pin 3">
+                    <div class="pin-info">
+                        <h4>Forest Trail</h4>
+                        <p>Nature walks</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=400" alt="Pin 4">
+                    <div class="pin-info">
+                        <h4>Lake Reflection</h4>
+                        <p>Mirror image</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=350" alt="Pin 5">
+                    <div class="pin-info">
+                        <h4>Open Fields</h4>
+                        <p>Freedom space</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=400&h=450" alt="Pin 6">
+                    <div class="pin-info">
+                        <h4>Mountain Valley</h4>
+                        <p>Hidden gem</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400&h=280" alt="Pin 7">
+                    <div class="pin-info">
+                        <h4>Starry Night</h4>
+                        <p>Cosmic beauty</p>
+                    </div>
+                </div>
+                <div class="pin-item">
+                    <img src="https://images.unsplash.com/photo-1465146633011-14f8e0781093?w=400&h=380" alt="Pin 8">
+                    <div class="pin-info">
+                        <h4>Wildflowers</h4>
+                        <p>Natural colors</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
