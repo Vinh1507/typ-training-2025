@@ -1,0 +1,301 @@
+/* ===============================
+   GLOBAL STYLES
+================================= */
+body {
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+section, header, footer {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.t-h4-color {
+  color: #332811;
+}
+
+/* ===============================
+   HEADER
+================================= */
+header {
+  background: linear-gradient(135deg, #FFD478, #80796A);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+header:hover {
+  background: linear-gradient(135deg, #FFE39E, #9B8F7B);
+}
+
+header h1 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header p.lead {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+header .nav-link {
+  color: white;
+  font-weight: 500;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+header .nav-link:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+#hero {
+  background-color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+  animation-delay: 0.1s;
+}
+
+#hero img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #80796A;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+#hero img:hover {
+  transform: scale(1.05);
+}
+
+#hero .btn {
+  background-color: #80796A;
+  border: none;
+  transition: background 0.3s, color 0.3s;
+  color: #fff;
+  font-weight: 500;
+}
+
+#hero .btn:hover {
+  background-color: #FFD478;
+  color: #332811;
+}
+
+/* ===============================
+   SKILLS SECTION
+================================= */
+#skills {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+#skills h2 {
+  font-weight: 700;
+  color: #332811;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+}
+
+#skills .card {
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding-top: 25px;
+}
+
+#skills .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(128, 121, 106, 0.25);
+  background-color: #FFF8E7;
+}
+
+#skills .card i, #skills .card svg {
+  color: #80796A;
+  transition: color 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+}
+
+#skills .card:hover i, #skills .card:hover svg {
+  color: #FFD478;
+  transform: scale(1.15);
+}
+
+#skills .card-title {
+  color: #332811;
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 0.3px;
+}
+
+#skills .card-text {
+  color: #555;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ===============================
+   PROJECTS SECTION
+================================= */
+#projects {
+  padding: 70px 0;
+  background-color: #f6f6f6;
+  animation-delay: 0.3s;
+}
+
+#projects .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#projects .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#projects img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+#projects img:hover {
+  transform: scale(1.05);
+}
+
+#projects .card-body h5 {
+  color: #332811;
+  font-weight: 600;
+}
+
+#projects .btn {
+  background-color: #80796A;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+}
+
+#projects .btn:hover {
+  background-color: #FFD478;
+  color: #332811;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   CONTACT SECTION
+================================= */
+#contact {
+  padding: 70px 0;
+  animation-delay: 0.4s;
+  background-color: #fff;
+}
+
+#contact h2 {
+  color: #332811;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+#contact form input, #contact form textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+#contact form input:focus, #contact form textarea:focus {
+  border-color: #80796A !important;
+  box-shadow: 0 0 5px rgba(128, 121, 106, 0.4) !important;
+  outline: none;
+}
+
+#contact form button, #contact form .btn {
+  background-color: #80796A !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#contact form button:hover, #contact form .btn:hover {
+  background-color: #FFD478 !important;
+  color: #332811 !important;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+footer {
+  background: #80796A;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: background 0.5s;
+  animation-delay: 0.5s;
+}
+
+footer:hover {
+  background: #6e6659;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  #hero img {
+    width: 130px;
+    height: 130px;
+  }
+
+  form.w-75 {
+    width: 100% !important;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  #skills h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* ===============================
+   ANIMATION
+================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
