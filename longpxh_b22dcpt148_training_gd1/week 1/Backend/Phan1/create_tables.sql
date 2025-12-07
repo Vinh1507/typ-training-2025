@@ -1,0 +1,36 @@
+
+-- Tạo bảng
+
+CREATE TABLE khoa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    MaKhoa VARCHAR(255) NOT NULL UNIQUE,
+    TenKhoa VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE sinhvien (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    MaSV VARCHAR(255) NOT NULL UNIQUE,
+    HoTen VARCHAR(255),
+    NgaySinh DATE,
+    GioiTinh VARCHAR(255),
+    Email VARCHAR(255),
+    MaKhoa VARCHAR(255),
+    FOREIGN KEY (MaKhoa) REFERENCES khoa(MaKhoa)
+);
+
+CREATE TABLE monhoc (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    MaMonHoc VARCHAR(255) NOT NULL UNIQUE,
+    TenMonHoc VARCHAR(255),
+    SoTinChi INT
+);
+
+
+CREATE TABLE ketqua (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    MaSV VARCHAR(255),
+    MaMonHoc VARCHAR(255),
+    Diem DECIMAL(3,1),
+    FOREIGN KEY (MaSV) REFERENCES sinhvien(MaSV),
+    FOREIGN KEY (MaMonHoc) REFERENCES monhoc(MaMonHoc)
+);

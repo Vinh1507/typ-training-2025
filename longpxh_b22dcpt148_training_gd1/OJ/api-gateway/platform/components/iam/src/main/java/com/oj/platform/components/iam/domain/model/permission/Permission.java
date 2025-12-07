@@ -1,0 +1,28 @@
+package com.oj.platform.components.iam.domain.model.permission;
+
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.OffsetDateTime;
+
+@Getter
+@Setter
+public class Permission {
+    private final Long id;
+    private final String name;
+    private final String description;
+    private final OffsetDateTime createdAt;
+    private final OffsetDateTime updatedAt;
+
+    public Permission(Long id, String name, String description, OffsetDateTime createdAt, OffsetDateTime updatedAt) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public String getId() {
+        return id != null ? id.toString() : null;
+    }
+}

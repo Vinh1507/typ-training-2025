@@ -1,0 +1,12 @@
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.*
+
+# Node
+node_modules/
+.next/
+dist/
