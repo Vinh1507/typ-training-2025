@@ -1,0 +1,209 @@
+image: docker:latest
+
+variables:
+  TAG: $CI_COMMIT_REF_SLUG 
+
+stages:
+  - build
+  - test
+  - scan
+  - deploy
+  - rollback
+  - notify
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+build_job:
+  stage: build
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_DRIVER: overlay2
+  before_script: 
+    - docker info
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - docker compose build
+    - docker compose push
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+
+unit_test_coverage:
+  stage: test
+  image: maven:3.9.6-eclipse-temurin-21-alpine
+  script:
+    - cd StemHub
+    - mvn test 
+    - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, " instructions covered"; print 100*covered/instructions "% covered" }' target/site/jacoco/jacoco.csv
+  coverage: '/(\d+\.?\d*)% covered/'
+  artifacts:
+    when: always
+    reports:
+      junit: StemHub/target/surefire-reports/TEST-*.xml
+      coverage_report:
+        coverage_format: jacoco
+        path: StemHub/target/site/jacoco/jacoco.xml
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+
+test_job:
+  stage: test
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_DRIVER: overlay2
+  before_script: 
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - cp "$ENV_FILE" .env
+    - docker compose pull
+    - docker compose up -d
+    - sleep 15
+    - docker compose ps
+    - docker compose down
+  needs: ["build_job"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+
+security_scan:
+  stage: scan
+  image: 
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  variables:
+    TRIVY_USERNAME: "$CI_REGISTRY_USER"
+    TRIVY_PASSWORD: "$CI_REGISTRY_PASSWORD"
+    TRIVY_AUTH_URL: "$CI_REGISTRY"
+    TRIVY_NO_PROGRESS: "true"
+  script:
+    - trivy fs --severity HIGH,CRITICAL --exit-code 0 --no-progress . 
+    - trivy image --severity HIGH,CRITICAL --exit-code 0 --no-progress "$CI_REGISTRY_IMAGE/stemhub:$TAG"
+  allow_failure: true
+  needs: ["build_job"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_TAG
+
+deploy_staging_job: 
+  stage: deploy
+  tags: ["self-hosted"]
+  before_script: 
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+    - cp "$ENV_FILE" .env && echo "" >> .env
+    - export TAG=$CI_COMMIT_REF_SLUG
+  script:
+    - mkdir -p StemHub/
+    - cp docker-compose.yml .env StemHub/
+    - cd StemHub/
+    - docker compose pull 
+    - docker rm -f stemhub mysql || true
+    - docker compose down || true
+    - docker compose up -d --remove-orphans
+    - docker system prune -f 
+  needs: ["test_job", "security_scan", "unit_test_coverage"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+      when: always
+
+deploy_production_job:
+  stage: deploy
+  tags: ["self-hosted"]
+  before_script:
+    - cp "$SSH_KEY" gitlab_ci_cd.pem && chmod 600 gitlab_ci_cd.pem
+    - cp "$ENV_FILE" .env && echo "" >> .env
+    - echo "TAG=$CI_COMMIT_REF_SLUG" >> .env
+    - echo "CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE" >> .env
+  script:
+    - ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "mkdir -p StemHub"
+    - scp -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem docker-compose.yml .env $DEPLOY_USER@$DEPLOY_HOST:StemHub/
+    - |
+      ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "
+          cd StemHub/ &&
+
+          CURRENT_ID=\$(docker inspect --format='{{.Image}}' stemhub 2>/dev/null || true) &&
+          
+          if [ ! -z \"\$CURRENT_ID\" ]; then
+             docker tag \$CURRENT_ID $CI_REGISTRY_IMAGE/stemhub:backup || true;
+          fi &&
+
+          # Deploy Mới
+          docker login -u '$CI_REGISTRY_USER' -p '$CI_REGISTRY_PASSWORD' '$CI_REGISTRY' &&
+          export TAG=$CI_COMMIT_REF_SLUG &&
+          export CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE &&
+          
+          docker compose pull && 
+          # [ĐÃ SỬA] Xóa tên ngắn gọn
+          docker rm -f stemhub mysql || true &&
+          docker compose down || true &&
+          docker compose up -d --remove-orphans --no-build &&
+          docker system prune -f &&
+
+          sleep 15 &&
+          if docker ps | grep -w \"stemhub\" | grep -q \"Up\"; then
+              echo '✅ Deploy Success!';
+          else
+              exit 1;
+          fi
+        "
+  needs: ["test_job", "security_scan", "unit_test_coverage"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: manual
+    - if: $CI_COMMIT_TAG
+      when: always
+
+rollback_job:
+  stage: rollback
+  tags: ["self-hosted"]
+  before_script:
+    - cp "$SSH_KEY" gitlab_ci_cd.pem && chmod 600 gitlab_ci_cd.pem
+  script:
+    - |
+      ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "
+          cd StemHub/ &&
+
+          if [[ \"\$(docker images -q stemhub:backup 2> /dev/null)\" == \"\" ]]; then
+            exit 1;
+          fi &&
+
+          export TAG=backup &&
+          docker rm -f stemhub mysql || true &&
+          docker compose down || true &&
+          docker compose up -d --remove-orphans --no-build &&
+        "
+  needs: ["deploy_production_job"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+      when: on_failure
+
+notify_success:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -H "Content-Type: application/json" \
+      -d "{\"content\": \"✅ **DEPLOY SUCCESS!** 🚀\\n**Project:** $CI_PROJECT_NAME\\n**Branch:** $CI_COMMIT_REF_SLUG\\n**User:** $GITLAB_USER_NAME\\n**Status:** 🟢 Thành công\\n👉 [Xem Pipeline]($CI_PIPELINE_URL)\"}" \
+      $DISCORD_WEBHOOK_URL
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "dev"
+      when: on_success
+
+notify_fail:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -H "Content-Type: application/json" \
+      -d "{\"content\": \"🚨 **PIPELINE FAILED!** 💥\\n**Project:** $CI_PROJECT_NAME\\n**Branch:** $CI_COMMIT_REF_SLUG\\n**User:** $GITLAB_USER_NAME\\n**Status:** 🔴 Thất bại\\n👉 [Xem lỗi tại đây]($CI_PIPELINE_URL)\"}" \
+      $DISCORD_WEBHOOK_URL
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "dev"
+      when: on_failure

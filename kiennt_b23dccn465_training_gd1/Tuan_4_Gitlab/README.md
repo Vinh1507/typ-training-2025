@@ -24,18 +24,16 @@
 
 ## 3. Deploy Production và Nâng cao
 - [x] Thiết lập deploy thủ công (manual) lên **PRODUCTION**.
-- [ ] Sử dụng Branch Rule:
+- [x] Sử dụng Branch Rule:
   - `develop` → deploy STAGING
   - `main` → deploy PRODUCTION
-- [ ] Thêm job scan bảo mật:
+- [x] Thêm job scan bảo mật:
   - Dependency scan
   - Container image scan
-- [ ] Thêm Code Quality hoặc Coverage Report.
-- [ ] Thêm thông báo pipeline:
-  - Slack
-  - Email
-  - Teams
+- [x] Thêm Code Quality hoặc Coverage Report.
+- Thêm thông báo pipeline:
+  - [ ] Slack
+  - [ ] Email
+  - [ ] Teams
 - [ ] Triển khai Blue/Green hoặc Canary (nếu có).
 - [ ] Thiết lập Auto Rollback nếu deploy thất bại.
-
-> **Note:** Tất cả luồng CI/CD cần được thực hiện xây dựng mô phỏng hệ thống thật, đảm bảo bảo mật và tính sẵn sàng cao (HA).
