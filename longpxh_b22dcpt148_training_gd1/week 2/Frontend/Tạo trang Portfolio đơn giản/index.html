@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">Loading...</div>
+    </div>    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Portfolio</h2>
+            </div>            <div class="mobile-menu">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Trang chủ</a></li>
+                    <li><a href="#about" class="nav-link">Giới thiệu</a></li>
+                    <li><a href="#skills" class="nav-link">Kỹ năng</a></li>
+                    <li><a href="#projects" class="nav-link">Dự án</a></li>
+                    <li><a href="#contact" class="nav-link">Liên hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Xin chào, tôi là <br><span class="highlight">Phạm Xuân Hoàng Long</span></h1>
+                <p class="hero-subtitle">Sinh viên - Đam mê sáng tạo & học hỏi</p>
+                <p class="hero-description">Tôi là một lập trình viên trẻ yêu thích công nghệ và thiết kế web.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Xem dự án</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../Styling lại trang Profile từ tuần 1/ava.jpg" alt="ảnh tôi">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Giới thiệu</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Xin chào! Tôi là một lập trình viên trẻ yêu thích công nghệ và thiết kế web.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <strong>Học vấn:</strong> Học viện Công nghệ Bưu chính Viễn thông
+                        </div>
+                        <div class="info-item">
+                            <strong>Ngành học:</strong> Công nghệ đa phương tiện
+                        </div>
+                        <div class="info-item">
+                            <strong>Năm học:</strong> 2022 - nay
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Kỹ năng & Sở thích</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML/CSS</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>ReactJS</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class='fab fa-java'></i>
+                    </div>
+                    <h3>Java</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Spring Boot</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-guitar"></i>
+                    </div>
+                    <h3>Nghe nhạc</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Đọc sách</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Dự án</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                         <img
+                            src="https://img.freepik.com/free-vector/laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.jpg?semt=ais_hybrid&w=740&q=80">
+                        <div class="project-overlay">
+                            <a href="https://github.com/hoanglong2534/html-css-softwareM4" target="_blank" class="btn btn-secondary">Mã nguồn</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Software M4</h3>
+                        <p>Trang web cá nhân được xây dựng với HTML, CSS</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img
+                            src="https://www.orientsoftware.com/Themes/Content/Images/blog/2022-12-07/top-programming-languages-2023.jpg">
+                        <div class="project-overlay">
+                            <a href="https://github.com/hoanglong2534/springMVC-jsp-estate" target="_blank" class="btn btn-secondary">Mã nguồn</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Estate web</h3>
+                        <p>Trang web bất động sản</p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring MVC</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                         <img
+                            src="https://media.bitcot.com/wp-content/uploads/2023/06/best-web-development-languages.webp">
+                        <div class="project-overlay">
+                            <a href="https://github.com/hoanglong2534/simple-spring-AI" target="_blank" class="btn btn-secondary">Mã nguồn</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Simple Spring AI</h3>
+                        <p>thử nghiệm tích hợp chatbox với Spring AI</p>
+                        <div class="project-tags">
+                            <span class="tag">Spring AI</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Liên hệ</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Thông tin liên hệ</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>phamxuanhoanglong@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>0988226000</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Hà Nội, Việt Nam</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/hoanglong2534" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/gnolggnaoh/?locale=vi_VN"  target="_blank"  class="social-link"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Chủ đề:</label>
+                        <input type="text" id="subject" name="subject" placeholder="Nhập chủ đề" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tin nhắn:</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Nhập nội dung liên hệ..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        Gửi liên hệ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>    <footer>
+        <p>&copy; 2025 Phạm Xuân Hoàng Long | Do not reup.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
