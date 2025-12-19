@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="org.eclipse.buildship:3.1.10.v20240802-1314"/>
+		<item value="org.eclipse.egit.gitflow.feature:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.egit:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.epp.mpc:1.13.0.v20250816-1241"/>
+		<item value="org.eclipse.help:2.3.2300.v20250905-0730"/>
+		<item value="org.eclipse.jdt:3.20.300.v20250905-1111"/>
+		<item value="org.eclipse.jgit.gpg.bc:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.jgit.http.apache:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.jgit.lfs:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.jgit.ssh.apache:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.jgit:7.4.0.202509020913-r"/>
+		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.39.0.v202508180233"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:21.0.8.v20250724-1412"/>
+		<item value="org.eclipse.m2e.feature:2.9.1.20250811-2022"/>
+		<item value="org.eclipse.m2e.logback.feature:2.7.100.20250418-1315"/>
+		<item value="org.eclipse.m2e.wtp.feature:1.6.1.20231024-1618"/>
+		<item value="org.eclipse.mylyn.wikitext.feature:4.8.0.v20250823-0814"/>
+		<item value="org.eclipse.pde:3.16.400.v20250905-0730"/>
+		<item value="org.eclipse.platform:4.37.0.v20250905-0730"/>
+		<item value="org.eclipse.rcp:4.37.0.v20250905-0730"/>
+		<item value="org.eclipse.wst.common.fproj:3.39.0.v202508180233"/>
+		<item value="org.jboss.tools.m2e.wro4j.feature:1.2.1.202301111328"/>
+		<item value="org.sonatype.m2e.egit.feature:0.17.0.202209271423"/>
+	</list>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\TYP-2025\giangnt_b23dccn259_training_gd1\week2\TYP"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="77"/>
+			<item key="DIALOG_Y_ORIGIN" value="142"/>
+			<item key="DIALOG_WIDTH" value="885"/>
+			<item key="DIALOG_HEIGHT" value="626"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>
