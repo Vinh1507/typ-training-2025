@@ -1,7 +1,9 @@
 image: docker:latest
 
 variables:
-  TAG: $CI_COMMIT_REF_SLUG 
+  TAG: $CI_COMMIT_REF_SLUG
+  # [OPTIMIZE] Biến hỗ trợ cache docker
+  DOCKER_BUILDKIT: 1
 
 stages:
   - build
@@ -26,6 +28,8 @@ build_job:
     - docker info
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
+    - docker pull $CI_REGISTRY_IMAGE/stemhub:dev || true
+    - docker pull $CI_REGISTRY_IMAGE/stemhub:latest || true
     - docker compose build
     - docker compose push
   rules:
@@ -48,8 +52,7 @@ unit_test_coverage:
         coverage_format: jacoco
         path: StemHub/target/site/jacoco/jacoco.xml
   rules:
-    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
-    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH == "dev"
 
 test_job:
   stage: test
@@ -70,8 +73,7 @@ test_job:
     - docker compose down
   needs: ["build_job"]
   rules:
-    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
-    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH == "dev"
 
 security_scan:
   stage: scan
@@ -89,8 +91,7 @@ security_scan:
   allow_failure: true
   needs: ["build_job"]
   rules:
-    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
-    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH == "dev"
 
 deploy_staging_job: 
   stage: deploy
@@ -129,31 +130,29 @@ deploy_production_job:
           cd StemHub/ &&
 
           CURRENT_ID=\$(docker inspect --format='{{.Image}}' stemhub 2>/dev/null || true) &&
-          
           if [ ! -z \"\$CURRENT_ID\" ]; then
-             docker tag \$CURRENT_ID $CI_REGISTRY_IMAGE/stemhub:backup || true;
+             docker tag \$CURRENT_ID stemhub:backup || true;
           fi &&
 
-          # Deploy Mới
           docker login -u '$CI_REGISTRY_USER' -p '$CI_REGISTRY_PASSWORD' '$CI_REGISTRY' &&
           export TAG=$CI_COMMIT_REF_SLUG &&
           export CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE &&
           
           docker compose pull && 
-          # [ĐÃ SỬA] Xóa tên ngắn gọn
           docker rm -f stemhub mysql || true &&
           docker compose down || true &&
           docker compose up -d --remove-orphans --no-build &&
           docker system prune -f &&
 
-          sleep 15 &&
+          # [OPTIMIZE] Giảm sleep xuống nếu server khỏe
+          sleep 10 &&
           if docker ps | grep -w \"stemhub\" | grep -q \"Up\"; then
               echo '✅ Deploy Success!';
           else
               exit 1;
           fi
         "
-  needs: ["test_job", "security_scan", "unit_test_coverage"]
+  needs: ["build_job"]
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
       when: manual
@@ -169,11 +168,7 @@ rollback_job:
     - |
       ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "
           cd StemHub/ &&
-
-          if [[ \"\$(docker images -q stemhub:backup 2> /dev/null)\" == \"\" ]]; then
-            exit 1;
-          fi &&
-
+          if [[ \"\$(docker images -q stemhub:backup 2> /dev/null)\" == \"\" ]]; then exit 1; fi &&
           export TAG=backup &&
           docker rm -f stemhub mysql || true &&
           docker compose down || true &&

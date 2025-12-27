@@ -32,8 +32,8 @@
   - Container image scan
 - [x] Thêm Code Quality hoặc Coverage Report.
 - Thêm thông báo pipeline:
-  - [ ] Slack
+  - [x] Slack
   - [ ] Email
   - [ ] Teams
 - [ ] Triển khai Blue/Green hoặc Canary (nếu có).
-- [ ] Thiết lập Auto Rollback nếu deploy thất bại.
+- [x] Thiết lập Auto Rollback nếu deploy thất bại.
