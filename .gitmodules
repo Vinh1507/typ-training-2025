@@ -1,6 +1,0 @@
-[submodule "Docker"]
-	path = kiennt_b23dccn465_training_gd1/Tuan_3_Docker/Docker
-	url = git@github.com:NguyenTuKien/StemHub.git
-[submodule "Gitlab"]
-	path = kiennt_b23dccn465_training_gd1/Tuan_4_Gitlab
-	url = git@gitlab.com:NguyenTuKien/Tuan_4_Gitlab.git
