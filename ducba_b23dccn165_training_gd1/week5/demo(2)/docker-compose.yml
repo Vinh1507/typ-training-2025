@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    container_name: redis-demo
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-demo
+    ports:
+      - "5672:5672"
+      - "15672:15672"

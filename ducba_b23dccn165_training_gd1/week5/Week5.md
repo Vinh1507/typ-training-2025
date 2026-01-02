@@ -47,3 +47,92 @@ Caching - Bộ nhớ đệm: là kỹ thuật lưu trữ bản sao của dữ li
 -   **Cache Invalidation**: Chủ động xóa cache `user:{id}` khi cập nhật hoặc xóa user.
 -   **Cache Penetration**: Đã xử lý bằng cách cache giá trị null (ví dụ string `"USER_NOT_FOUND"`) với TTL ngắn (1 phút) nếu tìm trong DB không thấy, tránh tấn công vào DB với các ID không tồn tại.
 -   **Cache Avalanche**: Để tránh, nên dùng TTL ngẫu nhiên (Random jitter) cho các key cache hàng loạt (chưa implement trong demo này, nhưng nên lưu ý).
+
+## 3. Chi tiết thực hiện & Kết quả:
+### 3.1 Chi tiết thực hiện
+#### Thiết lập môi trường
+Em đã cấu hình docker-compose.yml để chạy redis server dưới dạng 1 container
+
+-> Tác dụng: chỉ cần chạy = lệnh `docker-compose up -d` chứ không cần cài đặt thủ công trên máy
+
+#### Thêm thư viện Dependencies trong pom.xml
+- `spring-boot-starter-data-redis` 
+
+-> Tác dụng: Cung cấp các công cụ để ứng dụng SpringBoot kết nối & làm việc với Redis.
+
+#### Cấu hình kết nối trong RedisConfig.java (Configuration)
+
+- File cấu hình này dùng để định nghĩa cách ứng dụng lưu dữ liệu vào Redis.
+
+-> Tác dụng: 
+
+    - Tạo Bean RedisTemplate để định nghĩa cách lưu dữ liệu vào Redis.
+
+    - Cấu hình key để lưu dưới dạng chuỗi (String) và value dưới dạng JSON.
+
+    --> Giúp Redis dể đọc và dễ chuyển đổi ngược lại thành Object khi cần.
+
+#### Tạo Service cho Redis
+Thay vì gọi trực tiếp RedisTemplate, emd tạo RedisService để đóng gói các thao tác thành vào 1 class riêng.
+
+-> Tác dụng: Cung cấp các hàm đơn giản như:
+
+    - set() dùng để lưu dữ liệu
+
+    - setWithTTL() : lưu dữ liệu có hẹn giờ tự xóa (Time to Live)
+
+    - get() : lấy dữ liệu
+
+    - delete() : xóa dữ liệu
+
+
+#### Tích hợp:
+- Sử dụng mô hình Cache Aside
+
+- Luồng xử lý cơ bản:
+    - Lấy User bằng handleGetUserById():
+        + Kiểm tra trong Redis(Cache) trước
+        + Nếu có (sẽ là TH hit) -> trả về
+        + Nếu không (sẽ là TH miss) -> query DB -> lưu vào Redis cho lần sau nếu có lấy thì sẽ lấy nhanh hơn -> trả về
+    - Lưu/Xóa User sử dụng handleSaveUser/handleDeleteUser:
+        + Khi dữ liệu gốc thay đổi, mình sẽ phải dùng RedisService gọi đến phương thức delete() để xóa cache cũ. Điều này đảm bảo người dùng không bị nhìn thấy dữ liệu cũ sai lệch --> đảm bảo tính nhất quán
+
+### 3.2 Kết quả demo
+#### Do cần chạy Redis server nên em đã dùng docker-compose để chạy Redis server dưới dạng container,trước khi test các API thì cần đăng nhập để lấy token 
+- Method : POST
+- URL : http://localhost:8080/api/auth/login
+- Body : 
+```json
+{
+    "username": "buianhduc1@example.com",
+    "password": "123456789"
+}
+```
+- Lấy được accessToken trả về
+
+![alt text](image-2.png)
+
+#### Test Cache User có Token 
+Chèn Token vào Bearer Token và paste Token vừa lưu bên trên vào
+
+- Test với ID tồn tại = 3
+![alt text](image-4.png)
+![alt text](image-5.png)
+
+- Test thử với ID rác = 999
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+#### Test Leaderboard
+
+![alt text](image-8.png)
+![alt text](image-9.png)
+
+- Làm tương tự với Player2,3,4,5 
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
+![alt text](image-13.png)
+
+=> sau đó gọi test API leaderboard `http://localhost:8080/api/leaderboard/top` ra được như sau:
+![alt text](image-14.png)
