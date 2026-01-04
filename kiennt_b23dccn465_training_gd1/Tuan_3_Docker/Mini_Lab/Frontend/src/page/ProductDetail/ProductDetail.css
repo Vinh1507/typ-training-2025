@@ -1,0 +1,429 @@
+/* Layout tổng */
+.pd-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.pd-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.pd-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 520px;
+  overflow: auto;
+}
+
+.pd-thumb {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+}
+
+.pd-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pd-thumb.active {
+  outline: 2px solid #111;
+}
+
+.pd-main {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.pd-main img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+}
+
+/* Variation dots */
+.pd-variations {
+  display: grid;
+  gap: 8px;
+}
+
+.pd-variation-color {
+  font-weight: 600;
+}
+
+.pd-variation-dots {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.var-dot-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.var-tooltip {
+  position: absolute;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+}
+
+.var-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+}
+
+.var-dot-wrap:hover .var-tooltip {
+  opacity: 1;
+}
+
+.var-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5e7eb;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.var-dot.active {
+  border-color: #111;
+  box-shadow: 0 0 0 2px #1110;
+}
+
+/* Info */
+.pd-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.pd-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.pd-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 10px 0 16px;
+}
+
+.pd-price .old {
+  color: #999;
+  text-decoration: line-through;
+}
+
+.pd-price .now {
+  color: #e11d48;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pd-price .normal {
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.pd-badge {
+  background: #fde68a;
+  color: #7c2d12;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+
+.pd-options {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.opt-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.chip.active {
+  border-color: #111;
+  box-shadow: 0 0 0 2px #1110;
+}
+
+.color-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.color-dot.active {
+  outline: 2px solid #111;
+}
+
+.qty {
+  display: inline-flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.qty button {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.qty input {
+  width: 48px;
+  text-align: center;
+  border: 0;
+}
+
+.pd-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #fff;
+  color: #111;
+}
+
+.pd-note {
+  margin-top: 16px;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .pd-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-main img {
+    height: 420px;
+  }
+}
+
+/* Skeleton Loading Styles */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton-image {
+  background: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+
+.skeleton-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0px,
+    #f8f8f8 40px,
+    #f0f0f0 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-line {
+  height: 20px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0px,
+    #f8f8f8 40px,
+    #f0f0f0 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+.skeleton-meta {
+  width: 120px;
+  height: 14px;
+}
+
+.skeleton-title {
+  width: 80%;
+  height: 32px;
+}
+
+.skeleton-rating {
+  width: 150px;
+  height: 18px;
+}
+
+.skeleton-price {
+  width: 200px;
+  height: 28px;
+}
+
+.skeleton-description {
+  width: 100%;
+  height: 16px;
+}
+
+.skeleton-description-short {
+  width: 70%;
+  height: 16px;
+}
+
+.skeleton-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.skeleton-option-label {
+  width: 140px;
+  height: 18px;
+}
+
+.skeleton-dots {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.skeleton-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0px,
+    #f8f8f8 40px,
+    #f0f0f0 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-chips {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.skeleton-chip {
+  width: 60px;
+  height: 36px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0px,
+    #f8f8f8 40px,
+    #f0f0f0 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.skeleton-button {
+  flex: 1;
+  height: 48px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 0px,
+    #f8f8f8 40px,
+    #f0f0f0 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+.skeleton-button.secondary {
+  background: linear-gradient(
+    90deg,
+    #f8f8f8 0px,
+    #f0f0f0 40px,
+    #f8f8f8 80px
+  );
+  background-size: 200px 100%;
+}
+

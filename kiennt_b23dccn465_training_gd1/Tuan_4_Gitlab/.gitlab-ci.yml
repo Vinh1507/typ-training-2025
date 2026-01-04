@@ -2,8 +2,9 @@ image: docker:latest
 
 variables:
   TAG: $CI_COMMIT_REF_SLUG
-  # [OPTIMIZE] Biến hỗ trợ cache docker
   DOCKER_BUILDKIT: 1
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_DRIVER: overlay2
 
 stages:
   - build
@@ -22,18 +23,28 @@ build_job:
     - docker:dind
   variables:
     DOCKER_HOST: tcp://docker:2375
-    DOCKER_TLS_CERTDIR: ""
-    DOCKER_DRIVER: overlay2
   before_script: 
     - docker info
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
-    - docker pull $CI_REGISTRY_IMAGE/stemhub:dev || true
-    - docker pull $CI_REGISTRY_IMAGE/stemhub:latest || true
-    - docker compose build
-    - docker compose push
+    - |
+      if [ "$CI_COMMIT_BRANCH" == "main" ]; then
+        TAG="production"
+      elif [ "$CI_COMMIT_BRANCH" == "dev" ]; then
+        TAG="staging"
+      else
+        TAG="$CI_COMMIT_REF_SLUG"
+      fi
+      docker pull $CI_REGISTRY_IMAGE/stemhub:$TAG || true
+      docker compose build --build-arg TAG=$TAG
+      docker push $CI_REGISTRY_IMAGE/stemhub:$TAG
+  cache:
+    paths:
+      - .docker-cache/
+    key: docker-cache
   rules:
-    - if: $CI_COMMIT_BRANCH == "dev" || $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_BRANCH == "main"  
     - if: $CI_COMMIT_TAG
 
 unit_test_coverage:
@@ -41,16 +52,16 @@ unit_test_coverage:
   image: maven:3.9.6-eclipse-temurin-21-alpine
   script:
     - cd StemHub
-    - mvn test 
+    - mvn clean test
+    - mvn jacoco:report
     - awk -F"," '{ instructions += $4 + $5; covered += $5 } END { print covered, "/", instructions, " instructions covered"; print 100*covered/instructions "% covered" }' target/site/jacoco/jacoco.csv
   coverage: '/(\d+\.?\d*)% covered/'
   artifacts:
     when: always
     reports:
       junit: StemHub/target/surefire-reports/TEST-*.xml
-      coverage_report:
-        coverage_format: jacoco
-        path: StemHub/target/site/jacoco/jacoco.xml
+    paths:
+      - StemHub/target/site/jacoco/
   rules:
     - if: $CI_COMMIT_BRANCH == "dev"
 
@@ -60,20 +71,30 @@ test_job:
     - docker:dind
   variables:
     DOCKER_HOST: tcp://docker:2375
-    DOCKER_TLS_CERTDIR: ""
-    DOCKER_DRIVER: overlay2
   before_script: 
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   script:
-    - cp "$ENV_FILE" .env
+    - |
+      if [ -z "$ENV_FILE" ]; then
+        echo "ERROR: ENV_FILE variable is not set"
+        exit 1
+      fi
+      cp "$ENV_FILE" .env
     - docker compose pull
-    - docker compose up -d
-    - sleep 15
+    - docker compose up -d --wait
+    - sleep 10
     - docker compose ps
+    - curl -f http://localhost:8080/health 2>/dev/null || echo "Health check optional"
     - docker compose down
   needs: ["build_job"]
   rules:
     - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_TAG
+
+code_quality:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_TAG
 
 security_scan:
   stage: scan
@@ -92,35 +113,58 @@ security_scan:
   needs: ["build_job"]
   rules:
     - if: $CI_COMMIT_BRANCH == "dev"
+    - if: $CI_COMMIT_TAG
 
 deploy_staging_job: 
   stage: deploy
+  image: docker:latest
   tags: ["self-hosted"]
   before_script: 
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
     - cp "$ENV_FILE" .env && echo "" >> .env
     - export TAG=$CI_COMMIT_REF_SLUG
   script:
-    - mkdir -p StemHub/
-    - cp docker-compose.yml .env StemHub/
-    - cd StemHub/
-    - docker compose pull 
-    - docker rm -f stemhub mysql || true
-    - docker compose down || true
-    - docker compose up -d --remove-orphans
-    - docker system prune -f 
-  needs: ["test_job", "security_scan", "unit_test_coverage"]
+    - |
+      CURRENT_ID=$(docker inspect --format='{{.Image}}' stemhub 2>/dev/null || true)
+      if [ ! -z "$CURRENT_ID" ]; then
+          docker tag $CURRENT_ID stemhub:backup || true
+      fi
+
+      docker compose pull
+      docker rm -f stemhub mysql || true
+      docker compose down || true
+      docker compose up -d --remove-orphans --no-build
+      docker system prune -f 
+
+      # Health check với timeout
+      timeout=30
+      interval=5
+      for i in $(seq 1 $((timeout/interval))); do
+        if docker ps | grep -w "stemhub" | grep -q "Up"; then
+          if curl -f http://localhost:8080/health 2>/dev/null || true; then
+            echo '✅ Deploy Success!'
+            exit 0
+          fi
+        fi
+        sleep $interval
+      done
+      echo '❌ Deploy Failed - Container not healthy'
+      exit 1
+  needs: ["test_job", "unit_test_coverage"]
   rules:
     - if: $CI_COMMIT_BRANCH == "dev"
+      when: always
+    - if: $CI_COMMIT_TAG
       when: always
 
 deploy_production_job:
   stage: deploy
+  image: docker:latest
   tags: ["self-hosted"]
   before_script:
     - cp "$SSH_KEY" gitlab_ci_cd.pem && chmod 600 gitlab_ci_cd.pem
     - cp "$ENV_FILE" .env && echo "" >> .env
-    - echo "TAG=$CI_COMMIT_REF_SLUG" >> .env
+    - echo "TAG=production" >> .env 
     - echo "CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE" >> .env
   script:
     - ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "mkdir -p StemHub"
@@ -128,55 +172,47 @@ deploy_production_job:
     - |
       ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "
           cd StemHub/ &&
-
-          CURRENT_ID=\$(docker inspect --format='{{.Image}}' stemhub 2>/dev/null || true) &&
-          if [ ! -z \"\$CURRENT_ID\" ]; then
-             docker tag \$CURRENT_ID stemhub:backup || true;
-          fi &&
-
           docker login -u '$CI_REGISTRY_USER' -p '$CI_REGISTRY_PASSWORD' '$CI_REGISTRY' &&
-          export TAG=$CI_COMMIT_REF_SLUG &&
-          export CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE &&
           
-          docker compose pull && 
-          docker rm -f stemhub mysql || true &&
-          docker compose down || true &&
-          docker compose up -d --remove-orphans --no-build &&
-          docker system prune -f &&
-
-          # [OPTIMIZE] Giảm sleep xuống nếu server khỏe
-          sleep 10 &&
-          if docker ps | grep -w \"stemhub\" | grep -q \"Up\"; then
-              echo '✅ Deploy Success!';
-          else
-              exit 1;
-          fi
+          # Pull image với tag production (thay vì staging)
+          docker pull $CI_REGISTRY_IMAGE/stemhub:production &&
+          
+          docker-compose down --remove-orphans || true &&
+          docker-compose up -d --no-build &&
+          
+          docker image prune -f
         "
-  needs: ["build_job"]
+  needs: ["build_job"]  
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
       when: manual
-    - if: $CI_COMMIT_TAG
-      when: always
 
 rollback_job:
   stage: rollback
+  image: docker:latest
   tags: ["self-hosted"]
   before_script:
     - cp "$SSH_KEY" gitlab_ci_cd.pem && chmod 600 gitlab_ci_cd.pem
   script:
     - |
-      ssh -o StrictHostKeyChecking=no -i gitlab_ci_cd.pem $DEPLOY_USER@$DEPLOY_HOST "
-          cd StemHub/ &&
-          if [[ \"\$(docker images -q stemhub:backup 2> /dev/null)\" == \"\" ]]; then exit 1; fi &&
-          export TAG=backup &&
-          docker rm -f stemhub mysql || true &&
-          docker compose down || true &&
-          docker compose up -d --remove-orphans --no-build &&
-        "
-  needs: ["deploy_production_job"]
+      if [ -n "$ENV_FILE" ] && [ -f "$ENV_FILE" ]; then
+        cp "$ENV_FILE" .env && echo "" >> .env
+      fi
+
+      if [[ "$(docker images -q stemhub:backup 2> /dev/null)" == "" ]]; then 
+        echo "No backup image found!"
+        exit 1
+      fi
+      
+      export TAG=backup
+      docker rm -f stemhub mysql || true
+      docker compose down || true
+      docker compose up -d --remove-orphans --no-build
+  needs: ["deploy_staging_job"]
   rules:
-    - if: $CI_COMMIT_BRANCH == "main"
+    - if: $CI_COMMIT_BRANCH == "dev"
+      when: on_failure
+    - if: $CI_COMMIT_TAG
       when: on_failure
 
 notify_success:

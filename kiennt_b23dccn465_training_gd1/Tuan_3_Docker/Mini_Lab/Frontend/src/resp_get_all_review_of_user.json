@@ -1,0 +1,17 @@
+{
+    "message": "Lấy danh sách đánh giá của MỘT người dùng thành công",
+    "data": [
+        {
+            "comment_id": 1,
+            "comment": "Shop rất tốt, quá xịn, chất lượng tốt, giá cả phải chăng, giao hàng nhanh"
+        },
+        {
+            "comment_id": 2,
+            "comment": "Shop rất tệ, chất lượng kém, giá cả quá đắt, giao hàng chậm"
+        },
+        {
+            "comment_id": 3,
+            "comment": "Shop rất tệ, nhưng giá cả rẻ, giao hàng đúng hạn và đúng địa chỉ"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+/* Layout for admin page with left sidebar */
+.admin-page {
+    display: flex;
+    min-height: 100vh;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar {
+    flex: 0 0 220px;
+    border-right: 1px solid #e5e7eb;
+    padding: 12px;
+    background: #ffffff;
+}
+
+.admin-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-nav a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #374151;
+    text-decoration: none;
+}
+
+.admin-nav a:hover {
+    background: #f3f4f6;
+}
+
+.admin-nav a.active {
+    background: #111827;
+    color: #ffffff;
+}
+
+.admin-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 1800px;
+}
+

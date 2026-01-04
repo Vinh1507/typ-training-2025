@@ -1,0 +1,54 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    volumes:
+      - mysql-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost", "-u", "${MYSQL_USER}", "-p${MYSQL_PASSWORD}" ]
+      timeout: 10s
+      retries: 10
+      interval: 5s
+    networks:
+      - minilab
+
+  backend:
+    build: ./Backend
+    image: backend:1.0
+    container_name: backend
+    ports: ["8080:8080"]
+    volumes:
+      - ./Backend/.m2:/root/.m2
+      - ./Backend/logs:/app/logs
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      - SERVER_ADDRESS=0.0.0.0
+      - HOST=mysql
+      - PORT=3306
+      - DATABASE=${MYSQL_DATABASE}
+      - USERNAME=${MYSQL_USER}
+      - PASSWORD=${MYSQL_PASSWORD}
+    networks:
+      - minilab
+
+  frontend:
+    build: ./Frontend
+    image: frontend:1.0
+    container_name: frontend
+    ports: ["81:80"]
+    networks:
+      - minilab
+
+volumes:
+  mysql-data:
+
+networks:
+  minilab:
+    driver: bridge

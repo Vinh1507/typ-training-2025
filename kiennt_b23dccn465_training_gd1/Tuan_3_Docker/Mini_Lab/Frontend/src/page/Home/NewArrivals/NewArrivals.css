@@ -1,0 +1,106 @@
+.na-section { 
+	padding: 32px 0; 
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.na-title { 
+	text-align: center; 
+	font-size: 32px; 
+	font-weight: 700;
+	margin: 0 0 8px; 
+	color: #0f172a;
+}
+.na-desc { 
+	text-align: center; 
+	color: #64748b; 
+	margin: 0 0 32px; 
+	font-size: 16px;
+}
+.na-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	align-items: stretch; /* Đảm bảo tất cả card có cùng chiều cao */
+}
+
+.na-loading,
+.na-error,
+.na-empty {
+	text-align: center;
+	padding: 40px 20px;
+	color: #64748b;
+	font-size: 16px;
+}
+
+.na-error {
+	color: #ef4444;
+}
+
+.na-empty {
+	color: #94a3b8;
+	font-style: italic;
+}
+
+/* View More Button */
+.na-view-more-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 32px;
+	padding: 0 20px;
+}
+
+.na-view-more-btn {
+	background: #0f172a;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	padding: 12px 32px;
+	font-size: 16px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.na-view-more-btn:hover {
+	background: #1e293b;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.na-view-more-btn:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+	.na-grid { 
+		grid-template-columns: repeat(2, 1fr); 
+		gap: 20px;
+	}
+	.na-section {
+		padding: 24px 16px;
+	}
+}
+@media (max-width: 640px) {
+	.na-grid { 
+		grid-template-columns: 1fr; 
+		gap: 16px;
+	}
+	.na-title {
+		font-size: 24px;
+	}
+	.na-desc {
+		font-size: 14px;
+	}
+	.na-section {
+		padding: 20px 12px;
+	}
+	.na-view-more-container {
+		margin-top: 24px;
+	}
+	.na-view-more-btn {
+		padding: 10px 24px;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,23 @@
+{
+    "message": "Lấy danh sách đánh giá của một thương hiệu thành công",
+    "data": [
+        {
+            "comment_id": 1,
+            "user_fullName": "Nguyễn Văn A",
+            "user_id": 1,
+            "comment": "Shop rất tốt, quá xịn, chất lượng tốt, giá cả phải chăng, giao hàng nhanh"
+        },
+        {
+            "comment_id": 2,
+            "user_fullName": "Nguyễn Văn B",
+            "user_id": 2,
+            "comment": "Shop rất tệ, chất lượng kém, giá cả quá đắt, giao hàng chậm"
+        },
+        {
+            "comment_id": 3,
+            "user_fullName": "Nguyễn Văn C",
+            "user_id": 3,
+            "comment": "Shop rất tệ, nhưng giá cả rẻ, giao hàng đúng hạn và đúng địa chỉ"
+        }
+    ]
+}
