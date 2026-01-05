@@ -1,0 +1,297 @@
+/* Registration Page Specific Styles */
+
+/* Form Progress */
+.form-progress {
+    margin-bottom: 2rem;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: var(--primary-gradient);
+    border-radius: 2px;
+    width: 33.33%; /* 1/3 steps completed */
+    transition: width 0.3s ease;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    text-align: center;
+    color: #6c757d;
+    transition: var(--transition);
+}
+
+.step.active {
+    color: #006056; /* Thay thế #667eea */
+}
+
+.step.completed {
+    color: #198754; /* Màu xanh thành công vẫn giữ nguyên */
+}
+
+
+.step i {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+    color: #6c757d;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.step.active i {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.step.completed i {
+    background: #198754;
+    color: white;
+}
+
+.step span {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Password Strength */
+.password-strength {
+    margin-top: 0.75rem;
+}
+
+.strength-bar {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.strength-progress {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.strength-progress.weak {
+    width: 20%;
+    background: #dc3545;
+}
+
+.strength-progress.fair {
+    width: 40%;
+    background: #fd7e14;
+}
+
+.strength-progress.good {
+    width: 60%;
+    background: #ffc107;
+}
+
+.strength-progress.strong {
+    width: 80%;
+    background: #209fc9;
+}
+
+.strength-progress.very-strong {
+    width: 100%;
+    background: #196287;
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.strength-requirements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.requirement i {
+    width: 12px;
+    font-size: 0.7rem;
+}
+
+.requirement.met i {
+    color: #196287 !important;
+}
+
+.requirement.met i::before {
+    content: '\f00c';
+}
+
+/* Password Match */
+.password-match {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.password-match.match {
+    color: #196287;
+}
+
+.password-match.no-match {
+    color: #dc3545;
+}
+
+/* Email Verification */
+.email-verification {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.email-verification.valid {
+    color: #196287;
+}
+
+.email-verification.invalid {
+    color: #dc3545;
+}
+
+/* Username Validation */
+.username-validation {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.username-validation.valid {
+    color: #198754;
+}
+
+.username-validation.invalid {
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #dc3545;
+}
+
+/* Field Requirements */
+.field-requirements {
+    margin-top: 0.5rem;
+}
+
+.field-requirements small {
+    font-size: 0.75rem;
+}
+
+/* Terms Links */
+.terms-link {
+    color: #006056;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-link:hover {
+    color: #005249; /* Tối hơn để tạo hiệu ứng hover */
+    text-decoration: underline;
+}
+
+
+/* Form validation enhancements */
+.form-control:valid {
+    border-color: #198754;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Submit button states */
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Animations */
+.form-floating {
+}
+
+.form-floating:nth-child(2) { }
+.form-floating:nth-child(3) { }
+.form-floating:nth-child(4) { }
+.form-floating:nth-child(5) { }
+
+/* Modal customizations */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    border-top: 1px solid #e9ecef;
+    padding: 1.5rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .progress-steps {
+        font-size: 0.7rem;
+    }
+    
+    .step span {
+        display: none;
+    }
+    
+    .strength-requirements {
+        grid-template-columns: 1fr;
+    }
+}

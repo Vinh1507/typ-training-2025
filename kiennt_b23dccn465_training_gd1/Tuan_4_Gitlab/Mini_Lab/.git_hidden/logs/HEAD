@@ -1,0 +1,119 @@
+0000000000000000000000000000000000000000 2956f415e7a5639a957ecc266db69ff8660b7748 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764426321 +0700	clone: from gitlab.com:NguyenTuKien/Tuan_4_Gitlab.git
+2956f415e7a5639a957ecc266db69ff8660b7748 08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764426578 +0700	commit: Update
+08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f 08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764604427 +0700	checkout: moving from main to dev
+08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f 1562a281abcb3e9f5cd52aedc94eb8b36d431561 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764604436 +0700	commit: Update
+1562a281abcb3e9f5cd52aedc94eb8b36d431561 acd1b5d46cabe2f5e800b9e5a2345ad562ad8126 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764605533 +0700	commit: Update
+acd1b5d46cabe2f5e800b9e5a2345ad562ad8126 cd397fe178f69558da7ed71df7028e5feb4e0bb0 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764605822 +0700	commit: Update
+cd397fe178f69558da7ed71df7028e5feb4e0bb0 186bb7de4ff749cb157c7ab2de348111952353ae NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764633171 +0700	commit: Update
+186bb7de4ff749cb157c7ab2de348111952353ae 87e01d8897b7f15cb1c1e40fef010495497e8c58 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764634335 +0700	commit: Update
+87e01d8897b7f15cb1c1e40fef010495497e8c58 a5c63450d5f1b2f9f04dfb81f5de48bae15c6be3 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764636521 +0700	commit: Update
+a5c63450d5f1b2f9f04dfb81f5de48bae15c6be3 becb346a6c7913c3fd0f93aec23a541ff175855f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764637801 +0700	commit: Update
+becb346a6c7913c3fd0f93aec23a541ff175855f 1cc80111747cb5d6180ef6b4b4b70a618afa80ad NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641119 +0700	commit (merge): Update
+1cc80111747cb5d6180ef6b4b4b70a618afa80ad 08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641280 +0700	checkout: moving from dev to main
+08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f 4a50d049d2a6e7857459ac617740ed79161b79c5 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641308 +0700	pull origin main --no-rebase: Fast-forward
+4a50d049d2a6e7857459ac617740ed79161b79c5 1cc80111747cb5d6180ef6b4b4b70a618afa80ad NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641391 +0700	checkout: moving from main to dev
+1cc80111747cb5d6180ef6b4b4b70a618afa80ad becb346a6c7913c3fd0f93aec23a541ff175855f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641519 +0700	reset: moving to becb346a6c7913c3fd0f93aec23a541ff175855f
+becb346a6c7913c3fd0f93aec23a541ff175855f 4a50d049d2a6e7857459ac617740ed79161b79c5 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641552 +0700	checkout: moving from dev to main
+4a50d049d2a6e7857459ac617740ed79161b79c5 08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641745 +0700	reset: moving to 08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f
+08caab4eb4322ebe5edabdaa7ca0f73fce3aec7f becb346a6c7913c3fd0f93aec23a541ff175855f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764641769 +0700	merge dev: Fast-forward
+becb346a6c7913c3fd0f93aec23a541ff175855f e1785637a067b33f670fe4fca5b9b0f23bf11be1 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642104 +0700	commit (merge): Update
+e1785637a067b33f670fe4fca5b9b0f23bf11be1 becb346a6c7913c3fd0f93aec23a541ff175855f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642114 +0700	checkout: moving from main to dev
+becb346a6c7913c3fd0f93aec23a541ff175855f e1785637a067b33f670fe4fca5b9b0f23bf11be1 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642120 +0700	checkout: moving from dev to main
+e1785637a067b33f670fe4fca5b9b0f23bf11be1 becb346a6c7913c3fd0f93aec23a541ff175855f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642288 +0700	checkout: moving from main to dev
+becb346a6c7913c3fd0f93aec23a541ff175855f dba1d72aedeb9a1d1b8a34144e123f5e2d7166cc NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642317 +0700	commit: Docs
+dba1d72aedeb9a1d1b8a34144e123f5e2d7166cc e1785637a067b33f670fe4fca5b9b0f23bf11be1 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642327 +0700	checkout: moving from dev to main
+e1785637a067b33f670fe4fca5b9b0f23bf11be1 679878a6d840065969369be22fb9bca67d228ad9 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642386 +0700	commit (merge): Docs
+679878a6d840065969369be22fb9bca67d228ad9 186bb7de4ff749cb157c7ab2de348111952353ae NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642423 +0700	reset: moving to 186bb7de4ff749cb157c7ab2de348111952353ae
+186bb7de4ff749cb157c7ab2de348111952353ae e1785637a067b33f670fe4fca5b9b0f23bf11be1 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642568 +0700	pull origin main: Fast-forward
+e1785637a067b33f670fe4fca5b9b0f23bf11be1 186bb7de4ff749cb157c7ab2de348111952353ae NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764642694 +0700	reset: moving to 186bb7d
+186bb7de4ff749cb157c7ab2de348111952353ae 85970a5f4b7ffc9881a4703ada72b3add6e3f4c5 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764643020 +0700	commit: Save
+85970a5f4b7ffc9881a4703ada72b3add6e3f4c5 0fe984bfb91c5860f233408e56f05d8c366fb946 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764644243 +0700	commit: Docs
+0fe984bfb91c5860f233408e56f05d8c366fb946 dba1d72aedeb9a1d1b8a34144e123f5e2d7166cc NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764644253 +0700	checkout: moving from main to dev
+dba1d72aedeb9a1d1b8a34144e123f5e2d7166cc 1b1131543fafb1b3c8df9fa7529c9082a82f6737 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764644282 +0700	commit: Docs
+1b1131543fafb1b3c8df9fa7529c9082a82f6737 0fe984bfb91c5860f233408e56f05d8c366fb946 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764644293 +0700	checkout: moving from dev to main
+0fe984bfb91c5860f233408e56f05d8c366fb946 813019e5f6801f986f0fc7514f9b7b2909e4b760 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764644312 +0700	commit: Docs
+813019e5f6801f986f0fc7514f9b7b2909e4b760 c4d4c8c8a541ba61738d675ad4a650f8b537d376 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764745427 +0700	commit: Update
+c4d4c8c8a541ba61738d675ad4a650f8b537d376 d5c105c4167dd9b5180c534c970830df3ca599d4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764746322 +0700	commit: Update
+d5c105c4167dd9b5180c534c970830df3ca599d4 343bf33c2f016f168d25905cb05ff526933dac8a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764746395 +0700	commit: Update
+343bf33c2f016f168d25905cb05ff526933dac8a 297554f1d4c88ba8d4661ae1d1c5fa8b9396360d NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764746547 +0700	commit: Update
+297554f1d4c88ba8d4661ae1d1c5fa8b9396360d d71b82d9042805b326099b9d7c913b6c71686164 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764748261 +0700	commit: Update
+d71b82d9042805b326099b9d7c913b6c71686164 33adef24c5311a28010c74c9c5905fb933567b7f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764749079 +0700	commit: Update
+33adef24c5311a28010c74c9c5905fb933567b7f 5bc2a15c71422bcd7239f3439fcc1a2cbced95ed NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764750596 +0700	commit: Update
+5bc2a15c71422bcd7239f3439fcc1a2cbced95ed 686b08e9d0ff522553699383251e6434371fe455 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764751088 +0700	commit: Update
+686b08e9d0ff522553699383251e6434371fe455 3cc42b78567d601134b0d329f96e43e7f5f7672c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764751582 +0700	commit: Update
+3cc42b78567d601134b0d329f96e43e7f5f7672c 935c3daa916d031ecc6c7eba83d68dc6f2800d94 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764752211 +0700	commit: Update
+935c3daa916d031ecc6c7eba83d68dc6f2800d94 14c0330ee130cee8ae6a4b50f2e014d76e97d5b8 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764752751 +0700	commit: Update
+14c0330ee130cee8ae6a4b50f2e014d76e97d5b8 85a49cb14da2baf55d770e5da6af3f6dbd2a9df7 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764753118 +0700	commit: Update
+85a49cb14da2baf55d770e5da6af3f6dbd2a9df7 1b1131543fafb1b3c8df9fa7529c9082a82f6737 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764753442 +0700	checkout: moving from main to dev
+1b1131543fafb1b3c8df9fa7529c9082a82f6737 c5f98689dabf95a4d98c17be795b7edeb7ace729 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764753559 +0700	commit: Update
+c5f98689dabf95a4d98c17be795b7edeb7ace729 23cc80f8d473a533a0bdee4236f128d1e5c532fe NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764753864 +0700	commit: Update
+23cc80f8d473a533a0bdee4236f128d1e5c532fe 7bed5f1037e1c852d9a75786d84c5eb8589e4ab0 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764754087 +0700	commit: Update
+7bed5f1037e1c852d9a75786d84c5eb8589e4ab0 10286853078a9dc5d3d2acabeedcb0eaf42a686e NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764754098 +0700	commit: Update
+10286853078a9dc5d3d2acabeedcb0eaf42a686e eedc719640791a6ccb2f393f28fcc0e338eb993c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764754953 +0700	commit: Update
+eedc719640791a6ccb2f393f28fcc0e338eb993c e3df4fe67e96eb025ca8810e90e9bf498f834faa NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764755786 +0700	commit: Update
+e3df4fe67e96eb025ca8810e90e9bf498f834faa 85a49cb14da2baf55d770e5da6af3f6dbd2a9df7 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764756118 +0700	checkout: moving from dev to main
+85a49cb14da2baf55d770e5da6af3f6dbd2a9df7 3dd7f8b54d82ca5796160fc17af831689fe67861 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764756210 +0700	commit (merge): Update
+3dd7f8b54d82ca5796160fc17af831689fe67861 8e4c8a6fce7b5d3ef33456c53702c13503a00488 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764766504 +0700	commit: Update
+8e4c8a6fce7b5d3ef33456c53702c13503a00488 5fa98854f9f5a4c6aa66592157726e22d810dcbf NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764769808 +0700	commit: Update
+5fa98854f9f5a4c6aa66592157726e22d810dcbf 84268efdafdf9d2fce69670a21065deab7ce9aea NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764770713 +0700	commit: Update
+84268efdafdf9d2fce69670a21065deab7ce9aea cb9fb7c49f6c42d59b74bae13b5e24f4d553a261 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764771248 +0700	commit: Update
+cb9fb7c49f6c42d59b74bae13b5e24f4d553a261 6ff85597f59d274db9b58f17bbd9e8c15116722e NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764771360 +0700	commit: Update
+6ff85597f59d274db9b58f17bbd9e8c15116722e 3a518044e72c31ad82770ddfe3fc8c902edc500a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764774994 +0700	commit: Update
+3a518044e72c31ad82770ddfe3fc8c902edc500a e3df4fe67e96eb025ca8810e90e9bf498f834faa NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764775212 +0700	checkout: moving from main to dev
+e3df4fe67e96eb025ca8810e90e9bf498f834faa 3a518044e72c31ad82770ddfe3fc8c902edc500a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764775230 +0700	merge main: Fast-forward
+3a518044e72c31ad82770ddfe3fc8c902edc500a 3a518044e72c31ad82770ddfe3fc8c902edc500a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764775905 +0700	checkout: moving from dev to main
+3a518044e72c31ad82770ddfe3fc8c902edc500a f36ca68c21127461de8495e4b759a051f7c8c3ee NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764778377 +0700	commit: Update
+f36ca68c21127461de8495e4b759a051f7c8c3ee f8a3af7d23303f37e346a7a2ff766ac28b85b158 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1764781187 +0700	commit: Update
+f8a3af7d23303f37e346a7a2ff766ac28b85b158 f8a3af7d23303f37e346a7a2ff766ac28b85b158 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765181018 +0700	reset: moving to HEAD
+f8a3af7d23303f37e346a7a2ff766ac28b85b158 3a518044e72c31ad82770ddfe3fc8c902edc500a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765181033 +0700	checkout: moving from main to dev
+3a518044e72c31ad82770ddfe3fc8c902edc500a e309cfcaeb40a04edbd14ddf26994adc56e3f388 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765181282 +0700	commit: Finish
+e309cfcaeb40a04edbd14ddf26994adc56e3f388 f8a3af7d23303f37e346a7a2ff766ac28b85b158 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765181348 +0700	checkout: moving from dev to main
+f8a3af7d23303f37e346a7a2ff766ac28b85b158 a83bb054bf326be27350159fcadc82042823c9d4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765181353 +0700	merge dev: Merge made by the 'ort' strategy.
+a83bb054bf326be27350159fcadc82042823c9d4 e309cfcaeb40a04edbd14ddf26994adc56e3f388 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206117 +0700	checkout: moving from main to dev
+e309cfcaeb40a04edbd14ddf26994adc56e3f388 a83bb054bf326be27350159fcadc82042823c9d4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206127 +0700	checkout: moving from dev to main
+a83bb054bf326be27350159fcadc82042823c9d4 e309cfcaeb40a04edbd14ddf26994adc56e3f388 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206146 +0700	checkout: moving from main to dev
+e309cfcaeb40a04edbd14ddf26994adc56e3f388 a83bb054bf326be27350159fcadc82042823c9d4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206163 +0700	pull origin main: Fast-forward
+a83bb054bf326be27350159fcadc82042823c9d4 ebbea6520d289963abc51786c58702e58d770a76 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206224 +0700	commit: Finish
+ebbea6520d289963abc51786c58702e58d770a76 a83bb054bf326be27350159fcadc82042823c9d4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206319 +0700	checkout: moving from dev to main
+a83bb054bf326be27350159fcadc82042823c9d4 ebbea6520d289963abc51786c58702e58d770a76 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206339 +0700	merge dev: Fast-forward
+ebbea6520d289963abc51786c58702e58d770a76 ebbea6520d289963abc51786c58702e58d770a76 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206415 +0700	reset: moving to HEAD
+ebbea6520d289963abc51786c58702e58d770a76 ebbea6520d289963abc51786c58702e58d770a76 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765206422 +0700	checkout: moving from main to dev
+ebbea6520d289963abc51786c58702e58d770a76 e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765290883 +0700	commit: Update
+e802956d4d6ec39382fcb9034bae428fefcb589c ebbea6520d289963abc51786c58702e58d770a76 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765291228 +0700	checkout: moving from dev to main
+ebbea6520d289963abc51786c58702e58d770a76 e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765291233 +0700	merge dev: Fast-forward
+e802956d4d6ec39382fcb9034bae428fefcb589c e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293043 +0700	reset: moving to HEAD
+e802956d4d6ec39382fcb9034bae428fefcb589c e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293050 +0700	checkout: moving from main to dev
+e802956d4d6ec39382fcb9034bae428fefcb589c 7006bb5676e5ddabf699d1b69dc979b43afd808f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293126 +0700	commit: Update
+7006bb5676e5ddabf699d1b69dc979b43afd808f e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293482 +0700	checkout: moving from dev to main
+e802956d4d6ec39382fcb9034bae428fefcb589c 7006bb5676e5ddabf699d1b69dc979b43afd808f NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293514 +0700	checkout: moving from main to dev
+7006bb5676e5ddabf699d1b69dc979b43afd808f d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293578 +0700	commit: Update
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 e802956d4d6ec39382fcb9034bae428fefcb589c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293846 +0700	checkout: moving from dev to main
+e802956d4d6ec39382fcb9034bae428fefcb589c d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1765293881 +0700	merge dev: Fast-forward
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767400357 +0700	reset: moving to HEAD
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767400363 +0700	checkout: moving from main to dev
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 111d840ff1c7c38fd416dcadb40fa06ac838c793 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767400445 +0700	commit: Refactor
+111d840ff1c7c38fd416dcadb40fa06ac838c793 d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767400962 +0700	reset: moving to d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 44976b3320779433f95f42912c17ae36fd98ba2c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767404013 +0700	commit: Refactor
+44976b3320779433f95f42912c17ae36fd98ba2c 8a43c2469013f72ab5324b68e9cddb4a01ba9068 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767405322 +0700	commit: Refactor
+8a43c2469013f72ab5324b68e9cddb4a01ba9068 d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767409184 +0700	checkout: moving from dev to main
+d0e4e4dfd0343d7717e4c4bb3a772bfbdf3c9a05 8a43c2469013f72ab5324b68e9cddb4a01ba9068 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767409221 +0700	merge dev: Fast-forward
+8a43c2469013f72ab5324b68e9cddb4a01ba9068 51bc708296d9d5e7ff97ef5a5af868bed859a7ca NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767409857 +0700	commit: Refactor
+51bc708296d9d5e7ff97ef5a5af868bed859a7ca eaf34e6ee80835ecec27f4a97e707b1addea3ccf NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411425 +0700	commit: Refactor
+eaf34e6ee80835ecec27f4a97e707b1addea3ccf 8a43c2469013f72ab5324b68e9cddb4a01ba9068 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411442 +0700	checkout: moving from main to dev
+8a43c2469013f72ab5324b68e9cddb4a01ba9068 eaf34e6ee80835ecec27f4a97e707b1addea3ccf NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411479 +0700	merge main: Fast-forward
+eaf34e6ee80835ecec27f4a97e707b1addea3ccf 9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411530 +0700	commit: Refactor
+9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 eaf34e6ee80835ecec27f4a97e707b1addea3ccf NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411858 +0700	checkout: moving from dev to main
+eaf34e6ee80835ecec27f4a97e707b1addea3ccf 9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767411864 +0700	merge dev: Fast-forward
+9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 0ddc3789030f32cbf63238deea221bfbcc526bf4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412271 +0700	commit: Refactor
+0ddc3789030f32cbf63238deea221bfbcc526bf4 9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412359 +0700	checkout: moving from main to dev
+9386d540f8c54765b22cfaaa5bcf5929ef7aa1f9 0ddc3789030f32cbf63238deea221bfbcc526bf4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412365 +0700	merge main: Fast-forward
+0ddc3789030f32cbf63238deea221bfbcc526bf4 56a1c1a26e5b50e072343f79beb5bf5e363600bb NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412516 +0700	commit: Refactor
+56a1c1a26e5b50e072343f79beb5bf5e363600bb 0ddc3789030f32cbf63238deea221bfbcc526bf4 NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412551 +0700	checkout: moving from dev to main
+0ddc3789030f32cbf63238deea221bfbcc526bf4 56a1c1a26e5b50e072343f79beb5bf5e363600bb NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767412601 +0700	merge dev: Fast-forward
+56a1c1a26e5b50e072343f79beb5bf5e363600bb f61d5fdcc2346a5796b9949a82abba5c3792523d NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767413676 +0700	commit: Refactor
+f61d5fdcc2346a5796b9949a82abba5c3792523d 56a1c1a26e5b50e072343f79beb5bf5e363600bb NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414488 +0700	checkout: moving from main to dev
+56a1c1a26e5b50e072343f79beb5bf5e363600bb f61d5fdcc2346a5796b9949a82abba5c3792523d NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414495 +0700	merge main: Fast-forward
+f61d5fdcc2346a5796b9949a82abba5c3792523d f38f0ae98fd57dfc953ba7b3a7cc1142cab3bc1a NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414783 +0700	commit: Add
+f38f0ae98fd57dfc953ba7b3a7cc1142cab3bc1a 5dcd6dbb4d882af09c83213f207beba0c7b5568c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414791 +0700	commit: Add
+5dcd6dbb4d882af09c83213f207beba0c7b5568c f61d5fdcc2346a5796b9949a82abba5c3792523d NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414939 +0700	checkout: moving from dev to main
+f61d5fdcc2346a5796b9949a82abba5c3792523d 5dcd6dbb4d882af09c83213f207beba0c7b5568c NguyenTuKien <KienNT.B23CN465@stu.ptit.edu.vn> 1767414943 +0700	merge dev: Fast-forward

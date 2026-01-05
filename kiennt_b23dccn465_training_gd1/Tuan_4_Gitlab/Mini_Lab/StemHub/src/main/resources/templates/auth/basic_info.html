@@ -1,0 +1,185 @@
+{% extends "auth/auth_base.html" %}
+{% load static %}
+
+{% block title %}STEMIND - Thông tin cơ bản{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/auth/register.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Auth Brand -->
+<div class="auth-brand">
+    <h1>
+        <a href="{% url 'home' %}"><image src="{% static "images/Logo_text.png" %}" style="width:300px"></a>
+    </h1>
+    <p class="subtitle">Điền thông tin cơ bản để hoàn tất đăng ký</p>
+</div>
+
+<!-- Basic Info Form -->
+<form method="post" action="{% url 'basic_info' %}" id="basicInfoForm" novalidate>
+    {% csrf_token %}
+    
+    <!-- Error Messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags|default:'danger' }}" role="alert">
+                <i class="fas fa-{% if message.tags == 'success' %}check-circle{% else %}exclamation-triangle{% endif %} me-2"></i>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <!-- Form Progress Indicator -->
+    <div class="form-progress mb-4">
+        <div class="progress-bar" id="formProgress"></div>
+        <div class="progress-steps">
+            <div class="step completed" data-step="1">
+                <i class="fas fa-user"></i>
+                <span>Đăng ký</span>
+            </div>
+            <div class="step active" data-step="2">
+                <i class="fas fa-id-card"></i>
+                <span>Thông tin cơ bản</span>
+            </div>
+            <div class="step" data-step="3">
+                <i class="fas fa-check"></i>
+                <span>Hoàn thành</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Last Name Field -->
+    <div class="form-floating">
+        <input type="text" 
+               class="form-control" 
+               id="lastname" 
+               name="lastname" 
+               placeholder="Họ"
+               value="{{ user.lastname|default:'' }}"
+               required
+               autocomplete="family-name"
+               data-step="2">
+        <label for="lastname">
+            <i class="fas fa-user me-2"></i>Họ
+        </label>
+        {% if form.lastname.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.lastname.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- First Name Field -->
+    <div class="form-floating">
+        <input type="text" 
+               class="form-control" 
+               id="firstname" 
+               name="firstname" 
+               placeholder="Tên"
+               value="{{ user.firstname|default:'' }}"
+               required
+               autocomplete="given-name"
+               data-step="2">
+        <label for="firstname">
+            <i class="fas fa-user me-2"></i>Tên
+        </label>
+        {% if form.firstname.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.firstname.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Age Field -->
+    <div class="form-floating">
+        <input type="number" 
+               class="form-control" 
+               id="age" 
+               name="age" 
+               placeholder="Tuổi"
+               value="{{ user.age|default:'' }}"
+               required
+               min="1"
+               max="120"
+               data-step="2">
+        <label for="age">
+            <i class="fas fa-birthday-cake me-2"></i>Tuổi
+        </label>
+        {% if form.age.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.age.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Address Field -->
+    <div class="form-floating">
+        <input type="text" 
+               class="form-control" 
+               id="address" 
+               name="address" 
+               placeholder="Địa chỉ công tác"
+               value="{{ user.address|default:'' }}"
+               autocomplete="street-address"
+               data-step="2">
+        <label for="address">
+            <i class="fas fa-map-marker-alt me-2"></i>Địa chỉ công tác
+        </label>
+        {% if form.address.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.address.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Role Field -->
+    <div class="form-floating">
+        <select class="form-control" 
+                id="role" 
+                name="role" 
+                required
+                data-step="2">
+            <option value="">Chọn vai trò</option>
+            <option value="teacher" {% if user.role == 'teacher' %}selected{% endif %}>Giáo viên</option>
+            <option value="expert" {% if user.role == 'expert' %}selected{% endif %}>Chuyên gia</option>
+        </select>
+        <label for="role">
+            <i class="fas fa-user-tie me-2"></i>Vai trò
+        </label>
+        {% if form.role.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.role.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary w-100 mb-3" id="submitBtn">
+        <i class="fas fa-arrow-right me-2"></i>Tiếp tục
+    </button>
+    
+    <!-- Back to Register -->
+    <div class="text-center">
+        <small class="text-muted">
+            <a href="{% url 'register' %}" class="text-decoration-none">
+                <i class="fas fa-arrow-left me-1"></i>Quay lại đăng ký
+            </a>
+        </small>
+    </div>
+</form>
+
+<link rel="stylesheet" href="{% static 'style/auth/register.css' %}">
+<script src="{% static 'script/auth/register.js' %}"></script>
+
+{% endblock %}

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Về chúng tôi - STEMIND</title>
+    <link rel="icon" type="image/png" th:href="@{/images/Symbol.png}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link th:href="@{/style/base/base1.css}" rel="stylesheet">
+    <link th:href="@{/style/base/base2.css}" rel="stylesheet">
+    <link th:href="@{/style/base/header.css}" rel="stylesheet">
+    <link th:href="@{/style/home/about.css}" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <div th:replace="~{base/header :: header}"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow-1">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-content">
+                        <h1 class="hero-title">Nâng cao chất lượng giáo dục STEM tại Việt Nam</h1>
+                        <p class="hero-description">
+                            STEMIND là nền tảng trực tuyến tích hợp AI được thiết kế để giúp giáo viên nhanh chóng thiết kế bài
+                            giảng STEM, tìm kiếm tài liệu học tập phù hợp và tổ chức các hoạt động. Với giao diện thân thiện,
+                            tiết kiệm thời gian, nâng cao chất lượng giảng dạy và kết nối cộng đồng.
+                        </p>
+                        <a th:href="@{/}" class="explore-btn">Khám phá ngay</a>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img th:src="@{/images/Logo_text.png}" alt="STEMIND Logo"
+                            style="max-width: 300px; filter: brightness(0) invert(1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="vision-mission-card">
+                            <h3 class="card-title">Tầm nhìn</h3>
+                            <p class="card-content">
+                                STEMIND hướng đến việc tất cả giáo viên đều có thể tiếp cận công nghệ hiện đại để giảng dạy
+                                STEM hiệu quả, bất kể họ ở đâu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="vision-mission-card">
+                            <h3 class="card-title">Sứ mệnh</h3>
+                            <p class="card-content">
+                                Xây d���ng nền tảng AI thân thiện gi��p giáo viên tiết kiệm thời gian, nâng cao chất lượng
+                                giảng dạy và xây dựng cộng đồng giáo dục STEM bền vững.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Giá trị cốt lõi</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="value-title">Đồng hành cùng giáo viên</h4>
+                            <p class="value-description">
+                                Lấy nhu cầu thực tế làm trung tâm, luôn lắng nghe và hỗ trợ giáo viên trong quá trình
+                                giảng dạy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4 class="value-title">Đổi mới và công nghệ</h4>
+                            <p class="value-description">
+                                Ứng dụng AI để giải quyết các vấn đề giáo dục, mang công nghệ tiên tiến đến gần hơn
+                                với giáo viên.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h4 class="value-title">Bền vững và lan tỏa</h4>
+                            <p class="value-description">
+                                Hướng đến cộng đồng, giáo dục toàn diện và xây dựng một hệ sinh thái STEM bền vững
+                                tại Việt Nam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inspiration Story Section -->
+        <section class="story-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="section-title text-start">Câu chuyện cảm hứng</h2>
+                        <div class="story-content">
+                            <p>
+                                STEMIND được sinh ra từ những cuộc trò chuyện với các giáo viên tiểu học ở vùng nông
+                                thôn, những người mong muốn đổi mới nhưng thiếu thời gian, nguồn lực và công cụ
+                                phù hợp.
+                            </p>
+                            <p>
+                                Được thành lập vào năm 2025 bởi một nhóm nhỏ đam mê giáo dục và công nghệ, STEMIND
+                                hướng đến việc đưa công nghệ AI đến gần hơn với giáo viên, giúp họ tạo ra những
+                                bài giảng STEM hấp dẫn mà không cần kiến thức kỹ thuật sâu rộng hay thời gian
+                                chuẩn bị quá nhiều.
+                            </p>
+                            <p>
+                                Chúng tôi tin rằng mọi giáo viên đều xứng đáng có cơ hội tiếp cận những công cụ
+                                hiện đại để nâng cao chất lượng giảng dạy và truyền cảm hứng cho học sinh.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="vision-mission-card">
+                            <h3 class="card-title">Mục tiêu của chúng tôi</h3>
+                            <ul class="card-content" style="list-style: none; padding-left: 0;">
+                                <li style="margin-bottom: 15px;">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Tạo ra cộng đồng chia sẻ và học hỏi STEM tại Việt Nam
+                                </li>
+                                <li style="margin-bottom: 15px;">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Giảm thiểu thời gian chuẩn bị bài giảng cho giáo viên
+                                </li>
+                                <li style="margin-bottom: 15px;">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Nâng cao chất lượng giáo dục STEM trên toàn quốc
+                                </li>
+                                <li style="margin-bottom: 15px;">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    Kết nối giáo viên và tạo môi trường học tập cộng tác
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--        &lt;!&ndash; Founding Team Section &ndash;&gt;-->
+<!--        <section class="team-section">-->
+<!--            <div class="container">-->
+<!--                <h2 class="section-title">Đội ngũ sáng lập</h2>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="team-member">-->
+<!--                            <div class="member-avatar">DQ</div>-->
+<!--                            <h4 class="member-name">Đinh Thị Diễm Quỳnh</h4>-->
+<!--                            <p class="member-role">Founder & Marketing Lead</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="team-member">-->
+<!--                            <div class="member-avatar">TD</div>-->
+<!--                            <h4 class="member-name">Đỗ Tùng Dương</h4>-->
+<!--                            <p class="member-role">Co-founder & Business Lead</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="team-member">-->
+<!--                            <div class="member-avatar">TK</div>-->
+<!--                            <h4 class="member-name">Nguyễn Tự Kiên</h4>-->
+<!--                            <p class="member-role">Co-founder & Software Engineer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-3 col-md-6">-->
+<!--                        <div class="team-member">-->
+<!--                            <div class="member-avatar">LM</div>-->
+<!--                            <h4 class="member-name">Lê Quang Mạnh</h4>-->
+<!--                            <p class="member-role">Co-founder & AI Engineer</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Sẵn sàng tham gia cùng chúng tôi?</h2>
+                <p class="cta-description">
+                    Hãy cùng chúng tôi xây dựng tương lai giáo dục STEM tại Việt Nam
+                </p>
+                <a th:href="@{/auth/register}" class="cta-btn">Đăng ký ngay</a>
+            </div>
+        </section>
+
+        <!-- Social Links Section -->
+        <section class="social-section" style="background: #f8fafc; padding: 60px 0;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h3 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Liên kết</h3>
+                        <div class="social-links-about">
+                            <a href="#" class="social-link-about" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="social-link-about" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link-about" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link-about" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div th:replace="~{base/footer :: footer}"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/script/base/base.js}"></script>
+    <script th:src="@{/script/base/footer.js}"></script>
+</body>
+
+</html>
