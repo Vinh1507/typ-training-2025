@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập CSS - Tuần 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .exercise-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exercise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .exercise-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .exercise-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .exercise-card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .exercise-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .exercise-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .exercise-features li {
+            color: #555;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .exercise-features li:last-child {
+            border-bottom: none;
+        }
+
+        .exercise-features li::before {
+            content: '✓';
+            color: #2ecc71;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102,126,234,0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102,126,234,0.6);
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+        }
+
+        .info-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .info-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            padding: 2rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .exercises-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Bài Tập CSS - Tuần 2</h1>
+            <p class="subtitle">Tổng hợp 5 bài tập về CSS với kỹ thuật và hiệu ứng hiện đại</p>
+        </header>
+
+        <div class="info-section">
+            <h2>📚 Giới Thiệu</h2>
+            <p>
+                Bộ bài tập này bao gồm 5 chủ đề chính về CSS, từ cơ bản đến nâng cao. 
+                Mỗi bài tập được thiết kế để giúp bạn nắm vững các khái niệm quan trọng 
+                và kỹ thuật thực tế trong phát triển web.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">CSS3</span>
+                <span class="tech-badge">Flexbox</span>
+                <span class="tech-badge">CSS Grid</span>
+                <span class="tech-badge">Animations</span>
+                <span class="tech-badge">Transitions</span>
+                <span class="tech-badge">Responsive Design</span>
+                <span class="tech-badge">Pure CSS (No JavaScript)</span>
+            </div>
+        </div>
+
+        <div class="exercises-grid">
+            <div class="exercise-card">
+                <div class="exercise-number">1</div>
+                <h2>Loading Animation</h2>
+                <p>Tạo các hiệu ứng loading với CSS animations và keyframes</p>
+                <ul class="exercise-features">
+                    <li>6 loại animation khác nhau</li>
+                    <li>Rotating Spinner & Dots</li>
+                    <li>Pulse & Wave effects</li>
+                    <li>@keyframes techniques</li>
+                </ul>
+                <a href="1_LoadingAnimation/index.html" class="btn">Xem Demo →</a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-number">2</div>
+                <h2>Card Components</h2>
+                <p>Xây dựng các card components với hover effects đẹp mắt</p>
+                <ul class="exercise-features">
+                    <li>6 loại card khác nhau</li>
+                    <li>Product, Profile, Blog cards</li>
+                    <li>Hover & Transform effects</li>
+                    <li>Image zoom & Overlays</li>
+                </ul>
+                <a href="2_CardComponent/index.html" class="btn">Xem Demo →</a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-number">3</div>
+                <h2>Responsive Navigation</h2>
+                <p>Tạo menu navigation responsive với nhiều kiểu khác nhau</p>
+                <ul class="exercise-features">
+                    <li>4 navigation styles</li>
+                    <li>Hamburger menu (CSS only)</li>
+                    <li>Dropdown & Sidebar</li>
+                    <li>Mobile responsive</li>
+                </ul>
+                <a href="3_ResponsiveNavigation/index.html" class="btn">Xem Demo →</a>
+            </div>
+
+            <div class="exercise-card">
+                <div class="exercise-number">4</div>
+                <h2>Image Gallery</h2>
+                <p>Xây dựng image gallery với CSS Grid và nhiều layout</p>
+                <ul class="exercise-features">
+                    <li>4 gallery layouts</li>
+                    <li>Masonry & Pinterest style</li>
+                    <li>CSS Grid techniques</li>
+                    <li>Image overlay effects</li>
+                </ul>
+                <a href="4_ImageGallery/index.html" class="btn">Xem Demo →</a>
+            </div>
+
+
+            <div class="exercise-card">
+                <div class="exercise-number">5</div>
+                <h2>Button States</h2>
+                <p>Tạo buttons với nhiều styles, states và hiệu ứng đặc biệt</p>
+                <ul class="exercise-features">
+                    <li>12 nhóm button styles</li>
+                    <li>Solid, Outline, Gradient</li>
+                    <li>Animated & 3D effects</li>
+                    <li>Social media buttons</li>
+                </ul>
+                <a href="5_ButtonStates/index.html" class="btn">Xem Demo →</a>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>🎯 Mục Tiêu Học Tập</h2>
+            <p><strong>Sau khi hoàn thành các bài tập này, bạn sẽ:</strong></p>
+            <ul style="list-style-position: inside; color: #555; line-height: 2;">
+                <li>Nắm vững CSS Animations và Keyframes</li>
+                <li>Thành thạo Flexbox và CSS Grid</li>
+                <li>Tạo được responsive design cho mọi thiết bị</li>
+                <li>Hiểu rõ về Transform và Transition</li>
+                <li>Xây dựng UI components tái sử dụng</li>
+                <li>Áp dụng best practices trong CSS</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p><strong>Tác giả:</strong> Đinh Việt Dũng</p>
+            <p><strong>Tuần:</strong> Week 2 - Frontend Training 2025</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Made with ❤️ using Pure CSS</p>
+        </footer>
+    </div>
+</body>
+</html>
+

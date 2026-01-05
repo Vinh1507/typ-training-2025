@@ -1,0 +1,114 @@
+### ============================================
+### JWT AUTHENTICATION DEMO
+### Sử dụng REST Client extension trong VS Code
+### ============================================
+
+### 1. Đăng ký tài khoản mới
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "demo_user",
+  "email": "demo@example.com",
+  "password": "demo123",
+  "role": "user"
+}
+
+### 2. Đăng nhập với Admin (Copy accessToken và refreshToken từ response)
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+### 3. Đăng nhập với User thường (Copy accessToken và refreshToken từ response)
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "user1@example.com",
+  "password": "user123"
+}
+
+### 4. Verify Token - Kiểm tra JWT (Thay YOUR_ACCESS_TOKEN)
+GET http://localhost:3000/api/auth/verify
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+### 5. Xem tất cả sách - Protected Route (Thay YOUR_ACCESS_TOKEN)
+GET http://localhost:3000/api/books-protected
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+### 6. Xem sách theo ID - Protected Route (Thay YOUR_ACCESS_TOKEN và ID)
+GET http://localhost:3000/api/books-protected/1
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+### 7. Tạo sách mới - CHỈ ADMIN (Thay ADMIN_ACCESS_TOKEN)
+POST http://localhost:3000/api/books-protected
+Authorization: Bearer ADMIN_ACCESS_TOKEN
+Content-Type: application/json
+
+{
+  "title": "Sách mới từ Admin",
+  "author": "Tác giả Admin",
+  "year": 2024
+}
+
+### 8. Cập nhật sách - CHỈ ADMIN (Thay ADMIN_ACCESS_TOKEN và ID)
+PUT http://localhost:3000/api/books-protected/1
+Authorization: Bearer ADMIN_ACCESS_TOKEN
+Content-Type: application/json
+
+{
+  "title": "Sách đã cập nhật",
+  "author": "Tác giả mới",
+  "year": 2025
+}
+
+### 9. Xóa sách - CHỈ ADMIN (Thay ADMIN_ACCESS_TOKEN và ID)
+DELETE http://localhost:3000/api/books-protected/1
+Authorization: Bearer ADMIN_ACCESS_TOKEN
+
+### 10. Test phân quyền - User thường cố tạo sách (SẼ BỊ TỪ CHỐI)
+POST http://localhost:3000/api/books-protected
+Authorization: Bearer USER_ACCESS_TOKEN
+Content-Type: application/json
+
+{
+  "title": "Sách từ User",
+  "author": "Tác giả User",
+  "year": 2024
+}
+
+### 11. Test không có token - SẼ BỊ TỪ CHỐI
+GET http://localhost:3000/api/books-protected
+
+### 12. Test token không hợp lệ - SẼ BỊ TỪ CHỐI
+GET http://localhost:3000/api/books-protected
+Authorization: Bearer invalid_token_here
+
+### 13. Refresh Token - Lấy accessToken mới (Thay REFRESH_TOKEN)
+POST http://localhost:3000/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "REFRESH_TOKEN"
+}
+
+### 14. Đăng xuất (Thay REFRESH_TOKEN)
+POST http://localhost:3000/api/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "REFRESH_TOKEN"
+}
+
+### ============================================
+### LƯU Ý:
+### 1. Thay YOUR_ACCESS_TOKEN bằng token từ response đăng nhập
+### 2. Thay ADMIN_ACCESS_TOKEN bằng token của admin
+### 3. Thay USER_ACCESS_TOKEN bằng token của user
+### 4. Thay REFRESH_TOKEN bằng refreshToken từ response đăng nhập
+### ============================================
+

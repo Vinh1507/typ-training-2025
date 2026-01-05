@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3: Responsive Navigation Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-1">
+        <div class="container">
+            <a href="#" class="logo">MyBrand</a>
+            <input type="checkbox" id="menu-toggle-1">
+            <label for="menu-toggle-1" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li class="dropdown">
+                    <a href="#services">Dịch vụ ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#web">Web Development</a></li>
+                        <li><a href="#mobile">Mobile Apps</a></li>
+                        <li><a href="#design">UI/UX Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-section">
+        <h1>Style 1: Classic Horizontal Menu</h1>
+        <p>Menu với dropdown, responsive hamburger menu cho mobile</p>
+    </section>
+
+    <nav class="navbar navbar-2">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span>TechCo</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-2">
+            <label for="menu-toggle-2" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-menu nav-menu-icons">
+                <li><a href="#home">🏠 Home</a></li>
+                <li><a href="#products">📦 Products</a></li>
+                <li><a href="#blog">📝 Blog</a></li>
+                <li><a href="#team">👥 Team</a></li>
+                <li><a href="#contact" class="btn-cta">💬 Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="demo-section" style="background: #f8f9fa;">
+        <h1>Style 2: Modern with Icons</h1>
+        <p>Menu hiện đại với icons và CTA button</p>
+    </section>
+
+    <nav class="navbar navbar-3">
+        <div class="container">
+            <ul class="nav-menu nav-left">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <a href="#" class="logo logo-center">
+                <span class="logo-circle">BC</span>
+            </a>
+            <ul class="nav-menu nav-right">
+                <li><a href="#docs">Docs</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+            <input type="checkbox" id="menu-toggle-3">
+            <label for="menu-toggle-3" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+    </nav>
+
+    <section class="demo-section">
+        <h1>Style 3: Centered Logo Design</h1>
+        <p>Logo ở giữa với menu phân bố hai bên</p>
+    </section>
+
+    <section class="demo-section" style="background: #f8f9fa; padding: 3rem 0;">
+        <h1 style="text-align: center; margin-bottom: 1rem;">Style 4: Sidebar Navigation</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">Click "Menu" button để mở/đóng sidebar navigation</p>
+        
+        <div class="sidebar-layout">
+            <input type="checkbox" id="sidebar-toggle">
+            <label for="sidebar-toggle" class="sidebar-overlay"></label>
+            
+            <nav class="sidebar">
+                <div class="sidebar-header">
+                    <h2>Dashboard</h2>
+                    <label for="sidebar-toggle" class="close-btn">✕</label>
+                </div>
+                <ul class="sidebar-menu">
+                    <li><a href="#dashboard" class="active">📊 Dashboard</a></li>
+                    <li><a href="#analytics">📈 Analytics</a></li>
+                    <li><a href="#users">👤 Users</a></li>
+                    <li><a href="#settings">⚙️ Settings</a></li>
+                    <li><a href="#messages">💬 Messages</a></li>
+                    <li><a href="#notifications">🔔 Notifications</a></li>
+                    <li class="sidebar-divider"></li>
+                    <li><a href="#help">❓ Help</a></li>
+                    <li><a href="#logout">🚪 Logout</a></li>
+                </ul>
+            </nav>
+
+            <div class="main-content">
+                <label for="sidebar-toggle" class="menu-toggle-btn">☰ Menu</label>
+                <div class="sidebar-demo-content">
+                    <div class="demo-card">
+                        <h3>📊 Dashboard Overview</h3>
+                        <p>Welcome to your dashboard. Click the menu button to open the sidebar.</p>
+                    </div>
+                    <div class="demo-card">
+                        <h3>📈 Analytics</h3>
+                        <p>View your site analytics and statistics here.</p>
+                    </div>
+                    <div class="demo-card">
+                        <h3>👤 User Management</h3>
+                        <p>Manage users and permissions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="demo-footer">
+        <p>Responsive Navigation Menu Examples - CSS Only</p>
+        <p style="opacity: 0.8; font-size: 0.9rem;">Resize window để xem responsive design</p>
+    </footer>
+</body>
+</html>
