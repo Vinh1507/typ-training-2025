@@ -5,7 +5,9 @@
   * Simplicity: Ansible sử dụng cú pháp đơn giản và dễ đọc, thường được viết bằng YAML trong các tệp gọi là **playbook**.
   * Scalability and flexibility: Ansible có thể mở rộng để quản lý từ vài hệ thống đến hàng ngàn hệ thống.
   * Idempotence and predictability: Ansible đảm bảo rằng các tác vụ có thể được chạy nhiều lần mà không gây ra các thay đổi không mong muốn.
+
 ![architect.png](Image/architect.png)
+
 * Ansible gồm 3 thành phần:
   * Control node: Một hệ thống được cài đặt Ansible. Bạn chạy các lệnh Ansible như ansible hoặc ansible-inventory trên nút điều khiển.
   * Inventory: Danh sách các nút được quản lý.
@@ -123,68 +125,133 @@ Trong file cấu hình `ansible.cfg`:
 * Chỉ thị `inventory` có thể trỏ đến một **thư mục** (ví dụ: `./my_inventory`) thay vì một file đơn lẻ.
 * Khi trỏ vào thư mục, Ansible sẽ tự động xử lý và gộp tất cả các file nằm trong thư mục đó để tạo thành inventory hoàn chỉnh.
 
-### 3. Cách viết file Inventory (Định dạng INI)
+### 4.3. Cách viết file Inventory
 
-Dưới đây là các kỹ thuật gom nhóm (grouping) được đề cập trong video:
+#### 4.3.1. Quản lý Nhóm (Groups)
 
-#### a. Gom nhóm cơ bản (Basic Grouping)
+Ansible cho phép gom các máy chủ vào các nhóm để dễ quản lý.
+* **Nhóm mặc định:**
+  * `all`: Chứa tất cả các host.
+  * `ungrouped`: Chứa các host không thuộc nhóm nào (trừ nhóm `all`).
+* **Một host thuộc nhiều nhóm:** Bạn có thể phân loại host theo tiêu chí:
+  * **What (Cái gì):** Ứng dụng, Database, Web...
+  * **Where (Ở đâu):** Region (East, West), Datacenter...
+  * **When (Khi nào):** Môi trường (Prod, Test, Dev).
+* **Nhóm lồng nhau (Parent/Child Groups):** Tạo nhóm cha chứa các nhóm con.
+  * *INI:* Dùng hậu tố `:children`.
+  * *YAML:* Dùng mục `children:`.
+  * *Lợi ích:* Giúp quản lý biến chung cho cả một tập hợp lớn (ví dụ: nhóm `prod` chứa `east` và `west`).
 
-Sử dụng dấu ngoặc vuông `[]` để đặt tên nhóm. Một máy chủ có thể thuộc về nhiều nhóm khác nhau (ví dụ: vừa là web server, vừa là rhel9 server).
+#### 4.3.2. Khai báo Host hàng loạt (Ranges)
+Nếu tên host tuân theo quy tắc số hoặc chữ cái, bạn có thể khai báo theo dải thay vì liệt kê từng cái.
+* Ví dụ: `www[01:50].example.com` (từ www01 đến www50).
+* Có thể quy định bước nhảy (stride): `www[01:50:2]` (chỉ lấy số lẻ: 01, 03, 05...).
 
-```ini
-[webservers]
-servera
-serverc
+#### 4.3.3. Nguồn Inventory (Inventory Sources)
+* **Nhiều nguồn:** Bạn có thể dùng nhiều file inventory cùng lúc bằng cách dùng tham số `-i` nhiều lần hoặc trỏ vào một thư mục chứa nhiều file.
+* **Thứ tự load:** Ansible load file theo thứ tự bảng chữ cái. File load sau có thể ghi đè thông tin của file trước.
 
-[dbservers]
-serverb
-serverd
+#### 4.3.4. Biến trong Inventory (Inventory Variables)
+Có thể gán biến (variables) cho từng host hoặc cả nhóm.
+* **Host Variables:** Gán riêng cho 1 máy.
+  * *INI:* Viết cùng dòng với host (`host1 http_port=80`).
+  * *YAML:* Khai báo dưới mục host đó.
 
-```
+* **Group Variables:** Gán cho cả nhóm (tất cả máy trong nhóm đều nhận biến này).
+  * *INI:* Dùng section `[ten_nhom:vars]`.
+  * *YAML:* Dùng mục `vars:`.
 
-#### b. Sử dụng dải số (Ranges)
 
-Thay vì liệt kê từng máy, bạn có thể dùng dải ký tự/số để khai báo nhanh.
+* **Tổ chức biến (Khuyên dùng):** Thay vì viết hết vào file inventory, nên tách ra thư mục riêng:
+  * `/etc/ansible/host_vars/`: Chứa file biến cho từng host.
+  * `/etc/ansible/group_vars/`: Chứa file biến cho từng nhóm.
 
-```ini
-[rhel9]
-# Bao gồm servera, serverb, serverc, serverd
-server[a:d]
 
-```
+* **Thứ tự ưu tiên (Precedence):** Biến cụ thể sẽ ghi đè biến chung.
+* Thấp nhất: Nhóm `all` -> Nhóm cha -> Nhóm con -> Cao nhất: Host.
 
-#### c. Nhóm lồng nhau (Nested Groups / Children)
+#### 4.3.5. Các tham số kết nối (Behavioral Inventory Parameters)
+Đây là các biến đặc biệt để điều khiển cách Ansible kết nối SSH tới máy đích:
+**Kết nối chung:**
+  * `ansible_host`: IP hoặc Hostname thực tế để kết nối (nếu khác với tên alias trong inventory).
+  * `ansible_port`: Cổng SSH (mặc định 22).
+  * `ansible_user`: Username để đăng nhập SSH.
+  * `ansible_password`: Mật khẩu đăng nhập (Khuyên dùng Ansible Vault để bảo mật, không nên lưu text rõ).
+**Kết nối SSH:**
+  * `ansible_ssh_private_key_file`: Đường dẫn tới file private key (nếu không dùng ssh-agent).
+  * `ansible_connection`: Loại kết nối (mặc định là `ssh`, có thể là `local`, `winrm`...).
+**Leo thang đặc quyền (Privilege Escalation - Sudo):**
+  * `ansible_become`: Đặt là `yes` để bật chế độ sudo.
+  * `ansible_become_user`: User muốn trở thành (thường là `root`).
+  * `ansible_become_password`: Mật khẩu sudo.
+**Môi trường Python:**
+  * `ansible_python_interpreter`: Đường dẫn tới Python trên máy đích (Hữu ích nếu máy đích cài Python ở vị trí lạ hoặc dùng Python 2/3 lẫn lộn).
 
-Để tạo một "nhóm cha" chứa các "nhóm con", bạn **bắt buộc** phải sử dụng từ khóa `:children`.
+#### 4.3.6. Các ví dụ tổ chức Inventory (Inventory Setup Examples)
+* **Theo môi trường:** Tạo file riêng cho mỗi môi trường (`inventory_test`, `inventory_staging`, `inventory_prod`) để tránh chạy nhầm lệnh lên Production.
+* **Theo chức năng:** Gom nhóm dbserver, appserver để chạy các task cài đặt firewall hoặc phần mềm đặc thù.
+* **Theo vị trí:** Gom nhóm theo Datacenter (DC1, DC2) để xử lý các vấn đề hạ tầng cục bộ.
 
-* **Sai:** Nếu chỉ viết tên nhóm con dưới tên nhóm cha, Ansible sẽ hiểu lầm đó là tên của một máy chủ (host).
-* **Đúng:** Phải thêm hậu tố `:children`.
-
-```ini
-# Nhóm cha là 'rhel'
-[rhel:children]
-# Nhóm con
-rhel9
-rhel8
-
-```
-
-*(Lúc này, Ansible hiểu `rhel9` là một nhóm các máy chủ, chứ không phải là một máy chủ tên là rhel9).*
-
-### 4. Cách kiểm tra Inventory
-
-Tác giả video khuyên dùng các lệnh sau để kiểm tra xem Ansible đã hiểu đúng cấu trúc file inventory hay chưa:
-
+### 4.4. Cách kiểm tra Inventory
 * **`ansible-inventory --graph`** (Khuyên dùng):
-* Hiển thị cấu trúc dạng cây (tree layout).
-* Dễ đọc, trực quan.
-* Các nhóm sẽ có tiền tố `@` (ví dụ: `@all`, `@webservers`).
-* Hiển thị rõ nhóm mặc định `all` và `ungrouped`.
-
-
+  * Hiển thị cấu trúc dạng cây (tree layout).
+  * Dễ đọc, trực quan.
+  * Các nhóm sẽ có tiền tố `@` (ví dụ: `@all`, `@webservers`).
+  * Hiển thị rõ nhóm mặc định `all` và `ungrouped`.
 * **`ansible-inventory --list`**:
-* Hiển thị dữ liệu dạng **JSON**.
-* Chứa đầy đủ thông tin chi tiết nhưng khó đọc hơn đối với con người.
+  * Hiển thị dữ liệu dạng **JSON**.
+  * Chứa đầy đủ thông tin chi tiết nhưng khó đọc hơn đối với con người.
+-----
+# 5. Ad-Hoc commands trong Ansible.
+## 5.1. Giới thiệu về Ad-hoc Commands
+**Ad-hoc command** là các lệnh chạy nhanh, thực hiện **một nhiệm vụ duy nhất** trên một hoặc nhiều máy chủ.
+* **Đặc điểm:** Nhanh, dễ dùng, nhưng không lưu lại để tái sử dụng (khác với Playbook).
+* **Khi nào dùng:** Cho các việc hiếm khi lặp lại (ví dụ: tắt toàn bộ máy trong phòng Lab để nghỉ lễ, check nhanh thông tin hệ thống).
+* **Cấu trúc lệnh:**
+```bash
+ansible [nhóm_máy] -m [tên_module] -a "[tham_số]"
+```
+## 5.2. Các trường hợp sử dụng phổ biến
+**Ad-hoc** cũng hoạt động dựa trên mô hình **khai báo (declarative)** và **tính bất biến (idempotence)**: Nó kiểm tra trạng thái hiện tại, nếu máy đích đã ở đúng trạng thái mong muốn rồi thì nó sẽ không làm gì cả.
+### 5.2.1. Khởi động lại Server (Reboot)
+Module mặc định của Ansible là `command` (không cần gõ `-m command`).
+* **Reboot toàn bộ nhóm [chatbot]:**
+`ansible chatbot -a "/sbin/reboot"`
+* **Chạy song song (Forks):** Mặc định Ansible chạy 5 luồng cùng lúc. Muốn reboot 10 máy cùng lúc để nhanh hơn:
+`ansible chatbot -a "/sbin/reboot" -f 10`
+* **Quyền admin (Sudo):** Dùng `--become` để chạy với quyền root (nếu cần nhập pass sudo thì thêm `-K`):
+`ansible chatbot -a "/sbin/reboot" --become -K`
+* **Lưu ý quan trọng:** Module `command` không hỗ trợ các ký tự đặc biệt của shell như `|` (pipe), `>` (redirect). Nếu cần dùng chúng, hãy đổi sang module **`shell`** (`-m shell`).
+### 5.2.2. Quản lý File (File Transfer)
+Tận dụng sức mạnh của SCP để copy file hàng loạt.
+* **Copy file:**
+`ansible chatbot -m copy -a "src=/etc/hosts dest=/tmp/hosts"`
+* **Thay đổi quyền/tạo thư mục (chmod/chown/mkdir):** Dùng module `file`.
+`ansible webservers -m file -a "dest=/srv/foo/a.txt mode=600 owner=mdehaan"`
+* **Xóa file/thư mục:**
+`ansible webservers -m file -a "dest=/path/to/c state=absent"`
+### 5.2.3. Quản lý Gói phần mềm (Packages)
+Dùng module tương ứng với OS (ví dụ `yum` cho CentOS/RHEL, `apt` cho Ubuntu).
+* **Cài đặt (không update):** `state=present`
+* **Cài bản mới nhất:** `state=latest`
+* **Gỡ bỏ phần mềm:** `state=absent`
+*Ví dụ:* `ansible webservers -m yum -a "name=acme state=latest"`
+### 5.2.4. Quản lý Người dùng (Users)
+Tạo hoặc xóa user nhanh chóng.
+* **Tạo user:** `ansible all -m user -a "name=foo password=<pass_đã_mã_hóa>"`
+* **Xóa user:** `ansible all -m user -a "name=foo state=absent"`
+### 5.2.5. Quản lý Dịch vụ (Services)
+Bật/tắt/restart các service như Apache, Nginx...
+* **Start:** `ansible webservers -m service -a "name=httpd state=started"`
+* **Restart:** `state=restarted`
+* **Stop:** `state=stopped`
+## 5.3. Thu thập thông tin (Gathering Facts)
+Ansible có thể lấy toàn bộ thông tin phần cứng/phần mềm của máy đích (IP, OS, RAM, CPU...).
+* Lệnh: `ansible all -m setup`
+### 5.4. Chế độ kiểm tra (Check Mode)
+Đây là chế độ **"Chạy thử" (Dry Run)**. Ansible sẽ báo cáo những gì nó *dự định* làm nhưng **không thực sự thay đổi** bất cứ thứ gì trên máy đích.
+* Dùng cờ `-C` hoặc `--check`.
+* *Ví dụ:* `ansible all -m copy -a "..." -C` (Chỉ hiện ra là sẽ copy, nhưng không copy thật).
 
 
 

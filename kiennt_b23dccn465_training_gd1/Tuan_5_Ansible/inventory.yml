@@ -1,0 +1,22 @@
+all:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  
+  children:
+    database:
+      hosts:
+        db-server:
+          ansible_host: 192.168.123.81
+          ansible_user: lab
+    
+    backend:
+      hosts:
+        be-server:
+          ansible_host: 192.168.123.82
+          ansible_user: lab
+    
+    frontend:
+      hosts:
+        fe-server:
+          ansible_host: 192.168.123.83
+          ansible_user: lab
