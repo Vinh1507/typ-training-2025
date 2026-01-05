@@ -172,18 +172,22 @@ Có thể gán biến (variables) cho từng host hoặc cả nhóm.
 
 ### 4.3.5. Các tham số kết nối (Behavioral Inventory Parameters)
 Đây là các biến đặc biệt để điều khiển cách Ansible kết nối SSH tới máy đích:
+
 **Kết nối chung:**
   * `ansible_host`: IP hoặc Hostname thực tế để kết nối (nếu khác với tên alias trong inventory).
   * `ansible_port`: Cổng SSH (mặc định 22).
   * `ansible_user`: Username để đăng nhập SSH.
   * `ansible_password`: Mật khẩu đăng nhập (Khuyên dùng Ansible Vault để bảo mật, không nên lưu text rõ).
+
 **Kết nối SSH:**
   * `ansible_ssh_private_key_file`: Đường dẫn tới file private key (nếu không dùng ssh-agent).
   * `ansible_connection`: Loại kết nối (mặc định là `ssh`, có thể là `local`, `winrm`...).
+
 **Leo thang đặc quyền (Privilege Escalation - Sudo):**
   * `ansible_become`: Đặt là `yes` để bật chế độ sudo.
   * `ansible_become_user`: User muốn trở thành (thường là `root`).
   * `ansible_become_password`: Mật khẩu sudo.
+
 **Môi trường Python:**
   * `ansible_python_interpreter`: Đường dẫn tới Python trên máy đích (Hữu ích nếu máy đích cài Python ở vị trí lạ hoặc dùng Python 2/3 lẫn lộn).
 
