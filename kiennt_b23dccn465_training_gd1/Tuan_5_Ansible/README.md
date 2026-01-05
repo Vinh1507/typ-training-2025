@@ -110,24 +110,24 @@ Nhóm này dành cho người dùng nâng cao muốn tối ưu tốc độ và s
 | **`pipelining`** | Giảm số lượng kết nối SSH cần thiết để thực thi module. Giúp Ansible chạy **nhanh hơn rất nhiều**. | `True` (Nên bật nếu không dùng `requiretty` trong sudoers) |
 | **`ssh_args`** | Các tham số truyền thêm vào lệnh SSH. Thường dùng để giữ kết nối sống (KeepAlive). | `-o ControlMaster=auto -o ControlPersist=60s` |
 | **`retries`** | Số lần thử lại nếu kết nối SSH thất bại. | `3` |
-
-# 4. Invectory trong Ansible
-### 4.1. Tổng quan về Inventory
+-----
+# 4. Inventory trong Ansible
+## 4.1. Tổng quan về Inventory
 * **Inventory** là một thành phần quan trọng trong Ansible, nó là nơi lưu trữ danh sách các máy chủ (hosts) mà Ansible sẽ quản lý và thực thi các tác vụ trên đó.
 * Inventory có thể được định nghĩa dưới dạng:
   * **File tĩnh (Static Inventory):** Là các file văn bản (thường là định dạng INI hoặc YAML) chứa danh sách các host và nhóm host.
   * **File động (Dynamic Inventory):** Là các script hoặc chương trình tạo ra danh sách host một cách tự động từ các nguồn bên ngoài như dịch vụ đám mây (AWS, GCP, Azure).
 * Inventory giúp tổ chức các máy chủ thành các nhóm (groups) để dễ dàng quản lý và thực thi các tác vụ trên các nhóm máy chủ cụ thể.
-### 4.2. Cấu hình đường dẫn Inventory
+## 4.2. Cấu hình đường dẫn Inventory
 
 Trong file cấu hình `ansible.cfg`:
 
 * Chỉ thị `inventory` có thể trỏ đến một **thư mục** (ví dụ: `./my_inventory`) thay vì một file đơn lẻ.
 * Khi trỏ vào thư mục, Ansible sẽ tự động xử lý và gộp tất cả các file nằm trong thư mục đó để tạo thành inventory hoàn chỉnh.
 
-### 4.3. Cách viết file Inventory
+## 4.3. Cách viết file Inventory
 
-#### 4.3.1. Quản lý Nhóm (Groups)
+### 4.3.1. Quản lý Nhóm (Groups)
 
 Ansible cho phép gom các máy chủ vào các nhóm để dễ quản lý.
 * **Nhóm mặc định:**
@@ -142,16 +142,16 @@ Ansible cho phép gom các máy chủ vào các nhóm để dễ quản lý.
   * *YAML:* Dùng mục `children:`.
   * *Lợi ích:* Giúp quản lý biến chung cho cả một tập hợp lớn (ví dụ: nhóm `prod` chứa `east` và `west`).
 
-#### 4.3.2. Khai báo Host hàng loạt (Ranges)
+### 4.3.2. Khai báo Host hàng loạt (Ranges)
 Nếu tên host tuân theo quy tắc số hoặc chữ cái, bạn có thể khai báo theo dải thay vì liệt kê từng cái.
 * Ví dụ: `www[01:50].example.com` (từ www01 đến www50).
 * Có thể quy định bước nhảy (stride): `www[01:50:2]` (chỉ lấy số lẻ: 01, 03, 05...).
 
-#### 4.3.3. Nguồn Inventory (Inventory Sources)
+### 4.3.3. Nguồn Inventory (Inventory Sources)
 * **Nhiều nguồn:** Bạn có thể dùng nhiều file inventory cùng lúc bằng cách dùng tham số `-i` nhiều lần hoặc trỏ vào một thư mục chứa nhiều file.
 * **Thứ tự load:** Ansible load file theo thứ tự bảng chữ cái. File load sau có thể ghi đè thông tin của file trước.
 
-#### 4.3.4. Biến trong Inventory (Inventory Variables)
+### 4.3.4. Biến trong Inventory (Inventory Variables)
 Có thể gán biến (variables) cho từng host hoặc cả nhóm.
 * **Host Variables:** Gán riêng cho 1 máy.
   * *INI:* Viết cùng dòng với host (`host1 http_port=80`).
@@ -170,7 +170,7 @@ Có thể gán biến (variables) cho từng host hoặc cả nhóm.
 * **Thứ tự ưu tiên (Precedence):** Biến cụ thể sẽ ghi đè biến chung.
 * Thấp nhất: Nhóm `all` -> Nhóm cha -> Nhóm con -> Cao nhất: Host.
 
-#### 4.3.5. Các tham số kết nối (Behavioral Inventory Parameters)
+### 4.3.5. Các tham số kết nối (Behavioral Inventory Parameters)
 Đây là các biến đặc biệt để điều khiển cách Ansible kết nối SSH tới máy đích:
 **Kết nối chung:**
   * `ansible_host`: IP hoặc Hostname thực tế để kết nối (nếu khác với tên alias trong inventory).
@@ -187,12 +187,12 @@ Có thể gán biến (variables) cho từng host hoặc cả nhóm.
 **Môi trường Python:**
   * `ansible_python_interpreter`: Đường dẫn tới Python trên máy đích (Hữu ích nếu máy đích cài Python ở vị trí lạ hoặc dùng Python 2/3 lẫn lộn).
 
-#### 4.3.6. Các ví dụ tổ chức Inventory (Inventory Setup Examples)
+### 4.3.6. Các ví dụ tổ chức Inventory (Inventory Setup Examples)
 * **Theo môi trường:** Tạo file riêng cho mỗi môi trường (`inventory_test`, `inventory_staging`, `inventory_prod`) để tránh chạy nhầm lệnh lên Production.
 * **Theo chức năng:** Gom nhóm dbserver, appserver để chạy các task cài đặt firewall hoặc phần mềm đặc thù.
 * **Theo vị trí:** Gom nhóm theo Datacenter (DC1, DC2) để xử lý các vấn đề hạ tầng cục bộ.
 
-### 4.4. Cách kiểm tra Inventory
+## 4.4. Cách kiểm tra Inventory
 * **`ansible-inventory --graph`** (Khuyên dùng):
   * Hiển thị cấu trúc dạng cây (tree layout).
   * Dễ đọc, trực quan.
@@ -208,9 +208,9 @@ Có thể gán biến (variables) cho từng host hoặc cả nhóm.
 * **Đặc điểm:** Nhanh, dễ dùng, nhưng không lưu lại để tái sử dụng (khác với Playbook).
 * **Khi nào dùng:** Cho các việc hiếm khi lặp lại (ví dụ: tắt toàn bộ máy trong phòng Lab để nghỉ lễ, check nhanh thông tin hệ thống).
 * **Cấu trúc lệnh:**
-```bash
-ansible [nhóm_máy] -m [tên_module] -a "[tham_số]"
-```
+  ```bash
+  ansible [nhóm_máy] -m [tên_module] -a "[tham_số]"
+  ```
 ## 5.2. Các trường hợp sử dụng phổ biến
 **Ad-hoc** cũng hoạt động dựa trên mô hình **khai báo (declarative)** và **tính bất biến (idempotence)**: Nó kiểm tra trạng thái hiện tại, nếu máy đích đã ở đúng trạng thái mong muốn rồi thì nó sẽ không làm gì cả.
 ### 5.2.1. Khởi động lại Server (Reboot)
@@ -248,10 +248,12 @@ Bật/tắt/restart các service như Apache, Nginx...
 ## 5.3. Thu thập thông tin (Gathering Facts)
 Ansible có thể lấy toàn bộ thông tin phần cứng/phần mềm của máy đích (IP, OS, RAM, CPU...).
 * Lệnh: `ansible all -m setup`
-### 5.4. Chế độ kiểm tra (Check Mode)
+## 5.4. Chế độ kiểm tra (Check Mode)
 Đây là chế độ **"Chạy thử" (Dry Run)**. Ansible sẽ báo cáo những gì nó *dự định* làm nhưng **không thực sự thay đổi** bất cứ thứ gì trên máy đích.
 * Dùng cờ `-C` hoặc `--check`.
 * *Ví dụ:* `ansible all -m copy -a "..." -C` (Chỉ hiện ra là sẽ copy, nhưng không copy thật).
+-----
+# 6. Playbook trong Ansible
 
 
 
