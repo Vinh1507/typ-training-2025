@@ -1,0 +1,44 @@
+- name: Frontend backup
+  hosts: fe-server
+  become: yes
+
+  vars:
+    registry_image: "{{ lookup('env','CI_REGISTRY_IMAGE') }}"
+    ci_registry: "{{ lookup('env','CI_REGISTRY') }}"
+    ci_user: "{{ lookup('env','CI_REGISTRY_USER') }}"
+    ci_password: "{{ lookup('env','CI_REGISTRY_PASSWORD') }}"
+
+  tasks:
+  - name: Ensure Docker is installed
+    ansible.builtin.apt:
+      name:
+        - docker.io
+        - python3-docker
+      state: present
+      update_cache: yes
+
+  - name: Ensure Docker service is started
+    ansible.builtin.service:
+      name: docker
+      state: started
+      enabled: yes
+
+  - name: Login to GitLab Registry
+    community.docker.docker_login:
+      registry_url: "{{ ci_registry }}"
+      username: "{{ ci_user }}"
+      password: "{{ ci_password }}"
+      reauthorize: false
+
+  - name: Check if frontend container exists to get current image
+    community.docker.docker_container_info:
+      name: frontend
+    register: frontend_info
+
+  - name: Tag current frontend image as backup (only if container exists)
+    community.docker.docker_image:
+      name: "{{ frontend_info.container.Config.Image }}"
+      repository: "{{ registry_image }}/frontend:backup"
+      source: local
+      push: yes
+    when: frontend_info.exists

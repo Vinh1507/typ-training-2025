@@ -1,0 +1,60 @@
+- name: Frontend Server Setup
+  hosts: fe-server
+  become: yes
+  vars:
+    be_host: "{{ hostvars['be-server'].ansible_host }}"
+    be_port: "8080"
+
+    registry_image: "{{ lookup('env','CI_REGISTRY_IMAGE') }}"
+    tag: "{{ lookup('env','TAG') | default('latest', true) }}"
+    
+    ci_registry: "{{ lookup('env','CI_REGISTRY') }}"
+    ci_user: "{{ lookup('env','CI_REGISTRY_USER') }}"
+    ci_password: "{{ lookup('env','CI_REGISTRY_PASSWORD') }}" 
+
+  tasks:
+  - name: Install Docker and Python SDK
+    ansible.builtin.apt:
+      name:
+        - docker.io
+        - python3-docker 
+      state: present
+      update_cache: yes
+
+  - name: Ensure Docker service is started
+    ansible.builtin.service:
+      name: docker
+      state: started
+      enabled: yes
+
+  - name: Log into GitLab Registry
+    community.docker.docker_login:
+      registry_url: "{{ ci_registry }}"
+      username: "{{ ci_user }}"
+      password: "{{ ci_password }}"
+      reauthorize: yes
+
+  - name: Pull Frontend Image
+    community.docker.docker_image:
+      name: "{{ registry_image }}/frontend:{{ tag }}"
+      source: pull
+      force_source: false
+
+  - name: Run Frontend Container
+    community.docker.docker_container:
+      name: frontend
+      image: "{{ registry_image }}/frontend:{{ tag }}"
+      state: started
+      restart_policy: always
+      ports:
+        - "81:80"
+      env:
+        BACKEND_HOST: "{{ be_host }}"
+        BACKEND_PORT: "{{ be_port }}"
+  
+  - name: Clean up unused Docker images
+    community.docker.docker_prune:
+      images: yes
+      containers: no
+      networks: no
+      volumes: no

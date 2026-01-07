@@ -9,7 +9,7 @@
 ![architect.png](Image/architect.png)
 
 * Ansible gồm 3 thành phần:
-  * Control node: Một hệ thống được cài đặt Ansible. Bạn chạy các lệnh Ansible như ansible hoặc ansible-inventory trên nút điều khiển.
+  * Control node: Một hệ thống được cài đặt Ansible. Dev chạy các lệnh Ansible như ansible hoặc ansible-inventory trên nút điều khiển.
   * Inventory: Danh sách các nút được quản lý.
   * Managed node: Các hệ thống từ xa được quản lý bởi Ansible.
 -----
@@ -62,17 +62,17 @@ Thứ tự ưu tiên như sau:
 
 ![alt text](Image/conf2.png)
 
-3. **`./ansible.cfg` (Thư mục hiện tại):** Nằm ngay trong thư mục dự án bạn đang đứng. Đây là cấu hình đặc thù cho dự án (project-specific) và sẽ ghi đè hai loại trên.
+3. **`./ansible.cfg` (Thư mục hiện tại):** Nằm ngay trong thư mục dự án đang đứng. Đây là cấu hình đặc thù cho dự án (project-specific) và sẽ ghi đè hai loại trên.
 
 ![alt text](Image/conf3.png)
 
-4. **Biến môi trường `ANSIBLE_CONFIG` (Mạnh nhất):** Đây là thẩm quyền cao nhất. Nếu bạn định nghĩa biến môi trường này trỏ đến một file bất kỳ, Ansible sẽ sử dụng file đó và bỏ qua các nguồn khác.
+4. **Biến môi trường `ANSIBLE_CONFIG` (Mạnh nhất):** Đây là thẩm quyền cao nhất. Nếu định nghĩa biến môi trường này trỏ đến một file bất kỳ, Ansible sẽ sử dụng file đó và bỏ qua các nguồn khác.
 
 ## 3.3. Các lệnh kiểm tra và xác minh
 
-* **Kiểm tra file cấu hình đang dùng:** Sử dụng lệnh `ansible --version`. Kết quả trả về sẽ hiển thị dòng "config file", cho biết chính xác file nào đang được Ansible sử dụng dựa trên thư mục bạn đang đứng.
+* **Kiểm tra file cấu hình đang dùng:** Sử dụng lệnh `ansible --version`. Kết quả trả về sẽ hiển thị dòng "config file", cho biết chính xác file nào đang được Ansible sử dụng dựa trên thư mục đang đứng.
 * **Xem toàn bộ cấu hình hiện tại:** Sử dụng lệnh `ansible-config dump`. Lệnh này sẽ in ra tất cả các thiết lập đang có hiệu lực sau khi đã gộp và xử lý ưu tiên từ các nguồn khác nhau.
-* **Tạo file cấu hình mẫu:** Bạn có thể tạo một file chứa các thiết lập mặc định (đã bị comment) để tham khảo bằng cách chạy lệnh sinh file mẫu (ví dụ: `ansible-config init --disabled > default-ansible.cfg`).
+* **Tạo file cấu hình mẫu:** Có thể tạo một file chứa các thiết lập mặc định (đã bị comment) để tham khảo bằng cách chạy lệnh sinh file mẫu (ví dụ: `ansible-config init --disabled > default-ansible.cfg`).
 
 ## 3.4. Tạo file cấu hình ansible.cfg cơ bản
 ### 3.4.1. Nhóm `[defaults]` (Cấu hình chung)
@@ -82,7 +82,7 @@ Thứ tự ưu tiên như sau:
 | --- | --- | --- |
 | **`inventory`** | Đường dẫn đến file hoặc thư mục chứa danh sách host. | `./inventory` hoặc `/etc/ansible/hosts` |
 | **`remote_user`** | User mặc định dùng để SSH vào máy đích. | `root` hoặc `ubuntu` |
-| **`private_key_file`** | Đường dẫn đến file SSH private key (nếu bạn không dùng ssh-agent). | `~/.ssh/id_rsa` |
+| **`private_key_file`** | Đường dẫn đến file SSH private key (nếu không dùng ssh-agent). | `~/.ssh/id_rsa` |
 | **`host_key_checking`** | Kiểm tra SSH key fingerprint. Đặt `False` để tránh lỗi khi kết nối server mới lần đầu. | `False` (Rất hay dùng) |
 | **`forks`** | Số lượng host được xử lý song song cùng lúc. Tăng lên giúp chạy nhanh hơn nếu máy mạnh. | `5` (Mặc định). Có thể tăng lên `20` hoặc `50`. |
 | **`roles_path`** | Đường dẫn nơi Ansible tìm kiếm các Roles. | `./roles` |
@@ -133,7 +133,7 @@ Ansible cho phép gom các máy chủ vào các nhóm để dễ quản lý.
 * **Nhóm mặc định:**
   * `all`: Chứa tất cả các host.
   * `ungrouped`: Chứa các host không thuộc nhóm nào (trừ nhóm `all`).
-* **Một host thuộc nhiều nhóm:** Bạn có thể phân loại host theo tiêu chí:
+* **Một host thuộc nhiều nhóm:** Có thể phân loại host theo tiêu chí:
   * **What (Cái gì):** Ứng dụng, Database, Web...
   * **Where (Ở đâu):** Region (East, West), Datacenter...
   * **When (Khi nào):** Môi trường (Prod, Test, Dev).
@@ -143,12 +143,16 @@ Ansible cho phép gom các máy chủ vào các nhóm để dễ quản lý.
   * *Lợi ích:* Giúp quản lý biến chung cho cả một tập hợp lớn (ví dụ: nhóm `prod` chứa `east` và `west`).
 
 ### 4.3.2. Khai báo Host hàng loạt (Ranges)
-Nếu tên host tuân theo quy tắc số hoặc chữ cái, bạn có thể khai báo theo dải thay vì liệt kê từng cái.
+Nếu tên host tuân theo quy tắc số hoặc chữ cái, Ansible cho phép khai báo theo dải thay vì liệt kê từng cái.
 * Ví dụ: `www[01:50].example.com` (từ www01 đến www50).
 * Có thể quy định bước nhảy (stride): `www[01:50:2]` (chỉ lấy số lẻ: 01, 03, 05...).
 
 ### 4.3.3. Nguồn Inventory (Inventory Sources)
-* **Nhiều nguồn:** Bạn có thể dùng nhiều file inventory cùng lúc bằng cách dùng tham số `-i` nhiều lần hoặc trỏ vào một thư mục chứa nhiều file.
+* **Thứ tự ưu tiên:** Ansible sẽ load inventory theo thứ tự:
+  1. Biến môi trường `ANSIBLE_INVENTORY`.
+  2. File cấu hình `ansible.cfg` (tham số `inventory`).
+  3. File mặc định `/etc/ansible/hosts`.
+* **Nhiều nguồn:** Có thể dùng nhiều file inventory cùng lúc bằng cách dùng tham số `-i` nhiều lần hoặc trỏ vào một thư mục chứa nhiều file.
 * **Thứ tự load:** Ansible load file theo thứ tự bảng chữ cái. File load sau có thể ghi đè thông tin của file trước.
 
 ### 4.3.4. Biến trong Inventory (Inventory Variables)
@@ -256,8 +260,411 @@ Ansible có thể lấy toàn bộ thông tin phần cứng/phần mềm của m
 Đây là chế độ **"Chạy thử" (Dry Run)**. Ansible sẽ báo cáo những gì nó *dự định* làm nhưng **không thực sự thay đổi** bất cứ thứ gì trên máy đích.
 * Dùng cờ `-C` hoặc `--check`.
 * *Ví dụ:* `ansible all -m copy -a "..." -C` (Chỉ hiện ra là sẽ copy, nhưng không copy thật).
+
 -----
+
 # 6. Playbook trong Ansible
+## 6.1. Giới thiệu về Ansible Playbooks
+
+**Ansible Playbooks** là hệ thống quản lý cấu hình và triển khai (deployment) có thể tái sử dụng, lặp lại và đơn giản. Chúng rất phù hợp để triển khai các ứng dụng phức tạp.
+
+* **Chức năng:** Khai báo cấu hình, điều phối các quy trình thủ công trên nhiều nhóm máy theo thứ tự xác định, và chạy các tác vụ đồng bộ hoặc không đồng bộ.
+
+* **Lợi ích:** Nên viết Playbook và lưu vào source control (như Git) để quản lý phiên bản và tái sử dụng nếu một tác vụ cần thực hiện nhiều lần.
+
+## 6.2. Cú pháp và Cấu trúc của Playbook
+
+* **Định dạng:** Playbook được viết bằng định dạng **YAML**.
+
+* **Cấu trúc phân cấp:** 
+  * **Playbook:** Chứa danh sách các **Plays**.
+  * **Play:** Mỗi Play thực hiện một phần của mục tiêu tổng thể, nhắm vào một nhóm máy cụ thể (ví dụ: Web servers hoặc DB servers).
+  * **Task (Tác vụ):** Mỗi Play chứa nhiều Task. Mỗi Task gọi một **Ansible Module** để thực thi lệnh.
+
+## 6.3. Cơ chế hoạt động (Execution)
+
+* **Thứ tự:** Playbook chạy tuần tự từ trên xuống dưới. Trong mỗi Play, các Task cũng chạy theo thứ tự từ trên xuống.
+* **Quy trình:**
+  1. Xác định các máy (managed nodes) cần nhắm tới.
+  2. Thực thi ít nhất một tác vụ.
 
 
+* **FQCN (Fully-Qualified Collection Name):** Từ Ansible 2.10 trở đi, nên dùng tên đầy đủ của collection (ví dụ: `ansible.builtin.yum` thay vì chỉ `yum`) để đảm bảo chọn đúng module.
+
+* **Xử lý lỗi:** Nếu một Task bị lỗi trên một máy chủ, máy chủ đó sẽ bị loại khỏi danh sách thực thi cho các phần còn lại của Playbook.
+
+## 6.4. Trạng thái mong muốn và Tính Idempotency
+
+Đây là khái niệm cốt lõi của Ansible:
+
+* **Desired State (Trạng thái mong muốn):** Hầu hết các module sẽ kiểm tra xem hệ thống đã ở trạng thái mong muốn chưa. Nếu rồi, chúng sẽ **không làm gì cả**.
+* **Idempotency (Tính bất biến/lũy đẳng):** Dù chạy Playbook 1 lần hay nhiều lần, kết quả cuối cùng của hệ thống vẫn giống nhau. Điều này đảm bảo an toàn khi chạy lại Playbook.
+
+## 6.5. Các chế độ chạy Playbook
+
+Để chạy Playbook, sử dụng lệnh: `ansible-playbook playbook.yml`
+
+* **Chạy thông thường:** Áp dụng thay đổi trực tiếp lên hệ thống.
+* **Check Mode (Chạy kiểm tra):** Sử dụng cờ `--check` hoặc `-C`.
+* Chế độ này chạy "giả lập", báo cáo các thay đổi *sẽ* diễn ra nhưng **không thực hiện thay đổi thực tế**.
+* Rất hữu ích để kiểm tra an toàn trước khi chạy trên môi trường production (sản xuất).
+
+
+* **Ansible-Pull:**
+* Đảo ngược kiến trúc: Thay vì cần "đẩy" (push) cấu hình từ máy điều khiển xuống, các máy con sẽ tự động "kéo" (pull) cấu hình từ một kho lưu trữ trung tâm (như Git) và tự chạy.
+* Giúp mở rộng quy mô (scale) dễ dàng.
+
+
+
+## 6.6. Xác minh và Kiểm tra (Verification & Linting)
+
+Trước khi chạy, nên kiểm tra Playbook để tránh lỗi cú pháp hoặc logic:
+
+* **Các lệnh kiểm tra:** `ansible-playbook --syntax-check` (kiểm tra cú pháp), `--list-hosts` (liệt kê máy), `--list-tasks` (liệt kê tác vụ).
+
+* **Ansible-Lint:** Một công cụ phân tích code (linter) cung cấp phản hồi chi tiết về các lỗi best-practice. Ví dụ: Cảnh báo việc sử dụng `state: latest` (cài bản mới nhất) thay vì một phiên bản cụ thể, điều này có thể gây rủi ro không lường trước.
+
+
+## 6.7. Ví dụ Playbook đơn giản
+```yaml
+- name: DBServer setup
+  hosts: db-server # Chỉ định nhóm máy đích
+  become: yes # Sử dụng quyền sudo
+  tasks:
+  - name: Install MySQL
+    community.mysql.mysql_db:
+      name: mysql-server
+      state: present # Đảm bảo MySQL được cài đặt 
+
+  - name: Start MySQL service
+    ansible.builtin.service:
+      name: mysqld
+      state: started # Đảm bảo dịch vụ MySQL đang chạy
+
+- name: Backend Server setup
+  hosts: be-server
+  become: yes
+  tasks:
+  - name: Install Apache
+    ansible.builtin.apt:
+      name: apache2
+      state: present
+
+  - name: Start Apache service
+    ansible.builtin.service:
+      name: apache2
+      state: started 
+
+- name: Frontend Server setup
+  hosts: fe-server
+  become: yes
+  tasks:
+  - name: Install Nginx
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+  - name: Start Nginx service
+    ansible.builtin.service:
+      name: nginx
+      state: started
+```
+-----
+
+# 7. Module trong Ansible
+## 7.1. Ansible Modules là gì?
+* **Định nghĩa:** Là các đoạn mã nhỏ (script) độc lập, được Ansible đẩy xuống các máy con (managed nodes) để thực thi một tác vụ cụ thể.
+
+* **Cơ chế:** Mỗi khi bạn viết một `task` trong Playbook, bạn thực chất đang gọi một **Module**.
+
+* **Thư viện khổng lồ:** Ansible có sẵn hàng nghìn modules để làm đủ mọi việc: từ cài đặt phần mềm, sửa file, tạo user, đến cấu hình thiết bị mạng Cisco, hay thao tác với Cloud (AWS, Azure).
+
+* **Định dạng output chuẩn:** Mỗi module trả về kết quả dưới dạng JSON, giúp Ansible dễ dàng phân tích và xử lý.
+
+* **Tính bất biến (Idempotency)**: Hầu hết các module được thiết kế để đảm bảo tính bất biến, nghĩa là chạy nhiều lần sẽ không gây ra thay đổi không mong muốn nếu hệ thống đã ở trạng thái mong muốn.
+
+## 7.2. Các nhóm Module phổ biến nhất
+Ansible có rất nhiều module, nhưng dưới đây là một số nhóm module thường dùng nhất:
+### 7.2.1. Quản lý Gói phần mềm (Package Management)
+
+Dùng để cài đặt, gỡ bỏ, cập nhật phần mềm.
+
+* **`ansible.builtin.yum`** (hoặc `dnf`): Dùng cho họ RHEL/CentOS.
+* **`ansible.builtin.apt`**: Dùng cho họ Ubuntu/Debian.
+* **`community.general.pip`**: Cài thư viện Python.
+
+### 7.2.2. Quản lý File và Thư mục (Files)
+
+* **`ansible.builtin.copy`**: Copy file từ máy bạn (control node) sang máy đích.
+* **`ansible.builtin.file`**: Tạo thư mục, xóa file, phân quyền (chmod, chown).
+* **`ansible.builtin.template`**: Giống `copy` nhưng cho phép chèn biến động vào nội dung file (rất mạnh mẽ).
+* **`ansible.builtin.lineinfile`**: Tìm và sửa/thêm một dòng cụ thể trong file cấu hình.
+
+### 7.2.3. Quản lý Hệ thống (System)
+
+* **`ansible.builtin.service`** (hoặc `systemd`): Bật/tắt, khởi động lại dịch vụ (như Apache, MySQL).
+* **`ansible.builtin.user`**: Tạo, xóa, sửa user hệ thống.
+* **`ansible.builtin.group`**: Quản lý nhóm user.
+
+### 7.2.4. Chạy lệnh thô (Commands)
+
+Dùng khi không có module chuyên dụng nào làm được việc bạn muốn.
+
+* **`ansible.builtin.command`**: Chạy lệnh Linux cơ bản (an toàn hơn, không dùng được biến môi trường hay pipe `|`).
+* **`ansible.builtin.shell`**: Chạy lệnh Linux đầy đủ (dùng được pipe, redirect `>`, `>>`), nhưng rủi ro bảo mật cao hơn.
+
+> Ngoài ra, còn rất nhiều [modules](https://docs.ansible.com/projects/ansible/2.9/modules/modules_by_category.html) cho các mục đích khác như quản lý mạng, tương tác với Cloud, quản lý Docker/Kubernetes, v.v.
+
+## 7.3. Làm sao để biết Module nào có tham số gì?
+
+Ansible có công cụ tra cứu tích hợp sẵn ngay trên dòng lệnh, đó là `ansible-doc`.
+
+* **Liệt kê tất cả modules:**
+  ```bash
+  ansible-doc -l
+  ```
+
+
+* **Xem hướng dẫn sử dụng module cụ thể (Ví dụ module `apt`):**
+  ```bash
+  ansible-doc apt
+  ```
+
+-----
+# 8. Variables trong Ansible
+## 8.1. Giới thiệu về Variables trong Ansible
+* **Variables (Biến)** trong Ansible là các đại diện cho giá trị có thể thay đổi, giúp bạn tái sử dụng và quản lý cấu hình một cách linh hoạt hơn.
+* **Mục đích:** Giúp tránh lặp lại giá trị cứng (hard-coded values) trong Playbook, làm cho chúng dễ bảo trì và tái sử dụng.
+* **Cú pháp:** Biến được khai báo và sử dụng trong Playbook, templates, và các thành phần khác của Ansible.
+* **Cách sử dụng:** Biến được tham chiếu bằng cách sử dụng dấu ngoặc nhọn đôi `{{ variable_name }}`.
+## 8.2. Các loại Variables trong Ansible
+Ansible hỗ trợ nhiều loại biến khác nhau, mỗi loại có mục đích và phạm vi sử dụng riêng:
+### 8.2.1. Playbook Variables
+* Được khai báo trực tiếp trong Playbook dưới mục `vars:`.
+* Phạm vi: Chỉ trong Play đó.
+* Ví dụ:
+```yaml
+- name: Example Playbook
+  hosts: all
+  vars:
+    app_port: 8080
+  tasks:
+    - name: Print app port
+      ansible.builtin.debug:
+        msg: "Application will run on port {{ app_port }}"
+```
+### 8.2.2. Inventory Variables
+* Gán biến cho từng host hoặc nhóm trong file inventory.
+* Phạm vi: Trong host hoặc nhóm đó.
+* Ví dụ (INI):
+```ini
+[webservers]
+web1 ansible_host=192.168.1.10 ansible_user=ubuntu app_port=80
+```
+### 8.2.3. Host and Group Variables
+* Lưu trữ biến trong thư mục `host_vars/` và `group_vars/`.
+* Phạm vi: Tương ứng với từng host hoặc nhóm.
+* Ví dụ:
+```host_vars/web1.yml
+app_port: 80
+```
+### 8.2.4. Registered Variables
+* Lưu trữ kết quả của một task để sử dụng trong các task sau.
+* Phạm vi: Trong Playbook hoặc Role đó.
+* Ví dụ:
+```yaml
+- name: Get disk usage
+  ansible.builtin.command: df -h
+  register: disk_usage  
+- name: Print disk usage
+  ansible.builtin.debug:
+    var: disk_usage.stdout
+```
+### 8.2.5. Facts
+* Thông tin thu thập tự động từ các máy đích khi sử dụng module `setup`.
+* Phạm vi: Trong toàn bộ Playbook.
+* Ví dụ:
+```yaml
+- name: Print OS information
+  ansible.builtin.debug:
+    var: ansible_facts['os_family']
+```
+## 8.3. Thứ tự ưu tiên của Variables (Variable Precedence)
+Khi có nhiều biến cùng tên từ các nguồn khác nhau, Ansible sẽ áp dụng một thứ tự ưu tiên để xác định biến nào sẽ được sử dụng. Thứ tự ưu tiên từ thấp đến cao như sau:
+1. **Default variables** (biến mặc định trong module).
+2. **Inventory variables** (biến trong file inventory).
+3. **Host and Group variables** (biến trong `host_vars/` và `group_vars/`).
+4. **Playbook variables** (biến trong Playbook).
+5. **Registered variables** (biến đã đăng ký từ task trước).
+6. **Extra variables** (biến truyền từ dòng lệnh với `-e`).
+* Biến có độ ưu tiên cao hơn sẽ ghi đè biến có độ ưu tiên thấp hơn.
+## 8.4. Ví dụ sử dụng Variables trong Ansible
+```yaml
+- name: DBServer setup
+  hosts: db-server
+  become: yes
+  
+  vars:
+    db_user: "admin"
+    db_password: "securepassword"
+    db_name: "mydatabase"
+    mysql_service: mysql 
+  tasks:
+  - name: Install MySQL Server
+    ansible.builtin.apt:
+      name: mysql-server
+      state: present
+
+  - name: Install Python MySQL library
+    ansible.builtin.apt:
+      name: python3-pymysql
+      state: present
+
+  - name: Start MySQL service
+    ansible.builtin.service:
+      name: "{{ mysql_service }}"
+      state: started
+      enabled: yes
+
+  - name: Create database
+    community.mysql.mysql_db:
+      name: "{{ db_name }}"
+      state: present
+      login_unix_socket: /var/run/mysqld/mysqld.sock # Giúp login quyền root không cần pass
+
+  - name: Create user for database
+    community.mysql.mysql_user:
+      name: "{{ db_user }}"
+      password: "{{ db_password }}"
+      priv: "{{ db_name }}.*:ALL" 
+      state: present
+      login_unix_socket: /var/run/mysqld/mysqld.sock
+```
+-----
+# 9. Một số lệnh thường dùng trong Ansible Playbook
+## 9.1. Decision making (Điều kiện)
+* **`when`**: Chạy task chỉ khi điều kiện đúng.
+  ```yaml
+  - name: Check HTTP status
+    ansible.builtin.uri:
+      url: "http://{{ backend_server }}:{{ backend_port }}/health"
+      return_content: yes
+      status_code: 200 
+    register: result # Lưu kết quả vào biến 'result'
+    ignore_errors: yes # Quan trọng: Để nếu lỗi (404/500) thì playbook không dừng ngay
+
+  - name: Notify if Backend is Healthy
+    ansible.builtin.debug:
+      msg: "Backend is running perfectly!"
+    when: result.status == 200
+  ```
+* **`failed_when`**: Báo lỗi nếu điều kiện đúng.
+  ```yaml
+  - name: Ensure backend is healthy
+    ansible.builtin.uri:
+      url: "http://{{ backend_server }}:{{ backend_port }}/health"
+      return_content: yes
+      status_code: 200 
+    register: result
+    failed_when: result.status != 200 # Báo lỗi nếu status không phải 200
+  ```
+## 9.2. Debug & fail
+* **`fail`**: Báo lỗi và dừng playbook ngay lập tức.
+  ```yaml
+  - name: Ensure backend is healthy
+    ansible.builtin.uri:
+      url: "http://{{ backend_server }}:{{ backend_port }}/health"
+      return_content: yes
+      status_code: 200 
+    register: result
+
+  - name: Fail if Backend is Unhealthy
+    ansible.builtin.fail:
+      msg: "Backend server is down!"
+    when: result.status != 200
+  ```
+* **`debug`**: In thông tin ra màn hình để kiểm tra.
+  ```yaml
+  - name: Print backend status
+    ansible.builtin.debug:
+      msg: "Backend status is {{ result.status }}"
+  ```
+## 9.3. Handlers (Xử lý sự kiện)
+* **`handlers`**: Chạy khi được "gọi" bởi một task (thường dùng để restart dịch vụ).
+  ```yaml
+  handlers:
+    - name: restart apache
+      ansible.builtin.service:
+        name: httpd
+        state: restarted  
+  ```
+* **Gọi handler trong task:**
+  ```yaml  - name: Update Apache config
+    ansible.builtin.template:
+      src: apache.conf.j2
+      dest: /etc/httpd/conf/httpd.conf
+    notify: restart apache
+  ```
+## 9.3. Loops (Vòng lặp)
+* **`loop`**: Lặp qua danh sách các mục.
+  ```yaml
+  - name: Install MySQL Server and MySQL library
+    ansible.builtin.apt:
+      name: {{ item }}
+      loop:
+        - mysql-server
+        - python3-mysql.connector
+      state: present
+      update_cache: yes # Cập nhật cache trước khi cài đặt
+
+  ```
+
+## 9.4. Includes và Imports (Chia nhỏ Playbook)
+* **`include_tasks`**: Chèn các task từ file khác tại thời điểm chạy  
+  ```yaml
+  - name: Include additional tasks
+    include_tasks: additional_tasks.yml
+  ```
+* **`import_tasks`**: Chèn các task từ file khác tại thời điểm phân tích Playbook  
+  ```yaml
+  - name: Import additional tasks 
+    import_tasks: additional_tasks.yml
+  ```
+## 9.5. Tags (Gắn thẻ)
+* **`tags`**: Gắn thẻ cho task hoặc play để chạy một phần cụ thể.
+  ```yaml
+  - name: Restore Database
+  hosts: db-server
+  become: yes
+  gather_facts: yes # Lấy ngày giờ hệ thống
+
+  vars:
+    restore_file: "{{ restore_file }}"
+    backup_dir: /backups
+    db_name: "mydatabase"
+    db_user: "admin"
+    db_password: "securepassword"
+
+  tasks:
+  - name: Backup MySQL database
+    tags: backup
+    community.mysql.mysql_db:
+      name: "{{ db_name }}"
+      state: backup
+      target: "{{ backup_dir }}/{{ ansible_date_time.date }}_{{ ansible_date_time.time }}.sql"
+      login_user: "{{ db_user }}"
+      login_password: "{{ db_password }}"
+
+  - name: Restore MySQL database
+    tags: restore
+    community.mysql.mysql_db:
+      name: "{{ db_name }}"
+      state: import
+      target: "{{ restore_file }}"
+      login_user: "{{ db_user }}"
+      login_password: "{{ db_password }}"
+  ```
+* **Chạy với tag cụ thể:**
+  ```bash
+  ansible-playbook backup.yml --tags "backup"
+  ```
 

@@ -1,0 +1,2 @@
+- import_playbook: ./playbooks/backend/be_backup.yml
+- import_playbook: ./playbooks/frontend/fe_backup.yml

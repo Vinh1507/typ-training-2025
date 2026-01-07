@@ -7,19 +7,19 @@ all:
       hosts:
         db-server:
           ansible_host: 192.168.123.81
-          ansible_user: lab
+          ansible_user: typ
           ansible_ssh_private_key_file: ./database.pem
           
     backend:
       hosts:
         be-server:
           ansible_host: 192.168.123.82
-          ansible_user: lab
+          ansible_user: typ
           ansible_ssh_private_key_file: ./backend.pem
     
     frontend:
       hosts:
         fe-server:
           ansible_host: 192.168.123.83
-          ansible_user: lab
+          ansible_user: typ
           ansible_ssh_private_key_file: ./frontend.pem

@@ -1,0 +1,45 @@
+- name: MySQL Restore (Docker Version)
+  hosts: db-server
+  become: yes
+  vars:
+    backup_dir: /backups
+    container_name: mysql_db  # Phải khớp tên container đang chạy
+    
+    # Credentials (giống file backup)
+    db_name: "{{ lookup('env','MYSQL_DATABASE') }}"
+    db_user: "{{ lookup('env','MYSQL_USER') }}"
+    db_password: "{{ lookup('env','MYSQL_PASSWORD') }}"
+    
+    target_file: "" 
+
+  tasks:
+    - name: Fail if target_file is not provided
+      ansible.builtin.fail:
+        msg: "Set target_file to a .sql path (e.g. -e target_file=/backups/xxx.sql)"
+      when: target_file | length == 0
+
+    - name: Ensure restore file exists
+      ansible.builtin.stat:
+        path: "{{ target_file }}"
+      register: restore_stat
+
+    - name: Fail if restore file not found
+      ansible.builtin.fail:
+        msg: "Restore file does not exist: {{ target_file }}"
+      when: not restore_stat.stat.exists
+
+    - name: Use specified backup file
+      ansible.builtin.set_fact:
+        restore_src: "{{ target_file }}"
+      when: target_file != ""
+
+    - name: Show file info being restored
+      ansible.builtin.debug:
+        msg: "Đang tiến hành Restore từ file: {{ restore_src }}"
+
+    - name: Restore database using Docker Exec
+      ansible.builtin.shell: >
+        docker exec -i {{ container_name }} 
+        mysql -u {{ db_user }} -p'{{ db_password }}' {{ db_name }} 
+        < {{ restore_src }}
+      changed_when: true

@@ -10,6 +10,9 @@ stages:
   - build
   - test
   - scan
+  - deploy 
+  - rollback
+  - notify
 
 include:
   - template: Code-Quality.gitlab-ci.yml
@@ -43,7 +46,6 @@ unit_test_coverage:
   image: maven:3.9.6-eclipse-temurin-21-alpine
   services: []
   script:
-    - ls -la  
     - cd backend  
     - mvn clean test
     - mvn jacoco:report
@@ -52,9 +54,9 @@ unit_test_coverage:
   artifacts:
     when: always
     reports:
-      junit: backend/target/surefire-reports/TEST-*.xml # <--- Sửa đường dẫn artifact
+      junit: backend/target/surefire-reports/TEST-*.xml
     paths:
-      - backend/target/site/jacoco/ # <--- Sửa đường dẫn artifact
+      - backend/target/site/jacoco/
 
 test_job:
   stage: test
@@ -106,3 +108,71 @@ security_scan:
   rules:
     - if: $CI_COMMIT_BRANCH == "dev"
     - if: $CI_COMMIT_TAG
+
+deploy_job:
+  stage: deploy
+  image: alpine:latest 
+  tags: 
+    - deploy-runner
+  before_script: 
+    - cd ansible
+    - apk add --no-cache ansible openssh-client 
+    - cp "$ENV_FILE" .env
+    - echo "CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE" >> .env
+    - echo "TAG=$TAG" >> .env
+    - echo "CI_REGISTRY=$CI_REGISTRY" >> .env
+    - echo "CI_REGISTRY_USER=$CI_REGISTRY_USER" >> .env
+    - echo "CI_REGISTRY_PASSWORD=$CI_REGISTRY_PASSWORD" >> .env
+  script:
+    - ansible-playbook backup.yml
+    - ansible-playbook deploy.yml
+  needs: ["build_job", "test_job"]
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" 
+    - if: $CI_COMMIT_TAG
+
+rollback_job:
+  stage: rollback
+  image: alpine:latest
+  tags: 
+    - deploy-runner
+  before_script: 
+    - cd ansible
+    - apk add --no-cache ansible openssh-client 
+    - cp "$ENV_FILE" .env
+    - echo "CI_REGISTRY_IMAGE=$CI_REGISTRY_IMAGE" >> .env
+    - echo "TAG=$TAG" >> .env
+    - echo "CI_REGISTRY=$CI_REGISTRY" >> .env
+    - echo "CI_REGISTRY_USER=$CI_REGISTRY_USER" >> .env
+    - echo "CI_REGISTRY_PASSWORD=$CI_REGISTRY_PASSWORD" >> .env
+  script:
+    - ansible-playbook rollback.yml
+  needs: ["deploy_job"] 
+  when: manual 
+  rules:
+    - if: $CI_COMMIT_BRANCH == "dev" 
+    - if: $CI_COMMIT_TAG
+
+notify_success:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -H "Content-Type: application/json" \
+      -d "{\"content\": \"✅ **DEPLOY SUCCESS!** 🚀\\n**Project:** $CI_PROJECT_NAME\\n**Branch:** $CI_COMMIT_REF_SLUG\\n**User:** $GITLAB_USER_NAME\\n**Status:** 🟢 Thành công\\n👉 [Xem Pipeline]($CI_PIPELINE_URL)\"}" \
+      $DISCORD_WEBHOOK_URL
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "dev"
+      when: on_success
+
+notify_fail:
+  stage: notify
+  image: curlimages/curl:latest
+  script:
+    - |
+      curl -H "Content-Type: application/json" \
+      -d "{\"content\": \"🚨 **PIPELINE FAILED!** 💥\\n**Project:** $CI_PROJECT_NAME\\n**Branch:** $CI_COMMIT_REF_SLUG\\n**User:** $GITLAB_USER_NAME\\n**Status:** 🔴 Thất bại\\n👉 [Xem lỗi tại đây]($CI_PIPELINE_URL)\"}" \
+      $DISCORD_WEBHOOK_URL
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "dev"
+      when: on_failure

@@ -1,0 +1,71 @@
+- name: Backend restore (run container from :backup image)
+  hosts: be-server
+  become: yes
+
+vars:
+  db_host: "{{ hostvars['db-server'].ansible_host }}"
+  db_port: "3306"
+  db_name: "{{ lookup('env','MYSQL_DATABASE') }}"
+  db_user: "{{ lookup('env','MYSQL_USER') }}"
+  db_password: "{{ lookup('env','MYSQL_PASSWORD') }}"
+
+  registry_image: "{{ lookup('env','CI_REGISTRY_IMAGE') }}"
+  ci_registry: "{{ lookup('env','CI_REGISTRY') }}"
+  ci_user: "{{ lookup('env','CI_REGISTRY_USER') }}"
+  ci_password: "{{ lookup('env','CI_REGISTRY_PASSWORD') }}"
+
+tasks:
+- name: Ensure Docker is installed
+  ansible.builtin.apt:
+    name:
+      - docker.io
+      - python3-docker
+    state: present
+    update_cache: yes
+
+- name: Ensure backend data directories exist (for volume mounts)
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - /opt/minilab/backend/.m2
+    - /opt/minilab/backend/logs
+
+- name: Ensure Docker service is started
+  ansible.builtin.service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Login to GitLab Registry
+  community.docker.docker_login:
+    registry_url: "{{ ci_registry }}"
+    username: "{{ ci_user }}"
+    password: "{{ ci_password }}"
+    reauthorize: false
+
+- name: Pull Backend backup image
+  community.docker.docker_image:
+    name: "{{ registry_image }}/backend:backup"
+    source: pull
+    force_source: false
+
+- name: Run Backend Container from backup image
+  community.docker.docker_container:
+    name: backend
+    image: "{{ registry_image }}/backend:backup"
+    state: started
+    restart_policy: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/minilab/backend/.m2:/root/.m2
+      - /opt/minilab/backend/logs:/app/logs
+    env:
+      SERVER_ADDRESS: "0.0.0.0"
+      HOST: "{{ db_host }}"
+      PORT: "{{ db_port }}"
+      DATABASE: "{{ db_name }}"
+      USERNAME: "{{ db_user }}"
+      PASSWORD: "{{ db_password }}"
