@@ -1,0 +1,233 @@
+body{
+   background: linear-gradient(to right, rgb(233, 233, 255), rgb(244, 255, 244));
+   margin: 10px;
+   padding: 10px;
+   font-family: 'Segoe UI', sans-serif;
+   color: #333;
+   font-size: 1.1em;
+}
+
+
+#div1{
+   background-color: rgb(56, 57, 128);
+   border-radius: 5px;
+   font-family: 'Segoe UI', sans-serif;
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 900px;
+   margin: 0 auto 30px auto;
+   padding: 20px 40px;
+   color: white;
+}
+#div1 img{
+   border-radius: 10px;
+}
+#div1 a{
+   color: rgb(130, 191, 205);
+}
+
+
+#div2{
+   background-color: white;
+   margin: 0 auto 30px auto;
+   border-radius: 5px;
+   padding: 20px 40px;
+   max-width: 900px;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#div2 h2{
+   color: #2c3e50;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center
+}
+
+
+#section1{
+   line-height: 1.3;
+   padding: 20px 40px;
+   background-color: white;
+   border-radius: 5px;
+   font-family: 'Segoe UI', sans-serif;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 900px;
+   margin: auto;
+}
+#section1 h2{
+   color: #2c3e50;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+}
+#section1 h3{
+   color: green;
+}
+
+
+#section2{
+   background-color: white;
+   border-radius: 5px;
+   padding: 20px 40px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 900px;
+   margin: 0 auto 30px auto;
+}
+#section2 {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 40px auto;
+    text-align: center;
+  }
+#only{
+   background-color: #c4e4fe;
+}
+#section2 h2 {
+   color: #2c3e50;
+   margin-bottom: 20px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+#table1 {
+   width: 90%;
+   margin: 0 auto;
+   border-collapse: collapse;
+   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   overflow: hidden;
+   border-radius: 10px;
+   border-color: rgb(212, 211, 211);
+}
+
+#table1 th {
+   background-color: #0078D7;
+   color: white;
+   padding: 12px 15px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+#table1 td {
+   padding: 12px 15px;
+   border-bottom: 1px solid #ddd;
+}
+
+
+footer {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 40px 40px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-top: 3px solid #ffffff;
+  border-radius: 5px;
+  max-width: 900px;
+  margin: auto;
+}
+
+footer h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+footer label {
+  display: block;
+  text-align: left;
+  margin: 10px auto 5px;
+  font-weight: 600;
+  max-width: 400px;
+}
+
+footer input,
+footer textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #000;
+  background: #f9f9f9;
+}
+
+footer input:focus,
+footer textarea:focus {
+  border-color: #000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#submit {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#submit:hover {
+  background-color: #333;
+}
+
+footer hr {
+  margin: 30px auto;
+  width: 80%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 1em;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  #div1, #div2, #section1, #section2, footer {
+    width: 95%;
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  #div1 img {
+    width: 80px;
+    height: auto;
+  }
+
+  #div1 h1 {
+    font-size: 1.4em;
+  }
+
+  #table1 {
+    width: 100%;
+    font-size: 0.9em;
+    display: block;
+    overflow-x: auto;
+  }
+
+  footer input,
+  footer textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #submit {
+    width: 100%;
+    padding: 12px;
+  }
+}

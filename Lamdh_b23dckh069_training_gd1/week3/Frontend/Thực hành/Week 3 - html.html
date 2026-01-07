@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="Week 3 - CSS.css">
+</head>
+<body>
+   <header>
+      <nav>
+         <a href="" id="portfolio">Portfolio</a>
+         <div id="div1">
+            <a href="#Main">Trang chủ</a>
+            <a href="#Aboutme">Giới thiệu</a>
+            <a href="#Skill">Kỹ năng</a>
+            <a href="#Study">Học vấn</a>
+            <a href="#Contact">Liên hệ</a>
+         </div>
+      </nav>
+   
+      <div id="Main">
+         <div class="intro-text">
+            <h1>ĐẶNG HỒNG LÂM</h1>
+            <h3>Sinh viên trường Học Viện Công Nghệ Bưu Chính Viễn Thông</h3>
+            <p>Ước mơ được trở thành 1 lập trình viên web chuyên nghiệp.</p>
+
+         </div>
+
+         <div class="intro-img">
+            <img src="Avatar.png" alt="Ảnh đại diện">
+         </div>
+      </div>
+
+      <div id="Aboutme">
+         <h2>GIỚI THIỆU</h2>
+         <hr align="center", width="150px", color="gray">
+         <p class="para"><strong>Họ và tên: </strong>Đặng Hồng Lâm</p>
+         <p class="para"><strong>Nghề nghiệp: </strong>Sinh viên</p>
+         <p class="para"><strong>Mô tả: </strong>Tôi là sinh viên năm 3 ngành Khoa Học Máy Tính - Trường Học Viện Công Nghệ Bưu Chính Viễn Thông. Mong muốn được trở thành một lập trình viên web.</p>
+      </div>
+   </header>
+
+   <section id="Skill">
+      <h2>Kỹ năng & sở thích</h2>
+      <hr>
+      <ul>
+         <li>
+            <h3>Kỹ năng</h3>
+            <ul>
+               <li>HTML, CSS</li>
+               <li>JavaScript</li>
+               <li>Java Core</li>
+               <li>MySQL</li>
+            </ul>
+         </li>
+         <li>
+            <h3>Sở thích</h3>
+            <ul>
+               <li>Nghe nhạc</li>
+               <li>Chơi game</li>
+               <li>Ngủ</li>
+            </ul>
+         </li>
+      </ul>
+   </section>
+
+   <section id="Study">
+      <h2>Học vấn & Kinh nghiệm</h2>
+      <hr><br>
+      <table border="1" width="750px" style="text-align: center" id="table1">
+         <thead>
+            <tr id="only">
+               <td><strong>Thời gian</strong></td>
+               <td><strong>Trường</strong></td>
+               <td><Strong>Vai trò</Strong></td>
+            </tr>
+            <tr>
+               <td>2020 - 2023</td>
+               <td>THPT Nguyễn Duy Trinh</td>
+               <td>Học sinh</td>
+            </tr>
+            <tr>
+               <td>2023 - nay</td>
+               <td>Học Viện Công Nghệ Bưu Chính Viễn Thông</td>
+               <td>Sinh viên</td>
+            </tr>
+            <tr>
+               <td>2025</td>
+               <td>Thành viên team Web Development </td>
+               <td>Sinh viên - Thành viên team Dev</td>
+            </tr>
+         </thead>
+      </table>
+      <br>
+   </section>
+
+   <footer>
+      <div id="Contact">
+         <h2>LIÊN HỆ</h2>
+         <hr>
+         <label for="name">Họ và tên: </label>
+         <input type="text" id="name"><br><br>
+
+         <label for="email">Email: </label>
+         <input type="email" id="email"><br><br>
+
+         <label for="sdt">Số điện thoại: </label>
+         <input type="number" id="sdt"> <br><br>
+
+         <label for="loinhan">Nội dung: </label><br>
+         <textarea name="loinhan" id="loinhan" rows="5" cols="20"></textarea><br><br>
+
+         <button id="submit">Submit</button>
+      </div>
+      <div id="feedback-section">
+         <h2>Thông tin bạn đã gửi</h2>
+         <hr>
+         <div id="PersonalInfo"></div>
+      </div>
+   
+      <div id="PersonalInfoContainer">
+         <div id="PersonalInfo">
+            <p><strong>Họ và tên:</strong> Đặng Hồng Lâm</p>
+            <p><strong>Email:</strong> lam123zeroes@gmail.com</p>
+            <p><strong>Số điện thoại:</strong> 0387219059</p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/hong.lam.941866" target="_blank">Đặng Hồng Lâm</a></p>
+            <p><strong>Youtube:</strong> <a href="https://www.youtube.com/@Lapisbee1413" target="_blank">Lapisbee1413</a></p>
+            <p><strong>Github:</strong> <a href="https://github.com/Lapisbee1413" target="_blank">Lapisbee1413</a></p>
+         </div>
+      </div>
+   </footer>
+
+   <script src="Week 3 - JS.js"></script>
+</body>
+</html>
