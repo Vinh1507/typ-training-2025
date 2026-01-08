@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/chat")
-@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})
+@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3002", "http://localhost:5173", "http://192.168.123.83:81"})
 @RequiredArgsConstructor
 public class ChatHistoryController {
 

@@ -39,6 +39,12 @@ tasks:
     source: pull
     force_source: false
 
+- name: Kill existing Frontend Container
+  community.docker.docker_container:
+    name: frontend
+    state: absent
+    force_kill: yes
+
 - name: Run Frontend Container from backup image
   community.docker.docker_container:
     name: frontend
@@ -50,3 +56,10 @@ tasks:
     env:
       BACKEND_HOST: "{{ be_host }}"
       BACKEND_PORT: "{{ be_port }}"
+
+- name: Clean up unused Docker images
+  community.docker.docker_prune:
+    images: yes
+    containers: no
+    networks: no
+    volumes: no

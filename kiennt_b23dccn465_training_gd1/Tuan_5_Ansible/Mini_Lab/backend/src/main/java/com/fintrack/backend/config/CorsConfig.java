@@ -17,7 +17,8 @@ public class CorsConfig {
                         .allowedOrigins(
                             "http://localhost:3001",
                             "http://localhost:3002",
-                            "http://localhost:5173"
+                            "http://localhost:5173",
+                            "http://192.168.123.83:81"
                         ) // ✅ FE React - Cho phép nhiều port
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                         .allowedHeaders("*")

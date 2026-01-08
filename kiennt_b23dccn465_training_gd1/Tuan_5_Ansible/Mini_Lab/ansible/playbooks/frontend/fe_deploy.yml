@@ -38,7 +38,14 @@
     community.docker.docker_image:
       name: "{{ registry_image }}/frontend:{{ tag }}"
       source: pull
-      force_source: false
+      force_source: true
+    ignore_errors: yes
+  
+  - name: Kill existing Backend Container
+    community.docker.docker_container:
+      name: frontend
+      state: absent
+      force_kill: yes
 
   - name: Run Frontend Container
     community.docker.docker_container:

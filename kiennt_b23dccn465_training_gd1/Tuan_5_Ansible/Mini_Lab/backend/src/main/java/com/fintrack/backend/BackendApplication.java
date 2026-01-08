@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
-@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3002", "http://localhost:5173"})  // ✅ Cho phép FE React gọi từ nhiều port
+@CrossOrigin(origins = {"http://localhost:3001", "http://localhost:3002", "http://localhost:5173", "http://192.168.123.83:81"})  // ✅ Cho phép FE React gọi từ nhiều port
 public class BackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(BackendApplication.class, args);

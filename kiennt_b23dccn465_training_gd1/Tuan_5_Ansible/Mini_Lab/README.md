@@ -177,5 +177,5 @@ Dự án này được phân phối dưới giấy phép MIT. Xem file `LICENSE`
 
 <div align="center">
   <p>Được phát triển với ❤️ bởi Nhóm 14</p>
-  <p>⭐ Nếu dự án hữu ích, hãy cho chúng tôi một star!</p>
+  <p>⭐ Nếu dự án hữu ích, hãy cho chúng tôi một star!!!</p>
 </div>

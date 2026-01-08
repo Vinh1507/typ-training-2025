@@ -27,6 +27,12 @@
         name: mysql_data
         state: present
 
+    - name: Kill existing Backend Container
+      community.docker.docker_container:
+        name: mysql_db
+        state: absent
+        force_kill: yes
+
     - name: Start MySQL Container
       community.docker.docker_container:
         name: mysql_db
@@ -42,3 +48,15 @@
           MYSQL_DATABASE: "{{ db_name }}"
           MYSQL_USER: "{{ db_user }}"
           MYSQL_PASSWORD: "{{ db_pass }}"
+        healthcheck:
+          test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+          interval: 10s
+          timeout: 5s
+          retries: 5  
+
+    - name: Clean up unused Docker images
+      community.docker.docker_prune:
+        images: yes
+        containers: no
+        networks: no
+        volumes: no

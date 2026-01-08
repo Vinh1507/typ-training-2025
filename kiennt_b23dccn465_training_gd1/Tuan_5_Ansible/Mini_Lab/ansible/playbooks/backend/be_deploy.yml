@@ -50,7 +50,14 @@
     community.docker.docker_image:
       name: "{{ registry_image }}/backend:{{ tag }}"
       source: pull
-      force_source: no
+      force_source: true
+    ignore_errors: yes
+
+  - name: Kill existing Backend Container
+    community.docker.docker_container:
+      name: backend
+      state: absent
+      force_kill: yes
 
   - name: Run Backend Container
     community.docker.docker_container:

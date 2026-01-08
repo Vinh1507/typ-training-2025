@@ -51,6 +51,12 @@ tasks:
     source: pull
     force_source: false
 
+  - name: Kill existing Backend Container
+    community.docker.docker_container:
+      name: backend
+      state: absent
+      force_kill: yes
+
 - name: Run Backend Container from backup image
   community.docker.docker_container:
     name: backend
@@ -69,3 +75,10 @@ tasks:
       DATABASE: "{{ db_name }}"
       USERNAME: "{{ db_user }}"
       PASSWORD: "{{ db_password }}"
+
+- name: Clean up unused Docker images
+  community.docker.docker_prune:
+    images: yes
+    containers: no
+    networks: no
+    volumes: no

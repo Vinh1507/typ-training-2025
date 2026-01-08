@@ -3,6 +3,7 @@ package com.fintrack.backend.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -31,6 +32,9 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
 
                 .authorizeHttpRequests(authorize -> authorize
+                    // Cho phép preflight CORS (OPTIONS)
+                    .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
                         // 1. Cho phép Đăng nhập/Đăng ký (Code cũ của bạn)
                         .requestMatchers("/api/auth/**").permitAll()
 
@@ -59,15 +63,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        // Cho phép React chạy ở nhiều port (3001, 3002, 5173 - Vite default)
-        configuration.setAllowedOrigins(List.of(
-            "http://localhost:3001",
-            "http://localhost:3002",
-            "http://localhost:5173",
-            "http://localhost:81",
-            "http://127.0.0.1:81",
-            "http://${FRONTEND_HOST:localhost}:81"
-        ));
+        configuration.setAllowedOriginPatterns(List.of("*"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);

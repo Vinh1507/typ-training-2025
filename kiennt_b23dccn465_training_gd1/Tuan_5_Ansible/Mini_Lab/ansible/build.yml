@@ -1,0 +1,56 @@
+---
+- name: Build and Push Docker Images
+  hosts: build_servers
+  vars:
+    tag: "{{ lookup('env', 'TAG') | default('latest') }}"
+    registry_image: "{{ lookup('env', 'CI_REGISTRY_IMAGE') }}"
+    ci_registry: "{{ lookup('env', 'CI_REGISTRY') }}"
+    ci_registry_user: "{{ lookup('env', 'CI_REGISTRY_USER') }}"
+    ci_registry_password: "{{ lookup('env', 'CI_REGISTRY_PASSWORD') }}"
+    project_path: "Mini_Lab" # Đường dẫn chứa file docker-compose.yml
+
+  tasks:
+    - name: Ensure project directory exists
+      ansible.builtin.stat:
+        path: "{{ project_path }}"
+      register: dir_check
+      
+    - name: Fail if project directory not found
+      ansible.builtin.fail:
+        msg: "Thư mục {{ project_path }} không tồn tại trên build_server!"
+      when: not dir_check.stat.exists
+
+    - name: Login to Docker Registry
+      community.docker.docker_login:
+        registry_url: "{{ ci_registry }}"
+        username: "{{ ci_registry_user }}"
+        password: "{{ ci_registry_password }}"
+
+    - name: Pull existing images to use as cache (ignore errors)
+      community.docker.docker_image:
+        name: "{{ item }}"
+        source: pull
+      loop:
+        - "{{ registry_image }}/backend:{{ tag }}"
+        - "{{ registry_image }}/frontend:{{ tag }}"
+      ignore_errors: true
+
+    - name: Build images using Docker Compose
+      community.docker.docker_compose_v2:
+        project_src: "{{ project_path }}"
+        build: always
+        build_args:
+          TAG: "{{ tag }}"
+      register: build_result
+
+    - name: Tag and Push Backend Image
+      community.docker.docker_image:
+        name: "{{ registry_image }}/backend:{{ tag }}"
+        push: true
+        source: local
+
+    - name: Tag and Push Frontend Image
+      community.docker.docker_image:
+        name: "{{ registry_image }}/frontend:{{ tag }}"
+        push: true
+        source: local
