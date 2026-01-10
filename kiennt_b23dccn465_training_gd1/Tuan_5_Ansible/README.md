@@ -667,55 +667,95 @@ Khi có nhiều biến cùng tên từ các nguồn khác nhau, Ansible sẽ áp
   ```bash
   ansible-playbook backup.yml --tags "backup"
   ```
+-----
 # 10. Roles trong Ansible
-Trong Ansible, **Roles** là một cách để phân chia cấu trúc mã nguồn thành các phần nhỏ, có thể tái sử dụng và dễ quản lý hơn. Thay vì viết tất cả các tác vụ (tasks) vào một Playbook khổng lồ, bạn chia chúng thành các thư mục riêng biệt dựa trên chức năng (ví dụ: role cho Web Server, role cho Database).
-## 10.1. Tại sao cần sử dụng Roles?
-* **Tái sử dụng (Reusability):** Bạn có thể viết một role để cài đặt Nginx và sử dụng nó cho nhiều dự án khác nhau.
-* **Dễ bảo trì:** Mỗi thành phần (biến, file, template) được đặt trong một thư mục tiêu chuẩn, giúp việc tìm kiếm và sửa lỗi nhanh hơn.
-* **Chia sẻ:** Bạn có thể tải lên hoặc tải về các roles từ cộng đồng thông qua **Ansible Galaxy**.
-## 10.2. Cấu trúc thư mục của một Role
-Một role điển hình có cấu trúc thư mục nghiêm ngặt như sau (Ansible sẽ tự động tìm kiếm các file `main.yml` trong mỗi thư mục này):
+## 10.1. Khái niệm và Mục đích
 
-| Thư mục | Mục đích |
-| --- | --- |
-| **tasks/** | Chứa danh sách các công việc chính mà role sẽ thực hiện (`main.yml`). |
-| **handlers/** | Chứa các handlers (ví dụ: restart service), được kích hoạt bởi `notify`. |
-| **defaults/** | Chứa các biến mặc định cho role (ưu tiên thấp nhất, dễ bị ghi đè). |
-| **vars/** | Chứa các biến cố định cho role (ưu tiên cao hơn defaults). |
-| **files/** | Chứa các file tĩnh cần copy lên server (như file mã nguồn, script). |
-| **templates/** | Chứa các file mẫu Jinja2 (thường là file cấu hình `.j2`) có thể chèn biến. |
-| **meta/** | Chứa thông tin về role (tác giả, phiên bản, các role phụ thuộc). |
+Roles (Vai trò) cho phép bạn tự động tải các biến, tệp, tác vụ (tasks), trình xử lý (handlers) và các thành phần khác của Ansible dựa trên một cấu trúc tệp đã biết. Sau khi nhóm nội dung vào các roles, bạn có thể dễ dàng tái sử dụng và chia sẻ chúng với người dùng khác.
 
-## 10.3. Cách sử dụng Role trong Playbook
+## 10.2. Cấu trúc thư mục của Role
 
-Sau khi đã tạo cấu trúc role (thường nằm trong thư mục `roles/`), bạn gọi chúng vào Playbook như sau:
+Một Ansible role có cấu trúc thư mục tiêu chuẩn với 7 thư mục chính. Bạn phải bao gồm ít nhất một trong số này, nhưng có thể bỏ qua những thư mục không dùng đến.
 
+Các thư mục và tệp tin quan trọng bao gồm:
+
+* **`tasks/main.yml`**: Danh sách các tác vụ mà role sẽ thực thi.
+* **`handlers/main.yml`**: Các handlers được import để role hoặc playbook sử dụng.
+* **`vars/main.yml`**: Các biến có độ ưu tiên cao dành cho role.
+* **`defaults/main.yml`**: Các biến có độ ưu tiên rất thấp (có thể bị ghi đè dễ dàng).
+* **`files/`**: Chứa các tệp tĩnh (dùng cho module `copy`, `script`).
+* **`templates/`**: Chứa các mẫu template `.j2`.
+* **`meta/main.yml`**: Chứa metadata của role, bao gồm các role phụ thuộc (dependencies).
+* **`library/`** và **`module_utils/`**: Chứa các custom module hoặc plugin (đối với role độc lập - standalone roles).
+
+## 10.3. Cách sử dụng Roles
+
+Ansible tìm kiếm roles ở các vị trí mặc định như thư mục `roles/` nằm cùng cấp với playbook, đường dẫn cấu hình `roles_path`, hoặc thư mục hiện tại.
+
+Có 3 cách chính để sử dụng roles:
+
+### 10.3.1. Ở cấp độ Play (Play level)
+Đây là cách cổ điển, sử dụng tùy chọn `roles:` trong playbook.
+
+* Role được xử lý như một import tĩnh (static import) trong quá trình phân tích playbook.
+* Ví dụ:
 ```yaml
----
 - hosts: webservers
   roles:
     - common
-    - nginx
-    - postgresql
+    - webservers
 
 ```
-## 10.4. Cách tạo một Role nhanh chóng
+### 10.3.2. Ở cấp độ Task: Tái sử dụng động (`include_role`)
 
-Bạn không cần phải tạo thủ công từng thư mục. Hãy sử dụng lệnh `ansible-galaxy`:
+* Dùng `include_role` trong phần `tasks`.
+* Role được chạy theo thứ tự định nghĩa, cho phép sử dụng linh hoạt các biến và điều kiện.
+* Nếu gán `tag` cho `include_role`, tag đó chỉ áp dụng cho lệnh include, không áp dụng cho tất cả task bên trong trừ khi chúng cũng có tag đó.
 
-```bash
-ansible-galaxy init my_new_role
-```
+### 10.3.3. Ở cấp độ Task: Tái sử dụng tĩnh (`import_role`)
 
-Lệnh này sẽ tạo ra toàn bộ khung xương thư mục chuẩn cho bạn.
+* Dùng `import_role` trong phần `tasks`.
+* Hành vi tương tự như dùng từ khóa `roles:` ở cấp độ Play.
+* Nếu gán `tag` cho `import_role`, tag đó sẽ áp dụng cho **tất cả** các task bên trong role.
 
-## 10.5. Thứ tự thực thi
+### 10.4. Thứ tự thực thi (Execution Order)
 
-Khi bạn chạy một Playbook có chứa Role, Ansible thực hiện theo thứ tự:
+Khi sử dụng tùy chọn `roles` ở cấp độ Play, Ansible thực thi theo thứ tự sau:
 
-1. **pre_tasks** (nếu có định nghĩa trong playbook).
-2. **Handlers** được kích hoạt bởi pre_tasks.
-3. **Roles** được liệt kê (theo đúng thứ tự).
-4. **Tasks** định nghĩa trong playbook.
-5. **Handlers** được kích hoạt bởi roles hoặc tasks.
-6. **post_tasks** (nếu có).
+1. **`pre_tasks`** được định nghĩa trong play.
+2. Các handlers được kích hoạt bởi pre_tasks.
+3. **Các Role** được liệt kê trong `roles:`, bao gồm cả các role phụ thuộc (dependencies).
+4. **`tasks`** được định nghĩa trong play.
+5. Các handlers được kích hoạt bởi role hoặc task.
+6. **`post_tasks`** được định nghĩa trong play.
+7. Các handlers được kích hoạt bởi post_tasks.
+
+## 10.5. Kiểm tra tham số đầu vào (Argument Validation)
+
+Bạn có thể xác định thông số kỹ thuật (specification) cho các tham số của role trong tệp `meta/argument_specs.yml`.
+
+* Việc này giúp xác thực các tham số được cung cấp cho role.
+* Nếu tham số không hợp lệ, role sẽ báo lỗi và ngừng chạy.
+* Các thông số bao gồm: loại dữ liệu (`type`), bắt buộc (`required`), mặc định (`default`), mô tả (`description`), v.v..
+
+## 10.6. Chạy Role nhiều lần và Trùng lặp
+
+Theo mặc định, Ansible chỉ thực thi mỗi role **một lần** trong một play, ngay cả khi bạn liệt kê nó nhiều lần.
+
+Để chạy một role nhiều lần, bạn có 2 cách:
+
+1. **Truyền tham số khác nhau:** Nếu định nghĩa role với các tham số khác nhau, Ansible sẽ chạy role đó nhiều lần.
+2. **Sử dụng `allow_duplicates: true`:** Cấu hình trong tệp `meta/main.yml` của role để cho phép chạy lặp lại dù tham số giống nhau.
+
+## 10.7. Role phụ thuộc (Dependencies)
+
+Role phụ thuộc cho phép tự động kéo các role khác vào khi sử dụng một role chính.
+
+* Được định nghĩa trong `meta/main.yml`.
+* Ansible sẽ chạy các role phụ thuộc **trước** role chính.
+* Role phụ thuộc cũng tuân theo quy tắc chống trùng lặp (chỉ chạy một lần trừ khi tham số khác nhau hoặc được cho phép trùng lặp).
+
+## 10.8. Chia sẻ Roles
+
+* **Ansible Galaxy:** Là trang web miễn phí để tìm kiếm, tải xuống và chia sẻ các roles do cộng đồng phát triển.
+* Bạn có thể dùng lệnh `ansible-galaxy` đi kèm với Ansible để tải hoặc tạo cấu trúc role mới.
