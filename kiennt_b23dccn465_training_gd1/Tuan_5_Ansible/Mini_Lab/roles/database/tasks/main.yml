@@ -1,0 +1,32 @@
+- name: Create '{{ mysql_volume_name }}'
+  community.docker.docker_volume:
+    name: "{{ mysql_volume_name }}"
+
+- name: Start MySQL Container
+  community.docker.docker_container:
+    name: "{{ mysql_container_name }}"
+    image: "{{ mysql_image }}"
+    state: started
+    restart_policy: always
+    
+    ports:
+      - "3306:3306"
+    
+    volumes:
+      - "{{ mysql_volume_name }}:/var/lib/mysql"
+    
+    networks:
+      - name: "{{ docker_network_name }}"
+    
+    env:
+      MYSQL_DATABASE: "{{ db_name }}"
+      MYSQL_USER: "{{ db_user }}"
+      MYSQL_PASSWORD: "{{ db_pass }}"
+      MYSQL_ROOT_PASSWORD: "{{ db_root_pass }}"
+    
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "{{ db_user }}", "-p{{ db_pass }}"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+      start_period: 10s 

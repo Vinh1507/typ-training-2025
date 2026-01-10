@@ -1,3 +1,0 @@
-- import_playbook: playbooks/database/db_setup.yml
-- import_playbook: playbooks/backend/be_deploy.yml
-- import_playbook: playbooks/frontend/fe_deploy.yml

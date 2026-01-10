@@ -1,0 +1,24 @@
+- name: Wait for ({{ backend_host }}) open port {{ backend_port }}
+  wait_for:
+    host: "{{ backend_host }}"
+    port: "{{ backend_port }}"
+    timeout: 300
+    state: started
+
+- name: Start Frontend Container
+  community.docker.docker_container:
+    name: "{{ frontend_container_name }}"
+    image: "{{ frontend_image }}:{{ app_tag }}"
+    state: started
+    restart_policy: always
+    pull: always
+    
+    ports:
+      - "80:80"  
+    
+    networks:
+      - name: "{{ docker_network_name }}" 
+
+    env:
+      BACKEND_HOST: "{{ backend_host }}"
+      BACKEND_PORT: "{{ backend_port }}"

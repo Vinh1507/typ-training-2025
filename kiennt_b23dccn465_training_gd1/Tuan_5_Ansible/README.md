@@ -667,4 +667,55 @@ Khi có nhiều biến cùng tên từ các nguồn khác nhau, Ansible sẽ áp
   ```bash
   ansible-playbook backup.yml --tags "backup"
   ```
+# 10. Roles trong Ansible
+Trong Ansible, **Roles** là một cách để phân chia cấu trúc mã nguồn thành các phần nhỏ, có thể tái sử dụng và dễ quản lý hơn. Thay vì viết tất cả các tác vụ (tasks) vào một Playbook khổng lồ, bạn chia chúng thành các thư mục riêng biệt dựa trên chức năng (ví dụ: role cho Web Server, role cho Database).
+## 10.1. Tại sao cần sử dụng Roles?
+* **Tái sử dụng (Reusability):** Bạn có thể viết một role để cài đặt Nginx và sử dụng nó cho nhiều dự án khác nhau.
+* **Dễ bảo trì:** Mỗi thành phần (biến, file, template) được đặt trong một thư mục tiêu chuẩn, giúp việc tìm kiếm và sửa lỗi nhanh hơn.
+* **Chia sẻ:** Bạn có thể tải lên hoặc tải về các roles từ cộng đồng thông qua **Ansible Galaxy**.
+## 10.2. Cấu trúc thư mục của một Role
+Một role điển hình có cấu trúc thư mục nghiêm ngặt như sau (Ansible sẽ tự động tìm kiếm các file `main.yml` trong mỗi thư mục này):
 
+| Thư mục | Mục đích |
+| --- | --- |
+| **tasks/** | Chứa danh sách các công việc chính mà role sẽ thực hiện (`main.yml`). |
+| **handlers/** | Chứa các handlers (ví dụ: restart service), được kích hoạt bởi `notify`. |
+| **defaults/** | Chứa các biến mặc định cho role (ưu tiên thấp nhất, dễ bị ghi đè). |
+| **vars/** | Chứa các biến cố định cho role (ưu tiên cao hơn defaults). |
+| **files/** | Chứa các file tĩnh cần copy lên server (như file mã nguồn, script). |
+| **templates/** | Chứa các file mẫu Jinja2 (thường là file cấu hình `.j2`) có thể chèn biến. |
+| **meta/** | Chứa thông tin về role (tác giả, phiên bản, các role phụ thuộc). |
+
+## 10.3. Cách sử dụng Role trong Playbook
+
+Sau khi đã tạo cấu trúc role (thường nằm trong thư mục `roles/`), bạn gọi chúng vào Playbook như sau:
+
+```yaml
+---
+- hosts: webservers
+  roles:
+    - common
+    - nginx
+    - postgresql
+
+```
+## 10.4. Cách tạo một Role nhanh chóng
+
+Bạn không cần phải tạo thủ công từng thư mục. Hãy sử dụng lệnh `ansible-galaxy`:
+
+```bash
+ansible-galaxy init my_new_role
+```
+
+Lệnh này sẽ tạo ra toàn bộ khung xương thư mục chuẩn cho bạn.
+
+## 10.5. Thứ tự thực thi
+
+Khi bạn chạy một Playbook có chứa Role, Ansible thực hiện theo thứ tự:
+
+1. **pre_tasks** (nếu có định nghĩa trong playbook).
+2. **Handlers** được kích hoạt bởi pre_tasks.
+3. **Roles** được liệt kê (theo đúng thứ tự).
+4. **Tasks** định nghĩa trong playbook.
+5. **Handlers** được kích hoạt bởi roles hoặc tasks.
+6. **post_tasks** (nếu có).

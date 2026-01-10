@@ -1,0 +1,34 @@
+---
+- name: 1. Setup môi trường Docker chung
+  hosts: all
+  become: yes  
+  gather_facts: yes 
+
+  vars_prompt:
+    - name: docker_token
+      prompt: "Docker Access Token: "
+      private: yes
+
+  roles:
+    - common  
+
+
+- name: 2. Triển khai Database Server
+  hosts: database
+  become: yes
+  roles:
+    - database 
+
+
+- name: 3. Triển khai Backend Server
+  hosts: backend
+  become: yes
+  roles:
+    - backend 
+
+
+- name: 4. Triển khai Frontend Server
+  hosts: frontend
+  become: yes
+  roles:
+    - frontend 
