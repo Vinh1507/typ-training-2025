@@ -1,13 +1,13 @@
----
 - name: 1. Setup môi trường Docker chung
   hosts: all
   become: yes  
   gather_facts: yes 
 
   vars_prompt:
-    - name: docker_token
-      prompt: "Docker Access Token: "
-      private: yes
+    - name: input_app_tag  
+      prompt: "Nhập version (Default: latest)"
+      default: "latest"
+      private: no
 
   roles:
     - common  

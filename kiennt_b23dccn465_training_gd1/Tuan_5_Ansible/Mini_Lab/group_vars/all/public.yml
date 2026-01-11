@@ -1,0 +1,9 @@
+# Docker Hub thông tin đăng nhập và cấu hình chung
+docker_registry: ngtukien218
+docker_username: ngtukien218
+docker_network_name: minilab
+
+# Backend Database Configuration
+db_name: "mini_lab_db"
+db_user: "mini_lab_user"
+

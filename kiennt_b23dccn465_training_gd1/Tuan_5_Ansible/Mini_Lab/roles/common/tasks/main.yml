@@ -1,3 +1,7 @@
+- name: Set tag thành biến toàn cục (Fact)
+  set_fact:
+    app_tag: "{{ input_app_tag }}"
+
 - name: Install Docker SDK for Python
   apt:
     name: python3-docker

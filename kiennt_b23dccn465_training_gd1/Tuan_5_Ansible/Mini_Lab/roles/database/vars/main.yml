@@ -1,0 +1,4 @@
+# MySQL Configuration
+mysql_image: "mysql:8.0"
+mysql_container_name: "mysql"
+mysql_volume_name: "mysql-data"
