@@ -1,0 +1,12 @@
+{
+  "name": "node-ci-demo",
+  "version": "1.0.0",
+  "description": "Simple Node.js project for CI testing",
+  "main": "sum.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
