@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phùng Thị Thùy Dung</title>
+   <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="profile-intro">
+                <div class="profile-image">
+                    <img src="https://sf-static.upanhlaylink.com/img/image_20251024aa4186d904e68c2a3729b2f8e80b43ef.jpg" alt="35d30e51-a6c8-41da-8a4f-05c7c0598bd1.jpg" class="avatar">
+                    
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Phùng Thị Thùy Dung</h1>
+                    <h2 class="profession">Frontend Developer & UI/UX Designer</h2>
+                    <p class="description">
+                        Tôi là một lập trình viên đam mê với việc tạo ra những trải nghiệm web tuyệt vời. 
+                        Với 0 năm kinh nghiệm trong lĩnh vực phát triển frontend, tôi luôn tìm kiếm những 
+                        thách thức mới và cơ hội để học hỏi những công nghệ tiên tiến.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="skills-section">
+                <h2 class="section-title">Kỹ Năng & Sở Thích</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Kỹ Năng Lập Trình</h3>
+                        <ul class="skills-list">
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>TypeScript</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Sở Thích</h3>
+                        <ul class="skills-list">
+                            <li>Đọc sách công nghệ</li>
+                            <li>Chơi game</li>
+                            <li>Ăn ngon</li>
+                            <li>Du lịch</li>
+                            <li>Nấu ăn</li>
+                            <li>Xem hoạt hình</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="education-section">
+                <h2 class="section-title">Học Vấn & Kinh Nghiệm</h2>
+                <div class="table-container">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Thời gian</th>
+                                <th>Tổ chức/Trường học</th>
+                                <th>Vị trí/Học vấn</th>
+                                <th>Mô tả</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024 - Hiện tại</td>
+                                <td>hi</td>
+                                <td>hi</td>
+                                <td>Phát triển các ứng dụng web responsive, tối ưu hóa hiệu suất và trải nghiệm người dùng</td>
+                            </tr>
+                            <tr>
+                                <td>2023 - 2025</td>
+                                <td>Học Viện công Nghê Bưu Chính Viễn Thông</td>
+                                <td>Sinh viên</td>
+                                <td>Chuyên ngành An toàn thông tin, GPA: 3.1/4.0</td>
+                            </tr>
+                            <tr>
+                                <td>2020-2022</td>
+                                <td>THPT HBT</td>
+                                <td>Học sinh</td>
+                                <td>Đạt giải khuyến khích trong cuộc thi ...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2 class="section-title">Liên Hệ Với Tôi</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Chủ đề:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Chọn chủ đề</option>
+                            <option value="job">Cơ hội việc làm</option>
+                            <option value="collaboration">Hợp tác dự án</option>
+                            <option value="consultation">Tư vấn kỹ thuật</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tin nhắn:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Hãy chia sẻ thông tin về dự án hoặc cơ hội hợp tác..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Gửi Tin Nhắn</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Phùng Thị Thùy Dung.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/thuy.dung.310369" target="_blank" class="social-link">Facebook</a>
+                    <a href="https://github.com/Thuydung1130/" target="_blank" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
