@@ -27,8 +27,10 @@ Triển khai Kubernetes thông qua công cụ kubespray lên 1 master node VM + 
 ![img.png](image/1.6.kubectl.png)
 * Config kubectl:
   * Copy kubectl config từ master node về local:
+  
   ![img.png](image/1.7.1.copy-config.png)
   * Paste và sửa ip chỏ tới master node:
+  
   ![img.png](image/1.7.2.paste-config.png)
   * Export kubectl config: `export KUBECONFIG=./k8s-config.yml`
 * Verify:
