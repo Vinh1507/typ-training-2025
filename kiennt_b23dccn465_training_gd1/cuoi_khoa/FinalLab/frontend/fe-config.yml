@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fe-config
+  namespace: fe-web  
+data:
+  default.conf: |
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+
+        location /api {
+            # --- SỬA LỖI 2: Dùng địa chỉ đầy đủ (FQDN) ---
+            # Cú pháp: <tên-service>.<namespace>.svc.cluster.local:<port>
+            # Giả sử service backend tên là "be-service" nằm ở namespace "be-web"
+            proxy_pass http://be-service.be-web.svc.cluster.local:8080;
+            
+            # (Nếu Service backend của bạn tên là "backend-service" thì sửa lại chữ be-service thành backend-service nhé)
+        }
+    }

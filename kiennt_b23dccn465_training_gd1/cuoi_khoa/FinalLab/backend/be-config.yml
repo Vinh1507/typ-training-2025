@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: be-config
+  namespace: be-web
+data:
+  SERVER_ADDRESS: 0.0.0.0
+  HOST: mysql.mysql-db.svc.cluster.local
+  PORT: "3306"
+  DATABASE: mydatabase
+  USERNAME: user123
