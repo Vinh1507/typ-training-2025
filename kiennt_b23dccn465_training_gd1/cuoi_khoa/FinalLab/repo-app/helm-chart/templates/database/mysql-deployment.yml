@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}
+  labels:
+    {{- include "helm-chart.componentLabels" (dict "root" . "component" "database") | nindent 4 }}
+spec:
+  replicas: {{ .Values.database.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 8 }}
+    spec:
+      containers:
+        - name: mysql
+          image: "{{ .Values.database.image.repository }}:{{ .Values.database.image.tag }}"
+          imagePullPolicy: {{ .Values.database.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.database.service.port }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-config
+            - secretRef:
+                name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-secret
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+            - name: initdb
+              mountPath: /docker-entrypoint-initdb.d/setup.sql
+              subPath: setup.sql
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-pvc
+        - name: initdb
+          secret:
+            secretName: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-secret

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-pv
+  labels:
+    {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 4 }}
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/data/{{ include "helm-chart.componentName" (dict "root" . "component" "database") }}" # Per-release path

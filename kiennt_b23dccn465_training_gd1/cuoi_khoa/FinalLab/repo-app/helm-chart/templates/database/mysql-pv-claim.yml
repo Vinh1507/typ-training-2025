@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-pvc
+  labels:
+    {{- include "helm-chart.componentLabels" (dict "root" . "component" "database") | nindent 4 }}
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  selector:
+    matchLabels:
+      {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 6 }}

@@ -1,0 +1,13 @@
+1. Frontend service access:
+
+{{- if eq .Values.frontend.service.type "NodePort" }}
+  export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "helm-chart.componentName" (dict "root" . "component" "frontend") }})
+  export NODE_IP=$(kubectl get nodes -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT
+{{- else if eq .Values.frontend.service.type "LoadBalancer" }}
+  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+  kubectl get --namespace {{ .Release.Namespace }} svc {{ include "helm-chart.componentName" (dict "root" . "component" "frontend") }} -w
+{{- else }}
+  kubectl --namespace {{ .Release.Namespace }} port-forward svc/{{ include "helm-chart.componentName" (dict "root" . "component" "frontend") }} 8080:{{ .Values.frontend.service.port }}
+  echo http://127.0.0.1:8080
+{{- end }}
