@@ -1,0 +1,86 @@
+replicaCount: 1
+revisionHistoryLimit: 5
+
+image:
+  repository: ngtukien218/typ-frontend
+  tag: "1.0"
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: false
+  name: ""
+  annotations: {}
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+securityContext: {}
+
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30003
+  portName: http
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: web.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+apiProxy:
+  enabled: true
+  pathPrefix: /api
+  upstream:
+    serviceName: typ-backend
+    servicePort: 8080
+
+nginx:
+  listenPort: 3000
+  serverName: localhost
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+probes:
+  liveness:
+    enabled: true
+    path: /
+    initialDelaySeconds: 10
+    periodSeconds: 20
+    timeoutSeconds: 3
+    failureThreshold: 3
+  readiness:
+    enabled: true
+    path: /
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: null
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

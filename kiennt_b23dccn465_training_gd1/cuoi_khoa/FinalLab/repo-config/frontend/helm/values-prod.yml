@@ -1,0 +1,26 @@
+replicaCount: 1
+image:
+  repository: ngtukien218/typ_backend
+  pullPolicy: IfNotPresent
+  tag: "v1.0"
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30002
+
+ingress:
+  enabled: true
+  host: api.ngtukien218.local
+  tls:
+    secretName: typ-backend-tls
+
+database:
+  host: mysql
+  port: 3306
+  name: typ_database
+  user: typ_backend
+  password: "123456"
+
+
+resources: {}

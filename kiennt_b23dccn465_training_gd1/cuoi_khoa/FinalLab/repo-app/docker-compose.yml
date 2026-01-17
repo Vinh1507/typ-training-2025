@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8.0
-    container_name: k8s-mysql
+    container_name: typ-mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -23,8 +23,8 @@ services:
 
   backend:
     build: ./backend
-    image: ngtukien218/k8s-backend
-    container_name: k8s-backend
+    image: ngtukien218/typ-backend
+    container_name: typ-backend
     restart: always
     ports:
       - "8080:8080"
@@ -48,8 +48,8 @@ services:
 
   frontend:
     build: ./frontend
-    image: ngtukien218/k8s-frontend
-    container_name: k8s-frontend
+    image: ngtukien218/typ-frontend
+    container_name: typ-frontend
     restart: always
     ports:
       - "3000:3000"
