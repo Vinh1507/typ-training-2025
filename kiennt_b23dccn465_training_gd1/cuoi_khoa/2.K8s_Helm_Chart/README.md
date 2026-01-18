@@ -29,17 +29,31 @@
   kubectl create namespace argocd
   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
   ```
-* File manifest ArgoCD Application: [Manifest File](argocd/setup/install.yml)
+* Mở port truy cập ArgoCD:
+  ```shell
+  apiVersion: v1
+  kind: Service
+  metadata:
+    name: argocd-server
+    namespace: argocd
+    labels:
+      app.kubernetes.io/name: argocd-server
+      app.kubernetes.io/part-of: argocd
+  spec:
+    type: NodePort
+    ports:
+      - port: 80
+        targetPort: 8080
+        nodePort: 32000
+    selector:
+      app.kubernetes.io/name: argocd-server
+  ```
+* Các files manifest ArgoCD Application: [Manifest Files](argocd/setup/)
 * Export ArgoCD qua NodePort:
   ```shell
   kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
   ```
-* Tìm kiếm port của ArgoCD:
-  ```shell
-  kubectl get svc argocd-server -n argocd
-  ```
-  ![alt text](image/2.1.port.png)
-* Truy cập ArgoCD qua trình duyệt: `http://192.168.123.11:31787`
+* Truy cập ArgoCD qua trình duyệt: `http://192.168.123.11:32000`
 
   ![alt text](image/2.1.web.png)
 
