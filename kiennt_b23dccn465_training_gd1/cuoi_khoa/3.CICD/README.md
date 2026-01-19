@@ -34,20 +34,21 @@ Do Jenkins được triển khai trên cụm Kubernetes và chỉ có thể truy
 * Public URL: https://jenkins.ngtukien.id.vn
 * Forward to: http://192.168.123.11:30000
 * Mục đích: Cho phép GitHub webhook có thể gọi đến Jenkins để trigger CI/CD pipeline
+* Tài liệu hướng dẫn: [Cloudflared](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/)
 * File cấu hình cloudflared: 
-```yaml
-tunnel: 85daa144-d09d-4d29-b1e6-b370acf84ec5
-credentials-file: /home/typ/.cloudflared/85daa144-d09d-4d29-b1e6-b370acf84ec5.json # Đường dẫn đến file credentials
+  ```yaml
+  tunnel: 85daa144-d09d-4d29-b1e6-b370acf84ec5
+  credentials-file: /home/typ/.cloudflared/85daa144-d09d-4d29-b1e6-b370acf84ec5.json # Đường dẫn đến file credentials
 
-ingress:
-  - hostname: jenkins.ngtukien.id.vn
-    service: http://192.168.123.11:30000
-  - service: http_status:404
-```
+  ingress:
+    - hostname: jenkins.ngtukien.id.vn
+      service: http://192.168.123.11:30000
+    - service: http_status:404
+  ```
 * Lệnh khởi chạy tunnel:
-```bash
-cloudflared tunnel --config /home/typ/.cloudflared/config.yml run
-```
+  ```bash
+  cloudflared tunnel --config /home/typ/.cloudflared/config.yml run
+  ```
 
 ### Cấu hình Jenkins Pipeline
 * Tạo một pipeline mới trong Jenkins với tên "ci-cd-pipeline"
