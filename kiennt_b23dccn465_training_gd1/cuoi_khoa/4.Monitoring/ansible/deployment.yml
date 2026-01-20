@@ -4,7 +4,6 @@
   become: yes
   vars:
     prometheus_dir: /opt/prometheus
-    prometheus_port: "{{ prometheus_port | default(9090) }}"  # TODO: set in inventory.ini if different
     
   tasks:
     - name: Update package cache

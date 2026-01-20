@@ -26,7 +26,7 @@ scrape_configs:
     metrics_path: '/metrics'
     scrape_interval: 10s
     static_configs:
-      - targets: ['192.168.123.11:30030']
+      - targets: ['192.168.123.11:30113']
     relabel_configs:
       - source_labels: [__address__]
         target_label: instance

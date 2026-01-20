@@ -1,6 +1,6 @@
 #!/bin/bash
 # Chạy từ vị trí của thư mục '2.K8s_Helm_Chart'
-export KUBECONFIG=./k8s-config.yml
+export KUBECONFIG=../k8s-config.yml
 kubectl create namespace argocd
 kubectl apply -n argocd -f argocd/setup/install.yml
 kubectl apply -n argocd -f argocd/setup/service.yml
