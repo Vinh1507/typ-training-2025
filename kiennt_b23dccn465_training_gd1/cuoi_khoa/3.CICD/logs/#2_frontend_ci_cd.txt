@@ -1,0 +1,488 @@
+Started by GitLab push by KienHocCode
+Lightweight checkout support not available, falling back to full checkout.
+Checking out git https://gitlab.com/NguyenTuKien/typ_2026_frontend.git into /var/jenkins_home/workspace/TYP_2026/Frontend@script/f508fe87073287bf3040ace049fee252fda51fd61ff88eced119fe32be8afffb to read Jenkinsfile
+The recommended git tool is: NONE
+using credential git_credential
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/TYP_2026/Frontend@script/f508fe87073287bf3040ace049fee252fda51fd61ff88eced119fe32be8afffb/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/NguyenTuKien/typ_2026_frontend.git # timeout=10
+Fetching upstream changes from https://gitlab.com/NguyenTuKien/typ_2026_frontend.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://gitlab.com/NguyenTuKien/typ_2026_frontend.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+skipping resolution of commit refs/tags/v1.5, since it originates from another repository
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 9ab42fd8f93a58cd414bce1122e5639da04d5466 (refs/tags/v1.5)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9ab42fd8f93a58cd414bce1122e5639da04d5466 # timeout=10
+Commit message: "Version 1.5"
+First time build. Skipping changelog.
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent1 in /home/jenkins/agent/workspace/TYP_2026/Frontend
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential git_credential
+Cloning the remote Git repository
+Cloning repository https://gitlab.com/NguyenTuKien/typ_2026_frontend.git
+ > git init /home/jenkins/agent/workspace/TYP_2026/Frontend # timeout=10
+Fetching upstream changes from https://gitlab.com/NguyenTuKien/typ_2026_frontend.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://gitlab.com/NguyenTuKien/typ_2026_frontend.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+skipping resolution of commit refs/tags/v1.5, since it originates from another repository
+ > git config remote.origin.url https://gitlab.com/NguyenTuKien/typ_2026_frontend.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+Checking out Revision 9ab42fd8f93a58cd414bce1122e5639da04d5466 (refs/tags/v1.5)
+Commit message: "Version 1.5"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (1. Agent Information)
+[Pipeline] echo
+Running on agent: agent1
+[Pipeline] echo
+Workspace: /home/jenkins/agent/workspace/TYP_2026/Frontend
+[Pipeline] sh
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9ab42fd8f93a58cd414bce1122e5639da04d5466 # timeout=10
++ whoami
+jenkins
+[Pipeline] sh
++ pwd
+/home/jenkins/agent/workspace/TYP_2026/Frontend
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (2. Checkout Source Code)
+[Pipeline] echo
+ Cloning source code...
+[Pipeline] checkout
+The recommended git tool is: NONE
+using credential git_credential
+Fetching changes from the remote Git repository
+ > git rev-parse --resolve-git-dir /home/jenkins/agent/workspace/TYP_2026/Frontend/.git # timeout=10
+ > git config remote.origin.url https://gitlab.com/NguyenTuKien/typ_2026_frontend.git # timeout=10
+Fetching upstream changes from https://gitlab.com/NguyenTuKien/typ_2026_frontend.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://gitlab.com/NguyenTuKien/typ_2026_frontend.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+skipping resolution of commit refs/tags/v1.5, since it originates from another repository
+Checking out Revision 9ab42fd8f93a58cd414bce1122e5639da04d5466 (refs/tags/v1.5)
+Seen branch in repository origin/main
+Seen 1 remote branch
+ > git show-ref --tags -d # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 9ab42fd8f93a58cd414bce1122e5639da04d5466 # timeout=10
+Commit message: "Version 1.5"
+[Pipeline] echo
+ Clone completed!
+[Pipeline] sh
++ ls -la
+total 56
+drwxrwxr-x 6 jenkins jenkins 4096 Jan 20 00:36 .
+drwxrwxr-x 5 jenkins jenkins 4096 Jan 20 00:35 ..
+-rw-rw-r-- 1 jenkins jenkins  271 Jan 20 00:36 Dockerfile
+drwxrwxr-x 3 jenkins jenkins 4096 Jan 20 00:36 frontend-chart
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 00:36 .git
+-rw-rw-r-- 1 jenkins jenkins   49 Jan 20 00:36 .gitignore
+-rw-rw-r-- 1 jenkins jenkins 7413 Jan 20 00:36 Jenkinsfile
+-rw-rw-r-- 1 jenkins jenkins  475 Jan 20 00:36 nginx.conf
+-rw-rw-r-- 1 jenkins jenkins  703 Jan 20 00:36 package.json
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 00:36 public
+-rw-rw-r-- 1 jenkins jenkins 6101 Jan 20 00:36 README.md
+drwxrwxr-x 4 jenkins jenkins 4096 Jan 20 00:36 src
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (3. Get Git Tag Version)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Getting Git tag version...
+[Pipeline] sh
++ git log --oneline -n 5
+9ab42fd Version 1.5
+5c02377 Update
+0aed69f Test
+82b6d0d Update
+d191512 Update
+[Pipeline] sh
++ git tag --list
+v1.5
+[Pipeline] sh
++ git describe --tags --exact-match
+[Pipeline] echo
+ Using tag version: v1.5
+[Pipeline] echo
+ Docker image will be: ngtukien218/typ-2026-frontend:v1.5
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (4. Build Docker Image)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Building Docker image: ngtukien218/typ-2026-frontend:v1.5
+[Pipeline] sh
++ docker build -t ngtukien218/typ-2026-frontend:v1.5 .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  244.2kB
+Step 1/11 : FROM node:18-alpine AS build
+ ---> ee77c6cd7c18
+Step 2/11 : WORKDIR /app
+ ---> Running in 5aa904959c81
+ ---> Removed intermediate container 5aa904959c81
+ ---> 42efa36ff271
+Step 3/11 : COPY package*.json ./
+ ---> 7db68e8fdf1e
+Step 4/11 : RUN npm install
+ ---> Running in c0b24bdc12bc
+[91mnpm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+[0m[91mnpm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+[0m[91mnpm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+[0m[91mnpm warn deprecated q@1.5.1: You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+npm warn deprecated
+npm warn deprecated (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
+[0m[91mnpm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+[0m[91mnpm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+[0m[91mnpm warn deprecated whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+[0m[91mnpm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+[0m[91mnpm warn deprecated domexception@2.0.1: Use your platform's native DOMException instead
+[0m[91mnpm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+[0m[91mnpm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[0m[91mnpm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+[0m[91mnpm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+[0m[91mnpm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+[0m[91mnpm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+[0m[91mnpm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+[0m[91mnpm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+[0m[91mnpm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+[0m[91mnpm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+[0m[91mnpm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+[0m
+added 1305 packages, and audited 1306 packages in 3m
+
+266 packages are looking for funding
+  run `npm fund` for details
+
+9 vulnerabilities (3 moderate, 6 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[91mnpm notice
+npm notice New major version of npm available! 10.8.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+[0m ---> Removed intermediate container c0b24bdc12bc
+ ---> a46cbd783177
+Step 5/11 : COPY . .
+ ---> e81aa637be71
+Step 6/11 : RUN npm run build
+ ---> Running in 93f080ce9ec8
+
+> user-management-frontend@1.0.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  61.62 kB  build/static/js/main.6656cd10.js
+  1.02 kB   build/static/css/main.df3d1a07.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+ ---> Removed intermediate container 93f080ce9ec8
+ ---> 1984871ae60c
+Step 7/11 : FROM nginx:alpine
+ ---> 004f022f4ef5
+Step 8/11 : COPY --from=build /app/build /usr/share/nginx/html
+ ---> 072940b34312
+Step 9/11 : COPY nginx.conf /etc/nginx/conf.d/default.conf
+ ---> 1409d0b4fcac
+Step 10/11 : EXPOSE 3000
+ ---> Running in a68e62a18b03
+ ---> Removed intermediate container a68e62a18b03
+ ---> cc4c74977434
+Step 11/11 : CMD ["nginx", "-g", "daemon off;"]
+ ---> Running in 52456f9bc6f8
+ ---> Removed intermediate container 52456f9bc6f8
+ ---> 3bf662b78ad9
+Successfully built 3bf662b78ad9
+Successfully tagged ngtukien218/typ-2026-frontend:v1.5
++ docker tag ngtukien218/typ-2026-frontend:v1.5 ngtukien218/typ-2026-frontend:latest
+[Pipeline] echo
+ Docker image built successfully!
+[Pipeline] sh
++ docker images
++ grep ngtukien218/typ-2026-frontend
+ngtukien218/typ-2026-frontend   latest                   3bf662b78ad9   4 seconds ago   62.6MB
+ngtukien218/typ-2026-frontend   v1.5                     3bf662b78ad9   4 seconds ago   62.6MB
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (5. Test Docker Image)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Testing Docker image...
+[Pipeline] sh
++ echo Testing if image can start...
+Testing if image can start...
++ docker run --rm ngtukien218/typ-2026-frontend:v1.5 java -version
+/docker-entrypoint.sh: exec: line 47: java: not found
++ echo Image test completed
+Image test completed
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (6. Push to Docker Hub)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Pushing image to Docker Hub...
+[Pipeline] withCredentials
+Masking supported pattern matches of $DOCKER_USERNAME or $DOCKER_PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ docker login -u **** --password-stdin
++ echo ****
+Login Succeeded
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ docker push ngtukien218/typ-2026-frontend:v1.5
+The push refers to repository [docker.io/ngtukien218/typ-2026-frontend]
+0cc24eb5398d: Preparing
+7fc0ce53eed1: Preparing
+4b6d03d0cebb: Preparing
+67ea0b046e7d: Preparing
+ed5fa8595c7a: Preparing
+8ae63eb1f31f: Preparing
+b3e3d1bbb64d: Preparing
+48078b7e3000: Preparing
+fd1e40d7f74b: Preparing
+7bb20cf5ef67: Preparing
+8ae63eb1f31f: Waiting
+b3e3d1bbb64d: Waiting
+48078b7e3000: Waiting
+fd1e40d7f74b: Waiting
+7bb20cf5ef67: Waiting
+ed5fa8595c7a: Layer already exists
+67ea0b046e7d: Layer already exists
+4b6d03d0cebb: Layer already exists
+48078b7e3000: Layer already exists
+8ae63eb1f31f: Layer already exists
+b3e3d1bbb64d: Layer already exists
+7bb20cf5ef67: Layer already exists
+fd1e40d7f74b: Layer already exists
+0cc24eb5398d: Pushed
+7fc0ce53eed1: Pushed
+v1.5: digest: sha256:61176d72f383ad26a3703361c7dbcadf39b34b9f867f11feca3a4e166bcfcdec size: 2406
+[Pipeline] echo
+ Successfully pushed to Docker Hub!
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (7. Clone Config Repo)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Cloning config repository...
+[Pipeline] sh
++ mkdir -p config-repo
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Frontend/config-repo
+[Pipeline] {
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_USERNAME or $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [GIT_USERNAME]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ git clone https://gitlab.com/****/typ_2026_fe_config.git .
+Cloning into '.'...
++ git config user.email ****@KienNT.B23CN465@stu.ptit.edu.vn
++ git config user.name Jenkins CI/CD Backend
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+ Config repo cloned successfully!
+[Pipeline] sh
++ ls -la
+total 24
+drwxrwxr-x 4 jenkins jenkins 4096 Jan 20 00:41 .
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 00:41 ..
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 00:41 .git
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 00:41 helm-values
+-rw-rw-r-- 1 jenkins jenkins 6122 Jan 20 00:41 README.md
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (8. Update Helm Values)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Frontend/config-repo
+[Pipeline] {
+[Pipeline] echo
+Updating with tag: v1.5
+[Pipeline] sh
++ sed -i /^frontend:/,/^backend:/ s/^    tag:.*/    tag: "v1.5"/ helm-values/values-prod.yml
+[Pipeline] sh
++ grep tag: helm-values/values-prod.yml
+    tag: "v1.5"
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (9. Push Config Changes)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pushing changes to config repository...
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Frontend/config-repo
+[Pipeline] {
+[Pipeline] sh
++ git status --porcelain
+[Pipeline] echo
+Changes detected, committing and pushing...
+[Pipeline] sh
++ git add .
++ git commit -m  Update image version to v1.5
+                                
+                                - Updated helm-values/values-prod.yml
+                                - Image: ngtukien218/typ-2026-frontend:v1.5
+                                - Build: 2
+                                - Jenkins Job: TYP_2026/Frontend
+[main 48cd63c]  Update image version to v1.5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_USERNAME or $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git push origin main
+To https://gitlab.com/****/typ_2026_fe_config.git
+   2f62c4b..48cd63c  main -> main
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+ Config changes pushed successfully!
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+ Cleaning up...
+[Pipeline] sh
++ docker rmi ngtukien218/typ-2026-frontend:v1.5
+Untagged: ngtukien218/typ-2026-frontend:v1.5
++ docker rmi ngtukien218/typ-2026-frontend:latest
+Untagged: ngtukien218/typ-2026-frontend:latest
+Untagged: ngtukien218/typ-2026-frontend@sha256:61176d72f383ad26a3703361c7dbcadf39b34b9f867f11feca3a4e166bcfcdec
+Deleted: sha256:3bf662b78ad96eaf1633e57dc80294b91a6230ee7d0c8917dced9eb1ca8bcce1
+Deleted: sha256:cc4c749774346e0da8680f3045a5fd2655f27ecfcab4586c021501405833904f
+Deleted: sha256:1409d0b4fcac7d5c5edb084dc511d03f9f6fee413d0256359dd6ad8f1d688e3d
+Deleted: sha256:f5ded60a71bf06eb38e806d2db34043ea5a916a277cd582df3c10123a0fadbb5
+Deleted: sha256:072940b34312356f6a6ca47e7299b816369a8f68e04533a7d98af195d72c2205
+Deleted: sha256:7f83f3c40e130d8326b1d6f8f5d1dcb0088da13205977d2974beda43900cae5a
++ docker system prune -f
+Deleted Images:
+deleted: sha256:1984871ae60c5161565da8a158d8b2ee1f28a9ce2161167dcf1d122917df2dac
+deleted: sha256:d6c90e901206b5a0de3b544f28c7ff73641cfe672dce3f7789b57ddb136f449a
+deleted: sha256:e81aa637be71328689503a493815cc63e123c6fca7c1db649653a880db193bf0
+deleted: sha256:c7dd0ed7085647735111347b967bcc367a1798215b0dd943f74c924ad805f6d9
+deleted: sha256:a46cbd783177e197a1ae4c1f4085005cd9f5c3e2830ea6c6fa14ed8970323321
+deleted: sha256:7024b835b7e4207b3546cc7480b4aa65cb3fe5527ed75671e4bbeb39bc286d93
+deleted: sha256:7db68e8fdf1ee6d1ff9962be86b5f7ac902b5f72bb4e773c8554f289453f0259
+deleted: sha256:9558f07ec25d8927a112ef10279c0c821975cd18d2548036ea16bc08e82558f9
+deleted: sha256:42efa36ff2711cb009cc1c434014cac2a07495d5271a94c888d221984e6d2156
+deleted: sha256:e6006f63ca4b486230ea446bf50c42192d63507267b8e4fda59bea90e5b40f14
+
+Total reclaimed space: 606MB
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] echo
+BUILD SUCCESS!
+[Pipeline] echo
+Source code built and pushed: ngtukien218/typ-2026-frontend:v1.5
+[Pipeline] echo
+Config repository updated with new version
+[Pipeline] echo
+Docker Hub: https://hub.docker.com/r/ngtukien218/typ-2026-frontend
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

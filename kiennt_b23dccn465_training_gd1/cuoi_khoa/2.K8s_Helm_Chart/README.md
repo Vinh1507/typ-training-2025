@@ -1,6 +1,6 @@
 # 2. Helm Chart (1.5đ)
 ---
-## Tài liệu triển khai:
+## [Tài liệu triển khai:](kiennt_b23dccn465_training_gd1/cuoi_khoa/0.Source_code)
 **Chuẩn bị:** Đã có Kubernetes cluster chạy ổn định (tham khảo phần 1).
 * **Ứng dụng được lựa chọn:** WebApp CRUD đơn giản.
   * Service backend: Spring Boot
@@ -112,7 +112,7 @@
 | Typ 2026 Backend | Repo chứa source code backend (Spring Boot) | [Backend](https://gitlab.com/NguyenTuKien/typ_2026_backend)|
 | Typ 2026 Frontend | Repo chứa source code frontend (ReactJS) | [Frontend](https://gitlab.com/NguyenTuKien/typ_2026_frontend)|
 | Typ 2026 BE Config | Repo chứa các file helm chart và value deployment | [BE-Config](https://gitlab.com/NguyenTuKien/typ_2026_be_config)|
-| Typ 2026 FE Config | Repo chứa các file helm chart và value deployment | | [FE-Config](https://gitlab.com/NguyenTuKien/typ_2026_fe_config)|
+| Typ 2026 FE Config | Repo chứa các file helm chart và value deployment |  [FE-Config](https://gitlab.com/NguyenTuKien/typ_2026_fe_config)|
 
 
 **Danh sách các Helm Chart đã sử dụng:**
@@ -126,10 +126,9 @@
 
 | Service | Replicas | Service Type | Port |
 | ------- | -------- | -------------| ---- |
-| Database | 1 | ClusterIP | 3306 |
-| Backend | 2 | ClusterIP | 8080 |
-| Frontend | 1 | NodePort | 30080 |
-> Em cũng có đặt source code bên trong `repo app` và `repo config` để tiện cho việc tham khảo.
+| Database | 1 | NodePort | 30336 |
+| Backend | 2 | ClusterIP | 30080 |
+| Frontend | 1 | NodePort | 30030 |
 ---
 ### Helm Charts
 #### Cài đặt Helm:

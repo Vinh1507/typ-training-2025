@@ -1,0 +1,1616 @@
+Downloading from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar
+Progress (2): 16/272 kB | 29/459 kB
+Progress (2): 32/272 kB | 29/459 kB
+Progress (2): 32/272 kB | 45/459 kB
+Progress (2): 32/272 kB | 61/459 kB
+Progress (3): 32/272 kB | 61/459 kB | 0/1.4 MB
+Progress (3): 32/272 kB | 61/459 kB | 0/1.4 MB
+Progress (3): 32/272 kB | 61/459 kB | 0/1.4 MB
+Progress (3): 32/272 kB | 61/459 kB | 0/1.4 MB
+Progress (3): 32/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 32/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.1/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 61/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.2/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.3/1.4 MB
+Progress (3): 49/272 kB | 78/459 kB | 0.3/1.4 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.3/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 78/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.4/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.5/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.6/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 94/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.7/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 49/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.8/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 0.9/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.0/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 111/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.1/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.2/1.4 MB | 0.1/1.9 MB
+Progress (4): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.1/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.3/1.4 MB | 0.2/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.4/1.4 MB | 0.2/1.9 MB | 0/1.6 MB
+Progress (5): 65/272 kB | 127/459 kB | 1.4 MB | 0.2/1.9 MB | 0/1.6 MB    
+                                                                     
+Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna-platform/5.13.0/jna-platform-5.13.0.jar (1.4 MB at 9.4 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar
+Progress (4): 65/272 kB | 143/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 65/272 kB | 143/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 65/272 kB | 143/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 143/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 143/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 160/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 160/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 160/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 176/459 kB | 0.2/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 176/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 81/272 kB | 176/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 176/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 193/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 193/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 193/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (4): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB | 0/1.1 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB | 0/1.1 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB | 0/1.1 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.3/1.9 MB | 0/1.6 MB | 0/1.1 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0/1.1 MB
+Progress (5): 98/272 kB | 209/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 98/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 98/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.1/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.2/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.3/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 225/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.4/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.5/1.1 MB
+Progress (5): 114/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.6/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 242/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.4/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.7/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.8/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 0.9/1.1 MB
+Progress (5): 131/272 kB | 258/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.0/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.1/1.1 MB
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.1 MB    
+Progress (5): 131/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB | 1.1 MB
+                                                                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar (1.1 MB at 4.6 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar
+Progress (4): 147/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 274/459 kB | 0.5/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 291/459 kB | 0.5/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 291/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 291/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 307/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 307/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 147/272 kB | 307/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 307/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 307/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 324/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 324/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 324/459 kB | 0.6/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 324/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 340/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 163/272 kB | 340/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 180/272 kB | 340/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 180/272 kB | 340/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 180/272 kB | 340/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (4): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 7.7/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 16/840 kB 
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 25/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 41/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 57/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 74/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 74/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 90/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 106/840 kB
+Progress (5): 180/272 kB | 356/459 kB | 0.7/1.9 MB | 0/1.6 MB | 123/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.7/1.9 MB | 0/1.6 MB | 123/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.7/1.9 MB | 0/1.6 MB | 139/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.7/1.9 MB | 0/1.6 MB | 156/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.7/1.9 MB | 0/1.6 MB | 172/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 172/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 188/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 205/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 221/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 238/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 254/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 262/840 kB
+Progress (5): 180/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 270/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 270/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 270/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 287/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 303/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 319/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 336/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 352/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 369/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 385/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 393/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 410/840 kB
+Progress (5): 196/272 kB | 373/459 kB | 0.8/1.9 MB | 0/1.6 MB | 410/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 410/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 426/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 442/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 459/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 475/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 492/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 508/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 524/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 524/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 541/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 557/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 573/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 590/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 606/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 610/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 623/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 639/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 639/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 655/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 672/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 688/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 705/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 721/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 737/840 kB
+Progress (5): 196/272 kB | 389/459 kB | 0.8/1.9 MB | 0/1.6 MB | 741/840 kB
+Progress (5): 196/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 741/840 kB
+Progress (5): 196/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 741/840 kB
+Progress (5): 196/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 757/840 kB
+Progress (5): 196/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 774/840 kB
+Progress (5): 196/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 790/840 kB
+Progress (5): 213/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 790/840 kB
+Progress (5): 213/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 807/840 kB
+Progress (5): 213/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 823/840 kB
+Progress (5): 213/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 839/840 kB
+Progress (5): 213/272 kB | 406/459 kB | 0.8/1.9 MB | 0/1.6 MB | 840 kB    
+                                                                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar (840 kB at 2.8 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar
+Progress (4): 213/272 kB | 406/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 406/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 422/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 422/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 422/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 438/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 213/272 kB | 438/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 438/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 438/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 438/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 455/459 kB | 0.9/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 455/459 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (4): 229/272 kB | 459 kB | 1.0/1.9 MB | 0/1.6 MB    
+                                                         
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.14.2/jackson-core-2.14.2.jar (459 kB at 1.4 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar
+Progress (3): 229/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 229/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.0/1.9 MB | 0/1.6 MB
+Progress (3): 245/272 kB | 1.1/1.9 MB | 0/1.6 MB
+Progress (3): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 7.7/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 7.7/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 16/853 kB 
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 32/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 49/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 65/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 81/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 98/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 114/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 131/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 147/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 163/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 163/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 180/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 196/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 213/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 229/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 245/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 262/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 262/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 278/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 294/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 311/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 327/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 344/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 360/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 376/853 kB
+Progress (4): 262/272 kB | 1.1/1.9 MB | 0/1.6 MB | 393/853 kB
+Progress (4): 272 kB | 1.1/1.9 MB | 0/1.6 MB | 393/853 kB    
+Progress (4): 272 kB | 1.1/1.9 MB | 0/1.6 MB | 409/853 kB
+Progress (4): 272 kB | 1.1/1.9 MB | 0/1.6 MB | 426/853 kB
+Progress (4): 272 kB | 1.1/1.9 MB | 0/1.6 MB | 442/853 kB
+                                                         
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-buildpack-platform/3.2.0/spring-boot-buildpack-platform-3.2.0.jar (272 kB at 720 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 458/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 458/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 475/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 491/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 491/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 507/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 524/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 540/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 557/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 573/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 589/853 kB
+Progress (3): 1.1/1.9 MB | 0/1.6 MB | 606/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 606/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 622/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 639/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 655/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 671/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 671/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 688/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 704/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 720/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 737/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 753/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 753/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 770/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 786/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 802/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 819/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 835/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 851/853 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 853 kB    
+                                            
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar (853 kB at 2.3 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.0.10/spring-jcl-6.0.10.jar
+Progress (2): 1.2/1.9 MB | 0/1.6 MB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 7.7/237 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 7.7/237 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 7.7/237 kB
+Progress (3): 1.2/1.9 MB | 0/1.6 MB | 7.7/237 kB
+Progress (3): 1.3/1.9 MB | 0/1.6 MB | 7.7/237 kB
+Progress (3): 1.3/1.9 MB | 0/1.6 MB | 24/237 kB 
+Progress (3): 1.3/1.9 MB | 0/1.6 MB | 24/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 24/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 24/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 24/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 24/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 41/237 kB
+Progress (3): 1.3/1.9 MB | 0.1/1.6 MB | 41/237 kB
+Progress (3): 1.4/1.9 MB | 0.1/1.6 MB | 41/237 kB
+Progress (3): 1.4/1.9 MB | 0.1/1.6 MB | 57/237 kB
+Progress (3): 1.4/1.9 MB | 0.1/1.6 MB | 57/237 kB
+Progress (3): 1.4/1.9 MB | 0.1/1.6 MB | 57/237 kB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 57/237 kB | 0/1.8 MB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 73/237 kB | 0/1.8 MB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 73/237 kB | 0/1.8 MB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 73/237 kB | 0/1.8 MB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 73/237 kB | 0/1.8 MB
+Progress (4): 1.4/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB
+Progress (5): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB | 7.7/24 kB
+Progress (5): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB | 16/24 kB 
+Progress (5): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB | 24 kB   
+                                                                    
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.0.10/spring-jcl-6.0.10.jar (24 kB at 57 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 90/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 106/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 106/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 106/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 106/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 122/237 kB | 0/1.8 MB
+Progress (4): 1.5/1.9 MB | 0.1/1.6 MB | 122/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 122/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 139/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 139/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 139/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 139/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 155/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 155/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 155/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 155/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 155/237 kB | 0/1.8 MB
+Progress (4): 1.6/1.9 MB | 0.1/1.6 MB | 172/237 kB | 0/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 172/237 kB | 0/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 172/237 kB | 0/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 172/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 188/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 188/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 188/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB
+Progress (4): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB
+Progress (5): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 7.7/157 kB
+Progress (5): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 16/157 kB 
+Progress (5): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 32/157 kB
+Progress (5): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 49/157 kB
+Progress (5): 1.7/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 65/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 65/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 204/237 kB | 0.1/1.8 MB | 81/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 81/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 98/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 114/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 131/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 147/157 kB
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 157 kB    
+Progress (5): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 157 kB
+                                                                        
+Downloaded from central: https://repo.maven.apache.org/maven2/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar (157 kB at 332 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar
+Progress (4): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.8/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.9/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.9/1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 1.9 MB | 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB    
+                                                           
+Downloaded from central: https://repo.maven.apache.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar (1.9 MB at 3.7 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 7.7/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 12/338 kB 
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 28/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 44/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 61/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 77/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 93/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 110/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 126/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 126/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 143/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 159/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 175/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 192/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 208/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 213/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 229/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 246/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 262/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 279/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 295/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 311/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 328/338 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 338 kB    
+                                                           
+Downloaded from central: https://repo.maven.apache.org/maven2/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar (338 kB at 635 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.2.0/spring-boot-loader-tools-3.2.0.jar
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 7.7/20 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 16/20 kB 
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.1/1.8 MB | 20 kB   
+                                                          
+Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 36 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB
+Progress (3): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 4.1/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 20/432 kB 
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 37/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 53/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 70/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 86/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 102/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 115/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 131/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 147/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 147/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 164/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 180/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 197/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 213/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 229/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 246/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 262/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 279/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 295/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 311/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 7.7/58 kB
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 16/58 kB 
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 25/58 kB
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 41/58 kB
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 57/58 kB
+Progress (5): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB | 58 kB   
+                                                                       
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-common-artifact-filters/3.3.2/maven-common-artifact-filters-3.3.2.jar (58 kB at 96 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.jar
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB
+Progress (4): 0.1/1.6 MB | 221/237 kB | 0.2/1.8 MB | 328/432 kB
+Progress (4): 0.1/1.6 MB | 237 kB | 0.2/1.8 MB | 328/432 kB    
+                                                           
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar (237 kB at 369 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar
+Progress (3): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 7.7/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 16/268 kB 
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 16/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 16/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 32/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 49/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 65/268 kB
+Progress (4): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 65/268 kB
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 65/268 kB | 7.7/147 kB
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 65/268 kB | 12/147 kB 
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 65/268 kB | 28/147 kB
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 81/268 kB | 28/147 kB
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 328/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.1/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.3/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 44/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 61/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 77/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 93/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 110/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 126/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 143/147 kB
+Progress (5): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB | 147 kB    
+                                                                       
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-shade-plugin/3.5.0/maven-shade-plugin-3.5.0.jar (147 kB at 195 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 344/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 360/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 360/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 360/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.4/1.8 MB | 377/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 7.7/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 12/122 kB 
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 28/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 28/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 44/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 44/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 61/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 61/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 77/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 93/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 93/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 93/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 110/122 kB
+Progress (5): 0.2/1.6 MB | 0.5/1.8 MB | 377/432 kB | 81/268 kB | 122 kB    
+                                                                       
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar (122 kB at 142 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 393/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 393/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 393/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.5/1.8 MB | 393/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 393/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 410/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 410/432 kB | 81/268 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 410/432 kB | 81/268 kB
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 410/432 kB | 81/268 kB | 7.7/72 kB
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 410/432 kB | 81/268 kB | 16/72 kB 
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 426/432 kB | 81/268 kB | 16/72 kB
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 426/432 kB | 81/268 kB | 16/72 kB
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 426/432 kB | 81/268 kB | 32/72 kB
+Progress (5): 0.2/1.6 MB | 0.6/1.8 MB | 432 kB | 81/268 kB | 32/72 kB    
+                                                                     
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-loader-tools/3.2.0/spring-boot-loader-tools-3.2.0.jar (432 kB at 467 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 81/268 kB | 32/72 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 81/268 kB | 48/72 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 81/268 kB | 48/72 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 81/268 kB | 65/72 kB
+Progress (4): 0.2/1.6 MB | 0.6/1.8 MB | 81/268 kB | 72 kB   
+                                                         
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar (72 kB at 77 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar
+Progress (3): 0.3/1.6 MB | 0.6/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.6/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.6/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB
+Progress (3): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB
+Progress (4): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 7.7/328 kB
+Progress (4): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 12/328 kB 
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 12/328 kB | 7.7/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 12/328 kB | 16/52 kB 
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 12/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 28/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 81/268 kB | 28/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 28/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 44/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 44/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 61/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 61/328 kB | 16/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 61/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 61/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 77/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.7/1.8 MB | 98/268 kB | 93/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 98/268 kB | 93/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 98/268 kB | 110/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 98/268 kB | 110/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 98/268 kB | 110/328 kB | 32/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 98/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 114/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 131/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 147/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 163/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 180/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 196/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 213/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 229/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 245/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 262/268 kB | 110/328 kB | 49/52 kB
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 268 kB | 110/328 kB | 49/52 kB    
+Progress (5): 0.3/1.6 MB | 0.8/1.8 MB | 268 kB | 126/328 kB | 49/52 kB
+                                                                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.jar (268 kB at 258 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar
+Progress (4): 0.3/1.6 MB | 0.8/1.8 MB | 126/328 kB | 49/52 kB
+Progress (4): 0.3/1.6 MB | 0.8/1.8 MB | 126/328 kB | 52 kB   
+Progress (4): 0.3/1.6 MB | 0.8/1.8 MB | 143/328 kB | 52 kB
+                                                          
+Downloaded from central: https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar (52 kB at 50 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 159/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 159/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 159/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 175/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 175/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 192/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 208/328 kB
+Progress (3): 0.3/1.6 MB | 0.8/1.8 MB | 208/328 kB
+Progress (3): 0.4/1.6 MB | 0.8/1.8 MB | 208/328 kB
+Progress (3): 0.4/1.6 MB | 0.8/1.8 MB | 225/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 225/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 241/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 257/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 257/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 274/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 274/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 274/328 kB
+Progress (4): 0.4/1.6 MB | 0.9/1.8 MB | 274/328 kB | 7.7/43 kB
+Progress (4): 0.4/1.6 MB | 0.9/1.8 MB | 274/328 kB | 12/43 kB 
+Progress (4): 0.4/1.6 MB | 0.9/1.8 MB | 290/328 kB | 12/43 kB
+Progress (4): 0.4/1.6 MB | 0.9/1.8 MB | 290/328 kB | 28/43 kB
+Progress (4): 0.4/1.6 MB | 0.9/1.8 MB | 290/328 kB | 43 kB   
+                                                          
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.2.1/maven-dependency-tree-3.2.1.jar (43 kB at 39 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 306/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 306/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 323/328 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 328 kB    
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 328 kB
+                                              
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jdom/jdom2/2.0.6.1/jdom2-2.0.6.1.jar (328 kB at 299 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar
+Progress (2): 0.4/1.6 MB | 0.9/1.8 MB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 7.7/484 kB
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 16/484 kB 
+Progress (3): 0.4/1.6 MB | 0.9/1.8 MB | 16/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 16/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 16/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 16/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 16/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 32/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 32/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 32/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 32/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 32/484 kB
+Progress (3): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 7.7/233 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 16/233 kB 
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 32/233 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 32/233 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 49/233 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 65/233 kB
+Progress (4): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 65/233 kB
+Progress (5): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 65/233 kB | 7.7/752 kB
+Progress (5): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 65/233 kB | 16/752 kB 
+Progress (5): 0.4/1.6 MB | 1.0/1.8 MB | 49/484 kB | 81/233 kB | 16/752 kB
+Progress (5): 0.5/1.6 MB | 1.0/1.8 MB | 49/484 kB | 81/233 kB | 16/752 kB
+Progress (5): 0.5/1.6 MB | 1.0/1.8 MB | 49/484 kB | 81/233 kB | 25/752 kB
+Progress (5): 0.5/1.6 MB | 1.0/1.8 MB | 49/484 kB | 98/233 kB | 25/752 kB
+Progress (5): 0.5/1.6 MB | 1.0/1.8 MB | 65/484 kB | 98/233 kB | 25/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 98/233 kB | 25/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 114/233 kB | 25/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 114/233 kB | 41/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 131/233 kB | 41/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 131/233 kB | 57/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 131/233 kB | 57/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 147/233 kB | 57/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 147/233 kB | 57/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 163/233 kB | 57/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 163/233 kB | 74/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 180/233 kB | 74/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 180/233 kB | 74/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 180/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 196/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 65/484 kB | 213/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 213/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 213/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 213/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 229/233 kB | 90/752 kB
+Progress (5): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 233 kB | 90/752 kB    
+                                                                      
+Downloaded from central: https://repo.maven.apache.org/maven2/org/vafer/jdependency/2.8.0/jdependency-2.8.0.jar (233 kB at 198 kB/s)
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 106/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 106/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 123/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 139/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 139/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 139/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 81/484 kB | 156/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 98/484 kB | 156/752 kB
+Progress (4): 0.5/1.6 MB | 1.1/1.8 MB | 98/484 kB | 172/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 98/484 kB | 172/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 98/484 kB | 172/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 98/484 kB | 188/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 98/484 kB | 188/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 188/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 205/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 221/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 221/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 221/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 238/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 238/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 114/484 kB | 254/752 kB
+Progress (4): 0.5/1.6 MB | 1.2/1.8 MB | 131/484 kB | 254/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 254/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 254/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 270/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 287/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 287/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 131/484 kB | 287/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 147/484 kB | 287/752 kB
+Progress (4): 0.6/1.6 MB | 1.2/1.8 MB | 147/484 kB | 303/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 147/484 kB | 303/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 147/484 kB | 319/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 147/484 kB | 319/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 147/484 kB | 319/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 147/484 kB | 336/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 336/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 352/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 352/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 369/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 369/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 369/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 385/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 401/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 163/484 kB | 401/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 401/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 401/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 418/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 434/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 434/752 kB
+Progress (4): 0.6/1.6 MB | 1.3/1.8 MB | 180/484 kB | 451/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 180/484 kB | 451/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 180/484 kB | 451/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 196/484 kB | 451/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 196/484 kB | 467/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 196/484 kB | 467/752 kB
+Progress (4): 0.6/1.6 MB | 1.4/1.8 MB | 196/484 kB | 483/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 196/484 kB | 483/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 196/484 kB | 500/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 196/484 kB | 500/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 196/484 kB | 516/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 516/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 516/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 516/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 532/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 549/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 549/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 213/484 kB | 549/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 229/484 kB | 549/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 229/484 kB | 565/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 229/484 kB | 565/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 229/484 kB | 582/752 kB
+Progress (4): 0.7/1.6 MB | 1.4/1.8 MB | 229/484 kB | 598/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 229/484 kB | 598/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 229/484 kB | 598/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 598/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 614/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 631/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 631/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 647/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 647/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 647/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 245/484 kB | 664/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 664/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 664/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 680/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 680/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 680/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 696/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 696/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 262/484 kB | 713/752 kB
+Progress (4): 0.7/1.6 MB | 1.5/1.8 MB | 278/484 kB | 713/752 kB
+Progress (4): 0.8/1.6 MB | 1.5/1.8 MB | 278/484 kB | 713/752 kB
+Progress (4): 0.8/1.6 MB | 1.5/1.8 MB | 278/484 kB | 729/752 kB
+Progress (4): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB | 729/752 kB
+Progress (4): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB | 745/752 kB
+Progress (4): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB | 752 kB    
+Progress (4): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB | 752 kB
+                                                           
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar (752 kB at 561 kB/s)
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 278/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 294/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 294/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 294/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 311/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 311/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 311/484 kB
+Progress (3): 0.8/1.6 MB | 1.6/1.8 MB | 311/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 311/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 327/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 344/484 kB
+Progress (3): 0.8/1.6 MB | 1.7/1.8 MB | 344/484 kB
+Progress (3): 0.9/1.6 MB | 1.7/1.8 MB | 344/484 kB
+Progress (3): 0.9/1.6 MB | 1.7/1.8 MB | 344/484 kB
+Progress (3): 0.9/1.6 MB | 1.7/1.8 MB | 360/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 360/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 360/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 360/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 360/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 376/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 376/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 376/484 kB
+Progress (3): 0.9/1.6 MB | 1.8/1.8 MB | 376/484 kB
+Progress (3): 0.9/1.6 MB | 1.8 MB | 376/484 kB    
+                                              
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.0.10/spring-core-6.0.10.jar (1.8 MB at 1.3 MB/s)
+Progress (2): 0.9/1.6 MB | 393/484 kB
+Progress (2): 0.9/1.6 MB | 393/484 kB
+Progress (2): 0.9/1.6 MB | 409/484 kB
+Progress (2): 0.9/1.6 MB | 409/484 kB
+Progress (2): 0.9/1.6 MB | 409/484 kB
+Progress (2): 0.9/1.6 MB | 426/484 kB
+Progress (2): 1.0/1.6 MB | 426/484 kB
+Progress (2): 1.0/1.6 MB | 442/484 kB
+Progress (2): 1.0/1.6 MB | 442/484 kB
+Progress (2): 1.0/1.6 MB | 442/484 kB
+Progress (2): 1.0/1.6 MB | 458/484 kB
+Progress (2): 1.0/1.6 MB | 475/484 kB
+Progress (2): 1.0/1.6 MB | 475/484 kB
+Progress (2): 1.0/1.6 MB | 484 kB    
+Progress (2): 1.0/1.6 MB | 484 kB
+                                 
+Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.13.0/commons-io-2.13.0.jar (484 kB at 327 kB/s)
+Progress (1): 1.0/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.1/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.2/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.3/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.4/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.5/1.6 MB
+Progress (1): 1.6/1.6 MB
+Progress (1): 1.6/1.6 MB
+Progress (1): 1.6/1.6 MB
+Progress (1): 1.6/1.6 MB
+Progress (1): 1.6 MB    
+                    
+Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.14.2/jackson-databind-2.14.2.jar (1.6 MB at 934 kB/s)
+[INFO] Replacing main artifact /app/target/user-management-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /app/target/user-management-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.639 s
+[INFO] Finished at: 2026-01-20T00:05:34Z
+[INFO] ------------------------------------------------------------------------
+ ---> Removed intermediate container 4da22a05b17e
+ ---> 1257c76a6139
+Step 6/10 : FROM eclipse-temurin:17-jre
+ ---> 8cb2a26e3467
+Step 7/10 : WORKDIR /app
+ ---> Running in 8c8681fe51dc
+ ---> Removed intermediate container 8c8681fe51dc
+ ---> edc5f3a3abc9
+Step 8/10 : COPY --from=build /app/target/*.jar app.jar
+ ---> 6cb3058fd932
+Step 9/10 : EXPOSE 8080
+ ---> Running in 8ca22ef369f0
+ ---> Removed intermediate container 8ca22ef369f0
+ ---> 3fcaa3d0cc83
+Step 10/10 : ENTRYPOINT ["java", "-jar", "app.jar"]
+ ---> Running in be66677bc6ff
+ ---> Removed intermediate container be66677bc6ff
+ ---> 7d36b45be36f
+Successfully built 7d36b45be36f
+Successfully tagged ngtukien218/typ-2026-backend:v1.5
++ docker tag ngtukien218/typ-2026-backend:v1.5 ngtukien218/typ-2026-backend:latest
+[Pipeline] echo
+ Docker image built successfully!
+[Pipeline] sh
++ grep ngtukien218/typ-2026-backend
++ docker images
+ngtukien218/typ-2026-backend   latest                   7d36b45be36f   1 second ago    310MB
+ngtukien218/typ-2026-backend   v1.5                     7d36b45be36f   1 second ago    310MB
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (5. Test Docker Image)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Testing Docker image...
+[Pipeline] sh
++ echo Testing if image can start...
+Testing if image can start...
++ docker run --rm ngtukien218/typ-2026-backend:v1.5 java -version
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2026-01-20T00:05:41.458Z  INFO 1 --- [user-management] [           main] c.e.u.UserManagementApplication          : Starting UserManagementApplication v1.0.0 using Java 17.0.17 with PID 1 (/app/app.jar started by root in /app)
+2026-01-20T00:05:41.462Z  INFO 1 --- [user-management] [           main] c.e.u.UserManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-01-20T00:05:42.872Z  INFO 1 --- [user-management] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-20T00:05:42.928Z  INFO 1 --- [user-management] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2026-01-20T00:05:43.463Z  INFO 1 --- [user-management] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-20T00:05:43.475Z  INFO 1 --- [user-management] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-20T00:05:43.475Z  INFO 1 --- [user-management] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-01-20T00:05:43.532Z  INFO 1 --- [user-management] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-20T00:05:43.534Z  INFO 1 --- [user-management] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1907 ms
+2026-01-20T00:05:43.771Z  INFO 1 --- [user-management] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-20T00:05:43.850Z  INFO 1 --- [user-management] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2026-01-20T00:05:43.897Z  INFO 1 --- [user-management] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-20T00:05:44.182Z  INFO 1 --- [user-management] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-20T00:05:44.226Z  INFO 1 --- [user-management] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-20T00:05:45.358Z ERROR 1 --- [user-management] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:819) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:440) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:9) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58) ~[app.jar:1.0.0]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:939) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:809) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 56 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 59 common frames omitted
+
+2026-01-20T00:05:45.373Z  WARN 1 --- [user-management] [           main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:273) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:105) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:66) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:129) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:169) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:9) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58) ~[app.jar:1.0.0]
+
+2026-01-20T00:05:45.411Z  WARN 1 --- [user-management] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-20T00:05:46.280Z  INFO 1 --- [user-management] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-20T00:05:46.301Z  INFO 1 --- [user-management] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-20T00:05:47.305Z ERROR 1 --- [user-management] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:819) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:440) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at java.base/java.util.HashMap.forEach(Unknown Source) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:295) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:9) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58) ~[app.jar:1.0.0]
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:939) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:809) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 61 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 64 common frames omitted
+
+2026-01-20T00:05:47.320Z  WARN 1 --- [user-management] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 08S01
+2026-01-20T00:05:47.321Z ERROR 1 --- [user-management] [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2026-01-20T00:05:47.335Z ERROR 1 --- [user-management] [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2026-01-20T00:05:47.336Z  WARN 1 --- [user-management] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+2026-01-20T00:05:47.343Z  INFO 1 --- [user-management] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-20T00:05:47.369Z  INFO 1 --- [user-management] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-20T00:05:47.385Z ERROR 1 --- [user-management] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1775) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1173) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:936) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.1.1.jar!/:6.1.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:455) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:323) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1331) ~[spring-boot-3.2.0.jar!/:3.2.0]
+	at com.example.usermanagement.UserManagementApplication.main(UserManagementApplication.java:9) ~[!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:91) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:53) ~[app.jar:1.0.0]
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:58) ~[app.jar:1.0.0]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1822) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.1.1.jar!/:6.1.1]
+	... 23 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution [Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:100) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:570) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:286) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:145) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at java.base/java.util.HashMap.forEach(Unknown Source) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:142) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:295) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:450) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1507) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.1.jar!/:6.1.1]
+	... 27 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:819) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:440) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar!/:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar!/:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:424) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.3.1.Final.jar!/:6.3.1.Final]
+	... 48 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:939) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:809) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 61 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+	at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63) ~[mysql-connector-j-8.1.0.jar!/:8.1.0]
+	... 64 common frames omitted
+
++ echo Image test completed
+Image test completed
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (6. Push to Docker Hub)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Pushing image to Docker Hub...
+[Pipeline] withCredentials
+Masking supported pattern matches of $DOCKER_USERNAME or $DOCKER_PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ docker login -u **** --password-stdin
++ echo ****
+Login Succeeded
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ docker push ngtukien218/typ-2026-backend:v1.5
+The push refers to repository [docker.io/ngtukien218/typ-2026-backend]
+9b0c4a6f6f3b: Preparing
+fa0862627171: Preparing
+5ef8b7c09604: Preparing
+8ed1a2ee5d73: Preparing
+22877e550c92: Preparing
+7ae6d280ed01: Preparing
+123a078714d5: Preparing
+7ae6d280ed01: Waiting
+123a078714d5: Waiting
+5ef8b7c09604: Layer already exists
+22877e550c92: Layer already exists
+8ed1a2ee5d73: Layer already exists
+123a078714d5: Layer already exists
+7ae6d280ed01: Layer already exists
+fa0862627171: Pushed
+9b0c4a6f6f3b: Pushed
+v1.5: digest: sha256:be658a266d69f970e7f098c46a43ab1fc56572990ca12e63295b58fbd2bee9d4 size: 1786
+[Pipeline] echo
+ Successfully pushed to Docker Hub!
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (7. Clone Config Repo)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+ Cloning config repository...
+[Pipeline] sh
++ mkdir -p config-repo
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Backend/config-repo
+[Pipeline] {
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_USERNAME or $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
+Warning: A secret was passed to "sh" using Groovy String interpolation, which is insecure.
+		 Affected argument(s) used the following variable(s): [GIT_USERNAME]
+		 See https://jenkins.io/redirect/groovy-string-interpolation for details.
++ git clone https://gitlab.com/****/typ_2026_be_config.git .
+Cloning into '.'...
++ git config user.email ****@KienNT.B23CN465@stu.ptit.edu.vn
++ git config user.name Jenkins CI/CD Backend
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+ Config repo cloned successfully!
+[Pipeline] sh
++ ls -la
+total 24
+drwxrwxr-x 4 jenkins jenkins 4096 Jan 20 00:06 .
+drwxrwxr-x 7 jenkins jenkins 4096 Jan 20 00:06 ..
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 00:06 .git
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 00:06 helm-values
+-rw-rw-r-- 1 jenkins jenkins 6119 Jan 20 00:06 README.md
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (8. Update Helm Values)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Backend/config-repo
+[Pipeline] {
+[Pipeline] echo
+Updating with tag: v1.5
+[Pipeline] sh
++ sed -i /^backend:/,/^database:/ s/^    tag:.*/    tag: "v1.5"/ helm-values/values-prod.yml
+[Pipeline] sh
++ grep tag: helm-values/values-prod.yml
+    tag: "v1.5"
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (9. Push Config Changes)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pushing changes to config repository...
+[Pipeline] dir
+Running in /home/jenkins/agent/workspace/TYP_2026/Backend/config-repo
+[Pipeline] {
+[Pipeline] sh
++ git status --porcelain
+[Pipeline] echo
+Changes detected, committing and pushing...
+[Pipeline] sh
++ git add .
++ git commit -m  Update image version to v1.5
+                                
+                                - Updated helm-values/values-prod.yml
+                                - Image: ngtukien218/typ-2026-backend:v1.5
+                                - Build: 30
+                                - Jenkins Job: TYP_2026/Backend
+[main 821a8a8]  Update image version to v1.5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_USERNAME or $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git push origin main
+To https://gitlab.com/****/typ_2026_be_config.git
+   8333cee..821a8a8  main -> main
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+ Config changes pushed successfully!
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+ Cleaning up...
+[Pipeline] sh
++ docker rmi ngtukien218/typ-2026-backend:v1.5
+Untagged: ngtukien218/typ-2026-backend:v1.5
++ docker rmi ngtukien218/typ-2026-backend:latest
+Untagged: ngtukien218/typ-2026-backend:latest
+Untagged: ngtukien218/typ-2026-backend@sha256:be658a266d69f970e7f098c46a43ab1fc56572990ca12e63295b58fbd2bee9d4
+Deleted: sha256:7d36b45be36f2642e689e576a9392098feade5d1a261e64749f70bf49d7df864
+Deleted: sha256:3fcaa3d0cc830d7133a74a76b116d62f7c34080b571786a0befdc1782eaf7642
+Deleted: sha256:6cb3058fd932717b13f7224a40472047970f0e18f4f0479c180489d8b9e9a79a
+Deleted: sha256:6db45dbecf9871fb5e3d9b655b66b6f94bbe7e41678f2de7fc5af8c7dcaf89e3
+Deleted: sha256:edc5f3a3abc97794a7f733e55c827925fd5bd2ccc393b573fa57554c40f58c98
+Deleted: sha256:1d42fdd9b14df6fdce986afa5968b83f21f9369ece9c1f97df94a2e62cf7918c
++ docker system prune -f
+Deleted Images:
+deleted: sha256:1257c76a6139472fc76d629537007488631c8066e6ccfe5a72a7bd67601c7501
+deleted: sha256:d74c54e993689a271187ad81ba3718929930d96baa185d5ae54baddee776849b
+deleted: sha256:5cb1bdace634df439d18d5c23e2620e341125a5bd761273f6149f9af6d247ae8
+deleted: sha256:a077077e78a888e2fa15b212f842172df639ff0e896f39d91b1c73adc54e8a47
+deleted: sha256:5bf47c95c5ad040da2eb93d9e8293866d27ca4509ff5feeb947a8854a2e21e09
+deleted: sha256:18b3e34fcb8743bb8422ac1e8af4df6fc4dea4f22625bb05fc1cb4e0100a4c0e
+deleted: sha256:032dcf1d2b580cee27924643b10633c7a39d11ee9c486e5c1c12733dd925fa03
+deleted: sha256:c46ba9683ebfe334bdab99ab13453d2679e80af598d2540e025ab63873df6014
+
+Total reclaimed space: 130.2MB
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] echo
+BUILD SUCCESS!
+[Pipeline] echo
+Source code built and pushed: ngtukien218/typ-2026-backend:v1.5
+[Pipeline] echo
+Config repository updated with new version
+[Pipeline] echo
+Docker Hub: https://hub.docker.com/r/ngtukien218/typ-2026-backend
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

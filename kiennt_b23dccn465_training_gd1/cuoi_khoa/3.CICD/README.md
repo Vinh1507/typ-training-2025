@@ -50,8 +50,142 @@ Do Jenkins được triển khai trên cụm Kubernetes và chỉ có thể truy
   cloudflared tunnel --config /home/typ/.cloudflared/config.yml run
   ```
 
-### Cấu hình Jenkins Pipeline
-* Tạo một pipeline mới trong Jenkins với tên "ci-cd-pipeline"
-* Cấu hình pipeline để sử dụng Jenkinsfile từ repo GitHub chứa source code của ứng
+### Cấu hình Jenkins Agent
+Tạo 1 Jenkins Agent và cài đặt các công cụ cần thiết (`docker`, `java`, `git`) và tạo user Jenkins trên agent để Jenkins master có thể kết nối và sử dụng agent này cho các job CI/CD.
+* Cấu hình phần cứng cho Jenkins Agent: 
+  * RAM: 2GB
 
+    ![alt text](image/3.RAM.png)
+  * CPU: 2 vCPU
 
+    ![alt text](image/3.CPU.png)
+  * OS: Ubuntu 22.04 LTS
+
+    ![alt text](image/3.OS.png)
+  * Bộ nhớ: 60GB
+
+    ![alt text](image/3.MEM.png)
+* Cấu hình mạng: 
+  * IP tĩnh: 192.168.123.111
+  * Hostname: agent1
+  * SSH port: 22 (Mặc định)
+
+    ![alt text](image/3.IP.png) 
+* Cài đặt các công cụ cần thiết (`docker`, `java`) trên Jenkins Agent:
+  ```bash
+  # git của em được cài sẵn khi tạo VM
+  sudo apt update && sudo apt upgrade -y 
+  sudo apt install docker.io openjdk-17-jre git -y
+  sudo useradd -m -s /bin/bash jenkins
+  sudo usermod -aG docker jenkins
+  ```
+* Tạo user Jenkins, thêm vào nhóm docker:
+  ```bash
+  sudo useradd -m -d /home/jenkins -s /bin/bash jenkins
+  sudo passwd jenkins
+  sudo usermod -aG docker jenkins
+  ```
+* Cấu hình SSH key để Jenkins master có thể kết nối đến Jenkins Agent.
+* Thêm Jenkins Agent vào thành một nodes trong Jenkins master:
+  * **Node name**: agent1
+  * **Remote root directory**: /home/jenkins/agent
+  * **Labels**: agent1
+  * **Launch method**: Launch agents by connecting it to the controller
+
+  ![alt text](image/3.Agent_cfg.png)
+* Kiểm tra kết nối từ Jenkins master đến Jenkins Agent:
+  
+  ![alt text](image/3.Agent_verify.png)
+
+### Cấu hình pipeline CI/CD trên Jenkins
+
+Tài liệu hướng dẫn cài đặt Jenkins Pipeline: [DEVOPSEDU VN](https://youtu.be/8ujz58xmMFI?si=qJ3vtS4UZlvyuTu3)
+
+**Các bước cần chuẩn bị:**
+* Tạo **Gitlab Webhook** gửi request đến Jenkins khi có tag mới được tạo. 
+  * URL: lấy từ bước Trigger khi tạo pipeline trên Jenkins (ví dụ: `https://jenkins.ngtukien.id.vn/project/TYP_2026/Backend`
+  )
+  * Chọn event: Tag push events & nhánh main.
+
+    ![alt text](image/3.Webhook_1.png)
+    ![alt text](image/3.Webhook_2.png)
+* Tạo **Personal Access Token (PAT)** trên **Docker Hub** để Jenkins có thể push image lên Docker Hub.
+* Tạo **Personal Access Token (PAT)** trên **GitLab** để Jenkins có thể push code lên repo config.
+* Cấu hình các credential trên Jenkins:
+  * **Gitlab API Token**: Cấu hình cho Gitlab plugin.
+  * **dockerhub_credential**: Chứa Docker Hub PAT.
+  * **git_credential**: Chứa GitLab PAT.
+    
+    ![alt text](image/3.Credential.png)
+  
+**Cấu hình pipeline CI/CD:**
+* Giữ lại không quá 10 bản và xóa bất kỳ bản build nào cũ hơn 30 ngày.
+
+  ![alt text](image/3.History.png)
+* Chọn build khi có 1 thay đổi được push lên Gitlab (cấu hình webhook ở bước trên).
+
+  ![alt text](image/3.Trigger.png)
+
+* Pipeline script từ SCM, chọn Git và nhập URL repo source code.
+
+  ![alt text](image/3.Pipeline_1.png)
+  ![alt text](image/3.Pipeline_2.png)
+
+### Tạo Jenkinsfile
+* [Backend/Jenkinsfile](../0.Source_code/typ_2026_backend/Jenkinsfile)
+* [Frontend/Jenkinsfile](../0.Source_code/typ_2026_frontend/Jenkinsfile)
+---
+## Kết quả chạy CI/CD pipeline
+* Chi tiết log quá trình chạy pipeline CI/CD trên Jenkins:
+  * [Backend CI/CD log](./logs/#30_backend_ci_cd_log.txt)
+  * [Frontend CI/CD log](./logs/#2_frontend_ci_cd.txt)
+### Thực hiện chạy pipeline CI/CD cho Backend
+* Tạo tag mới và push lên repo:
+
+  ![alt text](image/3.Backend_1.png)
+* Tag được push lên repo:
+
+  ![alt text](image/3.Backend_2.png)
+* Jenkins nhận webhook và thực hiện chạy pipeline:
+
+  ![alt text](image/3.Backend_3.png)
+* Quá trình pipeline CI/CD diễn ra:
+
+  ![alt text](image/3.Backend_4.png)
+* Build và push image lên Docker Hub:
+
+  ![alt text](image/3.Backend_5.png)
+* Sửa file values-prod.yaml và push code lên repo config:
+  
+  ![alt text](image/3.Backend_6.png)
+* ArgoCD phát hiện sự thay đổi trên repo config và thực hiện deploy lại:
+
+  ![alt text](image/3.Backend_7.png)
+* ArgoCD triển khai thành công:
+
+  ![alt text](image/3.Backend_8.png)
+### Thực hiện chạy pipeline CI/CD cho Frontend
+* Tạo tag mới và push lên repo:
+
+  ![alt text](image/3.Frontend_1.png)
+* Tag được push lên repo: 
+
+  ![alt text](image/3.Frontend_2.png)
+* Jenkins nhận webhook và thực hiện chạy pipeline:
+  
+  ![alt text](image/3.Frontend_3.png)
+* Quá trình pipeline CI/CD diễn ra.
+
+  ![alt text](image/3.Frontend_4.png)
+* Build và push image lên Docker Hub:
+
+  ![alt text](image/3.Frontend_5.png)
+* Sửa file values-prod.yaml và push code lên repo config:
+
+  ![alt text](image/3.Frontend_6.png)
+* ArgoCD phát hiện sự thay đổi trên repo config và thực hiện deploy lại:
+
+  ![alt text](image/3.Frontend_7.png)
+* ArgoCD triển khai thành công:
+
+  ![alt text](image/3.Frontend_8.png)
