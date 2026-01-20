@@ -137,8 +137,8 @@ Tài liệu hướng dẫn cài đặt Jenkins Pipeline: [DEVOPSEDU VN](https://
 ---
 ## Kết quả chạy CI/CD pipeline
 * Chi tiết log quá trình chạy pipeline CI/CD trên Jenkins:
-  * [Backend CI/CD log](kiennt_b23dccn465_training_gd1/cuoi_khoa/3.CICD/logs/#30_backend_ci_cd.txt)
-  * [Frontend CI/CD log](kiennt_b23dccn465_training_gd1/cuoi_khoa/3.CICD/logs/#2_frontend_ci_cd.txt)
+  * [Backend CI/CD log](./logs/#30_backend_ci_cd.txt)
+  * [Frontend CI/CD log](./logs/#2_frontend_ci_cd.txt)
 ### Thực hiện chạy pipeline CI/CD cho Backend
 * Tạo tag mới và push lên repo:
 
