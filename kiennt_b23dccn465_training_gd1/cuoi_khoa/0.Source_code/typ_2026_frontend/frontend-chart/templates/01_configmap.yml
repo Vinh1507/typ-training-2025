@@ -29,4 +29,16 @@ data:
             proxy_set_header Host $host;
             proxy_cache_bypass $http_upgrade;
         }
+
+        # Nginx stub_status endpoint for Prometheus exporter
+        location /nginx_status {
+            stub_status;
+            access_log off;
+
+            allow 127.0.0.1;
+            allow 10.0.0.0/8;
+            allow 172.16.0.0/12;
+            allow 192.168.0.0/16;
+            deny all;
+        }
     }

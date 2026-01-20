@@ -3,7 +3,7 @@ backend:
   replicaCount: 2
   image:
     repository: ngtukien218/typ-2026-backend
-    tag: "2073dc8"
+    tag: "v1.5"
     pullPolicy: Always
   service:
     type: NodePort

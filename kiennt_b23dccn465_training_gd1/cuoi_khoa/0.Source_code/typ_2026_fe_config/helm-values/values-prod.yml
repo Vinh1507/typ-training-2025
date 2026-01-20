@@ -3,7 +3,7 @@ frontend:
   replicaCount: 1
   image:
     repository: ngtukien218/typ-2026-frontend
-    tag: "v1.5"
+    tag: "v1.5.3"
     pullPolicy: Always
   service:
     type: NodePort
@@ -17,3 +17,15 @@ backend:
     type: NodePort
     port: 8080
     nodePort: 30080
+
+nginxExporter:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: nginx/nginx-prometheus-exporter
+    tag: "1.1.0"
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 9113
+    nodePort: 30113

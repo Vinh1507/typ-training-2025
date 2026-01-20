@@ -1,0 +1,36 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Backend API trên Kubernetes
+  - job_name: 'typ-backend-api'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['192.168.123.11:30080']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'typ-backend-api'
+      - source_labels: [__address__]
+        target_label: application
+        replacement: 'student-management-backend'
+
+  # Frontend Nginx metrics trên Kubernetes
+  - job_name: 'typ-frontend-nginx'
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['192.168.123.11:30030']
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: instance
+        replacement: 'typ-frontend-nginx'
+      - source_labels: [__address__]
+        target_label: application
+        replacement: 'student-management-frontend'

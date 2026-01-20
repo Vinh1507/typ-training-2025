@@ -3,7 +3,7 @@ import './App.css';
 import UserList from './components/UserList';
 import UserForm from './components/UserForm';
 import { getUsers, createUser, updateUser, deleteUser } from './services/userService';
-// Version 1.5
+
 function App() {
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
