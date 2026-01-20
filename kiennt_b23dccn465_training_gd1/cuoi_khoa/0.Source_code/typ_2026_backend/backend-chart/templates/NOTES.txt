@@ -1,0 +1,17 @@
+1. Get the application URL by running these commands:
+
+{{- if eq .Values.backend.service.type "NodePort" }}
+  export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} -o jsonpath="{.spec.ports[0].nodePort}" services {{ include "helm-chart.componentName" (dict "root" . "component" "backend") }})
+  export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} -o jsonpath="{.items[0].status.addresses[?(@.type=='InternalIP')].address}")
+  echo "http://$NODE_IP:$NODE_PORT"
+{{- else if eq .Values.backend.service.type "LoadBalancer" }}
+  NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+  export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace }} {{ include "helm-chart.componentName" (dict "root" . "component" "backend") }} -o jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  echo "http://$SERVICE_IP:{{ .Values.backend.service.port }}"
+{{- else }}
+  kubectl port-forward --namespace {{ .Release.Namespace }} svc/{{ include "helm-chart.componentName" (dict "root" . "component" "backend") }} 8080:{{ .Values.backend.service.port }}
+  echo "http://127.0.0.1:8080"
+{{- end }}
+
+2. API base path:
+  /api/users

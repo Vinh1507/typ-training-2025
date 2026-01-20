@@ -1,0 +1,205 @@
+pipeline {
+    agent {
+        label 'agent1'
+    }
+
+    environment {
+        IMAGE_NAME = "ngtukien218/typ-2026-backend"
+        DOCKERHUB_CREDENTIAL = "dockerhub_credential"
+        GIT_CREDENTIAL = "git_credential"
+        CONFIG_REPO_URL = "https://gitlab.com/NguyenTuKien/typ_2026_be_config.git"
+    }
+
+    stages {
+        stage('1. Agent Information'){
+            steps {
+                echo "Running on agent: ${env.NODE_NAME}"
+                echo "Workspace: ${env.WORKSPACE}"
+                sh 'whoami'
+                sh 'pwd'
+            }
+        }
+
+        stage('2. Checkout Source Code') {
+            steps {
+                echo " Cloning source code..."
+                checkout scm
+                
+                echo " Clone completed!"
+                sh 'ls -la'
+            }
+        }
+
+        stage('3. Get Git Tag Version') {
+            steps {
+                script {
+                    echo " Getting Git tag version..."
+                    sh 'git log --oneline -n 5'
+                    sh 'git tag --list'
+                    def tagVersion = sh(
+                        script: 'git describe --tags --exact-match 2>/dev/null || git describe --tags --abbrev=0 2>/dev/null || git rev-parse --short HEAD', 
+                        returnStdout: true
+                    ).trim()
+                    env.TAG_NAME = tagVersion
+                    echo " Using tag version: ${env.TAG_NAME}"
+                    echo " Docker image will be: ${env.IMAGE_NAME}:${env.TAG_NAME}"
+                }
+            }
+        }
+
+        stage('4. Build Docker Image') {
+            steps {
+                script {
+                    echo " Building Docker image: ${env.IMAGE_NAME}:${env.TAG_NAME}"
+                    
+                    sh """
+                        docker build -t ${env.IMAGE_NAME}:${env.TAG_NAME} .
+                        docker tag ${env.IMAGE_NAME}:${env.TAG_NAME} ${env.IMAGE_NAME}:latest
+                    """
+                    
+                    echo " Docker image built successfully!"
+                    sh "docker images | grep ${env.IMAGE_NAME}"
+                }
+            }
+        }
+
+        stage('5. Test Docker Image') {
+            steps {
+                script {
+                    echo " Testing Docker image..."
+                    sh """
+                        echo "Testing if image can start..."
+                        docker run --rm ${env.IMAGE_NAME}:${env.TAG_NAME} java -version || echo "Image test completed"
+                    """
+                }
+            }
+        }
+
+        stage('6. Push to Docker Hub') {
+            steps {
+                script {
+                    echo " Pushing image to Docker Hub..."
+                    
+                    withCredentials([usernamePassword(
+                        credentialsId: env.DOCKERHUB_CREDENTIAL, 
+                        passwordVariable: 'DOCKER_PASSWORD', 
+                        usernameVariable: 'DOCKER_USERNAME'
+                    )]) {
+                        sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
+                    }
+                    
+                    sh """
+                        docker push ${env.IMAGE_NAME}:${env.TAG_NAME}
+                    """
+                    echo " Successfully pushed to Docker Hub!"
+                }
+            }
+        } 
+
+        stage('7. Clone Config Repo') {
+            steps {
+                script {
+                    echo " Cloning config repository..."
+                    
+                    
+                    sh 'mkdir -p config-repo'
+                    
+                    dir('config-repo') {
+                    
+                        withCredentials([gitUsernamePassword(credentialsId: env.GIT_CREDENTIAL, gitToolName: 'Default')]) {
+                            sh """
+                                git clone ${env.CONFIG_REPO_URL} .
+                                git config user.email "NguyenTuKien@KienNT.B23CN465@stu.ptit.edu.vn"
+                                git config user.name "Jenkins CI/CD Backend"
+                            """
+                        }
+                        
+                        echo " Config repo cloned successfully!"
+                        sh 'ls -la'
+                    }
+                }
+            }
+        }
+
+        stage('8. Update Helm Values') {
+            steps {
+                script {  
+                    dir('config-repo') {
+                        def tagName = env.TAG_NAME
+                        echo "Updating with tag: ${tagName}"
+                        
+                        sh """
+                            sed -i '/^backend:/,/^database:/ s/^    tag:.*/    tag: "'""${tagName}""'"/' helm-values/values-prod.yml
+                        """
+                        
+                      
+                        sh "grep 'tag:' helm-values/values-prod.yml"
+                    }
+                }
+            }
+        }
+
+        stage('9. Push Config Changes') {
+            steps {
+                script {
+                    echo "Pushing changes to config repository..."
+                    
+                    dir('config-repo') {
+                     
+                        def gitStatus = sh(
+                            script: 'git status --porcelain',
+                            returnStdout: true
+                        ).trim()
+                        
+                        if (gitStatus) {
+                            echo "Changes detected, committing and pushing..."
+                            
+                            sh """
+                                git add .
+                                git commit -m " Update image version to ${env.TAG_NAME}
+                                
+                                - Updated helm-values/values-prod.yml
+                                - Image: ${env.IMAGE_NAME}:${env.TAG_NAME}
+                                - Build: ${env.BUILD_NUMBER}
+                                - Jenkins Job: ${env.JOB_NAME}"
+                            """
+                            
+                            // Push with credentials
+                            withCredentials([gitUsernamePassword(credentialsId: env.GIT_CREDENTIAL, gitToolName: 'Default')]) {
+                                sh 'git push origin main'
+                            }
+                            
+                            echo " Config changes pushed successfully!"
+                        } else {
+                            echo " No changes detected in config repo"
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo " Cleaning up..."
+            sh """
+                docker rmi ${env.IMAGE_NAME}:${env.TAG_NAME} || true
+                docker rmi ${env.IMAGE_NAME}:latest || true
+                docker system prune -f || true
+            """
+            
+          
+            cleanWs()
+        }
+        success {
+            echo "BUILD SUCCESS!"
+            echo "Source code built and pushed: ${env.IMAGE_NAME}:${env.TAG_NAME}"
+            echo "Config repository updated with new version"
+            echo "Docker Hub: https://hub.docker.com/r/${env.IMAGE_NAME}"
+        }
+        failure {
+            echo "BUILD FAILED!"
+            echo "Please check the logs above"
+        }
+    }
+} 

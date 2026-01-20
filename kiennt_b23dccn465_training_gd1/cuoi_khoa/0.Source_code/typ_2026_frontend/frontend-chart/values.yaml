@@ -1,0 +1,19 @@
+frontend:
+  name: frontend
+  replicaCount: 1
+  image:
+    repository: ngtukien218/typ-2026-frontend
+    tag: "v1.0"
+    pullPolicy: Always
+  service:
+    type: NodePort
+    port: 3000
+    nodePort: 30030
+  env: 
+    BACKEND_HOST: 192.168.123.11
+
+backend:
+  service:
+    type: NodePort
+    port: 8080
+    nodePort: 30080

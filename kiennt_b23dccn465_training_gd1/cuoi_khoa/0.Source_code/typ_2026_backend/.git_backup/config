@@ -1,0 +1,8 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@gitlab.com:NguyenTuKien/typ_2026_backend.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
