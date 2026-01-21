@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.4
+    container_name: elasticsearch
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+      - ./elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - "${ES_PORT}:9200"
+    networks:
+      - efk-net
+    restart: always
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.4
+    container_name: kibana
+    volumes:
+      - ./kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "${KIBANA_PORT}:5601"
+    networks:
+      - efk-net
+    depends_on:
+      - elasticsearch
+    restart: always
+
+volumes:
+  es_data:
+    driver: local
+
+networks:
+  efk-net:
+    driver: bridge

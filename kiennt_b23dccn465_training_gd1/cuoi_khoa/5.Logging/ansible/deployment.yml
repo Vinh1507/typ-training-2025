@@ -1,0 +1,98 @@
+---
+- name: Deploy EFK Stack (Config File Method)
+  hosts: efk_servers
+  become: yes
+  vars:
+    efk_dir: /opt/efk-stack
+    
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+        
+    - name: Install Docker packages
+      apt:
+        name:
+          - docker.io
+          - docker-compose
+        state: present
+        
+    - name: Start Docker service
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Increase vm.max_map_count (Required for ES)
+      sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes
+
+    - name: Add user to docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Reset connection
+      meta: reset_connection
+
+    - name: Create EFK directory
+      file:
+        path: "{{ efk_dir }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        
+    - name: Copy Docker Compose file
+      copy:
+        src: ./docker-compose.yml
+        dest: "{{ efk_dir }}/docker-compose.yml"
+        mode: '0644'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy Elasticsearch config
+      copy:
+        src: ./elasticsearch.yml
+        dest: "{{ efk_dir }}/elasticsearch.yml"
+        mode: '0644'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Copy Kibana config
+      copy:
+        src: ./kibana.yml
+        dest: "{{ efk_dir }}/kibana.yml"
+        mode: '0644'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+
+    - name: Stop existing containers
+      shell: docker-compose down || docker compose down
+      args:
+        chdir: "{{ efk_dir }}"
+      ignore_errors: yes
+      become_user: "{{ ansible_user }}"
+      
+    - name: Start EFK stack
+      shell: >
+        ES_PORT={{ es_port }} 
+        KIBANA_PORT={{ kibana_port }} 
+        docker-compose up -d
+      args:
+        chdir: "{{ efk_dir }}"
+      become_user: "{{ ansible_user }}"
+      
+    - name: Wait for Elasticsearch to be ready
+      uri:
+        url: "http://localhost:{{ es_port }}/_cluster/health"
+        method: GET
+        status_code: 200
+      register: es_ready
+      until: es_ready.status == 200
+      retries: 20
+      delay: 10

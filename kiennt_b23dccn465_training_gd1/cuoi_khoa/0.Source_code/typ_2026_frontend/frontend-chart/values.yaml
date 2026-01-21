@@ -4,7 +4,7 @@ frontend:
   image:
     repository: ngtukien218/typ-2026-frontend
     tag: "v1.0"
-    pullPolicy: IfNotPresent
+    pullPolicy: Always
   service:
     type: NodePort
     port: 3000

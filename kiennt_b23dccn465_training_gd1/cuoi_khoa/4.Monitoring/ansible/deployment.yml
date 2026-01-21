@@ -1,4 +1,3 @@
----
 - name: Deploy Prometheus on VM
   hosts: prometheus_servers
   become: yes
