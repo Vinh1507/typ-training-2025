@@ -15,7 +15,7 @@ data:
         '"response_code":$status,'            
         '"remote_addr":"$remote_addr",'
         '"query_string":"$query_string",'
-        '"body_bytes_sent":$body_bytes_sent,"
+        '"body_bytes_sent":$body_bytes_sent,'
         '"request_time":$request_time,'       
         '"http_referer":"$http_referer",'
         '"http_user_agent":"$http_user_agent",'
@@ -36,8 +36,7 @@ data:
         }
 
         location /api {
-            # 3. Luôn dùng Port nội bộ để giao tiếp giữa các Pod (Ổn định hơn NodePort)
-            proxy_pass http://{{ .Values.frontend.env.BACKEND_HOST }}:{{ .Values.backend.service.port }};
+            proxy_pass http://{{ .Values.backend.name }}:{{ .Values.backend.service.port }};
             
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;

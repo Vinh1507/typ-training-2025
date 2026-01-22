@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}
+  labels:
+    {{- include "helm-chart.componentLabels" (dict "root" . "component" "database") | nindent 4 }}
+spec:
+  serviceName: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-headless
+  replicas: {{ .Values.database.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "database") | nindent 8 }}
+    spec:
+      containers:
+        - name: mysql
+          image: "{{ .Values.database.image.repository }}:{{ .Values.database.image.tag }}"
+          imagePullPolicy: {{ .Values.database.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.database.service.port }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-config
+            - secretRef:
+                name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-secret
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
+            - name: volume-from-secret
+              mountPath: /docker-entrypoint-initdb.d/grant.sql
+              subPath: grant.sql
+            - name: volume-from-configmap
+              mountPath: /docker-entrypoint-initdb.d/init.sql
+              subPath: init.sql
+          livenessProbe:
+            tcpSocket:
+              port: {{ .Values.database.service.port }}
+            initialDelaySeconds: 30  # Chờ 30s sau khi start mới bắt đầu check (cho DB kịp khởi động)
+            periodSeconds: 10        # Check mỗi 10s một lần
+            timeoutSeconds: 5        # Nếu quá 5s không phản hồi là fail
+            failureThreshold: 3      # Fail 3 lần liên tiếp thì restart Pod
+          readinessProbe:
+            tcpSocket:
+              port: {{ .Values.database.service.port }}
+            initialDelaySeconds: 10  # Chờ 10s mới check xem đã sẵn sàng nhận traffic chưa
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        {{- if not .Values.database.persistence.enabled }}
+        - name: mysql-data
+          emptyDir: {}
+        {{- end }}
+        - name: volume-from-secret
+          secret:
+            secretName: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-secret
+        - name: volume-from-configmap
+          configMap:
+            name: {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}-config
+
+  {{- if .Values.database.persistence.enabled }}
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-data
+    spec:
+      accessModes: [ "{{ index .Values.database.persistence.accessModes 0 }}" ]
+      resources:
+        requests:
+          storage: {{ .Values.database.persistence.size | default "10Gi" }}
+      {{- if .Values.database.persistence.storageClass }}
+      storageClassName: {{ .Values.database.persistence.storageClass | quote }}
+      {{- end }}
+  {{- end }}  

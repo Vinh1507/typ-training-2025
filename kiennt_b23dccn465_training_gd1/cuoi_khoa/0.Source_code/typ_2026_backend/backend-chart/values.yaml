@@ -10,16 +10,21 @@ backend:
     port: 8080
     nodePort: 30080
   env:
-    MYSQL_HOST: 192.168.123.11
     CORS_ALLOWED_ORIGINS: "*"
 
+  ingress:
+    enabled: true  
+    host: api.typ-app.local  
+    tls:
+      secretName: vdt-tls-secret
+
 database:
+  name: typ-2026-database
   service:
-    type: NodePort
     port: 3306
-    nodePort: 30336
 
   env:
+    MYSQL_HOST: typ-2026-database
     MYSQL_DATABASE: "typ-database"
     MYSQL_USER: "typ-admin"
     MYSQL_PASSWORD: "password123"

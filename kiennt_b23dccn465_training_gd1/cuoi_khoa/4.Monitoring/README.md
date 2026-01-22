@@ -1,4 +1,4 @@
-# Monitoring (1.5đ)
+# 4. Monitoring (1.5đ)
 
 ## Yêu cầu
 
@@ -56,7 +56,7 @@
     management.metrics.enable.http=true
     management.metrics.enable.tomcat=true
     ```
-* File `MetricController`: [Gitlab](https://gitlab.com/NguyenTuKien/typ_2026_backend/-/blob/main/src/main/java/com/example/usermanagement/controller/MetricController.java).
+* File `MetricController`: [Gitlab](https://gitlab.com/NguyenTuKien/typ_2026_backend/-/blob/main/src/main/java/com/example/demo/controller/MetricController.java).
 * Tạo class `MetricController` để expose các metrics tùy chỉnh.
     * `api_request_total`: Counter cho tổng số request.
     * `api_request_duration`: Thời gian xử lý cho cho các endpoint.

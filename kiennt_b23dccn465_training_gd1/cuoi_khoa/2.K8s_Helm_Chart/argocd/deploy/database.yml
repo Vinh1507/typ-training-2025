@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: typ-database
+  name: typ-2026-database
   namespace: argocd
 spec:
   project: default

@@ -55,7 +55,12 @@ Component helpers used by templates/*.yml
 {{- define "helm-chart.componentName" -}}
 {{- $root := .root -}}
 {{- $component := .component -}}
+{{- $suffix := printf "-%s" $component -}}
+{{- if or (eq $root.Release.Name $component) (hasSuffix $suffix $root.Release.Name) -}}
+{{- $root.Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- else -}}
 {{- printf "%s-%s" $root.Release.Name $component | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
 {{- end -}}
 
 {{- define "helm-chart.componentSelectorLabels" -}}

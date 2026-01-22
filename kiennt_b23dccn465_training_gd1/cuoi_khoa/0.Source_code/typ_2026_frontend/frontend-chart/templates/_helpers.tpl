@@ -66,7 +66,13 @@ Component helpers used by templates/*.yml
 {{- define "helm-chart.componentName" -}}
 {{- $root := .root -}}
 {{- $component := .component -}}
+{{- /* Logic: Nếu tên Release (VD: typ-2026-frontend) đã chứa chữ "frontend" thì giữ nguyên */ -}}
+{{- if contains $component $root.Release.Name -}}
+{{- $root.Release.Name | trunc 63 | trimSuffix "-" -}}
+{{- else -}}
+{{- /* Ngược lại chưa có thì nối thêm vào */ -}}
 {{- printf "%s-%s" $root.Release.Name $component | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
 {{- end -}}
 
 {{- define "helm-chart.componentSelectorLabels" -}}

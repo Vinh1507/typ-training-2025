@@ -14,7 +14,7 @@ Sử dụng **Ansible Playbooks** để triển khai stack **EFK** (Elasticsearc
 * Cấu hình logging trong ứng dụng web service và api service để ghi log theo định dạng đã yêu cầu.
 * Kiểm tra và xác nhận log được ghi nhận đầy đủ trong Kibana.
 ---
-## Cài đặt và cầu hình EFK stack
+## Cài đặt và cấu hình EFK stack
 ### Deploy Elastic Search và Kibana
 * Cài đặt Elastic Search và Kibana sử dụng Ansible Playbook có sẵn trong thư mục [`ansible/`](./ansible/).
     ```bash
@@ -57,7 +57,7 @@ Sử dụng **Ansible Playbooks** để triển khai stack **EFK** (Elasticsearc
 
     # Logging Configuration
     logging.pattern.console=%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{requestId}] %logger{36} - %msg%n
-    logging.level.com.example.usermanagement=INFO
+    logging.level.com.example.demo=INFO
     logging.level.HTTP_REQUEST=INFO
     logging.level.org.springframework.web=INFO
 
@@ -69,7 +69,7 @@ Sử dụng **Ansible Playbooks** để triển khai stack **EFK** (Elasticsearc
     server.tomcat.accesslog.prefix=access_log
     server.tomcat.accesslog.suffix=.txt
     ```
-* Tạo [RequestLoggingFilter.java](../0.Source_code/typ_2026_backend/src/main/java/com/example/usermanagement/filter/RequestLoggingFilter.java) để ghi log cho các HTTP request.
+* Tạo [RequestLoggingFilter.java](../0.Source_code/typ_2026_backend/src/main/java/com/example/demo/filter/RequestLoggingFilter.java) để ghi log cho các HTTP request.
 * Tạo [logback-spring.xml](../0.Source_code/typ_2026_backend/src/main/resources/logback-spring.xml) để cấu hình log định dạng JSON.
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -95,7 +95,7 @@ Sử dụng **Ansible Playbooks** để triển khai stack **EFK** (Elasticsearc
         <logger name="HTTP_REQUEST" level="INFO" additivity="false">
             <appender-ref ref="STDOUT"/>
         </logger>
-        <logger name="com.example.usermanagement" level="INFO" additivity="false">
+        <logger name="com.example.demo" level="INFO" additivity="false">
             <appender-ref ref="STDOUT"/>
         </logger>
         <root level="INFO">

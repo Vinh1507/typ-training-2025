@@ -5,18 +5,31 @@ frontend:
     repository: ngtukien218/typ-2026-frontend
     tag: "v1.0"
     pullPolicy: Always
+  
   service:
     type: NodePort
     port: 3000
     nodePort: 30030
-  env: 
-    BACKEND_HOST: 192.168.123.11
+
+  ingress:
+    enabled: true
+    className: nginx
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - host: web.typ-app.local
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: vdt-tls-secret
+        hosts:
+          - web.typ-app.local
 
 backend:
+  name: typ-2026-backend
   service:
-    type: NodePort
     port: 8080
-    nodePort: 30080
 
 nginxExporter:
   enabled: true
@@ -29,3 +42,5 @@ nginxExporter:
     type: NodePort
     port: 9113
     nodePort: 30113
+
+
