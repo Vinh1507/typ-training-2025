@@ -16,7 +16,7 @@ backend:
     enabled: true  
     host: api.typ-app.local  
     tls:
-      secretName: vdt-tls-secret
+      secretName: typ-tls-secret 
 
 database:
   name: typ-2026-database

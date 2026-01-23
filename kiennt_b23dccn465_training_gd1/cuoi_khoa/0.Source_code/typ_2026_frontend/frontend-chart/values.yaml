@@ -22,7 +22,7 @@ frontend:
           - path: /
             pathType: Prefix
     tls:
-      - secretName: vdt-tls-secret
+      - secretName: typ-tls-secret
         hosts:
           - web.typ-app.local
 

@@ -3,7 +3,7 @@ backend:
   replicaCount: 2
   image:
     repository: ngtukien218/typ-2026-backend
-    tag: "v1.5.11"
+    tag: "v1.6.1"
     pullPolicy: Always
   service:
     type: NodePort
@@ -16,7 +16,7 @@ backend:
     enabled: true  
     host: api.typ-app.local  
     tls:
-      secretName: vdt-tls-secret  # Tên secret chứa chứng chỉ SSL
+      secretName: typ-tls-secret 
 
 database:
   name: typ-2026-database

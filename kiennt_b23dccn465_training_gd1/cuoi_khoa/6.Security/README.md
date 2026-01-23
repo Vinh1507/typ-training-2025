@@ -45,23 +45,23 @@ kubectl get svc -n ingress-nginx
 **Cấu hình phần cứng:**
 * CPU: 1 vCPU
 
-    ![alt text](image/6.CPU.png)
+    ![alt text](image/6.1.CPU.png)
 * RAM: 2 GB
 
-    ![alt text](image/6.RAM.png)
+    ![alt text](image/6.1.RAM.png)
 * Disk: 20 GB
 
-    ![alt text](image/6.Disk.png)
+    ![alt text](image/6.1.Disk.png)
 * OS: Ubuntu 22.04 
 
-    ![alt text](image/6.OS.png)
+    ![alt text](image/6.1.OS.png)
 
 **Cấu hình mạng:**
 * Static IP: 192.168.123.12
 * Hostname: haproxy1
 * SSH port: 22 (mặc định)
 
-    ![alt text](image/6.network.png)
+    ![alt text](image/6.1.network.png)
 * Cài đặt Haproxy:
     ```bash
     sudo apt update
@@ -96,7 +96,7 @@ kubectl get svc -n ingress-nginx
     backend backend_ingress_http
         mode tcp
         balance roundrobin
-        server worker1 192.168.123.111:30633 check
+        server worker1 192.168.123.11:30633 check
 
     frontend frontend_https
         bind *:443
@@ -106,15 +106,15 @@ kubectl get svc -n ingress-nginx
     backend backend_ingress_https
         mode tcp
         balance roundrobin
-        server worker1 192.168.123.111:31160 check
+        server worker1 192.168.123.11:31160 check
     ```
 * Khởi động lại Haproxy:
     ```bash
     sudo systemctl restart haproxy
     ```
-    ![alt text](image/6.haproxy.png)
+    ![alt text](image/6.1.haproxy.png)
 * Cấu hình DNS trỏ tên miền typ-app.local về IP của Haproxy Loadbalancer.
-![alt text](image/6.DNS.png)
+![alt text](image/6.1.DNS.png)
 ---
 ## Cấu hình Ingress cho Backend và Frontend:
 ### Backend
@@ -128,7 +128,7 @@ ingress:
         secretName: vdt-tls-secret 
 ```
 * **Kết quả:**
-    ![alt text](image/6.backend-ingress.png)
+    ![alt text](image/6.1.backend-ingress.png)
 ### Frontend
 * File `ingress.yml`: [Frontend Ingress Configuration](../0.Source_code/typ_2026_frontend/frontend-chart/templates/06.ingress.yml)
 * Bổ xung các giá trị sau vào file `values-prod.yml` của Frontend:
@@ -149,12 +149,12 @@ ingress:
           - web.typ-app.local
 ```
 * **Kết quả:**
-    ![alt text](image/6.frontend-ingress.png)
+    ![alt text](image/6.1.frontend-ingress.png)
 ---
 ### Trạng thái Ingress trên K8S Cluster:
-![alt text](image/6.status.png)
+![alt text](image/6.1.status.png)
 ### Chi tiết Ingress Controller:
-![alt text](image/6.detail.png)
+![alt text](image/6.1.detail.png)
 ---
 ## Yêu cầu 2 (1đ):
 * Đảm bảo 1 số URL của api service khi truy cập phải có xác thực thông qua 1 trong số các phương thức cookie, basic auth, token auth, nếu không sẽ trả về HTTP response code 403. (0.5)
@@ -264,4 +264,90 @@ các request sau đó bị trả về HTTP Response 409
 ## Output:
 * File tài liệu trình bày giải pháp
 * File ghi lại kết quả thử nghiệm khi gọi quá 10 request trong 1 phút vào Endpoint của API Service.
-    
+
+---
+## Yêu cầu 3: 
+Sử dụng 1 trong số các giải pháp để rate limit cho Endpoint của API Service, sao cho nếu có quá **10 request trong 1 phút** gửi đến Endpoint của api service thì các request sau đó bị trả về **HTTP Response 409**.
+
+## Output 3: 
+* File tài liệu trình bày giải pháp
+* File ghi lại kết quả thử nghiệm khi gọi quá 10 request trong 1 phút vào Endpoint của API Service.
+---
+## Hường triến khai: Rate Limit ở HA Proxy 
+Điểu chỉnh cấu hình HA Proxy (`/etc/haproxy/haproxy.cfg`) để thêm tính năng rate limit:
+```ini
+global
+    daemon
+    maxconn 4096
+    log stdout local0
+
+defaults
+    mode tcp
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+    option tcplog
+    log global
+
+listen stats
+    bind *:8404
+    mode http
+    stats enable
+    stats uri /stats
+
+frontend frontend_http
+    bind *:80
+    mode http
+
+    stick-table type ip size 100k expire 60s store http_req_rate(60s)
+    http-request track-sc0 src
+
+    http-request return status 409 content-type application/json string '{"error":"Rate limit exceeded","message":"Too many requests"}' if { sc_http_req_rate(0) gt 10 }
+
+    default_backend backend_ingress_http
+
+backend backend_ingress_http
+    mode http
+    balance roundrobin
+    server worker1 192.168.123.11:30633 check
+
+frontend frontend_https
+    bind *:443
+    mode tcp
+    default_backend backend_ingress_https
+
+backend backend_ingress_https
+    mode tcp
+    balance roundrobin
+    server worker1 192.168.123.11:31160 check
+```
+### Test rate limit:
+#### Kiểm tra tổng số request gửi đến API:
+```bash
+SUCCESS=0
+BLOCKED=0
+
+for i in {1..20}; do
+  CODE=$(curl -s -o /dev/null -w "%{http_code}" http://web.typ-app.local/)
+  if [ "$CODE" = "409" ]; then
+    BLOCKED=$((BLOCKED+1))
+  else
+    SUCCESS=$((SUCCESS+1))
+  fi
+done
+
+echo "✅ Successful requests (HTTP 200): $SUCCESS"
+echo "⛔ Blocked requests (rate-limited): $BLOCKED"
+```
+**Kết quả:**
+
+![alt text](image/6.3.total.png)
+#### Chi tiết từng request:
+```bash
+for i in {1..20}; do
+  echo -n "Request $i → "
+  curl -s -o /dev/null -w "%{http_code}\n" http://api.typ-app.local/actuator/health
+done
+```
+**Kết quả:**
+![alt text](image/6.3.detail.png)
