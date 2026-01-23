@@ -351,3 +351,4 @@ done
 ```
 **Kết quả:**
 ![alt text](image/6.3.detail.png)
+#### Hình ảnh báo cáo của 
