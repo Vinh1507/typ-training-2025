@@ -6,6 +6,13 @@ metadata:
     {{- include "helm-chart.componentLabels" (dict "root" . "component" "frontend") | nindent 4 }}
 spec:
   replicas: {{ .Values.frontend.replicaCount }}
+  strategy: 
+    type: {{ .Values.frontend.strategy.type }}
+    {{- if eq .Values.frontend.strategy.type "RollingUpdate" }}
+    rollingUpdate:
+      maxSurge: {{ .Values.frontend.strategy.rollingUpdate.maxSurge }}
+      maxUnavailable: {{ .Values.frontend.strategy.rollingUpdate.maxUnavailable }}
+    {{- end }}
   selector:
     matchLabels:
       {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "frontend") | nindent 6 }}

@@ -351,4 +351,5 @@ done
 ```
 **Kết quả:**
 ![alt text](image/6.3.detail.png)
-#### Hình ảnh báo cáo của 
+#### Hình ảnh báo cáo của HA Proxy:
+![alt text](image/6.3.report.png)

@@ -1,6 +1,8 @@
 frontend:
   name: frontend
-  replicaCount: 1
+  replicaCount: 2
+  strategy:
+    type: Recreate
   image:
     repository: ngtukien218/typ-2026-frontend
     tag: "v1.6.3"
@@ -12,7 +14,7 @@ frontend:
     nodePort: 30030
 
   ingress:
-    enabled: true
+    enabled: false
     className: nginx
     annotations:
       nginx.ingress.kubernetes.io/ssl-redirect: "true"
