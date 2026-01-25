@@ -75,6 +75,7 @@ Việc triển khai chỉ cần pull đúng image version, giúp tăng tính t�
 Trong CI/CD pipeline, Helm Chart được sử dụng để chuẩn hóa và tự động hóa việc triển khai ứng dụng lên Kubernetes thông qua các manifest dạng template.
 
 Pipeline cập nhật giá trị cấu hình (như image version), đóng gói chart và triển khai lên cluster, giúp đảm bảo tính nhất quán, dễ cấu hình và hỗ trợ rollback hiệu quả giữa các môi trường.
+
 ---
 ## 3. CI/CD workflow
 **1. Commit & Push:**
