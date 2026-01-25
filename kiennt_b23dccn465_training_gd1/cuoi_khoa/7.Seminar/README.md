@@ -77,26 +77,34 @@ Vì vậy, chúng ta cần một hệ thống CI/CD tự động để giúp cá
 ## 3. CI/CD workflow
 **1. Commit & Push:**
 - Developer thực hiện các thay đổi mã nguồn trên máy tính cá nhân và sử dụng hệ thống quản lý mã nguồn (như Git) để commit và push các thay đổi lên kho lưu trữu mã nguồn trung tâm (như GitHub, GitLab).
+
 **2. CI Trigger:**
 - Jenkins phát hiện thay đổi trong kho lưu trữ mã nguồn và tự động kích hoạt quá trình CI.
+
 **3. Build & Test:**
 - Jenkins thực hiện quá trình build mã nguồn thành các artifact (như Docker images) và chạy các bài kiểm thử tự động để đảm bảo mã nguồn hoạt động đúng.
+
 **4. Tag & Push**
 - Nếu quá trình build và test thành công, Jenkins sẽ gán thẻ (tag) cho phiên bản mới của mã nguồn và đẩy các artifact đã xây dựng lên registry (như Docker Hub, GitLab Container Registry).
+
 **5. Update Manifest**
 - Jenkins clone config repo chứa file value.yaml và cập nhật phiên bản image mới trong file này.
 - Jenkins commit và push thay đổi này lên config repo.
+
 **6. Detect Changes**
 - ArgoCD theo dõi config repo và phát hiện thay đổi trong file value.yaml.
+
 **7. Sync Changes**
 - ArgoCD tự động đồng bộ các thay đổi từ config repo vào cụm Kubernetes, triển khai phiên bản mới của ứng dụng.
+
 **8. Deploy**
 - Ứng dụng mới được triển khai và chạy trên cụm Kubernetes.
+
 **9. Monitor & Rollback**
 - ArgoCD và các công cụ giám sát khác theo dõi trạng thái của ứng dụng. Nếu phát hiện sự cố, ArgoCD có thể tự động rollback về phiên bản trước đó để đảm bảo tính ổn định của hệ thống.
 ---
 ## 4. CI/CD strategy
-### Recreate 
+## Recreate 
 **Concept:** Chiến lược tái tạo (Recreate) là một phương pháp triển khai trong Kubernetes, trong đó tất cả các phiên bản hiện tại của một ứng dụng sẽ bị xóa bỏ trước khi triển khai phiên bản mới. Vì không có sự chồng chéo giữa các phiên bản, chiến lược này gây ra thời gian gián đoạn dịch vụ (downtime) trong quá trình triển khai.
 ## Rolling Update
 **Concept:** Chiến lược cập nhật cuộn (Rolling Update) là một phương pháp triển khai trong Kubernetes, trong đó các phiên bản mới của ứng dụng được triển khai dần dần, thay thế từng phần các phiên bản cũ mà không gây ra thời gian gián đoạn dịch vụ (downtime). Điều này giúp đảm bảo rằng ứng dụng luôn sẵn sàng phục vụ người dùng trong suốt quá trình triển khai.
