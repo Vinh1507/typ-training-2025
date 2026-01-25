@@ -109,4 +109,4 @@ Có 2 cách rollback phổ biến trong CI/CD với Kubernetes:
 
 Ta cần lật lại 'nhật ký bếp' để tra soát chính xác: Ai nấu? Bỏ dư gia vị gì? Vào lúc mấy giờ? Để truy vết được nguyên nhân gốc rễ đó, ta cần đến Logging. Và phần tiếp theo sẽ là về Logging trong Kubernetes do bạn Thắng thực hiện.
 
-Còn bây giờ, chúng ta sẽ timebreak ít phút trước khi quay lại nhé!""
+Còn bây giờ, chúng ta sẽ timebreak ít phút trước khi quay lại nhé!"
