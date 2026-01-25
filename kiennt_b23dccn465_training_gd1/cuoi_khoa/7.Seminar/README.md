@@ -64,7 +64,7 @@ Vì vậy, chúng ta cần một hệ thống CI/CD tự động để giúp cá
     * Phức tạp hơn trong việc thiết lập và cấu hình so với phương pháp đẩy (push-based).
     * Yêu cầu quản lý thêm các agent hoặc controller bên trong cụm Kubernetes.
     * Có thể có độ trễ trong việc áp dụng các thay đổi do quá trình kiểm tra định kỳ.
-### Một số công cụ thường dùng khác:
+### Other tools commonly used with Kubernetes:
 #### Docker:
 * Docker được sử dụng trong CI/CD pipeline để đóng gói ứng dụng cùng toàn bộ môi trường chạy (code, thư viện, cấu hình) thành Docker image.
 * Trong pipeline, Docker giúp build image, chạy test trong container, và đẩy image lên registry, đảm bảo ứng dụng chạy nhất quán giữa các môi trường (dev, test, staging, production).
