@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER: Phần đầu trang -->
+        <header>
+            <img src="./images/avatar.png" alt="Ảnh đại diện">
+            <h1>Tạ Trường Vũ</h1>
+            <p>Web Developer</p>
+        </header>
+        
+        <!-- NAV: Menu điều hướng -->
+        <nav>
+            <a href="#about">Giới thiệu</a>
+            <a href="#skills">Kỹ năng</a>
+            <a href="#education">Học vấn</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+        
+        <!-- SECTION 1: Giới thiệu -->
+        <section id="about">
+            <h2>Giới thiệu</h2>
+            <p class="about-text">
+                Xin chào! Tôi là <strong>Tạ Trường Vũ</strong>, một sinh viên PTIT năm 4 ngành Công nghệ thông tin
+            </p>
+        </section>
+        
+        <!-- SECTION 2: Kỹ năng & Sở thích -->
+        <section id="skills">
+            <h2>Kỹ năng & Sở thích</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Kỹ năng lập trình</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React & Vue.js</li>
+                        <li>Node.js & Express</li>
+                        <li>MongoDB & MySQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-card">
+                    <h3>Sở thích</h3>
+                    <ul>
+                        <li>Đọc sách công nghệ</li>
+                        <li>Chơi game</li>
+                        <li>Thể thao: Cầu lông</li>
+                        <li>Âm nhạc</li>
+                        <li>Dã ngoại</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- SECTION 3: Học vấn & Kinh nghiệm -->
+        <section id="education">
+            <h2>Học vấn</h2>
+            
+            <table>
+                <tr>
+                    <td>2022 - 2027</td>
+                    <td>Học viện Công nghệ Bưu chính viễn thông</td>
+                    <td>Ngành: Công nghệ Thông tin</td>
+                </tr>
+            </table>
+        </section>
+        
+        <!-- SECTION 4: Form liên hệ -->
+        <section id="contact">
+            <h2>Liên hệ</h2>
+            
+            <form>
+                <div class="form-group">
+                    <label for="name">Họ và tên *</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Chủ đề</label>
+                    <select id="subject" name="subject">
+                        <option value="">-- Chọn chủ đề --</option>
+                        <option value="study">Học tập</option>
+                        <option value="job">Cơ hội việc làm</option>
+                        <option value="question">Câu hỏi</option>
+                        <option value="other">Khác</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tin nhắn *</label>
+                    <textarea id="message" name="message" placeholder="Nội dung tin nhắn..." required></textarea>
+                </div>
+                
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+        </section>
+        
+        <!-- FOOTER: Phần chân trang -->
+        <footer>
+            <p><strong>Liên hệ:</strong> tatruongvuptit@gmail.com | +84 123 456 789</p>
+            <p>
+                <a href="https://github.com" target="_blank">GitHub</a> | 
+                <a href="https://facebook.com" target="_blank">Facebook</a> | 
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
