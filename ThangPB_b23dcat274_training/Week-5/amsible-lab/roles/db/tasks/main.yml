@@ -1,0 +1,27 @@
+- name: Create database config directory
+  file:
+    path: /opt/edudoc/db
+    state: directory
+    mode: '0755'
+
+- name: Copy init.sql to Remote Server
+  copy:
+    src: db/init.sql          
+    dest: /opt/edudoc/db/init.sql
+
+- name: Run MySQL Container
+  docker_container:
+    name: edudoc_db
+    image: mysql:8.0
+    restart_policy: always
+    state: started
+    ports:
+      - "3306:3306"     
+    env:                    
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: edudoc_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+      - /opt/edudoc/db/init.sql:/docker-entrypoint-initdb.d/init.sql

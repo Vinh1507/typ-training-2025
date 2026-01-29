@@ -1,0 +1,50 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: pass123
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: pass123
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - appnet
+
+  backend:
+    build: ./backend
+    container_name: backend_container
+    environment:
+      DB_HOST: db
+      DB_USER: appuser
+      DB_PASSWORD: pass123
+      DB_NAME: appdb
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+    networks:
+      - appnet
+
+  frontend:
+    build: ./frontend
+    container_name: frontend_container
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_BACKEND_URL=http://backend:3001
+    depends_on:
+      - backend
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge
+
+volumes:
+  db_data:

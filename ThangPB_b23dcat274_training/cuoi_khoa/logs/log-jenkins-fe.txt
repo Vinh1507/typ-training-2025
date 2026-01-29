@@ -1,0 +1,443 @@
+Generic Cause
+Obtained Jenkinsfile from git https://github.com/Phamthang-25/typ-frontend
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent-lab in /var/lib/jenkins/workspace/frontend-ci
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential git-hub
+Cloning the remote Git repository
+Cloning repository https://github.com/Phamthang-25/typ-frontend
+ > git init /var/lib/jenkins/workspace/frontend-ci # timeout=10
+Fetching upstream changes from https://github.com/Phamthang-25/typ-frontend
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Phamthang-25/typ-frontend +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 189a72de8a41d6c1077981008adf60a966cd8d13 (refs/remotes/origin/main)
+Commit message: "update"
+ > git config remote.origin.url https://github.com/Phamthang-25/typ-frontend # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 189a72de8a41d6c1077981008adf60a966cd8d13 # timeout=10
+ > git rev-list --no-walk 8a68b225b9417b472f1a703f94b409129be858e7 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Agent Information)
+[Pipeline] echo
+Running on agent: agent-lab
+[Pipeline] echo
+Workspace: /var/lib/jenkins/workspace/frontend-ci
+[Pipeline] sh
++ whoami
+jenkins
+[Pipeline] sh
++ pwd
+/var/lib/jenkins/workspace/frontend-ci
+[Pipeline] sh
++ uname -a
+Linux agent-lab 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+[Pipeline] sh
++ docker --version
+Docker version 28.2.2, build 28.2.2-0ubuntu1~22.04.1
+[Pipeline] sh
++ git --version
+git version 2.34.1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Checkout Source Code)
+[Pipeline] echo
+Cloning source code...
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential git-hub
+Fetching changes from the remote Git repository
+Checking out Revision 189a72de8a41d6c1077981008adf60a966cd8d13 (refs/remotes/origin/main)
+Commit message: "update"
+[Pipeline] echo
+Clone completed!
+[Pipeline] sh
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/frontend-ci/.git # timeout=10
+ > git config remote.origin.url https://github.com/Phamthang-25/typ-frontend # timeout=10
+Fetching upstream changes from https://github.com/Phamthang-25/typ-frontend
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Phamthang-25/typ-frontend +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 189a72de8a41d6c1077981008adf60a966cd8d13 # timeout=10
++ ls -la
+total 48
+drwxrwxr-x 5 jenkins jenkins 4096 Jan 20 18:27 .
+drwxr-xr-x 7 jenkins jenkins 4096 Jan 20 18:27 ..
+-rw-rw-r-- 1 jenkins jenkins  256 Jan 20 18:27 Dockerfile
+drwxrwxr-x 3 jenkins jenkins 4096 Jan 20 18:27 frontend-chart
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 18:27 .git
+-rw-rw-r-- 1 jenkins jenkins  302 Jan 20 18:27 index.html
+-rw-rw-r-- 1 jenkins jenkins 6065 Jan 20 18:27 Jenkinsfile
+-rw-rw-r-- 1 jenkins jenkins  367 Jan 20 18:27 nginx.conf
+-rw-rw-r-- 1 jenkins jenkins  407 Jan 20 18:27 package.json
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 18:27 src
+-rw-rw-r-- 1 jenkins jenkins  136 Jan 20 18:27 vite.config.js
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Get Tag From Webhook)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+No tag payload from webhook (manual build or wrong event). Fallback to git describe...
+[Pipeline] sh
++ git fetch --tags --force
+[Pipeline] sh
++ git describe --tags --exact-match
++ git describe --tags --abbrev=0
+[Pipeline] echo
+Using fallback version: v2.0.5
+[Pipeline] echo
+Docker image will be: thang05/typ-frontend:v2.0.5
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Checkout Tag (when tag build))
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Not a tag build -> keep current checkout
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build Docker Image)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Building Docker image: thang05/typ-frontend:v2.0.5
+[Pipeline] sh
++ docker build -t thang05/typ-frontend:v2.0.5 .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  176.6kB
+
+Step 1/10 : FROM node:20-alpine AS build
+ ---> 1b3a22d17cb6
+Step 2/10 : WORKDIR /app
+ ---> Running in 791df6eff7f9
+ ---> Removed intermediate container 791df6eff7f9
+ ---> f85f1a426bbc
+Step 3/10 : COPY package.json package-lock.json* ./
+ ---> dac7c4d9dc72
+Step 4/10 : RUN npm install
+ ---> Running in 180156eb5798
+
+added 62 packages, and audited 63 packages in 15s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+2 moderate severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[91mnpm notice
+npm notice New major version of npm available! 10.8.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+[0m ---> Removed intermediate container 180156eb5798
+ ---> c89bc6813f34
+Step 5/10 : COPY . .
+ ---> fd258f0ac637
+Step 6/10 : RUN npm run build
+ ---> Running in d8cd24996570
+
+> student-frontend@1.0.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 32 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.40 kB │ gzip:  0.27 kB
+dist/assets/index-DnimpzAK.css    2.56 kB │ gzip:  1.03 kB
+dist/assets/index-BB918laf.js   146.77 kB │ gzip: 47.25 kB
+✓ built in 1.42s
+ ---> Removed intermediate container d8cd24996570
+ ---> c071a329b74e
+Step 7/10 : FROM nginx:1.27-alpine
+ ---> 6769dc3a703c
+Step 8/10 : COPY nginx.conf /etc/nginx/conf.d/default.conf
+ ---> 98673554509b
+Step 9/10 : COPY --from=build /app/dist /usr/share/nginx/html
+ ---> f129cc6fe0e6
+Step 10/10 : EXPOSE 80
+ ---> Running in 6ee5ab2cd692
+ ---> Removed intermediate container 6ee5ab2cd692
+ ---> e2f08e78778c
+Successfully built e2f08e78778c
+Successfully tagged thang05/typ-frontend:v2.0.5
++ docker tag thang05/typ-frontend:v2.0.5 thang05/typ-frontend:latest
+[Pipeline] echo
+Docker image built successfully!
+[Pipeline] sh
++ docker images
++ grep thang05/typ-frontend
+thang05/typ-frontend   latest        e2f08e78778c   Less than a second ago   48.4MB
+thang05/typ-frontend   v2.0.5        e2f08e78778c   Less than a second ago   48.4MB
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push to Docker Hub)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pushing image to Docker Hub...
+[Pipeline] withCredentials
+Masking supported pattern matches of $DOCKER_PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ echo ****
++ docker login -u thang05 --password-stdin
+
+WARNING! Your credentials are stored unencrypted in '/home/jenkins/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ docker push thang05/typ-frontend:v2.0.5
+The push refers to repository [docker.io/thang05/typ-frontend]
+2d5f31e4f0eb: Preparing
+2f3b11f5038a: Preparing
+0d853d50b128: Preparing
+947e805a4ac7: Preparing
+811a4dbbf4a5: Preparing
+b8d7d1d22634: Preparing
+e244aa659f61: Preparing
+c56f134d3805: Preparing
+d71eae0084c1: Preparing
+08000c18d16d: Preparing
+b8d7d1d22634: Waiting
+e244aa659f61: Waiting
+c56f134d3805: Waiting
+d71eae0084c1: Waiting
+08000c18d16d: Waiting
+947e805a4ac7: Layer already exists
+811a4dbbf4a5: Layer already exists
+0d853d50b128: Layer already exists
+b8d7d1d22634: Layer already exists
+c56f134d3805: Layer already exists
+d71eae0084c1: Layer already exists
+08000c18d16d: Layer already exists
+e244aa659f61: Layer already exists
+2d5f31e4f0eb: Pushed
+2f3b11f5038a: Pushed
+v2.0.5: digest: sha256:3942f78d9cb188e9c4ac8fc098444f19f2a31910d6650a22a4c4094d02815fb7 size: 2405
++ docker push thang05/typ-frontend:latest
+The push refers to repository [docker.io/thang05/typ-frontend]
+2d5f31e4f0eb: Preparing
+2f3b11f5038a: Preparing
+0d853d50b128: Preparing
+947e805a4ac7: Preparing
+811a4dbbf4a5: Preparing
+b8d7d1d22634: Preparing
+e244aa659f61: Preparing
+c56f134d3805: Preparing
+d71eae0084c1: Preparing
+08000c18d16d: Preparing
+b8d7d1d22634: Waiting
+e244aa659f61: Waiting
+c56f134d3805: Waiting
+d71eae0084c1: Waiting
+08000c18d16d: Waiting
+947e805a4ac7: Layer already exists
+811a4dbbf4a5: Layer already exists
+2d5f31e4f0eb: Layer already exists
+0d853d50b128: Layer already exists
+2f3b11f5038a: Layer already exists
+e244aa659f61: Layer already exists
+d71eae0084c1: Layer already exists
+c56f134d3805: Layer already exists
+b8d7d1d22634: Layer already exists
+08000c18d16d: Layer already exists
+latest: digest: sha256:3942f78d9cb188e9c4ac8fc098444f19f2a31910d6650a22a4c4094d02815fb7 size: 2405
+[Pipeline] echo
+Successfully pushed to Docker Hub!
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clone Config Repo)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Cloning config repository...
+[Pipeline] sh
++ rm -rf config-repo
++ mkdir -p config-repo
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/frontend-ci/config-repo
+[Pipeline] {
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git clone https://github.com/Phamthang-25/typ-backend-config.git .
+Cloning into '.'...
++ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
++ git config user.email jenkins@local
++ git config user.name Jenkins CI/CD Backend
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ ls -la
+total 20
+drwxrwxr-x 5 jenkins jenkins 4096 Jan 20 18:28 .
+drwxrwxr-x 7 jenkins jenkins 4096 Jan 20 18:28 ..
+drwxrwxr-x 3 jenkins jenkins 4096 Jan 20 18:28 argocd
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 18:28 .git
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 18:28 helm-values
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Update Helm Values)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/frontend-ci/config-repo
+[Pipeline] {
+[Pipeline] echo
+Updating helm-values/values-prod.yaml with tag: v2.0.5
+[Pipeline] sh
++ sed -i s/^  tag:.*/  tag: "v2.0.5"/ helm-values/values-prod.yaml
++ echo After update:
+After update:
++ grep -n tag: helm-values/values-prod.yaml
+3:  tag: "v2.0.5"
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push Config Changes)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/frontend-ci/config-repo
+[Pipeline] {
+[Pipeline] sh
++ git status --porcelain
+[Pipeline] echo
+Changes detected, committing and pushing...
+[Pipeline] sh
++ git add helm-values/values-prod.yaml
++ git commit -m Update backend image tag to v2.0.5 (build 8)
+[main 3e8ee8d] Update backend image tag to v2.0.5 (build 8)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git push origin main
+To https://github.com/Phamthang-25/typ-backend-config.git
+   4303c44..3e8ee8d  main -> main
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+Config changes pushed successfully!
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Cleaning up...
+[Pipeline] sh
++ docker logout
+Removing login credentials for https://index.docker.io/v1/
++ docker rmi thang05/typ-frontend:v2.0.5
+Untagged: thang05/typ-frontend:v2.0.5
++ docker rmi thang05/typ-frontend:latest
+Untagged: thang05/typ-frontend:latest
+Untagged: thang05/typ-frontend@sha256:3942f78d9cb188e9c4ac8fc098444f19f2a31910d6650a22a4c4094d02815fb7
+Deleted: sha256:e2f08e78778c28a118e24ff5003c1f3b950e675a5359c99071c6882bf8b8b03c
+Deleted: sha256:f129cc6fe0e67924babddb302522a7639512cf3d3ed165fee651d94b87e119eb
+Deleted: sha256:5a1f238106d620213c80dfbe1a8edabfe5057c9910876f7667a663803b8ae8eb
+Deleted: sha256:98673554509b7449db68fb47b531f0ecad2dfcb854ce0ed360b3c1becaa999bf
+Deleted: sha256:cb1a02ff3d3b0d5474862cfc17aee911b3682d84ce3643ce02824843006609d7
++ docker system prune -f
+Deleted Images:
+deleted: sha256:c071a329b74e01ce595449dd465a725793d043920bcacb231018a293ad547a88
+deleted: sha256:1cb3a2931e889c5cf6ec60dd3d7123ab5500ee8ce871117bcbeea18afc1b54d7
+deleted: sha256:fd258f0ac63740225d30ebb226cf6db4ef8e7dd13c50ed4ec46b5037bbd479a9
+deleted: sha256:2fda06a4bea1a08c87beabea3a7959b1c90222fa02175e72b471cc978788ee4e
+deleted: sha256:c89bc6813f341cabe5a7035447f7efb812d8482ddd8ddd8ccef08cd75c155700
+deleted: sha256:4f25f4806c3d1dcb24ea3eaa8fe19fc9b84fffcd515573149d13515d5081f700
+deleted: sha256:dac7c4d9dc728b63bc90cc103ad6414b3fdf3c454c1fa6e41eb7b51df9cf7f65
+deleted: sha256:1a3d3b46b2656567393fb2e99d6731bfb8ad1414bcc19a0c27eb52f8f0a1aed0
+deleted: sha256:f85f1a426bbccc181879722ef6bb8751b667ca56435b73fe0b8e73625d33cf12
+deleted: sha256:114de8bac0e98a0d0428e4849d4adaba8ac564aa5b4372b3ec5f297fd4da45e2
+
+Total reclaimed space: 162.1MB
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] echo
+BUILD SUCCESS!
+[Pipeline] echo
+Image pushed: thang05/typ-frontend:v2.0.5
+[Pipeline] echo
+Config repo updated: https://github.com/Phamthang-25/typ-backend-config.git
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

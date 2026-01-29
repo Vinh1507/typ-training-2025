@@ -1,0 +1,4 @@
+- import_playbook: common.yml
+- import_playbook: db.yml
+- import_playbook: be.yml
+- import_playbook: fe.yml

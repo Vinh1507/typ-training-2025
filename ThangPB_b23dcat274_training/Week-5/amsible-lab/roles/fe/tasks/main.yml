@@ -1,0 +1,10 @@
+---
+- name: Run Frontend Container
+  docker_container:
+    name: edudoc_client
+    image: "{{ docker_user }}/myrepo:frontend-v1.1.2"
+    restart_policy: always
+    state: started
+    pull: yes
+    ports:
+      - "80:80"

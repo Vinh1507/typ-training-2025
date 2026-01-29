@@ -1,0 +1,4 @@
+- hosts: frontend_servers
+  become: yes
+  roles:
+    - fe

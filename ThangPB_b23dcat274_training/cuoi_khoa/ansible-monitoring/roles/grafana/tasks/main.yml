@@ -1,0 +1,53 @@
+- name: Create Grafana dirs
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop:
+    - "{{ grafana_data_dir }}"
+    - "{{ grafana_data_dir }}/provisioning/datasources"
+
+- name: Create docker network
+  community.docker.docker_network:
+    name: monitoring-net
+    state: present
+
+- name: Recreate Prometheus in same network (ensure name resolvable)
+  community.docker.docker_container:
+    name: prometheus
+    image: "{{ prometheus_image }}"
+    state: started
+    restart_policy: unless-stopped
+    networks:
+      - name: monitoring-net
+    ports:
+      - "{{ prometheus_listen_port }}:9090"
+    volumes:
+      - "{{ prometheus_config_dir }}/prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+      - "{{ prometheus_data_dir }}:/prometheus"
+    command: >
+      --config.file=/etc/prometheus/prometheus.yml
+      --storage.tsdb.path=/prometheus
+
+- name: Render Grafana datasource
+  template:
+    src: datasource.yml.j2
+    dest: "{{ grafana_data_dir }}/provisioning/datasources/datasource.yml"
+    mode: "0644"
+
+- name: Run Grafana container
+  community.docker.docker_container:
+    name: grafana
+    image: "{{ grafana_image }}"
+    state: started
+    restart_policy: unless-stopped
+    networks:
+      - name: monitoring-net
+    ports:
+      - "{{ grafana_listen_port }}:3000"
+    env:
+      GF_SECURITY_ADMIN_USER: "{{ grafana_admin_user }}"
+      GF_SECURITY_ADMIN_PASSWORD: "{{ grafana_admin_password }}"
+    volumes:
+      - "{{ grafana_data_dir }}:/var/lib/grafana"
+      - "{{ grafana_data_dir }}/provisioning:/etc/grafana/provisioning"

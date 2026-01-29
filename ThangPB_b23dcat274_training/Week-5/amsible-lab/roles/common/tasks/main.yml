@@ -1,0 +1,16 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install Docker & SDK
+  apt:
+    name:
+      - docker.io
+      - python3-docker
+    state: present
+
+- name: Start Docker Service
+  service:
+    name: docker
+    state: started
+    enabled: yes

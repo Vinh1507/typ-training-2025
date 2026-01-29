@@ -1,0 +1,4 @@
+- hosts: backend_servers
+  become: yes
+  roles:
+    - be

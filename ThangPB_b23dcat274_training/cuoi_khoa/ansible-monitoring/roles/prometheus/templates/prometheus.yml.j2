@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "{{ backend_metrics_job }}"
+    metrics_path: "{{ backend_metrics_path }}"
+    static_configs:
+      - targets:
+{% for t in backend_metrics_targets %}
+          - "{{ t }}"
+{% endfor %}

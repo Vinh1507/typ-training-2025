@@ -1,0 +1,14 @@
+- name: Run Backend Container
+  docker_container:
+    name: edudoc_server
+    image: "{{ docker_user }}/myrepo:backend-v1.1.2" 
+    restart_policy: always
+    state: started
+    pull: yes
+    ports:
+      - "5000:5000"
+    env:
+      DB_HOST: "{{ db_ip }}"
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: edudoc_db

@@ -1,0 +1,9 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.card {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 12px;
+}

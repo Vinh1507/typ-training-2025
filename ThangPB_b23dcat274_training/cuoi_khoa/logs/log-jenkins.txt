@@ -1,0 +1,410 @@
+Triggered by GitHub tag: $ref
+ Received:
+
+{"ref":"v2.0.2","ref_type":"tag","master_branch":"main","description":"typ-backend","pusher_type":"user","repository":{"id":1134980032,"node_id":"R_kgDOQ6ZrwA","name":"typ-backend","full_name":"Phamthang-25/typ-backend","private":false,"owner":{"login":"Phamthang-25","id":223889339,"node_id":"U_kgDODVhHuw","avatar_url":"https://avatars.githubusercontent.com/u/223889339?v=4","gravatar_id":"","url":"https://api.github.com/users/Phamthang-25","html_url":"https://github.com/Phamthang-25","followers_url":"https://api.github.com/users/Phamthang-25/followers","following_url":"https://api.github.com/users/Phamthang-25/following{/other_user}","gists_url":"https://api.github.com/users/Phamthang-25/gists{/gist_id}","starred_url":"https://api.github.com/users/Phamthang-25/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Phamthang-25/subscriptions","organizations_url":"https://api.github.com/users/Phamthang-25/orgs","repos_url":"https://api.github.com/users/Phamthang-25/repos","events_url":"https://api.github.com/users/Phamthang-25/events{/privacy}","received_events_url":"https://api.github.com/users/Phamthang-25/received_events","type":"User","user_view_type":"public","site_admin":false},"html_url":"https://github.com/Phamthang-25/typ-backend","description":"typ-backend","fork":false,"url":"https://api.github.com/repos/Phamthang-25/typ-backend","forks_url":"https://api.github.com/repos/Phamthang-25/typ-backend/forks","keys_url":"https://api.github.com/repos/Phamthang-25/typ-backend/keys{/key_id}","collaborators_url":"https://api.github.com/repos/Phamthang-25/typ-backend/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/Phamthang-25/typ-backend/teams","hooks_url":"https://api.github.com/repos/Phamthang-25/typ-backend/hooks","issue_events_url":"https://api.github.com/repos/Phamthang-25/typ-backend/issues/events{/number}","events_url":"https://api.github.com/repos/Phamthang-25/typ-backend/events","assignees_url":"https://api.github.com/repos/Phamthang-25/typ-backend/assignees{/user}","branches_url":"https://api.github.com/repos/Phamthang-25/typ-backend/branches{/branch}","tags_url":"https://api.github.com/repos/Phamthang-25/typ-backend/tags","blobs_url":"https://api.github.com/repos/Phamthang-25/typ-backend/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/Phamthang-25/typ-backend/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/Phamthang-25/typ-backend/git/refs{/sha}","trees_url":"https://api.github.com/repos/Phamthang-25/typ-backend/git/trees{/sha}","statuses_url":"https://api.github.com/repos/Phamthang-25/typ-backend/statuses/{sha}","languages_url":"https://api.github.com/repos/Phamthang-25/typ-backend/languages","stargazers_url":"https://api.github.com/repos/Phamthang-25/typ-backend/stargazers","contributors_url":"https://api.github.com/repos/Phamthang-25/typ-backend/contributors","subscribers_url":"https://api.github.com/repos/Phamthang-25/typ-backend/subscribers","subscription_url":"https://api.github.com/repos/Phamthang-25/typ-backend/subscription","commits_url":"https://api.github.com/repos/Phamthang-25/typ-backend/commits{/sha}","git_commits_url":"https://api.github.com/repos/Phamthang-25/typ-backend/git/commits{/sha}","comments_url":"https://api.github.com/repos/Phamthang-25/typ-backend/comments{/number}","issue_comment_url":"https://api.github.com/repos/Phamthang-25/typ-backend/issues/comments{/number}","contents_url":"https://api.github.com/repos/Phamthang-25/typ-backend/contents/{+path}","compare_url":"https://api.github.com/repos/Phamthang-25/typ-backend/compare/{base}...{head}","merges_url":"https://api.github.com/repos/Phamthang-25/typ-backend/merges","archive_url":"https://api.github.com/repos/Phamthang-25/typ-backend/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/Phamthang-25/typ-backend/downloads","issues_url":"https://api.github.com/repos/Phamthang-25/typ-backend/issues{/number}","pulls_url":"https://api.github.com/repos/Phamthang-25/typ-backend/pulls{/number}","milestones_url":"https://api.github.com/repos/Phamthang-25/typ-backend/milestones{/number}","notifications_url":"https://api.github.com/repos/Phamthang-25/typ-backend/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/Phamthang-25/typ-backend/labels{/name}","releases_url":"https://api.github.com/repos/Phamthang-25/typ-backend/releases{/id}","deployments_url":"https://api.github.com/repos/Phamthang-25/typ-backend/deployments","created_at":"2026-01-15T13:28:28Z","updated_at":"2026-01-20T16:56:13Z","pushed_at":"2026-01-20T17:32:09Z","git_url":"git://github.com/Phamthang-25/typ-backend.git","ssh_url":"git@github.com:Phamthang-25/typ-backend.git","clone_url":"https://github.com/Phamthang-25/typ-backend.git","svn_url":"https://github.com/Phamthang-25/typ-backend","homepage":null,"size":10,"stargazers_count":0,"watchers_count":0,"language":"JavaScript","has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"has_discussions":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"allow_forking":true,"is_template":false,"web_commit_signoff_required":false,"topics":[],"visibility":"public","forks":0,"open_issues":0,"watchers":0,"default_branch":"main"},"sender":{"login":"Phamthang-25","id":223889339,"node_id":"U_kgDODVhHuw","avatar_url":"https://avatars.githubusercontent.com/u/223889339?v=4","gravatar_id":"","url":"https://api.github.com/users/Phamthang-25","html_url":"https://github.com/Phamthang-25","followers_url":"https://api.github.com/users/Phamthang-25/followers","following_url":"https://api.github.com/users/Phamthang-25/following{/other_user}","gists_url":"https://api.github.com/users/Phamthang-25/gists{/gist_id}","starred_url":"https://api.github.com/users/Phamthang-25/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Phamthang-25/subscriptions","organizations_url":"https://api.github.com/users/Phamthang-25/orgs","repos_url":"https://api.github.com/users/Phamthang-25/repos","events_url":"https://api.github.com/users/Phamthang-25/events{/privacy}","received_events_url":"https://api.github.com/users/Phamthang-25/received_events","type":"User","user_view_type":"public","site_admin":false}}
+
+
+Contributing variables:
+
+    GH_REF = v2.0.2
+    GH_REF_TYPE = tag
+
+
+Obtained Jenkinsfile from git https://github.com/Phamthang-25/typ-backend
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on agent-lab in /var/lib/jenkins/workspace/backend-ci
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential git-hub
+Cloning the remote Git repository
+Cloning repository https://github.com/Phamthang-25/typ-backend
+ > git init /var/lib/jenkins/workspace/backend-ci # timeout=10
+Fetching upstream changes from https://github.com/Phamthang-25/typ-backend
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Phamthang-25/typ-backend +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+Checking out Revision 82fe7ad7c2e0927ccbe9232e3623918deab29a9a (refs/remotes/origin/main)
+Commit message: "uodate"
+ > git config remote.origin.url https://github.com/Phamthang-25/typ-backend # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 82fe7ad7c2e0927ccbe9232e3623918deab29a9a # timeout=10
+ > git rev-list --no-walk 82fe7ad7c2e0927ccbe9232e3623918deab29a9a # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Agent Information)
+[Pipeline] echo
+Running on agent: agent-lab
+[Pipeline] echo
+Workspace: /var/lib/jenkins/workspace/backend-ci
+[Pipeline] sh
++ whoami
+jenkins
+[Pipeline] sh
++ pwd
+/var/lib/jenkins/workspace/backend-ci
+[Pipeline] sh
++ uname -a
+Linux agent-lab 5.15.0-164-generic #174-Ubuntu SMP Fri Nov 14 20:25:16 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+[Pipeline] sh
++ docker --version
+Docker version 28.2.2, build 28.2.2-0ubuntu1~22.04.1
+[Pipeline] sh
++ git --version
+git version 2.34.1
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Checkout Source Code)
+[Pipeline] echo
+Cloning source code...
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+using credential git-hub
+Fetching changes from the remote Git repository
+Checking out Revision 82fe7ad7c2e0927ccbe9232e3623918deab29a9a (refs/remotes/origin/main)
+Commit message: "uodate"
+[Pipeline] echo
+Clone completed!
+[Pipeline] sh
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/backend-ci/.git # timeout=10
+ > git config remote.origin.url https://github.com/Phamthang-25/typ-backend # timeout=10
+Fetching upstream changes from https://github.com/Phamthang-25/typ-backend
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --force --progress -- https://github.com/Phamthang-25/typ-backend +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 82fe7ad7c2e0927ccbe9232e3623918deab29a9a # timeout=10
++ ls -la
+total 36
+drwxrwxr-x 5 jenkins jenkins 4096 Jan 20 17:32 .
+drwxr-xr-x 7 jenkins jenkins 4096 Jan 20 17:32 ..
+drwxrwxr-x 3 jenkins jenkins 4096 Jan 20 17:32 backend-chart
+-rw-rw-r-- 1 jenkins jenkins  150 Jan 20 17:32 Dockerfile
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 17:32 .git
+-rw-rw-r-- 1 jenkins jenkins 6064 Jan 20 17:32 Jenkinsfile
+-rw-rw-r-- 1 jenkins jenkins  277 Jan 20 17:32 package.json
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 17:32 src
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Get Tag From Webhook)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Using tag from webhook: v2.0.2
+[Pipeline] echo
+Docker image will be: thang05/typ-backend:v2.0.2
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Checkout Tag (when tag build))
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Checking out tag: v2.0.2
+[Pipeline] sh
++ git fetch --tags --force
++ git checkout -f refs/tags/v2.0.2
+Previous HEAD position was 82fe7ad uodate
+HEAD is now at 37ec3aa update
++ git rev-parse HEAD
+37ec3aa10a0345fb466669576d39fe35b413558d
++ git describe --tags --exact-match
+v2.0.2
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build Docker Image)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Building Docker image: thang05/typ-backend:v2.0.2
+[Pipeline] sh
++ docker build -t thang05/typ-backend:v2.0.2 .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  154.6kB
+
+Step 1/7 : FROM node:20-alpine
+ ---> 1b3a22d17cb6
+Step 2/7 : WORKDIR /app
+ ---> Running in 16cf60b4aff3
+ ---> Removed intermediate container 16cf60b4aff3
+ ---> ccc8069c1222
+Step 3/7 : COPY package.json package-lock.json* ./
+ ---> 840f4ca81df7
+Step 4/7 : RUN npm install --omit=dev
+ ---> Running in 37fa52b47366
+
+added 82 packages, and audited 83 packages in 6s
+
+18 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[91mnpm notice
+npm notice New major version of npm available! 10.8.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice
+[0m ---> Removed intermediate container 37fa52b47366
+ ---> 04d61fbbaaf6
+Step 5/7 : COPY src ./src
+ ---> e6919f1711cc
+Step 6/7 : EXPOSE 3000
+ ---> Running in 70884fd85c7b
+ ---> Removed intermediate container 70884fd85c7b
+ ---> 60ed43d9fb64
+Step 7/7 : CMD ["npm", "start"]
+ ---> Running in d2def47ec4b0
+ ---> Removed intermediate container d2def47ec4b0
+ ---> 6f3bad7ccf11
+Successfully built 6f3bad7ccf11
+Successfully tagged thang05/typ-backend:v2.0.2
++ docker tag thang05/typ-backend:v2.0.2 thang05/typ-backend:latest
+[Pipeline] echo
+Docker image built successfully!
+[Pipeline] sh
++ grep thang05/typ-backend
++ docker images
+thang05/typ-backend   latest        6f3bad7ccf11   Less than a second ago   145MB
+thang05/typ-backend   v2.0.2        6f3bad7ccf11   Less than a second ago   145MB
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push to Docker Hub)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Pushing image to Docker Hub...
+[Pipeline] withCredentials
+Masking supported pattern matches of $DOCKER_PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ echo ****
++ docker login -u thang05 --password-stdin
+
+WARNING! Your credentials are stored unencrypted in '/home/jenkins/.docker/config.json'.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/go/credential-store/
+
+Login Succeeded
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ docker push thang05/typ-backend:v2.0.2
+The push refers to repository [docker.io/thang05/typ-backend]
+623d78b762c8: Preparing
+71468be6428c: Preparing
+5a573fee9d98: Preparing
+a2b6d158db41: Preparing
+919c27cad7cf: Preparing
+4e05d5f29550: Preparing
+bc2e73ec7de4: Preparing
+7bb20cf5ef67: Preparing
+4e05d5f29550: Waiting
+bc2e73ec7de4: Waiting
+7bb20cf5ef67: Waiting
+919c27cad7cf: Layer already exists
+4e05d5f29550: Layer already exists
+bc2e73ec7de4: Layer already exists
+7bb20cf5ef67: Layer already exists
+623d78b762c8: Pushed
+5a573fee9d98: Pushed
+a2b6d158db41: Pushed
+71468be6428c: Pushed
+v2.0.2: digest: sha256:7f114ee60a63b7363bd44e22ac9cb799bb1c6787c92b2d55a68101bce0e63d0d size: 1990
++ docker push thang05/typ-backend:latest
+The push refers to repository [docker.io/thang05/typ-backend]
+623d78b762c8: Preparing
+71468be6428c: Preparing
+5a573fee9d98: Preparing
+a2b6d158db41: Preparing
+919c27cad7cf: Preparing
+4e05d5f29550: Preparing
+bc2e73ec7de4: Preparing
+7bb20cf5ef67: Preparing
+4e05d5f29550: Waiting
+bc2e73ec7de4: Waiting
+7bb20cf5ef67: Waiting
+71468be6428c: Layer already exists
+a2b6d158db41: Layer already exists
+919c27cad7cf: Layer already exists
+5a573fee9d98: Layer already exists
+623d78b762c8: Layer already exists
+bc2e73ec7de4: Layer already exists
+7bb20cf5ef67: Layer already exists
+4e05d5f29550: Layer already exists
+latest: digest: sha256:7f114ee60a63b7363bd44e22ac9cb799bb1c6787c92b2d55a68101bce0e63d0d size: 1990
+[Pipeline] echo
+Successfully pushed to Docker Hub!
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Clone Config Repo)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] echo
+Cloning config repository...
+[Pipeline] sh
++ rm -rf config-repo
++ mkdir -p config-repo
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/backend-ci/config-repo
+[Pipeline] {
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git clone https://github.com/Phamthang-25/typ-backend-config.git .
+Cloning into '.'...
++ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
++ git config user.email jenkins@local
++ git config user.name Jenkins CI/CD Backend
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] sh
++ ls -la
+total 20
+drwxrwxr-x 5 jenkins jenkins 4096 Jan 20 17:33 .
+drwxrwxr-x 7 jenkins jenkins 4096 Jan 20 17:33 ..
+drwxrwxr-x 3 jenkins jenkins 4096 Jan 20 17:33 argocd
+drwxrwxr-x 8 jenkins jenkins 4096 Jan 20 17:33 .git
+drwxrwxr-x 2 jenkins jenkins 4096 Jan 20 17:33 helm-values
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Update Helm Values)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/backend-ci/config-repo
+[Pipeline] {
+[Pipeline] echo
+Updating helm-values/values-prod.yaml with tag: v2.0.2
+[Pipeline] sh
++ sed -i s/^  tag:.*/  tag: "v2.0.2"/ helm-values/values-prod.yaml
++ echo After update:
+After update:
++ grep -n tag: helm-values/values-prod.yaml
+3:  tag: "v2.0.2"
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Push Config Changes)
+[Pipeline] script
+[Pipeline] {
+[Pipeline] dir
+Running in /var/lib/jenkins/workspace/backend-ci/config-repo
+[Pipeline] {
+[Pipeline] sh
++ git status --porcelain
+[Pipeline] echo
+Changes detected, committing and pushing...
+[Pipeline] sh
++ git add helm-values/values-prod.yaml
++ git commit -m Update backend image tag to v2.0.2 (build 14)
+[main 4303c44] Update backend image tag to v2.0.2 (build 14)
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[Pipeline] withCredentials
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+Masking supported pattern matches of $GIT_PASSWORD or $GIT_ASKPASS
+[Pipeline] {
+[Pipeline] sh
++ git push origin main
+To https://github.com/Phamthang-25/typ-backend-config.git
+   410b1b2..4303c44  main -> main
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] echo
+Config changes pushed successfully!
+[Pipeline] }
+[Pipeline] // dir
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Cleaning up...
+[Pipeline] sh
++ docker logout
+Removing login credentials for https://index.docker.io/v1/
++ docker rmi thang05/typ-backend:v2.0.2
+Untagged: thang05/typ-backend:v2.0.2
++ docker rmi thang05/typ-backend:latest
+Untagged: thang05/typ-backend:latest
+Untagged: thang05/typ-backend@sha256:7f114ee60a63b7363bd44e22ac9cb799bb1c6787c92b2d55a68101bce0e63d0d
+Deleted: sha256:6f3bad7ccf11fe025faf6abf8a27148d55da56400661db1a5f8e54162c33672d
+Deleted: sha256:60ed43d9fb646f82d147afa1a48f30c9e14b687849713b4ecb87e60996e64938
+Deleted: sha256:e6919f1711ccdd086f5d7c9b9d1b542264b82485c9e42f18ad3d9bea40a139a3
+Deleted: sha256:05a05c0fab1f0471526c0c033afdc167d6dc47b25e46e710a02900adaef37bb0
+Deleted: sha256:04d61fbbaaf62fa89928cbecd1ed3e53b5b91e7a2c80aafd034ac8737f724388
+Deleted: sha256:08479b82a085f07faac5e218ad3985e1c2f28c6b6d0ee6ade7665d62cd5250c6
+Deleted: sha256:840f4ca81df7a68811e38871bf4868e64766f8ea3e8703b295753e605f8905a7
+Deleted: sha256:43c314dbd1df7166acab8d91779fd14d7baf1f8592cc1a49b428461ab5e00d48
+Deleted: sha256:ccc8069c1222a789423eb2a1e62e834696a53585e9948748fa01db840ff77353
+Deleted: sha256:cb987cf16e30109cbcb5cda202177475564640d516b9159f24af36f9e47e2775
++ docker system prune -f
+Total reclaimed space: 0B
+[Pipeline] cleanWs
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] done
+[Pipeline] echo
+BUILD SUCCESS!
+[Pipeline] echo
+Image pushed: thang05/typ-backend:v2.0.2
+[Pipeline] echo
+Config repo updated: https://github.com/Phamthang-25/typ-backend-config.git
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

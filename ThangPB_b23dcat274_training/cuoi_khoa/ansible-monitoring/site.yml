@@ -1,0 +1,7 @@
+- name: Setup Monitoring Stack (Prometheus + Grafana)
+  hosts: monitoring
+  become: true
+  roles:
+    - docker
+    - prometheus
+    - grafana
