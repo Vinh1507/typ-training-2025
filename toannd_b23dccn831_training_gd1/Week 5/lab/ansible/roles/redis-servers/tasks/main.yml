@@ -1,0 +1,37 @@
+- name: Check if docker-compose.yml exists
+  stat:
+    path: /redis/docker-compose.yml
+  register: compose_file
+
+- name: Stop old containers if exists
+  command: docker compose down
+  args:
+    chdir: /redis
+  when: compose_file.stat.exists
+
+- name: Remove redis directory
+  file:
+    path: /redis
+    state: absent
+
+- name: Install redis server
+  apt:
+    name: redis-server
+    state: present
+
+- name: Create redis Repository
+  file:
+    path: /redis
+    state: directory
+    mode: "0755"
+
+- name: Render Docker Compose template
+  template: 
+    src: docker-compose.j2
+    dest: /redis/docker-compose.yml
+    mode: '0600'
+
+- name: Run Docker compose up
+  command: docker compose up -d
+  args:
+    chdir: /redis

@@ -1,0 +1,31 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Update Repository Index (Ubuntu)
+      apt: 
+        update_cache: true
+        lock_timeout: 300
+      when: ansible_distribution == "Ubuntu"
+
+- hosts: all
+  become: true
+  roles:
+    - ../roles/common
+
+- hosts: db-server
+  become: true
+  tags:
+    - mysql-server
+  roles:
+   - ../roles/db-servers
+
+- hosts: redis-server
+  become: true
+  roles:
+    - ../roles/redis-servers
+
+
+- hosts: be-server
+  become: true
+  roles:
+    - ../roles/be-servers

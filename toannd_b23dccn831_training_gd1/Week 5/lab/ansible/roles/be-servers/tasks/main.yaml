@@ -1,0 +1,33 @@
+- name: Check if docker-compose.yml exists
+  stat:
+    path: /backend/docker-compose.yml
+  register: compose_file
+
+- name: Force stop and remove old containers
+  shell: |
+    docker compose down
+    docker rm -f backend-app
+  when: compose_file.stat.exists
+  ignore_errors: yes
+
+- name: Remove backend directory
+  file:
+    path: /backend
+    state: absent
+
+- name: Create ptit-backend directory
+  file:
+    path: /backend
+    state: directory
+    mode: '0755'
+
+- name: Render Docker Compose template
+  template:
+    src: docker-compose.j2
+    dest: /backend/docker-compose.yml
+    mode: '0600'
+
+- name: Run Docker compose up
+  command: docker compose up -d --build
+  args:
+    chdir: /backend

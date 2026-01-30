@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  backend-spring:
+    container_name: "{{ backend_container_name }}"
+    image: "{{ backend_image_repo }}:{{ backend_image_version }}"
+    ports:
+      - "{{ backend_local_port }}:{{ backend_container_port }}"
+    environment: 
+      SPRING_PROFILES_ACTIVE: "{{ spring_env }}"
+      JAVA_OPTS: "{{ java_memory_opts }}"
+      DATABASE_HOST: "{{ database_host_ip }}"
+    restart: always

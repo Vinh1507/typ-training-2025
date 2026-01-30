@@ -1,0 +1,45 @@
+- name: Check if docker-compose.yml exists
+  stat:
+    path: /database-mysql/docker-compose.yml
+  register: compose_file
+
+- name: Stop old containers if exists
+  shell: docker compose down || true
+  args:
+    chdir: /database-mysql
+  when: compose_file.stat.exists
+
+- name: Remove database-mysql directory
+  file:
+    path: /database-mysql
+    state: absent
+
+- name: Install MySql server
+  apt:
+    name: mysql-server
+    state: present
+
+- name: Create database-mysql Repository
+  file:
+    path: /database-mysql
+    state: directory
+    mode: '0755'
+
+- name: Render Docker Compose template
+  template:
+    src: docker-compose.j2       
+    dest: /database-mysql/docker-compose.yml 
+    mode: '0600'
+
+- name: Copy mysql-init directory
+  copy:
+    src: mysql-init/
+    dest: /database-mysql/mysql-ptit/
+    mode: '0755'
+
+- name: Run Docker compose up
+  command: docker compose up -d 
+  args:
+    chdir: /database-mysql
+
+

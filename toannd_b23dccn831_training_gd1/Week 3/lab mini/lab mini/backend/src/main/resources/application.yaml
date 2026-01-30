@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: bookhop
+
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://db-mysql:3306/bookshop
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # url: jdbc:mysql://161.248.147.127:3306/bookshop
+    # username: ellie
+    # password: Ellie123#
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+    redis:
+      host: redis
+      port: 6379
+
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: bookshop.dpdns.org@gmail.com
+    password: fzyhqujnhakuiimh
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            trust: smtp.gmail.com
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+server:
+  port: 8080
+
+app:
+  upload-file:                   # cấu hình thư mục lưu file upload
+    base-path: bookshop/upload/
+  domain: http://www.ptit.dpdns.org:8080
+
+  jwt:                           # cấu hình token JWT
+    base64-secret: qoAEABDke07+AVLepXB4aCMtsT0wMAqR5x2VFyldsnx6e75YQkJH2UcZKTjEyoNgG71SBCXfq5N6NVZxWOfsHQ==
+    access-token-validity-in-seconds: 900     # thời gian sống access token
+    refresh-token-validity-in-seconds: 25920000   # thời gian sống refresh token
+
+
+#cloudianry config
+cloudinary:
+  cloud-name: "dunqy8ngo"
+  api-key: "656845335766711"
+  api-secret: "Cqkx6EDeqaiYTiulMT4aFJXNR1w"
+
+

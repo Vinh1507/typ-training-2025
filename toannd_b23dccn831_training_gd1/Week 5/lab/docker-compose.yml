@@ -1,0 +1,70 @@
+services:
+  db-mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: bookshop
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: 123456
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+
+  redis:
+    image: redis:7
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - app-network
+
+  backend-spring:
+    image: registry.gitlab.com/luckyn135/bookshop/backend:latest  
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend-app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-mysql:3306/bookshop
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=123456
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=com.mysql.cj.jdbc.Driver
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+      - upload-file.base-path=file:///uploads/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db-mysql
+      - redis
+    volumes:
+      - ./upload-docker/:/uploads/
+    networks:
+      - app-network
+
+  frontend:
+    image: registry.gitlab.com/luckyn135/bookshop/frontend:latest 
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-spring
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  dbdata:

@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  database-mysql:
+    container_name: database-app
+    image: mysql:{{ mysql_image_version }}
+    ports:
+      - "{{ mysql_host_port }}:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: "{{ mysql_root_password }}"
+        MYSQL_DATABASE: "{{ mysql_database_name }}"
+        MYSQL_USER: "{{ mysql_user }}"
+        MYSQL_PASSWORD: "{{ mysql_password }}"
+    volumes:
+      - ./mysql-ptit:/docker-entrypoint-initdb.d
+    restart: always

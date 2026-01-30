@@ -1,0 +1,13 @@
+all:
+  children:
+    db-servers:
+      hosts:
+        db-server:
+
+    redis-servers:
+      hosts:
+        redis-server:
+
+    be-servers:
+      hosts:
+        be-server:

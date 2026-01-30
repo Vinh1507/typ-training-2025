@@ -1,0 +1,6 @@
+mysql_host_port: "3307"
+mysql_database_name: "bookshop"
+mysql_user: "appuser"
+mysql_root_password: "{{vault_mysql_root_password}}"
+mysql_password: "{{vault_mysql_password}}"
+mysql_image_version: 8

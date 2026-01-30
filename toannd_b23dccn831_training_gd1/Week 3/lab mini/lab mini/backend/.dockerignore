@@ -1,0 +1,9 @@
+.git
+.gradle
+mvn
+.target
+build
+.idea
+*.iml
+*.log
+node_modules

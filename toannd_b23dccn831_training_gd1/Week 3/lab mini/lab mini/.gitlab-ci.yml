@@ -1,0 +1,43 @@
+stages:
+  - build
+  - deploy
+
+# ======== BUILD IMAGES ========
+build_frontend:
+  stage: build
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE/frontend:latest" -f frontend/Dockerfile frontend/
+    - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
+  tags:
+    - dev-server
+
+build_backend:
+  stage: build
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE/backend:latest" -f backend/Dockerfile backend/
+    - docker push "$CI_REGISTRY_IMAGE/backend:latest"
+  tags:
+    - dev-server
+
+# ======== DEPLOY TO SERVER ========
+deploy:
+  stage: deploy
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan 192.168.22.150 >> ~/.ssh/known_hosts
+  script:
+    - scp docker-compose.yml toannd@192.168.22.150:/home/bookshop/docker-compose.yml
+    - ssh toannd@192.168.22.150 "
+        echo '$CI_REGISTRY_PASSWORD' | docker login -u '$CI_REGISTRY_USER' --password-stdin registry.gitlab.com &&
+        cd /home/bookshop &&
+        docker compose pull &&
+        docker compose up -d --remove-orphans
+      "
+  tags:
+    - dev-server

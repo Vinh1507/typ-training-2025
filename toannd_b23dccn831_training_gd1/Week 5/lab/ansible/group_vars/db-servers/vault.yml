@@ -1,0 +1,2 @@
+vault_mysql_root_password: "root123"
+vault_mysql_password: "123456"

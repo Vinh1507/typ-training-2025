@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Account Verification</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            max-height: 50px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            color: #374151;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #111827;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #4b5563;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 5px 0;
+            padding: 14px 32px;
+            background: #f97316; /* màu cam chủ đạo */
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px; /* chữ to, nổi bật */
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: #ea580c; /* cam đậm khi hover */
+        }
+
+        .footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #9ca3af;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <!-- Header -->
+    <table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td align="center" class="header">
+                <h1>BookShop</h1>
+            </td>
+        </tr>
+
+        <!-- Body -->
+        <tr>
+            <td>
+                <h2>Xin chào,</h2>
+                <p>
+                    Cảm ơn bạn đã đăng ký tài khoản tại <strong>BookShop</strong>.<br>
+                    Để hoàn tất quá trình đăng ký, vui lòng xác minh tài khoản bằng cách bấm vào nút bên dưới.<br>
+                    Lưu ý: Liên kết xác minh sẽ hết hạn sau <strong>10 phút</strong>.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <a th:href="${confirmationLink}" class="btn">Xác nhận tài khoản</a>
+            </td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <td class="footer">
+                <p>&copy; 2025 BookShop Online. All rights reserved.</p>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+</html>

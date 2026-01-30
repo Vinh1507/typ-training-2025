@@ -1,0 +1,122 @@
+{
+  "status_code": 200,
+  "error": null,
+  "message": "Multiple files uploaded successfully",
+  "data": [
+    {
+      "file_name": "001.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141292/001_19d8c096-efa1-4fad-8d41-f3a1606a213b.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "002.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141294/002_dc0527a4-24c8-480a-9639-9ea4d2297d66.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "003.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141297/003_e93a1a57-25ea-4db4-a122-fe21f7dd0850.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "004.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141299/004_c1b27bac-6117-4d7f-9b1f-cf8166a82ebb.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "005.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141302/005_50622678-7e6c-4434-a0e2-e9d1320f8a3b.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "006.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141305/006_36768804-c02c-4b58-8ac5-e56893bd8728.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "007.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141308/007_c0c544f0-6773-4c52-909e-69aa4616ebb0.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "008.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141310/008_1f9107a6-3949-45cc-9c68-63201b786701.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "009.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141312/009_63473346-2f25-4315-b637-74de10463dff.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "010.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141315/010_27a0db50-8ad6-48d7-a493-5f4a4dcfe8ba.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "011.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141317/011_59c27858-ff14-47fa-a1dd-e3319a4f48d9.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "012.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141319/012_1ab1ace4-88d3-4185-9405-6d60c8b55331.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "013.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141322/013_803c37f8-e99c-4d95-9113-81c341b2f751.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "014.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141325/014_1feded8b-9056-4654-8123-d7d9631203cb.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "015.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/raw/upload/v1762141326/015_05cb182a-8491-4e3d-b7e8-fb5705885997",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "017.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141328/017_fd24c155-42df-4664-ada1-d2ddb015ab34.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "018.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141330/018_3ff80097-85c2-4453-bb5e-338a10121a13.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "019.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141332/019_4092f079-85cc-4d63-a326-bc0016bc8547.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "020.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141335/020_ae42af1a-693c-41c1-bf48-12ce7857e8ca.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "021.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141337/021_83b22425-6f65-45c7-917c-a03d3d16e7aa.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "022.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141339/022_b09f80c9-f4a9-40a3-9f52-b39cf650a7bf.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "023.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141342/023_ae85d2df-c6dc-410f-94a7-49cf35b5445b.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    },
+    {
+      "file_name": "024.jpg",
+      "url_file": "https://res.cloudinary.com/dunqy8ngo/image/upload/v1762141344/024_487b3f4b-17a6-4058-b78b-bf59472b8919.jpg",
+      "upload_at": "2025-11-03T03:42:11.938983100Z"
+    }
+  ]
+}

@@ -1,0 +1,1131 @@
+[
+  {
+    "name": "Anna Lembke",
+    "date_of_birth": "1972-04-21",
+    "gender": "FEMALE",
+    "country": "Mỹ",
+    "biography": "Bác sĩ tâm thần học, tác giả cuốn 'Dopamine Nation' nổi tiếng về nghiện và hành vi con người."
+  },
+  {
+    "name": "Matthew Walker",
+    "date_of_birth": "1973-10-25",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Giáo sư thần kinh học và tâm lý học, nổi tiếng với tác phẩm 'Why We Sleep' nghiên cứu về giấc ngủ."
+  },
+
+  {
+    "name": "Vương Đào",
+    "date_of_birth": "1968-07-11",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả và học giả Trung Quốc, chuyên nghiên cứu về triết học và văn hóa phương Đông."
+  },
+  {
+    "name": "Jessie Inchauspé",
+    "date_of_birth": "1990-03-12",
+    "gender": "FEMALE",
+    "country": "Pháp",
+    "biography": "Nhà hóa sinh và tác giả sách 'Glucose Revolution' về khoa học dinh dưỡng và sức khỏe."
+  },
+  {
+    "name": "Dịch Dương",
+    "date_of_birth": "1975-05-15",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả người Trung Quốc chuyên biên soạn các ấn phẩm khoa học kỹ thuật và văn hóa."
+  },
+  {
+    "name": "Ngô Đức Vượng",
+    "date_of_birth": "1948-09-19",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà nghiên cứu và tác giả người Việt, được biết đến với các công trình về y học và triết lý sống xanh."
+  },
+  {
+    "name": "Cao Ngọc Vĩ",
+    "date_of_birth": "1978-06-09",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Bộ ba tác giả hợp tác biên soạn sách chuyên ngành giáo dục và phát triển bản thân."
+  },
+  {
+    "name": "Jonathan Haidt",
+    "date_of_birth": "1963-10-19",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Giáo sư tâm lý học xã hội tại Đại học NYU, nổi tiếng với các nghiên cứu về đạo đức và xã hội hiện đại."
+  },
+  {
+    "name": "Ngô Sa Thạch",
+    "date_of_birth": "1987-12-03",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả người Việt nổi bật với những cuốn sách triết lý sống và tư duy phát triển bản thân."
+  },
+  {
+    "name": "T Collin Campbell, PhD, Thomas M Cambpell II, MD",
+    "date_of_birth": "1934-06-14",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Hai cha con nhà khoa học nổi tiếng, đồng tác giả nghiên cứu 'The China Study' về dinh dưỡng và sức khỏe."
+  },
+  {
+    "name": "Dr. Gleb Tsipursky",
+    "date_of_birth": "1982-02-09",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà khoa học nhận thức, diễn giả và tác giả về tư duy chiến lược và ra quyết định hợp lý."
+  },
+  {
+    "name": "Hải Yến",
+    "date_of_birth": "1989-07-08",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và dịch giả trẻ, nổi bật trong lĩnh vực sách kỹ năng sống và phát triển bản thân."
+  },
+  {
+    "name": "TS David A. Sinclair, Matthew D. Laplante",
+    "date_of_birth": "1969-06-30",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Giáo sư sinh học phân tử David Sinclair và nhà báo Matthew Laplante, đồng tác giả cuốn 'Lifespan' nghiên cứu về sự lão hóa và tuổi thọ con người."
+  },
+  {
+    "name": "Phan Bảo Long",
+    "date_of_birth": "1982-09-15",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và giảng viên người Việt, nổi bật với các công trình về kỹ năng sống và phát triển tư duy sáng tạo."
+  },
+  {
+    "name": "Dư Hạo, Trịnh Lê, Nhậm Chi Đường",
+    "date_of_birth": "1975-04-20",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả người Trung Quốc, chuyên biên soạn các sách về giáo dục, văn hóa và nghiên cứu xã hội học đương đại."
+  },
+  {
+    "name": "Hoàng Văn Vân",
+    "date_of_birth": "1960-03-18",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhóm biên soạn sách giáo khoa Ngữ văn Việt Nam, có nhiều năm kinh nghiệm trong lĩnh vực giảng dạy và nghiên cứu ngôn ngữ."
+  },
+  {
+    "name": "Bùi Mạnh Hùng, Nguyễn Thị Ly Kha, Nguyễn Lương Hải Như, Phạm Thị Kim Oanh, Vũ Minh Tâm, Nguyễn Xuân Tùng",
+    "date_of_birth": "1965-07-10",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhóm tác giả thuộc Bộ Giáo dục và Đào tạo, tham gia biên soạn chương trình Ngữ văn cấp THPT tại Việt Nam."
+  },
+  {
+    "name": "Bộ Giáo Dục Và Đào Tạo",
+    "date_of_birth": "1945-09-02",
+    "gender": "ORGANIZATION",
+    "country": "Việt Nam",
+    "biography": "Cơ quan quản lý giáo dục quốc gia Việt Nam, chịu trách nhiệm tổ chức và phát triển chương trình giảng dạy trên toàn quốc."
+  },
+
+  {
+    "name": "Khương Lệ bình",
+    "date_of_birth": "1979-02-09",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả nữ người Trung Quốc, chuyên viết sách giáo dục và tâm lý học dành cho thanh thiếu niên."
+  },
+  {
+    "name": "Tô Anh Hà",
+    "date_of_birth": "1980-06-22",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả người Trung Quốc, nổi bật với các tác phẩm dành cho thiếu nhi và sách giáo dục văn học."
+  },
+  {
+    "name": "Khương Lệ Bình, Vương Phong, Lưu Lệ Bình, Vương Phương",
+    "date_of_birth": "1978-10-04",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả sáng tạo người Trung Quốc, biên soạn sách văn học thiếu nhi giàu tính giáo dục và nghệ thuật."
+  },
+  {
+    "name": "Tô Anh Hà",
+    "date_of_birth": "1982-11-29",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả nổi tiếng người Trung Quốc, chuyên viết truyện thiếu nhi và các tác phẩm văn học nhẹ nhàng, ý nghĩa."
+  },
+  {
+    "name": "Chính Bình",
+    "date_of_birth": "1974-03-21",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và nhà biên soạn người Việt Nam, chuyên viết các tác phẩm về kỹ năng sống và tư duy hiện đại."
+  },
+  {
+    "name": "Khương Lệ Bình, Vu Diểu, Lý Lâm",
+    "date_of_birth": "1978-09-12",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả nữ người Trung Quốc nổi tiếng với các ấn phẩm văn học giáo dục và sách thiếu nhi."
+  },
+  {
+    "name": "Tô Anh Hà, Vương Lôi",
+    "date_of_birth": "1982-05-10",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Hai tác giả nữ người Trung Quốc chuyên viết truyện thiếu nhi và sách kỹ năng sống được yêu thích."
+  },
+  {
+    "name": "Khương Lệ Bình, Đổng Chính, Trương Quân",
+    "date_of_birth": "1980-08-27",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả người Trung Quốc chuyên biên soạn các bộ sách giáo dục và văn học dành cho thiếu nhi."
+  },
+  {
+    "name": "Bino Chém Tiếng Anh",
+    "date_of_birth": "1995-11-14",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Người sáng tạo nội dung giáo dục nổi tiếng trên mạng xã hội Việt Nam, chuyên chia sẻ mẹo học tiếng Anh thực tế và vui nhộn."
+  },
+  {
+    "name": "Khương Lệ Bình, Lỗ Giang, Lưu Sướng",
+    "date_of_birth": "1979-04-06",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Nhóm tác giả Trung Quốc có nhiều tác phẩm trong lĩnh vực văn học thiếu nhi và sách phát triển bản thân."
+  },
+  {
+    "name": "Tô Anh Hà, Vương Lôi, Lữ Diễm Huy",
+    "date_of_birth": "1983-02-18",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Bộ ba tác giả người Trung Quốc nổi bật với những ấn phẩm giáo dục dành cho trẻ em và thanh thiếu niên."
+  },
+  {
+    "name": "Lương Trọng Minh",
+    "date_of_birth": "1967-09-02",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và dịch giả người Việt, chuyên biên soạn các tác phẩm văn học và nghiên cứu xã hội học."
+  },
+  {
+    "name": "Elizabeth Dalby",
+    "date_of_birth": "1981-07-16",
+    "gender": "FEMALE",
+    "country": "Anh",
+    "biography": "Nhà văn và biên tập viên người Anh, chuyên sáng tác sách thiếu nhi và truyện khoa học dễ hiểu."
+  },
+  {
+    "name": "TS Chris Napier",
+    "date_of_birth": "1978-01-24",
+    "gender": "MALE",
+    "country": "Canada",
+    "biography": "Tiến sĩ vật lý trị liệu, huấn luyện viên điền kinh người Canada, tác giả của nhiều cuốn sách về chấn thương và thể thao."
+  },
+  {
+    "name": "Swami Vishnu Devananda",
+    "date_of_birth": "1927-12-31",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Đạo sư yoga người Ấn Độ, người sáng lập các trung tâm Sivananda Yoga và tác giả nhiều cuốn sách về thiền định và tâm linh."
+  },
+  {
+    "name": "Ross Edgley",
+    "date_of_birth": "1985-10-01",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Vận động viên và tác giả người Anh, nổi tiếng với những thí nghiệm thể thao cực hạn và cuốn sách 'The Art of Resilience'."
+  },
+  {
+    "name": "Swami Sitaramananda",
+    "date_of_birth": "1957-06-13",
+    "gender": "FEMALE",
+    "country": "Ấn Độ",
+    "biography": "Đạo sư yoga người Ấn Độ, giám đốc trung tâm Sivananda Yoga Farm, chuyên giảng dạy thiền định và tâm linh học phương Đông."
+  },
+  {
+    "name": "Mai Luân",
+    "date_of_birth": "1990-12-22",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả trẻ người Việt Nam, chuyên viết sách kỹ năng sống và các tác phẩm truyền cảm hứng cho giới trẻ."
+  },
+  {
+    "name": "Hiệp Hội Pickleball Hoa Kỳ",
+    "date_of_birth": "1984-05-01",
+    "gender": "ORGANIZATION",
+    "country": "Mỹ",
+    "biography": "Tổ chức thể thao phi lợi nhuận của Hoa Kỳ, chịu trách nhiệm phát triển và quảng bá môn thể thao Pickleball trên toàn quốc."
+  },
+  {
+    "name": "Osho",
+    "date_of_birth": "1931-12-11",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Đạo sư, triết gia và nhà tâm linh người Ấn Độ, nổi tiếng với những bài giảng về thiền định, tự do tư tưởng và tình yêu."
+  },
+  {
+    "name": "B.K.S. Iyengar",
+    "date_of_birth": "1918-12-14",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Bậc thầy yoga Ấn Độ, người sáng lập trường phái Iyengar Yoga, được công nhận là một trong những người có ảnh hưởng nhất trong lĩnh vực yoga hiện đại."
+  },
+  {
+    "name": "Bồ Đề Đạt Ma",
+    "date_of_birth": "440-01-01",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Tổ sư Thiền tông, được cho là người truyền bá Phật pháp và sáng lập võ phái Thiếu Lâm tại Trung Hoa."
+  },
+  {
+    "name": "TS Phạm Văn Xẹn, TS Nguyễn Thế Truyền, TS Nguyễn Sĩ Hà",
+    "date_of_birth": "1968-03-19",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhóm tiến sĩ Việt Nam chuyên nghiên cứu và biên soạn tài liệu giáo dục đại học trong lĩnh vực kỹ thuật và khoa học ứng dụng."
+  },
+  {
+    "name": "Steve House, Scott Johnston, Kilian Jornet",
+    "date_of_birth": "1978-08-05",
+    "gender": "MALE",
+    "country": "Mỹ - Na Uy",
+    "biography": "Ba vận động viên leo núi và huấn luyện viên thể lực nổi tiếng, đồng tác giả cuốn 'Training for the New Alpinism' về rèn luyện thể chất cho leo núi."
+  },
+  {
+    "name": "Raja Yoga",
+    "date_of_birth": "1896-01-01",
+    "gender": "ORGANIZATION",
+    "country": "Ấn Độ",
+    "biography": "Trường phái yoga cổ điển của Ấn Độ, chú trọng vào việc kiểm soát tâm trí, thiền định và đạt đến trạng thái tự giác ngộ."
+  },
+  {
+    "name": "Ben Hogan, Herbert Warren Wind, Anthony Ravielly",
+    "date_of_birth": "1912-08-13",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Những nhân vật có ảnh hưởng lớn trong làng golf Hoa Kỳ, đồng tác giả các tác phẩm kinh điển về kỹ thuật và triết lý chơi golf hiện đại."
+  },
+  {
+    "name": "Trần Mẫn Tuấn",
+    "date_of_birth": "1985-06-10",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và giảng viên người Việt, chuyên viết về giáo dục, kỹ năng mềm và tư duy phát triển cá nhân."
+  },
+  {
+    "name": "Geshe Michael Roach",
+    "date_of_birth": "1952-12-17",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tu sĩ Phật giáo và tác giả người Mỹ, nổi tiếng với cuốn 'The Diamond Cutter' về triết lý thành công dựa trên trí tuệ Phật giáo."
+  },
+  {
+    "name": "Gosho Aoyama",
+    "date_of_birth": "1963-06-21",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Họa sĩ manga người Nhật Bản, tác giả của bộ truyện trinh thám nổi tiếng 'Thám tử lừng danh Conan'."
+  },
+  {
+    "name": "Naoki Urasawa",
+    "date_of_birth": "1960-01-02",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Mangaka và nhạc sĩ người Nhật, được biết đến với các tác phẩm như 'Monster' và '20th Century Boys'."
+  },
+  {
+    "name": "Gege Akutami",
+    "date_of_birth": "1992-02-26",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Họa sĩ manga Nhật Bản, tác giả của bộ truyện nổi tiếng 'Jujutsu Kaisen'."
+  },
+  {
+    "name": "Aida Iro",
+    "date_of_birth": "1990-09-17",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Bộ đôi tác giả người Nhật, nổi tiếng với manga 'Toilet-Bound Hanako-kun' được đông đảo độc giả yêu thích."
+  },
+  {
+    "name": "Fujiko F Fujio",
+    "date_of_birth": "1933-12-01",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Họa sĩ manga huyền thoại người Nhật Bản, đồng tác giả của bộ truyện 'Doraemon' kinh điển dành cho thiếu nhi."
+  },
+  {
+    "name": "Taizan5",
+    "date_of_birth": "1985-09-03",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Mangaka người Nhật Bản, nổi tiếng với phong cách kể chuyện sâu sắc và các tác phẩm tâm lý học đường."
+  },
+  {
+    "name": "Katarina, Ryosuke Fuji",
+    "date_of_birth": "1990-05-12",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Cặp tác giả người Nhật, được biết đến với tác phẩm chuyển thể manga nổi tiếng dựa trên tiểu thuyết giả tưởng."
+  },
+  {
+    "name": "Saka Mikami",
+    "date_of_birth": "1988-03-29",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Tác giả và họa sĩ manga người Nhật, chuyên sáng tác truyện tâm lý học đường và tình cảm."
+  },
+  {
+    "name": "Chieko Hosokawa, Fūmin",
+    "date_of_birth": "1947-01-20",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Hai nữ họa sĩ manga kỳ cựu người Nhật Bản, nổi bật với các tác phẩm shojo và truyện cổ điển hiện đại."
+  },
+  {
+    "name": "Hajime Isayama",
+    "date_of_birth": "1986-08-29",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Mangaka người Nhật, tác giả bộ truyện nổi tiếng toàn cầu 'Attack on Titan'."
+  },
+  {
+    "name": "Bộ Giáo Dục và Đào Tạo",
+    "date_of_birth": "1945-09-02",
+    "gender": "ORGANIZATION",
+    "country": "Việt Nam",
+    "biography": "Cơ quan quản lý giáo dục quốc gia Việt Nam, chịu trách nhiệm xây dựng chương trình giảng dạy và quản lý hệ thống giáo dục."
+  },
+  {
+    "name": "Trần Đức Tuấn",
+    "date_of_birth": "1972-04-11",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và nhà nghiên cứu người Việt Nam, có nhiều đóng góp trong lĩnh vực giáo dục và chính trị học."
+  },
+  {
+    "name": "Quốc Hội",
+    "date_of_birth": "1946-01-06",
+    "gender": "ORGANIZATION",
+    "country": "Việt Nam",
+    "biography": "Cơ quan quyền lực nhà nước cao nhất của Việt Nam, chịu trách nhiệm lập pháp, giám sát và quyết định các vấn đề trọng đại của đất nước."
+  },
+  {
+    "name": "Krishnamurti",
+    "date_of_birth": "1895-05-11",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Triết gia và diễn giả tâm linh người Ấn Độ, nổi tiếng với những bài giảng về tự do nội tâm và nhận thức bản ngã."
+  },
+  {
+    "name": "Lão Tử",
+    "date_of_birth": "-571-01-01",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Triết gia Trung Hoa cổ đại, người sáng lập Đạo giáo và tác giả kinh điển 'Đạo Đức Kinh'."
+  },
+  {
+    "name": "Hồ Chí Minh",
+    "date_of_birth": "1890-05-19",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Lãnh tụ cách mạng và Chủ tịch nước Việt Nam Dân chủ Cộng hòa, người đặt nền móng cho nền độc lập dân tộc Việt Nam."
+  },
+  {
+    "name": "Nguyễn Ngọc Bích",
+    "date_of_birth": "1955-10-17",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà văn và dịch giả người Việt, chuyên biên soạn các tác phẩm giáo dục và nghiên cứu văn học hiện đại."
+  },
+  {
+    "name": "Niccolò Machiavelli",
+    "date_of_birth": "1469-05-03",
+    "gender": "MALE",
+    "country": "Ý",
+    "biography": "Triết gia chính trị người Ý thời Phục Hưng, tác giả cuốn 'Quân Vương' (The Prince), một trong những tác phẩm kinh điển về chính trị học."
+  },
+  {
+    "name": "Kiều Mai Sơn",
+    "date_of_birth": "1984-02-14",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà nghiên cứu và tác giả người Việt Nam, chuyên viết về tư tưởng triết học và quản trị xã hội."
+  },
+  {
+    "name": "Milton Friedman",
+    "date_of_birth": "1912-07-31",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà kinh tế học người Mỹ, đoạt giải Nobel Kinh tế năm 1976, người đặt nền móng cho trường phái kinh tế tự do mới (Monetarism)."
+  },
+  {
+    "name": "Chủ tịch Hồ Chí Minh",
+    "date_of_birth": "1890-05-19",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Lãnh tụ cách mạng Việt Nam, người sáng lập Đảng Cộng sản Việt Nam và là Chủ tịch nước Việt Nam Dân chủ Cộng hòa đầu tiên."
+  },
+  {
+    "name": "Zbigniew Brzezinski",
+    "date_of_birth": "1928-03-28",
+    "gender": "MALE",
+    "country": "Ba Lan - Mỹ",
+    "biography": "Nhà khoa học chính trị và cố vấn an ninh quốc gia Mỹ, nổi tiếng với vai trò trong chính sách đối ngoại thời Chiến tranh Lạnh."
+  },
+  {
+    "name": "Arthur Schopenhauer",
+    "date_of_birth": "1788-02-22",
+    "gender": "MALE",
+    "country": "Đức",
+    "biography": "Triết gia người Đức, nổi tiếng với triết học bi quan và tác phẩm 'Thế giới như ý chí và biểu tượng'."
+  },
+  {
+    "name": "Aristotle",
+    "date_of_birth": "-384-01-01",
+    "gender": "MALE",
+    "country": "Hy Lạp",
+    "biography": "Triết gia Hy Lạp cổ đại, học trò của Plato và thầy của Alexander Đại đế, người đặt nền móng cho triết học phương Tây."
+  },
+  {
+    "name": "Patanjali",
+    "date_of_birth": "-200-01-01",
+    "gender": "MALE",
+    "country": "Ấn Độ",
+    "biography": "Hiền triết Ấn Độ cổ đại, tác giả của bộ 'Yoga Sutras' – nền tảng triết học yoga cổ điển."
+  },
+  {
+    "name": "Trần Dân Tiên",
+    "date_of_birth": "1900-01-01",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Bút danh của Chủ tịch Hồ Chí Minh, tác giả cuốn 'Những mẩu chuyện về đời hoạt động của Hồ Chủ tịch'."
+  },
+  {
+    "name": "Inamori Kazuo",
+    "date_of_birth": "1932-01-30",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Doanh nhân và triết gia người Nhật, sáng lập tập đoàn Kyocera và Hãng hàng không ANA, nổi tiếng với triết lý kinh doanh nhân bản."
+  },
+  {
+    "name": "Robin Hard, Christopher Gill",
+    "date_of_birth": "1950-04-17",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Hai học giả người Anh chuyên nghiên cứu và dịch thuật triết học Hy Lạp cổ đại, đặc biệt là các tác phẩm của Plato và Aristotle."
+  },
+  {
+    "name": "Thu Giang Nguyễn Duy Cần",
+    "date_of_birth": "1897-03-08",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Học giả và triết nhân Việt Nam, tác giả của nhiều tác phẩm về triết học, đạo đức và nhân sinh quan Á Đông."
+  },
+  {
+    "name": "Mặc Am",
+    "date_of_birth": "1970-09-15",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà nghiên cứu và tác giả Việt Nam, chuyên viết về tư tưởng phương Đông và thiền học hiện đại."
+  },
+  {
+    "name": "Hồ Văn Phi",
+    "date_of_birth": "1981-07-21",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và giảng viên người Việt, nổi tiếng với các tác phẩm về lịch sử, văn hóa và chính trị đương đại."
+  },
+  {
+    "name": "Thomas Hobbes",
+    "date_of_birth": "1588-04-05",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Triết gia chính trị người Anh, tác giả cuốn 'Leviathan', người đặt nền móng cho triết học chính trị hiện đại."
+  },
+  {
+    "name": "Thiếu Tướng Hoàng Đan",
+    "date_of_birth": "1921-05-01",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Thiếu tướng Quân đội Nhân dân Việt Nam, chỉ huy tài năng trong kháng chiến chống Mỹ, từng giữ nhiều chức vụ lãnh đạo quan trọng."
+  },
+  {
+    "name": "Nguyễn Văn Tàu",
+    "date_of_birth": "1928-09-15",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Anh hùng Lực lượng Vũ trang Nhân dân Việt Nam, nhà văn và nhân chứng lịch sử trong cuộc kháng chiến chống Mỹ."
+  },
+  {
+    "name": "Đại Tướng Võ Nguyên Giáp, Phạm Chí Nhân",
+    "date_of_birth": "1911-08-25",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Đại tướng Võ Nguyên Giáp – danh tướng huyền thoại Việt Nam, cùng Phạm Chí Nhân – nhà nghiên cứu lịch sử quân sự Việt Nam."
+  },
+  {
+    "name": "Nguyễn Công Huy",
+    "date_of_birth": "1983-06-30",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả trẻ người Việt, chuyên viết về giáo dục, phát triển bản thân và đổi mới tư duy hiện đại."
+  },
+  {
+    "name": "Vũ Kỳ",
+    "date_of_birth": "1921-09-26",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Thư ký riêng và cộng sự thân cận của Chủ tịch Hồ Chí Minh, người có công lưu giữ và biên soạn nhiều tài liệu lịch sử quý giá."
+  },
+  {
+    "name": "Jon Balchin",
+    "date_of_birth": "1968-03-02",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Nhà văn và biên tập viên người Anh, chuyên viết về tiểu sử các nhân vật lịch sử và các tư tưởng triết học cổ điển."
+  },
+  {
+    "name": "Craig Mcnamara",
+    "date_of_birth": "1950-02-05",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà hoạt động xã hội và doanh nhân nông nghiệp người Mỹ, con trai của Bộ trưởng Quốc phòng Robert McNamara."
+  },
+  {
+    "name": "Nguyễn Thụy Kha",
+    "date_of_birth": "1949-04-20",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà thơ, nhà báo và nhà phê bình âm nhạc Việt Nam, được biết đến với nhiều công trình viết về văn hóa và con người Việt."
+  },
+  {
+    "name": "Cát Thảo Nguyễn",
+    "date_of_birth": "1987-10-09",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và dịch giả người Việt, chuyên viết các tác phẩm về kỹ năng sống và phát triển bản thân."
+  },
+  {
+    "name": "Hà Hương, Đào Thanh Huyền, Phạm Hoài Thanh",
+    "date_of_birth": "1986-07-03",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Nhóm tác giả và biên tập viên người Việt Nam, cùng thực hiện các ấn phẩm giáo dục và nghiên cứu xã hội."
+  },
+  {
+    "name": "Jeremy Dronfield",
+    "date_of_birth": "1965-09-20",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Nhà văn và nhà nghiên cứu người Anh, tác giả của nhiều tiểu thuyết lịch sử và tiểu sử nhân vật nổi tiếng."
+  },
+  {
+    "name": "Robert S. McNamara, Brian VanDemark",
+    "date_of_birth": "1916-06-09",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Robert S. McNamara – cựu Bộ trưởng Quốc phòng Mỹ, cùng Brian VanDemark – nhà sử học, đồng tác giả cuốn 'In Retrospect'."
+  },
+  {
+    "name": "Lê Hữu Trác Hải Thượng Lãn Ông",
+    "date_of_birth": "1720-11-11",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Danh y và học giả Việt Nam thời Lê, tác giả bộ 'Hải Thượng y tông tâm lĩnh', được tôn là ông tổ của nền y học cổ truyền Việt Nam."
+  },
+  {
+    "name": "Armand Mattelart, Michèle Mattelart",
+    "date_of_birth": "1936-03-14",
+    "gender": "MALE",
+    "country": "Pháp",
+    "biography": "Hai học giả người Pháp, nổi tiếng trong lĩnh vực truyền thông, văn hóa và xã hội học đương đại."
+  },
+  {
+    "name": "Trần Bạch Đằng, Lê Văn Năm, Nguyễn Huy Khôi, Nguyễn Thùy Linh",
+    "date_of_birth": "1930-08-08",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhóm tác giả và nhà nghiên cứu lịch sử Việt Nam, biên soạn nhiều công trình về cuộc kháng chiến và lãnh tụ Hồ Chí Minh."
+  },
+  {
+    "name": "Bộ Văn Hóa, Thể Thao Và Du Lịch",
+    "date_of_birth": "2007-08-01",
+    "gender": "ORGANIZATION",
+    "country": "Việt Nam",
+    "biography": "Cơ quan quản lý nhà nước của Việt Nam trong các lĩnh vực văn hóa, thể thao và du lịch, trực thuộc Chính phủ Việt Nam."
+  },
+  {
+    "name": "Xenophon",
+    "date_of_birth": "-430-01-01",
+    "gender": "MALE",
+    "country": "Hy Lạp",
+    "biography": "Nhà sử học, binh gia và triết gia Hy Lạp cổ đại, học trò của Socrates, tác giả của 'Hồi ký về Socrates'."
+  },
+  {
+    "name": "Trần Mai Hưởng",
+    "date_of_birth": "1953-03-09",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà báo, nhà thơ và nguyên Tổng giám đốc Thông tấn xã Việt Nam, có nhiều tác phẩm về chiến tranh và con người Việt Nam."
+  },
+  {
+    "name": "Nguyễn Thị Ngọc Hải",
+    "date_of_birth": "1968-07-18",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Nhà báo, nhà văn Việt Nam, nổi tiếng với các tác phẩm phóng sự và tiểu thuyết viết về cuộc sống đương đại."
+  },
+  {
+    "name": "Patrich Hogan",
+    "date_of_birth": "1951-02-22",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Giáo sư văn học và nhà nghiên cứu nhận thức người Mỹ, chuyên viết về tâm lý học văn chương và triết học nhân văn."
+  },
+  {
+    "name": "Roxie Nafousi",
+    "date_of_birth": "1990-04-30",
+    "gender": "FEMALE",
+    "country": "Anh",
+    "biography": "Tác giả và diễn giả truyền cảm hứng người Anh gốc Iraq, nổi tiếng với cuốn sách 'Manifest' về phát triển bản thân."
+  },
+  {
+    "name": "James Clear",
+    "date_of_birth": "1986-10-22",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả, diễn giả và doanh nhân người Mỹ, nổi tiếng với cuốn sách 'Atomic Habits' về thói quen và sự thay đổi tích cực."
+  },
+  {
+    "name": "M. Scott Peck",
+    "date_of_birth": "1936-05-22",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Bác sĩ tâm lý và tác giả người Mỹ, nổi tiếng với cuốn 'The Road Less Traveled' – tác phẩm kinh điển về tâm linh và tự phát triển."
+  },
+  {
+    "name": "Nguyễn Anh Dũng",
+    "date_of_birth": "1979-06-25",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và giảng viên người Việt, chuyên nghiên cứu và giảng dạy trong lĩnh vực quản trị và kỹ năng lãnh đạo."
+  },
+  {
+    "name": "Chase Hill, Scott Sharp",
+    "date_of_birth": "1990-12-05",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Hai tác giả người Mỹ, đồng sáng lập các chương trình phát triển kỹ năng cá nhân và đồng tác giả nhiều sách kỹ năng sống."
+  },
+  {
+    "name": "Lý Thượng Long",
+    "date_of_birth": "1975-05-16",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả và dịch giả người Trung Quốc, chuyên viết về triết học, lịch sử và văn hóa phương Đông."
+  },
+  {
+    "name": "Thanh Hương",
+    "date_of_birth": "1984-08-07",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả, nhà báo và biên tập viên người Việt Nam, chuyên viết về kỹ năng sống, giáo dục và phát triển cá nhân."
+  },
+  {
+    "name": "Trác Nhã",
+    "date_of_birth": "1970-02-19",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả người Trung Quốc, nổi tiếng với các tác phẩm về triết lý sống, tâm linh và thiền định hiện đại."
+  },
+  {
+    "name": "Hae Min",
+    "date_of_birth": "1973-07-12",
+    "gender": "MALE",
+    "country": "Hàn Quốc",
+    "biography": "Nhà sư và tác giả người Hàn Quốc, nổi tiếng với cuốn 'Yêu Những Điều Không Hoàn Hảo' truyền cảm hứng sống an yên."
+  },
+  {
+    "name": "Minh Niệm",
+    "date_of_birth": "1975-09-02",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Thiền sư, tác giả và diễn giả Việt Nam, sáng lập cộng đồng 'Hiểu và Thương' và tác giả của nhiều sách về chánh niệm."
+  },
+  {
+    "name": "Giản Tư Trung",
+    "date_of_birth": "1979-01-01",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà giáo dục và diễn giả Việt Nam, sáng lập Trường Doanh nhân PACE và Viện Giáo dục IRED, chuyên về triết học khai phóng."
+  },
+  {
+    "name": "Tara Westover",
+    "date_of_birth": "1986-09-30",
+    "gender": "FEMALE",
+    "country": "Mỹ",
+    "biography": "Tác giả người Mỹ, nổi tiếng với cuốn hồi ký 'Educated' kể về hành trình vượt qua tuổi thơ không được đến trường để vươn tới tri thức."
+  },
+  {
+    "name": "Mihaly Csikszentmihalyi",
+    "date_of_birth": "1934-09-29",
+    "gender": "MALE",
+    "country": "Hungary",
+    "biography": "Nhà tâm lý học người Hungary-Mỹ, người khai sinh khái niệm 'dòng chảy' (flow) trong tâm lý học tích cực."
+  },
+  {
+    "name": "Viktor E Frankl",
+    "date_of_birth": "1905-03-26",
+    "gender": "MALE",
+    "country": "Áo",
+    "biography": "Bác sĩ tâm thần và triết gia người Áo, người sáng lập liệu pháp 'logotherapy' và tác giả 'Đi tìm lẽ sống'."
+  },
+  {
+    "name": "Patrick King",
+    "date_of_birth": "1984-05-02",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả người Mỹ chuyên viết về giao tiếp, tâm lý xã hội và phát triển bản thân, nổi tiếng với phong cách thực tế, hài hước."
+  },
+  {
+    "name": "Stephen R Covey",
+    "date_of_birth": "1932-10-24",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả và nhà tư vấn người Mỹ, nổi tiếng toàn cầu với cuốn '7 Thói Quen Hiệu Quả'."
+  },
+  {
+    "name": "Trương Tiếu Hằng",
+    "date_of_birth": "1982-03-15",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả nữ người Trung Quốc, chuyên viết các sách triết lý sống và giáo dục nhân cách."
+  },
+  {
+    "name": "Dale Carnegie",
+    "date_of_birth": "1888-11-24",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả và giảng viên người Mỹ, người sáng lập phong trào đào tạo kỹ năng giao tiếp và lãnh đạo, nổi tiếng với 'Đắc nhân tâm'."
+  },
+  {
+    "name": "Phan Văn Trường",
+    "date_of_birth": "1961-02-09",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Doanh nhân, nhà giáo và tác giả Việt Nam, nổi tiếng với bộ sách 'Một đời như kẻ tìm đường' về triết lý sống và kinh doanh."
+  },
+  {
+    "name": "Từ Thính Phong",
+    "date_of_birth": "1978-11-13",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả trinh thám nổi tiếng người Trung Quốc, được mệnh danh là 'Vua truyện điều tra' của văn học đương đại Trung Hoa."
+  },
+  {
+    "name": "Morgan Housel",
+    "date_of_birth": "1984-06-17",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà văn và nhà đầu tư người Mỹ, tác giả cuốn 'The Psychology of Money' – tác phẩm kinh điển về tài chính và hành vi con người."
+  },
+  {
+    "name": "Darrell Mullis, Judith Orloff",
+    "date_of_birth": "1959-08-15",
+    "gender": "FEMALE",
+    "country": "Mỹ",
+    "biography": "Hai tác giả người Mỹ, nổi tiếng với các sách về tài chính doanh nghiệp và phát triển tâm lý cá nhân."
+  },
+  {
+    "name": "Robert Greene",
+    "date_of_birth": "1959-05-14",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả người Mỹ, chuyên viết về quyền lực, chiến lược và tâm lý học, nổi tiếng với '48 Quy luật của quyền lực'."
+  },
+  {
+    "name": "Jason Barron, MBA",
+    "date_of_birth": "1982-12-10",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả và giảng viên người Mỹ, chuyên dạy quản trị và phát triển sự nghiệp, nổi tiếng với cuốn 'The Visual MBA'."
+  },
+  {
+    "name": "T Harv Eker",
+    "date_of_birth": "1954-06-10",
+    "gender": "MALE",
+    "country": "Canada",
+    "biography": "Doanh nhân và diễn giả người Canada, tác giả cuốn 'Bí mật tư duy triệu phú' (Secrets of the Millionaire Mind), nổi tiếng với triết lý làm giàu thực tế."
+  },
+  {
+    "name": "Jim Collins",
+    "date_of_birth": "1958-01-25",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà nghiên cứu và tác giả người Mỹ, chuyên về lĩnh vực lãnh đạo và quản trị doanh nghiệp, nổi tiếng với cuốn 'Good to Great'."
+  },
+  {
+    "name": "George S Clason",
+    "date_of_birth": "1874-11-07",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả người Mỹ, nổi tiếng với cuốn 'Người giàu có nhất thành Babylon' – tác phẩm kinh điển về tài chính cá nhân."
+  },
+  {
+    "name": "Hoàng Nam Tiến",
+    "date_of_birth": "1969-12-01",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Doanh nhân và diễn giả Việt Nam, nguyên Chủ tịch FPT Telecom, nổi tiếng với phong cách lãnh đạo gần gũi và triết lý nhân văn."
+  },
+  {
+    "name": "Donald J Trump, Tony Schartz",
+    "date_of_birth": "1946-06-14",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Donald Trump – doanh nhân và cựu Tổng thống Mỹ, cùng Tony Schwartz – đồng tác giả cuốn 'The Art of the Deal', một trong những sách kinh doanh bán chạy nhất thế giới."
+  },
+  {
+    "name": "Napoleon Hill",
+    "date_of_birth": "1883-10-26",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả và triết gia người Mỹ, người tiên phong trong lĩnh vực tư duy thành công, nổi tiếng với 'Think and Grow Rich'."
+  },
+  {
+    "name": "George Samuel Clason",
+    "date_of_birth": "1874-11-07",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả và doanh nhân người Mỹ, đồng thời là người viết 'Người giàu có nhất thành Babylon', một cuốn sách tài chính kinh điển."
+  },
+  {
+    "name": "Lâm Minh Chánh",
+    "date_of_birth": "1972-04-16",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Doanh nhân, giảng viên và tác giả Việt Nam, nổi tiếng với những bài viết chia sẻ kinh nghiệm khởi nghiệp và đầu tư."
+  },
+  {
+    "name": "Og Mandino",
+    "date_of_birth": "1923-12-12",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Tác giả người Mỹ, tác giả cuốn 'The Greatest Salesman in the World', truyền cảm hứng về niềm tin và nghị lực sống."
+  },
+  {
+    "name": "David Anderson, Dennis Sweney, Thomas Williams",
+    "date_of_birth": "1960-02-02",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhóm tác giả người Mỹ, chuyên viết về quản lý doanh nghiệp, tổ chức phi lợi nhuận và phát triển con người."
+  },
+  {
+    "name": "David Clark, Mary Buffett",
+    "date_of_birth": "1952-07-11",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Hai tác giả người Mỹ, đồng tác giả các sách về đầu tư giá trị dựa trên triết lý của Warren Buffett."
+  },
+  {
+    "name": "Philip Kotler, Hermawan Kartajaya, Iwan Setiawan",
+    "date_of_birth": "1931-05-27",
+    "gender": "MALE",
+    "country": "Mỹ, Indonesia",
+    "biography": "Bộ ba chuyên gia marketing toàn cầu, tác giả của loạt sách 'Marketing 4.0' và 'Marketing 5.0' mang tính định hướng cho thời đại số."
+  },
+  {
+    "name": "Neil Postman",
+    "date_of_birth": "1931-03-08",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Giáo sư truyền thông người Mỹ, nổi tiếng với cuốn 'Amusing Ourselves to Death' phê phán ảnh hưởng của truyền hình và công nghệ."
+  },
+  {
+    "name": "Ajay Agrawal, Joshua Gans, Avi Goldfarb",
+    "date_of_birth": "1973-04-19",
+    "gender": "MALE",
+    "country": "Canada",
+    "biography": "Ba giáo sư kinh tế và AI người Canada, tác giả cuốn 'Prediction Machines' về tác động của trí tuệ nhân tạo trong kinh doanh."
+  },
+  {
+    "name": "John Perkins",
+    "date_of_birth": "1945-01-28",
+    "gender": "MALE",
+    "country": "Mỹ",
+    "biography": "Nhà kinh tế và tác giả người Mỹ, nổi tiếng với cuốn hồi ký 'Confessions of an Economic Hit Man' về trải nghiệm của ông trong các tập đoàn quốc tế."
+  },
+  {
+    "name": "Tiffani Bova",
+    "date_of_birth": "1972-03-14",
+    "gender": "FEMALE",
+    "country": "Mỹ",
+    "biography": "Nhà chiến lược kinh doanh người Mỹ, hiện là chuyên gia tăng trưởng toàn cầu tại Salesforce, tác giả cuốn 'Growth IQ'."
+  },
+  {
+    "name": "Chu Lai",
+    "date_of_birth": "1946-12-05",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà văn, nhà biên kịch Việt Nam, nổi tiếng với các tác phẩm viết về chiến tranh và con người sau chiến tranh."
+  },
+  {
+    "name": "Little Rainbow",
+    "date_of_birth": "1995-09-03",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả trẻ người Việt, nổi bật với các tác phẩm văn học nhẹ nhàng và cảm xúc về tuổi trẻ và tình yêu."
+  },
+  {
+    "name": "Fredrik Backman",
+    "date_of_birth": "1981-06-02",
+    "gender": "MALE",
+    "country": "Thụy Điển",
+    "biography": "Nhà văn người Thụy Điển, nổi tiếng với các tiểu thuyết 'A Man Called Ove' và 'Beartown' mang đậm yếu tố nhân văn."
+  },
+  {
+    "name": "Paulo Coelho",
+    "date_of_birth": "1947-08-24",
+    "gender": "MALE",
+    "country": "Brazil",
+    "biography": "Tiểu thuyết gia người Brazil, tác giả cuốn 'Nhà giả kim' – một trong những tác phẩm bán chạy nhất thế giới."
+  },
+  {
+    "name": "Phạm Lữ Ân",
+    "date_of_birth": "1982-01-10",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà văn và biên kịch Việt Nam, nổi tiếng với các tác phẩm văn học hiện đại viết cho giới trẻ như 'Nếu biết trăm năm là hữu hạn'."
+  },
+  {
+    "name": "Madeline Miller",
+    "date_of_birth": "1978-07-24",
+    "gender": "FEMALE",
+    "country": "Mỹ",
+    "biography": "Nhà văn người Mỹ, nổi tiếng với các tiểu thuyết dựa trên thần thoại Hy Lạp như 'The Song of Achilles' và 'Circe'."
+  },
+  {
+    "name": "Tuế Kiến",
+    "date_of_birth": "1986-08-09",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả người Trung Quốc, chuyên viết truyện ngắn và tiểu thuyết đương đại, nổi bật với phong cách sâu lắng, triết lý."
+  },
+  {
+    "name": "José Mauro de Vasconcelos",
+    "date_of_birth": "1920-02-26",
+    "gender": "MALE",
+    "country": "Brazil",
+    "biography": "Nhà văn người Brazil, tác giả cuốn 'Cây cam ngọt của tôi', một kiệt tác về tuổi thơ và tình người."
+  },
+  {
+    "name": "Kulzsc",
+    "date_of_birth": "1997-04-18",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và họa sĩ minh họa trẻ người Việt, nổi tiếng trên mạng xã hội với các tác phẩm truyền cảm hứng về cảm xúc và chữa lành."
+  },
+  {
+    "name": "Mộc Trầm",
+    "date_of_birth": "1990-10-09",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả Việt Nam chuyên viết tản văn và tiểu thuyết nhẹ nhàng, hướng đến độc giả trẻ yêu thích lối sống chậm."
+  },
+  {
+    "name": "Đặng Thùy Trâm",
+    "date_of_birth": "1942-11-26",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Bác sĩ và liệt sĩ, tác giả cuốn nhật ký 'Nhật ký Đặng Thùy Trâm' ghi lại những ngày tháng chiến đấu ở chiến trường Quảng Ngãi."
+  },
+  {
+    "name": "Nguyễn Nhật Ánh",
+    "date_of_birth": "1955-05-07",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà văn nổi tiếng Việt Nam, chuyên viết cho tuổi học trò, tác giả của nhiều tác phẩm được yêu thích như 'Mắt biếc' và 'Cho tôi xin một vé đi tuổi thơ'."
+  },
+  {
+    "name": "Jeffrey Archer",
+    "date_of_birth": "1940-04-15",
+    "gender": "MALE",
+    "country": "Anh",
+    "biography": "Tiểu thuyết gia và chính trị gia người Anh, tác giả của nhiều tác phẩm bán chạy như 'Kane and Abel'."
+  },
+  {
+    "name": "Lam",
+    "date_of_birth": "1993-09-09",
+    "gender": "FEMALE",
+    "country": "Việt Nam",
+    "biography": "Tác giả và nghệ sĩ minh họa trẻ người Việt, nổi bật với phong cách viết và vẽ nhẹ nhàng, hướng đến cảm xúc và cuộc sống giản dị."
+  },
+  {
+    "name": "Hector Malot",
+    "date_of_birth": "1830-05-20",
+    "gender": "MALE",
+    "country": "Pháp",
+    "biography": "Nhà văn Pháp, nổi tiếng với tiểu thuyết kinh điển 'Không gia đình' (Sans Famille) – câu chuyện cảm động về tình người và nghị lực sống."
+  },
+  {
+    "name": "Nguyễn Văn Thạc, Đặng Vương Hưng",
+    "date_of_birth": "1952-10-20",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nguyễn Văn Thạc – liệt sĩ và tác giả 'Mãi mãi tuổi 20'; Đặng Vương Hưng – nhà văn, biên tập viên biên soạn lại tác phẩm từ nhật ký chiến tranh."
+  },
+  {
+    "name": "Yoshichi Shimada",
+    "date_of_birth": "1940-08-05",
+    "gender": "MALE",
+    "country": "Nhật Bản",
+    "biography": "Tác giả, nhà biên kịch và nghệ sĩ người Nhật Bản, nổi tiếng với truyện thiếu nhi và phim hoạt hình nhân văn như 'Ngôi trường Totto-chan'."
+  },
+  {
+    "name": "H!koro Studio",
+    "date_of_birth": "2015-01-01",
+    "gender": "ORGANIZATION",
+    "country": "Nhật Bản",
+    "biography": "Nhóm sáng tạo Nhật Bản chuyên sản xuất truyện tranh và minh họa kỹ thuật số với phong cách đáng yêu và truyền cảm hứng tích cực."
+  },
+  {
+    "name": "Sunsunsun, Momoco",
+    "date_of_birth": "1989-11-12",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Cặp tác giả – họa sĩ minh họa người Nhật, nổi tiếng với series truyện nhẹ nhàng và ấm áp về tình bạn và cuộc sống."
+  },
+  {
+    "name": "Bảo Ninh",
+    "date_of_birth": "1952-10-18",
+    "gender": "MALE",
+    "country": "Việt Nam",
+    "biography": "Nhà văn Việt Nam, tác giả tiểu thuyết 'Nỗi buồn chiến tranh', được coi là một trong những cây bút văn học hiện đại tiêu biểu sau chiến tranh."
+  },
+  {
+    "name": "Kuroyanagi Tetsuko",
+    "date_of_birth": "1933-08-09",
+    "gender": "FEMALE",
+    "country": "Nhật Bản",
+    "biography": "Nữ diễn viên, người dẫn chương trình và tác giả Nhật Bản, nổi tiếng với cuốn 'Totto-chan: Cô bé bên cửa sổ' – tác phẩm giáo dục kinh điển."
+  },
+  {
+    "name": "Quất Tử Bất Toan",
+    "date_of_birth": "1985-04-02",
+    "gender": "MALE",
+    "country": "Trung Quốc",
+    "biography": "Tác giả người Trung Quốc, nổi bật với phong cách viết châm biếm, sâu sắc và nhân văn, thường khai thác đề tài xã hội hiện đại."
+  },
+  {
+    "name": "Thương Thái Vi",
+    "date_of_birth": "1983-07-16",
+    "gender": "FEMALE",
+    "country": "Trung Quốc",
+    "biography": "Nhà văn nữ nổi tiếng Trung Quốc, tác giả của nhiều tiểu thuyết lãng mạn và cổ trang, được yêu thích trong cộng đồng độc giả trẻ châu Á."
+  }
+]

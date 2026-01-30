@@ -1,0 +1,7 @@
+backend_container_name: "backend-app"
+backend_image_repo: "toannd135/bookshop-backend"
+backend_image_version: "v4"
+backend_local_port: 8080
+backend_container_port: 8080
+spring_env: "development"
+java_memory_opts: "-Xms256m -Xmx512m"

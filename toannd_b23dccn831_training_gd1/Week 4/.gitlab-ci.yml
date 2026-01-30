@@ -1,0 +1,67 @@
+stages:
+  - build
+  - deploy
+
+before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+
+# ======== BUILD IMAGES ========
+build_frontend:
+  stage: build
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE/frontend:latest" -f frontend/Dockerfile frontend/
+    - docker push "$CI_REGISTRY_IMAGE/frontend:latest"
+  tags:
+    - dev-server
+
+build_backend:
+  stage: build
+  script:
+    - docker build -t "$CI_REGISTRY_IMAGE/backend:latest" -f backend/Dockerfile backend/
+    - docker push "$CI_REGISTRY_IMAGE/backend:latest"
+  tags:
+    - dev-server
+# ======== DEPLOY STAGING ========
+deploy_staging:
+  stage: deploy
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan "$SERVER_HOST" >> ~/.ssh/known_hosts
+  script:
+    - ssh "$SERVER_USER@$SERVER_HOST" "
+        echo '$CI_REGISTRY_PASSWORD' | docker login -u '$CI_REGISTRY_USER' --password-stdin $CI_REGISTRY &&
+        echo '$SUDO_PASS' | sudo -S cp -r /home/gitlab-runner/builds/HTy413qga/0/'$CI_REGISTRY_USER'/'$PROJECT_NAME' /home &&
+        echo '$SUDO_PASS' | sudo -S chown -R "$SERVER_USER:$SERVER_USER" /home/'$PROJECT_NAME' &&
+        cd /home/'$PROJECT_NAME' &&
+        docker compose pull &&
+        docker compose up -d
+      "
+  tags:
+    - dev-server
+  only:
+    - develop
+
+# ======== DEPLOY PRODUCTION========
+deploy_production:
+  stage: deploy
+  when: manual
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan "$SERVER_HOST" >> ~/.ssh/known_hosts
+  script:
+    - ssh "$SERVER_USER@$SERVER_HOST" "
+        echo '$CI_REGISTRY_PASSWORD' | docker login -u '$CI_REGISTRY_USER' --password-stdin $CI_REGISTRY &&
+        echo '$SUDO_PASS' | sudo -S cp -r /home/gitlab-runner/builds/HTy413qga/0/'$CI_REGISTRY_USER'/'$PROJECT_NAME' /home &&
+        echo '$SUDO_PASS' | sudo -S chown -R "$SERVER_USER:$SERVER_USER" /home/'$PROJECT_NAME' &&
+        cd /home/'$PROJECT_NAME' &&
+        docker compose pull &&
+        docker compose up -d
+      "
+  tags:
+    - dev-server
+  only:
+    - main

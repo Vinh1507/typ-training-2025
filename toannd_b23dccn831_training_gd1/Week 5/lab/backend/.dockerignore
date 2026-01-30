@@ -1,0 +1,25 @@
+# Gradle cache & build
+.gradle/
+build/
+
+# Wrapper (đừng ignore file jar của wrapper)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Node (nếu có trong project)
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Logs & temp
+*.log
+*.tmp
+
+# OS junk
+.DS_Store
