@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang cá nhân - Nguyễn Vĩnh Tùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>Thông tin cá nhân</header>
+        <section class="avatar">
+            <img src="avatar.jpg" alt="Ảnh Vĩnh Tùng cực kì đẹp trai và dễ thương" class="disc-avatar">
+            <audio id="song" src="KHÔNG BUÔNG mix 1_2 - lucnhatkha - SoundLoadMate.com.mp3" preload="auto"></audio>
+        </section>
+        <section class="introduction">
+            <p>Tên: Nguyễn Vĩnh Tùng</p>
+            <p>Tuổi: 20</p>
+            <p>Nghề nghiệp: Sinh viên</p>
+            <p>Trường: Học viện Công nghệ Bưu chính Viễn thông</p>
+            <p>Mô tả: Em là một sinh viên năm ba đang được training tại team TYP dev. Em là
+                một người năng động, hiền lành, đẹp trai. Em rất thích học hỏi những điều mới và 
+                luôn cố gắng hoàn thiện bản thân mỗi ngày. Hi vọng trong tương lai em sẽ trở thành một
+                lập trình viên giỏi để có thể đóng góp cho xã hội nhiều hơn. Rất mong nhận được sự giúp đỡ
+                từ các anh chị trong quá trình làm việc và học tập sắp tới.
+            </p>
+        </section>
+        <section class="skills and hobby">
+            <h2>Kĩ năng</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Biết chút về ReactJS</li>
+                <li>Biết chút về FastAPI</li>
+            </ul>
+            <h2 style="margin-top: 30px;">Sở thích</h2>
+            <ul>
+                <li>Chơi game</li>
+                <li>Xem phim</li>
+                <li>Nghe nhạc</li>
+                <li>Đánh cầu lông</li>
+                <li>Đá bóng</li>
+            </ul>
+        </section>
+        <section class="education and experience">
+            <table border="1">
+                <caption>HỒ SƠ</caption>
+                
+                <thead>
+                    <tr>
+                        <th>Danh mục</th>
+                        <th>Thời gian</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td rowspan="3" class="category">Học vấn</td>
+                        <td class="time">2023 - nay</td>
+                        <td>
+                            Sinh viên Học viện Công nghệ Bưu chính viễn thông
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="time">2024</td>
+                        <td>
+                            Chứng chỉ SamSung Algorithms 2024
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="time">2025</td>
+                        <td>
+                            Giải khuyến khích kì thi ICPC PTIT 2025
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="category">Kinh nghiệm</td>
+                        <td class="time">2024</td>
+                        <td>
+                            Xây dựng trò chơi TETRIS sử dụng ngôn ngữ C++<br>
+                            <a href="https://github.com/VinhTungg/TETRIS" target="_blank">TETRIS</a>
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="contact">
+            <h2>Liên hệ với tôi</h2>
+            <form action="https://www.w3schools.com/action_page.php" method="post" target="_blank" id="contactForm">
+                <label for="fname">Họ và tên:</label>
+                <input type="text" id="fname" name="fname" placeholder="Nhập tên của bạn" required>
+                
+                <label for="age">Tuổi</label>
+                <input type="number" id="age" name="age" placeholder="Nhập tuổi của bạn" required min="1" max="150">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+
+                <label for="message">Tin nhắn:</label>
+                <textarea name="message" id="message" placeholder="Nhập tin nhắn của bạn" required></textarea>
+                <button type="submit">Gửi thông tin</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

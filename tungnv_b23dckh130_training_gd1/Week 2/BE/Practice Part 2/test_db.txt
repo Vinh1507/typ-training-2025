@@ -1,0 +1,6 @@
+Item(name="Laptop Dell XPS 13", price=25000000, description="Laptop cao cap cho lap trinh vien"),
+Item(name="iPhone 15 Pro", price=29000000, description="Dien thoai thong minh moi nhat"),
+Item(name="MacBook Pro M3", price=45000000, description="Laptop chuyen nghiep cho developers"),
+Item(name="AirPods Pro", price=6000000, description="Tai nghe khong day chong on"),
+Item(name="Magic Mouse", price=2500000, description="Chuot khong day cua Apple"),
+

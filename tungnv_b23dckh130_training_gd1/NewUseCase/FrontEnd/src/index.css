@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.page-transition {
+    animation: fadeInSlide 0.5s ease-out forwards; /* Chạy trong 0.5 giây */
+}

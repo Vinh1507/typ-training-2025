@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nguyễn Vĩnh Tùng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>Portfolio - Nguyễn Vĩnh Tùng</header>
+        <nav>
+            <ul>
+                <li><a href="#introduction">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#education">Học vấn & Kinh nghiệm</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>        
+        <section id="introduction" class="introduction">
+            <img src="avatar.jpg" alt="Ảnh Vĩnh Tùng" class="avatar">
+            <h1>Xin chào! Tôi là Vĩnh Tùng</h1>
+            <p class="intro-text">
+                Sinh viên năm ba tại Học viện Công nghệ Bưu chính Viễn thông, 
+                đang training tại team TYP dev. Tôi đam mê lập trình web và 
+                luôn học hỏi những công nghệ mới.
+            </p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Kỹ năng</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>ReactJS</li>
+                <li>FastAPI</li>
+                <li>C++</li>
+                <li>Git & GitHub</li>
+            </ul>
+            
+            <h2 style="margin-top: 30px;">Sở thích</h2>
+            <ul>
+                <li>Chơi game</li>
+                <li>Xem phim</li>
+                <li>Nghe nhạc</li>
+                <li>Đánh cầu lông</li>
+                <li>Đá bóng</li>
+            </ul>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Học vấn & Kinh nghiệm</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Danh mục</th>
+                        <th>Thời gian</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td rowspan="3" class="category">Học vấn</td>
+                        <td class="time">2023 - nay</td>
+                        <td>Sinh viên Học viện Công nghệ Bưu chính viễn thông</td>
+                    </tr>
+                    <tr>
+                        <td class="time">2024</td>
+                        <td>Chứng chỉ SamSung Algorithms 2024</td>
+                    </tr>
+                    <tr>
+                        <td class="time">2025</td>
+                        <td>Giải khuyến khích kì thi ICPC PTIT 2025</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="category">Kinh nghiệm</td>
+                        <td class="time">2024</td>
+                        <td>
+                            Xây dựng trò chơi TETRIS sử dụng ngôn ngữ C++<br>
+                            <a href="https://github.com/VinhTungg/TETRIS" target="_blank">TETRIS</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Liên hệ với tôi</h2>
+            
+            <form>
+                <label>Họ và tên:</label>
+                <input type="text" placeholder="Nhập tên của bạn" required>
+                
+                <label>Tuổi:</label>
+                <input type="number" placeholder="Nhập tuổi của bạn" required>
+
+                <label>Email:</label>
+                <input type="email" placeholder="Nhập email của bạn" required>
+
+                <label>Tin nhắn:</label>
+                <textarea placeholder="Nhập tin nhắn của bạn" required></textarea>
+                
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về tôi</h3>
+                    <p>Sinh viên năm 3 tại PTIT, đam mê lập trình và công nghệ.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liên kết</h3>
+                    <ul>
+                        <li><a href="#hero">Trang chủ</a></li>
+                        <li><a href="#skills">Kỹ năng</a></li>
+                        <li><a href="#education">Học vấn</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/VinhTungg" target="_blank">GitHub</a>
+                        <a href="https://www.facebook.com/nguyen.vinhtung.0707/" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/_vinhgnut_" target="_blank">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nguyễn Vĩnh Tùng. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
