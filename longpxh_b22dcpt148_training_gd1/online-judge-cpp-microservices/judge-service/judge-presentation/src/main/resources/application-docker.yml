@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: judge-service
+  cloud:
+    config:
+      enabled: false
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:postgresql://auth-db:5432/judge_db
+    username: auth-user
+    password: auth@123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    hostname: judge-service
+    instance-id: ${spring.application.name}:${random.value}

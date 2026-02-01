@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://auth-db:5432/auth-db
+    username: auth-user
+    password: auth@123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  cloud:
+    config:
+      enabled: false
+
+# Eureka Client Configuration
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.value}
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

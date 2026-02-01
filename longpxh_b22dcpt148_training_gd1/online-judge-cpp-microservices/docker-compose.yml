@@ -1,0 +1,167 @@
+
+services:
+
+  auth-db:
+    container_name: auth-db
+    image: 'postgres:15.15'
+    environment:
+      POSTGRES_USER: auth-user
+      POSTGRES_PASSWORD: auth@123
+      POSTGRES_DB: auth-db
+    volumes:
+      - 'auth-data:/var/lib/postgresql/data'
+    ports:
+      - '15433:5432'
+    networks:
+      - oj-cpp
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: 'rabbitmq:3-management'
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    networks:
+      - oj-cpp
+
+
+  discovery-service:
+    container_name: discovery-service
+    build:
+      context: ./discovery-service
+      dockerfile: Dockerfile
+    image: discovery-service
+    ports:
+      - '18761:8761'
+    networks:
+      - oj-cpp
+
+
+  config-service:
+    container_name:  config-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - GITLAB_TOKEN=${GITLAB_TOKEN}
+    build:
+      context: ./config-service
+      dockerfile: Dockerfile
+    image: config-service
+    ports:
+      - '18888:8888'
+    depends_on:
+      - discovery-service
+    networks:
+      - oj-cpp
+
+  auth-service:
+    container_name: auth-service
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JWT_SECRET=${JWT_SECRET}
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    image: auth-service
+    ports:
+      - '18081:8081'
+    depends_on:
+      - auth-db
+      - discovery-service
+      - config-service
+    networks:
+      - oj-cpp
+
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    image: api-gateway
+    ports:
+      - '18080:8080'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_WEB=DEBUG
+    depends_on:
+      - discovery-service
+      - config-service
+    networks:
+      - oj-cpp
+
+  core-service:
+    container_name: core-service
+    build:
+      context: ./core-service
+      dockerfile: Dockerfile
+    image: core-service
+    ports:
+      - '18082:8082'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+    volumes:
+      - 'testcase-data:/data/testcases'
+    depends_on:
+      - auth-db
+      - discovery-service
+      - config-service
+    networks:
+      - oj-cpp
+
+  submission-service:
+    container_name: submission-service
+    build:
+      context: ./submission-service
+      dockerfile: Dockerfile
+    image: submission-service
+    ports:
+      - '18083:8083'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - auth-db
+      - discovery-service
+      - config-service
+      - rabbitmq
+    networks:
+      - oj-cpp
+
+  judge-service:
+    container_name: judge-service
+    build:
+      context: ./judge-service
+      dockerfile: Dockerfile
+    image: judge-service
+    ports:
+      - '18084:8084'
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JWT_SECRET=${JWT_SECRET}
+      - JWT_SECRET=${JWT_SECRET}
+    volumes:
+      - 'testcase-data:/data/testcases'
+    depends_on:
+      - auth-db
+      - discovery-service
+      - config-service
+      - rabbitmq
+    networks:
+      - oj-cpp
+
+
+networks:
+  oj-cpp:
+    driver: bridge
+
+volumes:
+  auth-data:
+  testcase-data:
+
+
+

@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://auth-db:5432/submission_db
+    username: auth-user
+    password: auth@123
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  cloud:
+    config:
+      enabled: false
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
+jwt:
+  secret: ${JWT_SECRET}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+    hostname: submission-service
+    instance-id: ${spring.application.name}:${random.value}
