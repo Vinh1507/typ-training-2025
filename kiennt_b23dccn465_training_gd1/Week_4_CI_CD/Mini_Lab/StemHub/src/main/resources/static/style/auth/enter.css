@@ -1,0 +1,94 @@
+/* Login Page Specific Styles */
+.password-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.btn-password-toggle {
+    background: none;
+    border: none;
+    color: #6c757d;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-password-toggle:hover {
+    color: #006056;
+}
+
+.forgot-password-link {
+    font-size: 0.9rem;
+    color: #006056;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.forgot-password-link:hover {
+    color: #005249; /* Màu tối hơn một chút để tạo hiệu ứng hover */
+    text-decoration: underline;
+}
+
+/* Form validation styles */
+.form-control.is-valid {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.15);
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+}
+
+.invalid-feedback {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+
+.form-control.is-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Loading state */
+.btn-loading span {
+    opacity: 0;
+}
+
+/* Social login hover effects */
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced form floating labels */
+.form-floating > label i {
+    opacity: 0.7;
+}
+
+.form-floating.focused > label i,
+.form-floating:focus-within > label i {
+    opacity: 1;
+    color: #006056;
+}
+
+/* Animation for form elements */
+.form-floating {
+}
+
+.form-floating:nth-child(2) { }
+.form-floating:nth-child(3) { }
+.form-floating:nth-child(4) { }
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
