@@ -742,7 +742,7 @@ Có hai loại Docker Registry chính:
     * Sử dụng các dịch vụ Registry riêng tư trên cloud (GCR, ECR, ACR).
 ### 2.2.5. Docker Network
 **Docker Network** là cơ chế cho phép các container (và máy chủ Docker) giao tiếp với nhau và với thế giới bên ngoài. Docker sửs dụng các "trình điều khiển" (drivers) mạng để tạo ra các loại mạng khác nhau, tùy thuộc vào nhu cầu của bạn.
-Có một số loại mạng phổ biến :
+Có một số loại mạng phổ biến:
 
 #### a. Bridge (Mặc định)
 
