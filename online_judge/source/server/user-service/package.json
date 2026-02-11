@@ -1,0 +1,22 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "User management and authentication service for online judge",
+  "main": "user.js",
+  "scripts": {
+    "start": "node user.js",
+    "dev": "nodemon user.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^5.7.0",
+    "node": "^25.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
