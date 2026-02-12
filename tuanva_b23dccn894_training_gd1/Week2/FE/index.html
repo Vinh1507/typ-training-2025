@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Anh Tuấn - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!--  Added sticky navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Trang Chủ</a></li>
+            <li><a href="#skills">Kỹ Năng</a></li>
+            <li><a href="#experience">Kinh Nghiệm</a></li>
+            <li><a href="#contact">Liên Hệ</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <img src="images/check.jpg"Ảnh đại diện của Vũ Anh Tuấn">
+        <h1>Vũ Anh Tuấn</h1>
+        <p class="title">Lập trình viên Web</p>
+        <!-- <p>Đam mê phát triển web và giải quyết các vấn đề phức tạp thông qua công nghệ</p> -->
+    </header>
+
+    <main>
+        <!--  Added id for navigation -->
+        <section id="skills">
+            <h2>Kỹ Năng & Sở Thích</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>Frontend</strong>
+                    <ul>
+                        <li>HTML5, CSS3, JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <strong>Backend</strong>
+                    <ul>
+                        <li>Spring boot</li>
+                        <li>MySQL</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <strong>Sở Thích</strong>
+                    <ul>
+                        <li>Lập trình</li>
+                        <li>Đọc sách công nghệ</li>
+                        <li>Chơi thể thao</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--  Added id for navigation -->
+        <section id="experience">
+            <h2>Học Vấn & Kinh Nghiệm</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Năm</th>
+                        <th>Vị Trí / Học Vấn</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-2024</td>
+                        <td>Học viện Công nghệ bưu chính viễn thông</td>
+                        <td>Chuyên ngành Công nghệ thông tin, GPA: 3.7/4.0</td>
+                    </tr>
+                    <tr>
+                        <td>2024-2025</td>
+                        <td>Lập trình viên Backend</td>
+                        <td>Công ty ABC Tech </td>
+                    </tr>
+                    <tr>
+                        <td>2025-Hiện tại</td>
+                        <td>Lập trình viên Full Stack</td>
+                        <td>Công ty XYZ Solutions - Phát triển ứng dụng web toàn diện</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!--  Added id for navigation -->
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Họ Tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nội Dung</label>
+                    <textarea id="message" name="message" placeholder="Nhập nội dung tin nhắn của bạn" required></textarea>
+                </div>
+
+                <button type="submit">Gửi Tin Nhắn</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vũ Anh Tuấn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
