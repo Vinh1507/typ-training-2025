@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="498921ad-37f8-48d3-ae53-668043a61aad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/typ-training-2025.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/BEWeb.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Cloud.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.41.56 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.45.14 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.45.58 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.47.10 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.49.09 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.49.40 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.50.18 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.50.59 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.54.38 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.55.19 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.55.58 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/Screenshot 2025-11-02 at 1.56.33 AM.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1/cu-phap-trigger-sql.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/BEWeb.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/Cloud.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/java/com/example/TYP_training/TypTrainingApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/java/com/example/TYP_training/controller/StudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/java/com/example/TYP_training/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/java/com/example/TYP_training/repository/StudentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/java/com/example/TYP_training/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_2/TYP-training/src/test/java/com/example/TYP_training/TypTrainingApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="34t9EBUHDxQjpAbobTs7nvNa3F4" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/apple/DevTYPTIT/typ-training-2025",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/nhathh_b23dvcn121_training_gd1/week_1" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TypTrainingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="TYP-training" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.TYP_training.TypTrainingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="498921ad-37f8-48d3-ae53-668043a61aad" name="Changes" comment="" />
+      <created>1762021887084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762021887084</updated>
+      <workItem from="1762021888632" duration="13728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
