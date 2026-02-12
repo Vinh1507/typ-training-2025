@@ -1,0 +1,80 @@
+# Các Lý Thuyết Backend Quan Trọng về Bảo Mật và Phiên
+
+## 1. Authentication (Xác thực)
+
+**Xác thực (Authentication)** là quá trình **chứng minh danh tính** của người dùng, dịch vụ, hoặc ứng dụng.
+
+* Nó trả lời câu hỏi: **"Bạn là ai?"**
+* Quá trình này thường liên quan đến việc người dùng cung cấp thông tin đăng nhập (như **tên người dùng** và **mật khẩu**), và hệ thống kiểm tra xem thông tin đó có khớp với thông tin lưu trữ hay không.
+* **Ví dụ:** Đăng nhập vào một website bằng email và mật khẩu.
+
+---
+
+## 2. Authorization (Phân quyền)
+
+**Phân quyền (Authorization)** là quá trình **cấp quyền truy cập** cho một danh tính đã được xác thực để thực hiện các hành động hoặc truy cập các tài nguyên cụ thể.
+
+* Nó trả lời câu hỏi: **"Bạn được phép làm gì?"**
+* Quá trình này diễn ra **sau khi** người dùng đã được xác thực thành công.
+* **Ví dụ:** Một người dùng là **Admin** được phép xóa bài viết, trong khi người dùng là **User** chỉ được phép xem bài viết.
+
+---
+
+## 3. Session-based (Dựa trên Phiên)
+
+**Session-based Authentication** là phương pháp xác thực truyền thống, trong đó trạng thái của người dùng được **lưu trữ trên server**.
+
+* **Cách hoạt động:**
+    1.  Người dùng đăng nhập thành công.
+    2.  Server tạo một **Session** (Phiên) và lưu trữ thông tin về người dùng trong Session đó.
+    3.  Server gửi lại cho client một **Session ID** (thường dưới dạng **Cookie**).
+    4.  Trong các request tiếp theo, client gửi Session ID (trong Cookie) cho server.
+    5.  Server tra cứu Session ID trong bộ nhớ/database để xác định người dùng.
+* **Ưu điểm:** Dễ triển khai, dễ dàng thu hồi phiên ngay lập tức.
+* **Nhược điểm:**
+    * **Khó mở rộng (Scalability):** Yêu cầu chia sẻ trạng thái phiên giữa các server (cần Sticky Sessions hoặc sử dụng kho lưu trữ phiên bên ngoài như Redis).
+    * **Tốn tài nguyên server:** Phải lưu trữ thông tin phiên cho mọi người dùng đang hoạt động.
+
+---
+
+## 4. Token-based (Dựa trên Token)
+
+**Token-based Authentication** là phương pháp xác thực hiện đại, trong đó trạng thái của người dùng được **lưu trữ trong token** (không lưu trữ trên server). Đây là một cách tiếp cận **Stateless** (phi trạng thái).
+
+* **Cách hoạt động:**
+    1.  Người dùng đăng nhập thành công.
+    2.  Server tạo ra một **Token** (chứa thông tin nhận dạng người dùng) và ký điện tử (sign) token đó.
+    3.  Server gửi Token về cho client.
+    4.  Trong các request tiếp theo, client gửi Token (thường trong Header `Authorization: Bearer <token>`) cho server.
+    5.  Server **xác minh chữ ký** của Token và trích xuất thông tin người dùng từ Token.
+* **Ưu điểm:**
+    * **Mở rộng dễ dàng (Scalability):** Server không cần lưu trữ trạng thái (Stateless).
+    * **Hỗ trợ đa nền tảng:** Token có thể được sử dụng bởi các ứng dụng di động, web, và các dịch vụ khác.
+* **Nhược điểm:**
+    * **Không thể thu hồi ngay lập tức:** Trừ khi sử dụng danh sách đen (Blacklist) hoặc cơ chế làm mới phức tạp.
+
+---
+
+## 5. JWT là gì? (JSON Web Token)
+
+**JWT (JSON Web Token)** là một **tiêu chuẩn mở (RFC 7519)** định nghĩa cách thức truyền tải thông tin một cách **an toàn** giữa các bên dưới dạng một đối tượng **JSON**. Nó là hình thức phổ biến nhất của **Token** trong Token-based Authentication.
+
+* JWT được cấu tạo bởi **ba phần** được ngăn cách bằng dấu chấm (`.`):
+
+    1.  **Header (Tiêu đề):** Chứa loại token (thường là JWT) và thuật toán mã hóa được sử dụng (ví dụ: HMAC SHA256, RSA).
+    2.  **Payload (Tải trọng):** Chứa các "Claims" (khẳng định). Claims là các thông tin về người dùng và các siêu dữ liệu khác (như ID người dùng, vai trò, thời gian hết hạn `exp`). **Lưu ý: Payload KHÔNG được mã hóa, chỉ được ký điện tử, nên không chứa thông tin nhạy cảm.**
+    3.  **Signature (Chữ ký):** Được tạo ra bằng cách mã hóa (hashing) Header, Payload, và một **Secret Key** (Khóa bí mật) chỉ có server biết. Server dùng chữ ký này để **xác minh tính toàn vẹn** của Token (đảm bảo nó không bị thay đổi).
+
+* **Cấu trúc ví dụ:** `xxxxx.yyyyy.zzzzz`
+
+---
+
+## 6. Lợi ích của JWT
+
+JWT mang lại nhiều lợi ích quan trọng cho kiến trúc backend hiện đại:
+
+* **Stateless và Khả năng Mở rộng (Scalability):** Server không cần lưu trữ trạng thái phiên, giúp dễ dàng mở rộng theo chiều ngang (thêm nhiều server) mà không cần phức tạp hóa việc đồng bộ phiên.
+* **Tự chứa thông tin (Self-contained):** Token chứa tất cả thông tin cần thiết về người dùng trong Payload (vai trò, ID), giảm thiểu việc truy vấn cơ sở dữ liệu cho mỗi request.
+* **Tính bảo mật (Security):** Chữ ký số đảm bảo tính **toàn vẹn** của token. Bất kỳ sự thay đổi nào đối với Header hoặc Payload sẽ làm cho chữ ký không hợp lệ, và server sẽ từ chối token đó.
+* **Hỗ trợ nhiều bên/dịch vụ (Cross-domain/Microservices):** JWT hoạt động tốt trong kiến trúc Microservices. Một dịch vụ có thể tạo JWT và dịch vụ khác có thể xác minh nó (miễn là cả hai đều biết Khóa bí mật chung).
+* **Dễ dàng truyền tải:** JWT thường nhỏ gọn và dễ dàng truyền qua các tiêu đề HTTP, tham số truy vấn hoặc trong phần body của POST request.

@@ -1,0 +1,111 @@
+# Kiến Thức Cốt Lõi cho Chuyên Gia Frontend (JavaScript)
+
+## 1. Kiến Thức Cơ Bản về Ngôn ngữ (JS Fundamentals)
+
+Để làm chủ frontend, bạn phải nắm vững các cấu trúc cơ bản của JavaScript:
+
+* **Biến (Variables):** Dùng để lưu trữ dữ liệu. Gồm `var` (ít dùng), `let` (có thể gán lại), và `const` (bất biến, dùng cho hầu hết các trường hợp).
+* **Vòng lặp (Loops):** Lặp lại một khối lệnh nhiều lần. Các loại phổ biến: `for`, `while`, `do...while`, và các vòng lặp chuyên biệt cho mảng/đối tượng như `forEach`, `for...of`, `for...in`.
+* **Rẽ nhánh (Conditionals):** Thực thi các khối lệnh khác nhau dựa trên điều kiện. Gồm `if/else`, `else if`, và toán tử ba ngôi (`? :`).
+* **Hàm (Functions):** Các khối mã có thể tái sử dụng để thực hiện một nhiệm vụ cụ thể. Gồm hàm thông thường (`function tenHam() {}`) và **Arrow Functions** (`const tenHam = () => {}`) (rất quan trọng trong JS hiện đại).
+* **Mảng (Arrays):** Tập hợp các giá trị được đánh số thứ tự (index). Cần nắm vững các phương thức xử lý mảng như `map`, `filter`, `reduce`, `find`, `push`, `pop`, v.v.
+* **Xâu/Chuỗi (Strings):** Dữ liệu văn bản. Cần nắm các phương thức xử lý chuỗi như `substring`, `trim`, `split`, `toLowerCase`, và **Template Literals** (sử dụng dấu backtick \`\`\` để nhúng biến).
+
+---
+
+## 2. Callback và Callback Hell
+
+### **Callback**
+* **Khái niệm:** Một hàm được **truyền làm đối số** cho một hàm khác, và sẽ được **gọi (thực thi) sau** khi hàm bên ngoài hoàn thành một tác vụ nào đó (thường là tác vụ bất đồng bộ - asynchronous).
+* **Ví dụ:** Khi bạn sử dụng `setTimeout(callbackFunction, 1000)`, `callbackFunction` là hàm callback.
+
+### **Callback Hell**
+* **Khái niệm:** Tình trạng mã nguồn trở nên khó đọc và khó bảo trì do việc lồng ghép quá nhiều hàm **callback bất đồng bộ** vào nhau, tạo thành một cấu trúc "hình kim tự tháp lộn ngược" hoặc "hình chữ L".
+* **Giải pháp:** **Promise** và **async/await** (sẽ trình bày ở mục 5) là các công cụ chính để giải quyết Callback Hell.
+
+---
+
+## 3. Lập trình Hướng đối tượng (OOP)
+
+OOP là nền tảng giúp tổ chức mã nguồn lớn một cách hiệu quả:
+
+* **Class (Lớp):** Khuôn mẫu để tạo ra các đối tượng. Trong JavaScript (từ ES6), `class` là một cú pháp đơn giản hóa (syntactic sugar) dựa trên cơ chế **Prototype** vốn có của JS.
+    * Sử dụng từ khóa `class`, có phương thức `constructor` để khởi tạo thuộc tính.
+* **Object (Đối tượng):** Một thể hiện (instance) cụ thể được tạo ra từ Class. Đối tượng chứa các thuộc tính (properties) và phương thức (methods).
+* **Reference (Tham chiếu):** Trong JS, khi làm việc với **Object** và **Array**, chúng ta làm việc với **tham chiếu**. Điều này có nghĩa là khi bạn gán một đối tượng/mảng cho một biến khác, cả hai biến đều trỏ đến **cùng một vùng nhớ**.
+    * **Ví dụ:** `const a = {x: 1}; const b = a; b.x = 2;` => `a.x` cũng là 2.
+    * Điều này hoàn toàn khác với các kiểu dữ liệu nguyên thủy (primitive) như số, chuỗi, boolean (làm việc với **giá trị**).
+
+---
+
+## 4. DOM (Document Object Model)
+
+**DOM** là một giao diện lập trình (API) cho các tài liệu HTML và XML.
+
+* Nó biểu diễn cấu trúc của trang web dưới dạng một **cây đối tượng** (Node Tree), nơi mỗi phần tử, thuộc tính, và nội dung văn bản là một **Node**.
+* **Vai trò của Frontend:** Sử dụng JavaScript để **truy cập, thay đổi cấu trúc, nội dung, và kiểu dáng** của các phần tử HTML thông qua DOM API.
+* **Các thao tác cơ bản:**
+    * Tìm kiếm phần tử: `document.getElementById()`, `document.querySelector()`, `document.querySelectorAll()`.
+    * Thay đổi nội dung: `element.innerHTML`, `element.textContent`.
+    * Thay đổi thuộc tính: `element.setAttribute()`.
+    * Thêm/Xóa phần tử: `parentElement.appendChild(newElement)`, `parentElement.removeChild(childElement)`.
+
+### **JSON (JavaScript Object Notation)**
+
+* **Khái niệm:** Một định dạng trao đổi dữ liệu **nhẹ** và **độc lập với ngôn ngữ**. Nó là cách phổ biến nhất để gửi dữ liệu giữa server (backend) và client (frontend).
+* **Cấu trúc:** JSON dựa trên cú pháp của đối tượng JavaScript nhưng có quy tắc nghiêm ngặt hơn: **Tất cả các khóa (key) phải được đặt trong dấu ngoặc kép đôi** (`"`).
+* **Các phương thức chính:**
+    * `JSON.parse(string)`: Chuyển chuỗi JSON thành đối tượng/mảng JavaScript.
+    * `JSON.stringify(object)`: Chuyển đối tượng/mảng JavaScript thành chuỗi JSON để gửi đi.
+
+---
+
+## 5. Promise, Promise.all, Async/Await (Xử lý Bất đồng bộ)
+
+Đây là các kỹ thuật cốt lõi để xử lý các tác vụ bất đồng bộ (ví dụ: gọi API) mà không làm chặn luồng thực thi chính (main thread).
+
+### **Promise**
+* **Khái niệm:** Một đối tượng đại diện cho một giá trị có thể **có sẵn ngay bây giờ**, **trong tương lai**, hoặc **không bao giờ có sẵn** (bị lỗi). Promise có 3 trạng thái:
+    * **Pending** (Đang chờ): Trạng thái khởi tạo.
+    * **Fulfilled** (Thành công): Hoàn thành và trả về giá trị.
+    * **Rejected** (Thất bại): Gặp lỗi và trả về lý do lỗi.
+* **Sử dụng:** Dùng `.then()` để xử lý kết quả thành công và `.catch()` để xử lý lỗi.
+
+### **Promise.all()**
+* **Khái niệm:** Một phương thức nhận vào một mảng các Promise và trả về một **Promise mới**.
+* **Hoạt động:** Promise mới sẽ **thành công** khi **tất cả** các Promise trong mảng đều thành công, và trả về một mảng chứa kết quả của chúng. Promise mới sẽ **thất bại ngay lập tức** nếu **bất kỳ** Promise nào trong mảng thất bại.
+
+### **Async/Await**
+* **Khái niệm:** Cú pháp **hiện đại** và **dễ đọc nhất** để làm việc với Promise. Nó cho phép bạn viết mã bất đồng bộ trông giống như mã đồng bộ.
+* **`async`:** Đặt trước một hàm để khai báo rằng hàm đó sẽ luôn trả về một **Promise**.
+* **`await`:** Chỉ có thể được sử dụng **bên trong một hàm `async`**. Nó sẽ **tạm dừng** việc thực thi hàm `async` cho đến khi Promise bên cạnh nó được giải quyết (Fulfilled hoặc Rejected), sau đó trả về kết quả.
+
+---
+
+## 6. Fetch API
+
+**Fetch API** là giao diện hiện đại và linh hoạt trong trình duyệt để thực hiện các yêu cầu mạng (HTTP requests), thay thế cho `XMLHttpRequest` (XHR) truyền thống.
+
+* **Sử dụng:** `fetch()` trả về một **Promise**.
+* **Các bước gọi API cơ bản:**
+    1.  **Gọi `fetch(url, options)`:** Trả về một Promise giải quyết với đối tượng **Response**.
+    2.  **Xử lý Response:** Dùng `.then()` để chuyển đổi đối tượng Response thành dữ liệu JSON/text (ví dụ: `response.json()`).
+    3.  **Xử lý Dữ liệu:** Dùng `.then()` tiếp theo để làm việc với dữ liệu thực tế.
+    4.  **Bắt lỗi:** Dùng `.catch()` để xử lý lỗi mạng hoặc lỗi API.
+
+* **Sử dụng với Async/Await (phương pháp khuyến nghị):**
+    ```javascript
+    async function fetchData(url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          // Xử lý lỗi HTTP (ví dụ: 404, 500)
+          throw new Error(`HTTP error! status: ${response.status}`); 
+        }
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error("Fetch failed:", error);
+      }
+    }
+    ```

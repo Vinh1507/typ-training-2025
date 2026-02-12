@@ -1,0 +1,115 @@
+# TÀI LIỆU HỌC TẬP: CƠ SỞ DỮ LIỆU QUAN HỆ & LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG (OOP)
+
+Tài liệu này tổng hợp lý thuyết cơ bản và nâng cao cho các phần Database (tập trung vào CSDL Quan hệ) và Lập trình Hướng đối tượng trong Java.
+
+---
+
+## PHẦN 1: DATABASE (CƠ SỞ DỮ LIỆU QUAN HỆ - RDBMS)
+
+### 1.1. Cài đặt Hệ quản trị CSDL (DBMS)
+
+DBMS là phần mềm quản lý và tương tác với cơ sở dữ liệu.
+
+| DBMS | Mô tả | Công cụ cài đặt (Online/Local) |
+| :--- | :--- | :--- |
+| **MySQL** | RDBMS mã nguồn mở phổ biến. | **Local:** MySQL Workbench, XAMPP, AMPPS, Docker Container. |
+| **SQL Server** | RDBMS mạnh mẽ của Microsoft. | **Local:** SQL Server Management Studio (SSMS). |
+| **Lựa chọn khác** | CSDL dưới dạng dịch vụ (PostgreSQL). | **Online:** Supabase. |
+
+> **Thực hành:** Sau khi cài đặt, hãy tạo một CSDL cho một bài toán cụ thể (`quản lý giải đấu`, `quản lý thư viện`,...) để thực hành các câu lệnh SQL.
+
+### 1.2. Ngôn ngữ Truy vấn có Cấu trúc (SQL)
+
+SQL được chia thành các nhóm lệnh chính để tương tác với CSDL.
+
+#### A. Định nghĩa Dữ liệu (DDL - Data Definition Language)
+
+Dùng để tạo, sửa đổi và xóa các đối tượng trong CSDL (Schema, Table, View, Index...).
+
+| Lệnh | Mục đích | Ví dụ cơ bản |
+| :--- | :--- | :--- |
+| **CREATE TABLE** | Tạo bảng mới. | `CREATE TABLE TenBang (...);` |
+| **DROP TABLE** | Xóa toàn bộ bảng. | `DROP TABLE TenBang;` |
+| **ALTER TABLE** | Sửa đổi cấu trúc bảng (thêm/sửa/xóa cột). | `ALTER TABLE TenBang ADD COLUMN TenCot KieuDuLieu;` |
+| **CREATE VIEW** | Tạo View (bảng ảo). | `CREATE VIEW TenView AS SELECT ...;` |
+| **DROP VIEW** | Xóa View. | `DROP VIEW TenView;` |
+
+#### B. Thao tác Dữ liệu (DML - Data Manipulation Language)
+
+Dùng để thao tác (truy vấn, thêm, sửa, xóa) dữ liệu bên trong các bảng.
+
+| Lệnh | Mục đích | Ví dụ cơ bản |
+| :--- | :--- | :--- |
+| **SELECT** | Truy vấn/lấy dữ liệu. | `SELECT * FROM TenBang WHERE DieuKien;` |
+| **INSERT** | Thêm bản ghi mới. | `INSERT INTO TenBang (Cot1, Cot2) VALUES (GiaTri1, GiaTri2);` |
+| **UPDATE** | Sửa đổi dữ liệu hiện có. | `UPDATE TenBang SET Cot = GiaTriMoi WHERE DieuKien;` |
+| **DELETE** | Xóa bản ghi. | `DELETE FROM TenBang WHERE DieuKien;` |
+
+#### C. Các Mệnh đề và Toán tử Truy vấn Phổ biến
+
+Đây là các thành phần xây dựng nên câu lệnh `SELECT` phức tạp:
+
+| Mệnh đề | Chức năng | Ví dụ |
+| :--- | :--- | :--- |
+| **FROM** | Chỉ định bảng nguồn. | `FROM Students JOIN Classes ON ...` |
+| **WHERE** | Lọc hàng dựa trên điều kiện. | `WHERE Age > 18` |
+| **ORDER BY** | Sắp xếp kết quả. | `ORDER BY LastName ASC` |
+| **GROUP BY** | Gom các hàng có cùng giá trị. | `GROUP BY DepartmentId` |
+| **HAVING** | Lọc các nhóm (sau `GROUP BY`). | `HAVING COUNT(*) > 5` |
+| **Toán tử Lô-gic** | Kết hợp điều kiện. | `AND`, `OR` |
+
+### 1.3. Trigger và Transaction
+
+#### A. Trigger, Procedure, Function
+* **CREATE PROCEDURE/FUNCTION:** Tạo các khối mã SQL được đóng gói và lưu trữ, tăng khả năng tái sử dụng và hiệu năng.
+* **CREATE TRIGGER:** Một hành động được tự động thực thi (kích hoạt) khi có sự kiện (INSERT, UPDATE, DELETE) xảy ra trên một bảng.
+
+#### B. Transaction (Giao dịch)
+Là một chuỗi các thao tác CSDL được coi là một đơn vị xử lý duy nhất (phải thực hiện tất cả hoặc không thực hiện gì cả). Giao dịch đảm bảo tính chất **ACID**.
+* **COMMIT**: Lưu vĩnh viễn các thay đổi của giao dịch.
+* **ROLLBACK**: Hủy bỏ tất cả các thay đổi của giao dịch.
+* **SAVE TRANSACTION**: Đặt một điểm lưu (Savepoint) trong giao dịch để có thể rollback về điểm đó.
+
+#### C. Điều khiển Truy cập (DCL)
+* **GRANT**: Cấp quyền cho người dùng (ví dụ: cấp quyền `SELECT` trên một bảng).
+* **REVOKE**: Thu hồi quyền đã cấp.
+
+---
+
+## PHẦN 2: LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG (OOP)
+
+Lập trình Hướng đối tượng là một mô hình lập trình giúp tổ chức mã nguồn bằng cách sử dụng các đối tượng.
+
+### 2.1. Java Cơ bản và Khái niệm OOP
+
+* **Object & Class:** Class là khuôn mẫu, Object là thực thể của Class.
+* **Biến & Hàm (Thuộc tính & Phương thức):** Dữ liệu và hành vi của đối tượng.
+* **I/O và Thao tác file:** Các kiến thức cơ bản về luồng nhập/xuất và xử lý file trong Java.
+* **Vòng lặp:** `for`, `while`, `do-while` để kiểm soát luồng thực thi.
+* **Abstract Class:** Lớp cơ sở không thể khởi tạo, có thể chứa các phương thức trừu tượng.
+* **Interface:** Định nghĩa một tập hợp các phương thức (Hợp đồng) mà các lớp thực thi (implement) phải tuân theo.
+
+### 2.2. Bốn Tính chất Cốt lõi của OOP
+
+| Tính chất | Ý nghĩa | Cách thực hiện trong Java |
+| :--- | :--- | :--- |
+| **Đóng Gói** (Encapsulation) | Ẩn giấu chi tiết bên trong, bảo vệ dữ liệu, chỉ cho phép truy cập qua các phương thức công khai. | Sử dụng từ khóa `private` cho thuộc tính và cung cấp `public` **Getter/Setter**. |
+| **Kế Thừa** (Inheritance) | Lớp con thừa hưởng thuộc tính và phương thức của lớp cha, tăng tái sử dụng mã. | Sử dụng từ khóa `extends` và thiết lập mối quan hệ **IS-A**. |
+| **Đa Hình** (Polymorphism) | Khả năng một tên phương thức có thể thực hiện nhiều hành vi khác nhau. | **Method Overloading** (nạp chồng) và **Method Overriding** (ghi đè). |
+| **Trừu Tượng** (Abstraction) | Chỉ hiển thị các chức năng cần thiết ra bên ngoài, ẩn đi sự phức tạp bên trong. | Sử dụng `abstract class` và `interface`. |
+
+### 2.3. Dependency Injection (DI) & Inversion of Control (IoC)
+
+#### A. Inversion of Control (IoC)
+* **Khái niệm:** Là một **nguyên tắc** (Principle) trong đó quyền kiểm soát việc khởi tạo, quản lý và kết nối các đối tượng (component) được chuyển giao cho một **container** hoặc framework bên ngoài.
+* **Mục tiêu:** Giảm sự phụ thuộc chặt chẽ giữa các thành phần.
+
+#### B. Dependency Injection (DI)
+* **Khái niệm:** Là một **mẫu thiết kế** (Design Pattern) cụ thể để hiện thực hóa IoC. Thay vì một đối tượng tự tạo ra các đối tượng phụ thuộc, các đối tượng phụ thuộc đó được cung cấp (tiêm) từ bên ngoài.
+* **Các hình thức DI:**
+    1.  **Constructor Injection:** Tiêm qua hàm khởi tạo.
+    2.  **Setter Injection:** Tiêm qua phương thức setter.
+
+#### C. Ứng dụng trong Spring (Tìm hiểu thêm)
+* Spring Framework sử dụng **IoC Container** (như `ApplicationContext`) để quản lý các đối tượng (gọi là Beans).
+* Container sẽ tự động thực hiện DI, giúp lập trình viên không cần viết mã khởi tạo và kết nối các dependency, làm cho code dễ kiểm thử và linh hoạt hơn.

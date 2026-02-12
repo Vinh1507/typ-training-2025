@@ -1,0 +1,105 @@
+# TÀI LIỆU GIẢI PHÁP – CÔNG NGHỆ LỰA CHỌN – VẤN ĐỀ DỰ ĐỊNH NGHIÊN CỨU
+
+## 1. Tổng quan hệ thống
+Dự án hướng tới việc xây dựng **hệ thống thanh toán / xác thực bằng QR Code** cho môi trường ứng dụng nội bộ (ví dụ: trong khuôn viên trường đại học hoặc doanh nghiệp).  
+Người dùng có thể **quét mã QR động** để thực hiện đăng nhập, điểm danh, hoặc thanh toán trong một khoảng thời gian giới hạn.  
+Hệ thống cần đảm bảo **tránh xử lý trùng (idempotent)**, **bảo mật**, và **trải nghiệm mượt mà giữa Frontend – Backend**.
+
+---
+
+## 2. Giải pháp tổng thể
+
+### 2.1. Quy trình hoạt động
+1. **FE (React + Ant Design)** sinh hoặc hiển thị QR động mỗi X giây (ví dụ: 30s).  
+2. **BE (Java/ Spring boot)** tạo token tạm thời và mã hóa thông tin người dùng vào QR.  
+3. Người dùng khác quét QR → gửi request xác thực đến BE.  
+4. BE kiểm tra:
+   - Token còn hạn không?
+   - Token đã được dùng chưa?  
+   - Có trùng request hoặc trùng người dùng không?
+5. Nếu hợp lệ → ghi nhận quét thành công, cập nhật DB → trả về FE trạng thái thành công.
+6. FE tự động cập nhật giao diện xác nhận hoặc đổi QR mới sau interval.
+
+---
+
+## 3. Công nghệ lựa chọn
+
+| Thành phần | Công nghệ chính | Lý do chọn |
+|-------------|----------------|-------------|
+| **Frontend (FE)** | ReactJS + Ant Design | Cấu trúc component rõ ràng, thư viện UI mạnh, hỗ trợ dễ dàng quản lý state, modal, form |
+| **QR hiển thị FE** | `react-qr-code` hoặc `qrcode.react` | Tạo mã QR động, dễ refresh theo interval |
+| **State management** | React Context / Redux Toolkit | Dễ chia sẻ trạng thái đăng nhập, mã QR giữa component |
+| **Backend (BE)** | Java/ Spring boot | Tính bảo mật cao, dễ triển khai API, tích hợp Redis tốt |
+| **Database** |  MySQL | Lưu thông tin người dùng, token, log quét QR |
+| **Cache** | Redis | Lưu tạm token QR (TTL ngắn), xử lý idempotent và concurrency |
+| **Auth** | JWT / HMAC | Đảm bảo token QR không bị giả mạo |
+| **Triển khai** | Docker + Nginx Reverse Proxy | Dễ đóng gói, scale ngang FE–BE độc lập |
+
+---
+
+## 4. Vấn đề dự định nghiên cứu
+
+| Nhóm vấn đề | Mô tả nghiên cứu |
+|--------------|------------------|
+| **Idempotent trong xử lý quét QR** | Làm sao đảm bảo khi người dùng quét nhiều lần hoặc gửi lại request, hệ thống chỉ xử lý **một lần duy nhất**. Nghiên cứu cơ chế lưu “QR Session Key” trong Redis (SETNX) để đánh dấu token đã dùng. |
+| **Sinh mã QR động an toàn** | Tìm hiểu thuật toán sinh token ngẫu nhiên, có TTL, và mã hóa bằng HMAC để chống giả mạo. |
+| **Giảm tải và đồng bộ FE – BE** | Nghiên cứu cách sử dụng interval + WebSocket hoặc Server-Sent Events để đồng bộ trạng thái QR “hết hạn” hoặc “đã quét thành công” mà không cần polling quá nhiều. |
+| **Tối ưu giao diện Ant Design** | Thiết kế Form, Modal, Button, Table chuẩn UX. Đảm bảo FE phản hồi nhanh, xử lý loading và timeout rõ ràng. |
+| **Giải pháp concurrency trong Redis** | Dùng Lua script hoặc transaction để tránh race condition khi hai request cùng xác thực một QR. |
+| **Bảo mật dữ liệu QR** | Nghiên cứu cách ẩn thông tin nhạy cảm, chỉ mã hóa token (không chứa user ID thật trong QR). |
+
+---
+
+## 5. Luồng hoạt động chi tiết: Quét QR tránh xử lý trùng
+
+### 5.1. FE
+- Cứ mỗi **30 giây**, FE gọi API `/api/qr/new` để nhận token mới.
+- Token trả về dạng:
+```
+{
+"qrCode": "BASE64_ENCODED_STRING",
+"expiresAt": "2025-11-03T12:00:00Z"
+}
+```
+- Hiển thị mã QR trên giao diện, đồng hồ đếm ngược hiển thị thời gian còn lại.  
+- Sau khi hết hạn hoặc quét thành công, FE tự động gọi `/api/qr/new` để lấy mã mới.
+
+### 5.2. BE
+- Khi FE yêu cầu mã mới:
+- Sinh **token ngẫu nhiên** (UUIDv4 hoặc HMAC).
+- Lưu token vào **Redis**:  
+  `SET token:userId "unused" EX 30 NX`
+- Khi người dùng quét mã:
+- Gửi request `/api/qr/scan` với token.
+- BE kiểm tra Redis:
+  - Nếu **key không tồn tại** → báo “QR hết hạn”.
+  - Nếu **value = used** → báo “Đã quét”.
+  - Nếu **value = unused** →  
+    `SET token:userId "used" NX` (hoặc transaction).  
+    Sau đó xử lý logic (điểm danh, thanh toán, v.v.)
+- BE ghi log event để phục vụ truy vết sau này.
+
+### 5.3. Đảm bảo Idempotent
+- Mỗi token chỉ được xử lý **một lần duy nhất**.
+- Redis TTL tự động xóa key sau X giây để tránh rò rỉ bộ nhớ.
+- Trường hợp request bị timeout giữa chừng, chỉ có transaction đầu tiên được commit.
+
+---
+
+## 6. Kiến trúc tổng quan
+```
+[React FE] --> [Spring boot / BE] --> [Redis Cache] --> [MySQL]
+↑ ↓
+User scan Verify token + update
+```
+
+- **Redis** đóng vai trò trung gian chống trùng.  
+- **MySQL** lưu record vĩnh viễn sau khi xác nhận thành công.  
+- **FE** tự động cập nhật giao diện và sinh QR mới định kỳ.
+
+---
+
+
+**Người thực hiện:** Phạm Đức Của
+
+**Ngày:** 03/11/2025
