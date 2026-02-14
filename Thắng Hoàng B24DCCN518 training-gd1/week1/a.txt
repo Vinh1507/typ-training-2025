@@ -1,0 +1,59 @@
+Trong nhiệm vụ tuần 1 em đã tải về các app cần thiết như:
+
+1. (minh chứng đã cài đặt thành công ở trong folder assets)
+Dùng để quản lý server PHP + MySQL (Apache, PHP, MariaDB): xampp
+Dùng để kết nối và quản lý cơ sở dữ liệu: dbeaver (tại bản navicat của em hết hạn free rồi nên em dùng dbeaver nhưng em thấy dbeaver tuy nhìn giao diện chán hơn navicat nhưng có nhiều chức năng xịn hơn navicat nhiều)
+Dùng để thiết lập nhanh môi trường và chạy code có sẵn: docker (em đã chạy sẵn elastic bằng docker - một search engine mạnh mẽ)
+
+2.
+Em đã dump sẵn một dự án cơ sở dữ liệu đơn giản (23 bảng dữ liệu, có đủ các loại quan hệ 1-n, n-n, 1-1, polymorphic: đa hình) dữ liệu trong db blog
+
+-Trong Mysql
+*Chú ý cuối mỗi một câu lệnh phải có dấu ";" nếu ko có sẽ lỗi, mỗi 1 câu lệnh ngăn thì máy tính sẽ hiểu là ";" là kết thúc câu lệnh đó, cẩn thận tấn công SQL Injection
+SQL Injection: à lỗ hổng bảo mật xảy ra khi ứng dụng web ghép trực tiếp dữ liệu người dùng nhập vào trong câu lệnh SQL mà không kiểm tra hoặc lọc kỹ.
+- Thao tác Dữ liệu (DML): SELECT, INSERT, UPDATE, DELETE
+    + SELECT: Lấy dữ liệu từ một hoặc nhiều bảng trong cơ sở dữ liệu
+        Muốn lấy hết các trường thì SELECT *
+        Muốn lấy các trường cụ thể SELECT [tên_cột_1], [tên_cột_2], [tên_cột_3]
+        VD: SELECT * FROM users;
+    + INSERT: Thêm bản ghi mới  
+        VD: INSERT INTO users (name, email) VALUES ('An', 'an@gmail.com');
+    + UPDATE: Cập nhật dữ liệu hiện có
+        VD: UPDATE users SET name='Anh' WHERE id=1;
+    + DELETE: Xóa bản ghi
+        VD: DELETE FROM users WHERE id=1;
+        * chú ý nếu DELETE mà ko có WHERE thì nó sẽ xóa hết cả bảng dữ liệu: nếu lỡ chạy lệnh đó rồi thì phải chịu
+
+- Định nghĩa Dữ liệu (DDL): CREATE TABLE, DROP TABLE, ALTER TABLE, CREATE VIEW(tham khảo thêm), DROP VIEW(tham khảo thêm)
+    CREATE DATABASE: Tạo cơ sở dữ liệu mới VD: CREATE DATABASE ptit_dev
+    CREATE TABLE: Tạo bảng mới VD: CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(50));
+    ALTER TABLE: Sửa cấu trúc bảng VD: ALTER TABLE users ADD COLUMN email VARCHAR(100);
+    DROP TABLE: Xóa bảng VD: DROP TABLE users;
+    TRUNCATE TABLE: Xóa toàn bộ dữ liệu trong bảng (nhưng giữ cấu trúc) VD: TRUNCATE TABLE users;
+    CREATE VIEW: tạo một bảng ảo (virtual table) : là kết quả của 1 truy vấn SELECT, dùng để đóng gói truy vấn phức tạp, che giấu chi tiết, hoặc cung cấp interface đơn giản cho người dùng
+    DROP VIEW: xóa bảng ảo   
+- Trigger, Transaction: CREATE PROCEDURE, CREATE FUNCTION, CREATE TRIGGER, COMMIT, ROLLBACK, SAVE TRANSACTION
+    Trigger: một đoạn mã SQL tự động chạy khi có một sự kiện xảy ra trong bảng
+    Transaction một nhóm các câu lệnh SQL được thực hiện như một đơn vị duy nhất
+    CREATE PROCEDURE một tập hợp câu lệnh SQL được lưu trong database và có thể gọi lại nhiều lần
+    CREATE FUNCTION một tập hợp câu lệnh SQL được lưu trong database và có thể gọi lại nhiều lần nhưng lại trả về giá trị
+    CREATE TRIGGER: Tạo ra trigger
+    COMMIT Xác nhận toàn bộ thay đổi trong transaction
+    ROLLBACK Hủy toàn bộ thay đổi (trở về trạng thái trước START TRANSACTION)
+    SAVE TRANSACTION tạo điểm lưu tạm thời trong quá trình thực hiện transaction
+- Điều khiển Truy cập: GRANT, REVOKE
+    GRANT Cấp quyền cho user GRANT ALL PRIVILEGES ON blogdb.* TO 'user1'@'localhost';
+    REVOKE Thu hồi quyền REVOKE ALL PRIVILEGES ON shopdb.* FROM 'user1'@'localhost';
+- Toán tử truy vấn: FROM, WHERE, ORDER BY, HAVING, AND, OR,...
+    FROM, Trích dẫn từ bảng nào
+    WHERE, Lọc dữ liệu theo điều kiện
+    ORDER BY, Sắp xếp kết quả
+    HAVING, Lọc sau khi nhóm
+    AND, thỏa mãn cả đk trái và phải
+    OR thỏa mãn dk trái hoặc phải
+
+Một ví dụ vui 😁
+    VD: 
+    Bảng nyc có 3 trường start_time (thời gian bắt đầu hẹn hò), day_count (số ngày yêu nhau), reason (lý do chia tay)
+    Input: SELECT start_time FROM nyc WHERE day_count > 10;
+    Output: trả ra được start_time của những người yêu cũ trong bảng nyc có day_count > 10

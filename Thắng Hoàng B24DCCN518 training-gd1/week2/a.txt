@@ -1,0 +1,36 @@
+Phần 1:
+1.Đã cài Intelij
+2.
+Các kiểu dữ liệu trong Java
++ Kiểu dữ liệu nguyên thủy
+    byte, short, int, long, float, double, char, boolean
++ Kiểu dữ liệu tham chiếu
+    class, interface, array, enum, record
+- Câu lệnh điều kiện
+if (dk1) {
+    thuc_hien();
+}
+Y hệt c++
+- Toán tử logic
+Y hệt c++
+3.Làm quen với mảng và vòng lặp
+Mảng 1 chiều, 2 chiều: y hệt c++ nhưng khác ở chỗ c++ thì là mảng tĩnh, java thì là mảng động, cấp phát bộ nhớ dc
+Vòng lặp: y hệt c++
+4.Hàm
+Hàm trong java
+<phạm_vi_truy_cập> <kiểu_trả_về> <tên_hàm>(<danh_sách_tham_số>) {
+    // phần thân hàm
+    return <giá_trị>;
+}
+code ptit java chưa có vì năm 3 mới mở code java em sẽ hoàn thiện nó trên leetcode
+em chưa có thời gian nghiên cứu sâu java nên còn sơ sài ạ
+Phần 2:
+Entity là một đối tượng hoặc khái niệm trong thế giới thực mà bạn muốn lưu trữ thông tin trong CSDL
+Attribute là đặc điểm hoặc thông tin mô tả cho Entity
+Relationship thể hiện mối liên kết giữa các Entity
+Cardinality xác định số lượng tối đa thực thể này có thể liên kết với thực thể khác trong mối quan hệ
+
+E-R của hệ thống Quản lý Cửa Hàng Bán Hoa Offline
+Quan hệ 1-1: stores — employees (qua manager_id)
+Quan hệ 1-n: categories -> products 
+Quan hệ n-n: products <-> promotions
