@@ -1,0 +1,113 @@
+<!-- File: part4_profile.html -->
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Part 4 - Profile Page</title>
+    <style>
+      /* CSS tối giản để dễ view */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 720px;
+        margin: 16px auto;
+        padding: 0 12px;
+      }
+      header {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+      img.avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 8px;
+      }
+      .skills ul {
+        display: flex;
+        gap: 8px;
+        list-style: none;
+        padding: 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 6px;
+      }
+      form input,
+      form textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px;
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img class="avatar" src="../images/me.jpeg" alt="Avatar" />
+      <div>
+        <h1>Vương Đức Trọng</h1>
+        <p>Backend Developer - PTIT</p>
+      </div>
+    </header>
+
+    <section class="skills">
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>Java</li>
+        <li>Golang</li>
+        <li>C++</li>
+        <li>Database</li>
+        <li>Docker</li>
+        <li>Linux</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Học vấn / Kinh nghiệm</h2>
+      <table>
+        <tr>
+          <th>Thời gian</th>
+          <th>Trường / Công ty</th>
+        </tr>
+        <tr>
+          <td>2022 - 2027</td>
+          <td>Học Viện Công nghệ Bưu Chính Viễn Thông</td>
+        </tr>
+      <tr>
+          <td>03/03/2025 - 01/08/2025</td>
+          <td>Backend VTI</td>
+        </tr>
+        <tr>
+          <td>01/08/2025 - 29/08/2025</td>
+          <td>Software SamSung-SRV</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Liên hệ</h2>
+      <form>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="tunhoipro0306@gmail.com" />
+        <label for="message">Tin nhắn</label>
+        <textarea
+          id="message"
+          rows="4"
+          placeholder="Viết tin nhắn..."
+        ></textarea>
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Vương Đức Trọng</p>
+    </footer>
+  </body>
+</html>
