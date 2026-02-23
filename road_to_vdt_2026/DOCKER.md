@@ -131,7 +131,7 @@ D. v1.0.1
 ### 20. Which of the following option is used for following(continuously update) logs of a running container?
 A. `-c`
 
-**B. `-f`**
+**\*B. `-f`**
 
 C. `-follow`
 
@@ -234,7 +234,7 @@ A. True
 
 B. False
 ### 35. Docker run is a combination of which two commands?
-**\* A. Create and Start**
+**\*A. Create and Start**
 
 B. Pull and Start
 
