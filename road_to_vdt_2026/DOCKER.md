@@ -313,11 +313,11 @@ B. Creating a firewall
 C. Running Docker-Engine on a different host
 
 D. Enabling SELinux on Host
-### 47. In bridge networking, you can define your own IP range
+### 46. In bridge networking, you can define your own IP range
 **\*A. True**
 
 B. False
-### 48. In bridge networking, you can define your own IP range
+### 47. In bridge networking, you can define your own IP range
 **\*A. `docker network create <net_name> -d <driver_choice>`**
 
 B. `docker -d <driver_choice> network create <net_name>`
@@ -325,11 +325,11 @@ B. `docker -d <driver_choice> network create <net_name>`
 C. `docker <net_name> create network`
 
 D. `docker create network <net_name> -d <driver_choice>`
-### 49. You could link two containers which are attached to two different bridge networks. True or False?
+### 48. You could link two containers which are attached to two different bridge networks. True or False?
 A. True
 
 **\*B. False**
-### 50. Which of the following options you would use to attach a network while creating/running a container ?
+### 49. Which of the following options you would use to attach a network while creating/running a container ?
 A. `--use-network` option
 
 B. `--user-net` option
@@ -337,11 +337,11 @@ B. `--user-net` option
 **\*C. `--network` option**
 
 D. None of the above
-### 51. In bridge networking, the container receives an IP from host's subset. True or False?
+### 50. In bridge networking, the container receives an IP from host's subset. True or False?
 A. True
 
 **\*B. False**
-### 52. Which of the following statement is true?
+### 51. Which of the following statement is true?
 A. Host networking disable containers from accessing each other(isolation)
 
 B. Bridge network allows containers to access each other
@@ -349,7 +349,7 @@ B. Bridge network allows containers to access each other
 C. Overlay networking is used for single host communication
 
 **\*D. None of the above**
-### 53. Overlay networking depends on...
+### 52. Overlay networking depends on...
 **\*A. Service Discovery**
 
 B. Labels
@@ -357,7 +357,7 @@ B. Labels
 C. Bridge Networking
 
 D. All of the above
-### 54. Docker compose file follows which format by default?
+### 53. Docker compose file follows which format by default?
 A. JSON
 
 B. XML
@@ -365,11 +365,11 @@ B. XML
 **\*C. YAML**
 
 D. CSV
-### 55. Docker compose ships with Docker-Engine package. True or False?
+### 54. Docker compose ships with Docker-Engine package. True or False?
 A. True
 
 **\*B. False**
-### 56. How do you bring up a docker-compose stack?
+### 55. How do you bring up a docker-compose stack?
 **\*A. `docker-compose up -d`**
 
 B. `docker run -f docker-compose.yml`
@@ -377,7 +377,7 @@ B. `docker run -f docker-compose.yml`
 C. `docker-compose run -fd docker-compose.yml`
 
 D. None of the above
-### 57. In docker-compose file's network section, if no driver is mentioned, which driver will be used by default?
+### 56. In docker-compose file's network section, if no driver is mentioned, which driver will be used by default?
 A. Host network
 
 B. Overlay network
@@ -385,7 +385,7 @@ B. Overlay network
 **\*C. Bridge network**
 
 D. Network will be disabled
-### 58. How do you control the start up order of containers?
+### 57. How do you control the start up order of containers?
 **\*A. Using `depends_on` option**
 
 B. Using links
@@ -393,11 +393,11 @@ B. Using links
 C. Using `wait_for` option
 
 D. None of the above
-### 59. Dockerfile can be used with Docker-compose file. True or False?
+### 58. Dockerfile can be used with Docker-compose file. True or False?
 **\*A. True**
 
 B. False
-### 60. Which of the following is not a sub-command of docker-compose?
+### 59. Which of the following is not a sub-command of docker-compose?
 A. `build`
 
 B. `port`
@@ -405,7 +405,7 @@ B. `port`
 C. `scale`
 
 **\*D. `delete`**
-### 61. What is the default restart policy in Docker-compose?
+### 60. What is the default restart policy in Docker-compose?
 **\*A. `no`**
 
 B. `always`
@@ -413,15 +413,15 @@ B. `always`
 C. `on-failure`
 
 D. `unless-stopped`
-### 62. Is is possible to use multiple compose files at the same time?
+### 61. Is is possible to use multiple compose files at the same time?
 **\*A. Yes**
 
 B. No
-### 63. Docker-compose file supports JSON format too. True or False?
+### 62. Docker-compose file supports JSON format too. True or False?
 **\*A. True**
 
 B. False
-### 64. Which of the following options can be used to link to a service (e.g database) running outside of docker?
+### 63. Which of the following options can be used to link to a service (e.g database) running outside of docker?
 **\*A. `--extra-hosts`**
 
 B. `--external-hosts`
