@@ -1,0 +1,7 @@
+# Backend Image
+backend_image: "{{ docker_registry }}/vissmart-backend"
+backend_container_name: "backend"
+
+# Database Configuration
+db_host: "{{ hostvars['db_server'].ansible_host }}"
+db_port: "3306"

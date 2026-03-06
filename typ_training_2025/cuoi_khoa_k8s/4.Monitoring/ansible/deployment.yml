@@ -1,0 +1,86 @@
+- name: Deploy Prometheus on VM
+  hosts: prometheus_servers
+  become: yes
+  vars:
+    prometheus_dir: /opt/prometheus
+    
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+        
+    - name: Install required packages
+      apt:
+        name:
+          - docker.io
+          - docker-compose
+        state: present
+      tags: install_docker
+        
+    - name: Start and enable Docker
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+        
+    - name: Add user to docker group
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+        
+    - name: Reset SSH connection to allow group changes
+      meta: reset_connection
+      
+    - name: Test Docker access
+      command: docker ps
+      become_user: "{{ ansible_user }}"
+      
+    - name: Create prometheus directory
+      file:
+        path: "{{ prometheus_dir }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        
+    - name: Copy prometheus configuration
+      copy:
+        src: prometheus.yml
+        dest: "{{ prometheus_dir }}/prometheus.yml"
+        mode: '0644'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        
+    - name: Copy docker-compose file
+      copy:
+        src: docker-compose.yml
+        dest: "{{ prometheus_dir }}/docker-compose.yml"
+        mode: '0644'
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        
+    - name: Stop existing containers
+      shell: docker compose down || docker-compose down
+      args:
+        chdir: "{{ prometheus_dir }}"
+      ignore_errors: yes
+      become_user: "{{ ansible_user }}"
+      
+    - name: Start Prometheus stack
+      shell: docker compose up -d || docker-compose up -d
+      args:
+        chdir: "{{ prometheus_dir }}"
+      become_user: "{{ ansible_user }}"
+      
+    - name: Wait for Prometheus to be ready
+      uri:
+        url: "http://localhost:{{ prometheus_port }}/-/ready"
+        method: GET
+        status_code: 200
+      register: prometheus_ready
+      until: prometheus_ready.status == 200
+      retries: 30
+      delay: 10
+
+      

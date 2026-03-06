@@ -1,0 +1,7 @@
+# Frontend Image
+frontend_image: "{{ docker_registry }}/vissmart-frontend"
+frontend_container_name: "frontend"
+
+# Backend Configuration
+backend_host: "{{ hostvars['backend_server'].ansible_host }}"
+backend_port: "8080"

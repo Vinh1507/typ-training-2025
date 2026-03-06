@@ -1,0 +1,24 @@
+database:
+  replicaCount: 1
+
+  image:
+    repository: mysql
+    tag: "8.0"
+    pullPolicy: IfNotPresent
+
+  service:
+    type: NodePort
+    port: 3306
+    nodePort: 30336
+
+  persistence:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    size: 2Gi
+
+  env:
+    MYSQL_ROOT_PASSWORD: "rootpassword123"
+    MYSQL_DATABASE: "typ-database"
+    MYSQL_USER: "typ-admin"
+    MYSQL_PASSWORD: "password123"

@@ -1,0 +1,22 @@
+{{- if .Values.database.persistence.enabled }}
+{{- range $i, $e := until (.Values.database.replicaCount | int) }}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" $ "component" "database") }}-pv-{{ $i }}
+  labels:
+    type: local
+spec:
+  storageClassName: ""
+  capacity:
+    storage: {{ $.Values.database.persistence.size }}
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/data/{{ include "helm-chart.componentName" (dict "root" $ "component" "database") }}-{{ $i }}"
+  claimRef:
+    namespace: {{ $.Release.Namespace }}
+    name: mysql-data-{{ include "helm-chart.componentName" (dict "root" $ "component" "database") }}-{{ $i }}
+{{- end }}
+{{- end }}

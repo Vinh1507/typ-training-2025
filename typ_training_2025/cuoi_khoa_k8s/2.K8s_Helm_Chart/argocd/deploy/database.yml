@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: typ-2026-database
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://gitlab.com/NguyenTuKien/typ_2026_database.git'
+    targetRevision: HEAD
+    path: 'database-chart'
+    helm:
+      valueFiles:
+      - values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: typ-app
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

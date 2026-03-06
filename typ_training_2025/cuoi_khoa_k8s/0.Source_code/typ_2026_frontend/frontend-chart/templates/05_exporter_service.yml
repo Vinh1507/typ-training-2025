@@ -1,0 +1,19 @@
+{{- if .Values.nginxExporter.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "nginx-exporter") }}
+  labels:
+    {{- include "helm-chart.componentLabels" (dict "root" . "component" "nginx-exporter") | nindent 4 }}
+spec:
+  type: {{ .Values.nginxExporter.service.type }}
+  selector:
+    {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "nginx-exporter") | nindent 4 }}
+  ports:
+    - name: metrics
+      port: {{ .Values.nginxExporter.service.port }}
+      targetPort: {{ .Values.nginxExporter.service.port }}
+      {{- if and (eq .Values.nginxExporter.service.type "NodePort") .Values.nginxExporter.service.nodePort }}
+      nodePort: {{ .Values.nginxExporter.service.nodePort }}
+      {{- end }}
+{{- end }}

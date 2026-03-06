@@ -1,0 +1,6 @@
+# Bỏ qua thư mục thư viện, không copy từ máy thật vào Docker
+node_modules
+
+# Bỏ qua thư mục build (nếu có)
+dist
+build

@@ -1,0 +1,46 @@
+frontend:
+  name: frontend
+  replicaCount: 2
+  strategy:
+    type: Recreate
+  image:
+    repository: ngtukien218/typ-2026-frontend
+    tag: "v1.6.3"
+    pullPolicy: Always
+  
+    service:
+    type: NodePort
+    port: 3000
+    nodePort: 30030
+
+  ingress:
+    enabled: false
+    className: nginx
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - host: web.typ-app.local
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: typ-tls-secret
+        hosts:
+          - web.typ-app.local
+
+backend:
+  name: typ-2026-backend
+  service:
+    port: 8080
+
+nginxExporter:
+  enabled: true
+  replicaCount: 1
+  image:
+    repository: nginx/nginx-prometheus-exporter
+    tag: "1.1.0"
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 9113
+    nodePort: 30113

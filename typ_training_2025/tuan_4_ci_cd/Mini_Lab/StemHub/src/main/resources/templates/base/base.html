@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="STEMind - Nền tảng chia sẻ tài liệu giáo dục STEM hàng đầu Việt Nam">
+    <meta name="author" content="STEMind Team">
+    <title th:text="${title} ?: 'STEMIND - Chia sẻ tài liệu STEM'">STEMIND - Chia sẻ tài liệu STEM</title>
+    <link rel="icon" type="image/png" th:href="@{/images/Symbol.png}">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link th:href="@{/style/base/base1.css}" rel="stylesheet">
+    <link th:href="@{/style/base/base2.css}" rel="stylesheet">
+    <link th:href="@{/style/base/header.css}" rel="stylesheet">
+
+    <!-- Extra CSS block -->
+    <th:block layout:fragment="extra_css"></th:block>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Skip to main content for accessibility -->
+    <a class="visually-hidden-focusable" href="#main-content">Bỏ qua để đến nội dung chính</a>
+
+    <!-- Header -->
+    <div th:replace="~{base/header :: header}"></div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow-1 page-transition">
+        <th:block layout:fragment="content"></th:block>
+    </main>
+    
+    <!-- Footer -->
+    <div th:replace="~{base/footer :: footer}"></div>
+
+    <!-- SVG Icons -->
+    <div th:replace="~{base/svg_icons :: svg_icons}"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/script/base/base.js}"></script>
+    <script th:src="@{/script/base/footer.js}"></script>
+
+    <!-- Extra JS block -->
+    <th:block layout:fragment="extra_js"></th:block>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{{- if .Values.nginxExporter.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart.componentName" (dict "root" . "component" "nginx-exporter") }}
+  labels:
+    {{- include "helm-chart.componentLabels" (dict "root" . "component" "nginx-exporter") | nindent 4 }}
+spec:
+  replicas: {{ .Values.nginxExporter.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "nginx-exporter") | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "helm-chart.componentSelectorLabels" (dict "root" . "component" "nginx-exporter") | nindent 8 }}
+    spec:
+      containers:
+        - name: nginx-exporter
+          image: "{{ .Values.nginxExporter.image.repository }}:{{ .Values.nginxExporter.image.tag }}"
+          imagePullPolicy: {{ .Values.nginxExporter.image.pullPolicy }}
+          args:
+            - '-nginx.scrape-uri=http://{{ include "helm-chart.componentName" (dict "root" . "component" "frontend") }}:{{ .Values.frontend.service.port }}/nginx_status'
+          ports:
+            - name: metrics
+              containerPort: {{ .Values.nginxExporter.service.port }}
+{{- end }}

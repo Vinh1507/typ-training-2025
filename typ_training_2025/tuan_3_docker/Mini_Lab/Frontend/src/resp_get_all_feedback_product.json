@@ -1,0 +1,41 @@
+{
+    "message": "Lấy danh sách feedback sản phẩm thành công",
+    "data": [
+        {
+            "feedback_id": 1,
+            "user_fullName": "Nguyễn Văn A",
+            "feedback": "Áo rất đẹp, chất lượng tốt, giá cả phải chăng, giao hàng nhanh",
+            "created_at": "2025-06-01",
+            "status": "active"
+        },
+        {
+            "feedback_id": 2,
+            "user_fullName": "Nguyễn Văn B",
+            "feedback": "Áo xấu, chất lượng kém, giá cả quá đắt, giao hàng chậm",
+            "created_at": "2025-01-22",
+            "status": "active"
+        },
+        {
+            "feedback_id": 3,
+            "user_fullName": "Nguyễn Văn C",
+            "feedback": "Áo tệ, chất lượng kém, nhưng giá cả rẻ, giao hàng đúng hạn và đúng địa chỉ",
+            "created_at": "2025-01-08",
+            "status": "active"
+        },
+        {
+            "feedback_id": 4,
+            "user_fullName": "Nguyễn Văn D",
+            "feedback": "Áo rất đẹp, chất lượng tốt, giá cả phải chăng, giao hàng nhanh",
+            "created_at": "2025-01-01",
+            "status": "hidden"
+        },
+        {
+            "feedback_id": 5,
+            "user_fullName": "Nguyễn Văn E",
+            "feedback": "Áo rất đẹp, chất lượng tốt, giá cả phải chăng, giao hàng nhanh",
+            "created_at": "2025-01-01",
+            "status": "deleted????"
+        }
+
+    ]
+}

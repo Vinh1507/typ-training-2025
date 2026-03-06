@@ -1,0 +1,30 @@
+backend:
+  name: backend
+  replicaCount: 1
+  image:
+    repository: ngtukien218/typ-2026-backend
+    tag: "v1.0"
+    pullPolicy: Always
+  service:
+    type: NodePort
+    port: 8080
+    nodePort: 30080
+  env:
+    CORS_ALLOWED_ORIGINS: "*"
+
+  ingress:
+    enabled: true  
+    host: api.typ-app.local  
+    tls:
+      secretName: typ-tls-secret 
+
+database:
+  name: typ-2026-database
+  service:
+    port: 3306
+
+  env:
+    MYSQL_HOST: typ-2026-database
+    MYSQL_DATABASE: "typ-database"
+    MYSQL_USER: "typ-admin"
+    MYSQL_PASSWORD: "password123"

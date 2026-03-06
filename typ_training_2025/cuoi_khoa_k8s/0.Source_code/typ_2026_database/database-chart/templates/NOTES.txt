@@ -1,0 +1,10 @@
+MySQL Service name:
+  {{ include "helm-chart.componentName" (dict "root" . "component" "database") }}:{{ .Values.database.service.port }}
+
+Default connection:
+  host={{ include "helm-chart.componentName" (dict "root" . "component" "database") }}
+  port={{ .Values.database.service.port }}
+  database={{ .Values.database.env.MYSQL_DATABASE }}
+  user=root
+
+Note: init script runs on first startup of the container.

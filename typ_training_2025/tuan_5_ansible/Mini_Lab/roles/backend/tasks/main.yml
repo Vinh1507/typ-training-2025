@@ -1,0 +1,32 @@
+- name: Tạo thư mục Log
+  file:
+    path: /opt/vissmart/logs
+    state: directory
+    mode: '0755'
+
+- name: Chờ Database sẵn sàng
+  wait_for:
+    host: "{{ db_host }}"
+    port: "{{ db_port }}"
+    timeout: 300
+
+- name: Start Backend Container
+  community.docker.docker_container:
+    name: "{{ backend_container_name }}"
+    image: "{{ backend_image }}:{{ app_tag }}"
+    state: started
+    restart_policy: always
+    pull: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/vissmart/logs:/app/logs
+    networks:
+      - name: "{{ docker_network_name }}" 
+    env:
+      SERVER_ADDRESS: "0.0.0.0"
+      HOST: "{{ db_host }}"     
+      PORT: "{{ db_port }}"
+      DATABASE: "{{ db_name }}" 
+      USERNAME: "{{ db_user }}"
+      PASSWORD: "{{ db_pass }}"

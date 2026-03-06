@@ -1,0 +1,28 @@
+- name: Set tag thành biến toàn cục (Fact)
+  set_fact:
+    app_tag: "{{ input_app_tag }}"
+
+- name: Install Docker SDK for Python
+  apt:
+    name: python3-docker
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Ubuntu"
+
+- name: Docker Hub Login
+  community.docker.docker_login:
+    username: "{{ docker_username }}"
+    password: "{{ docker_token }}" 
+    reauthorize: yes
+
+- name: Create Internal Docker Network
+  community.docker.docker_network:
+    name: "{{ docker_network_name }}"
+    driver: bridge
+
+- name: Clear unused Docker resources
+  community.docker.docker_prune:
+    images: yes
+    containers: yes
+    networks: yes
+    builder_cache: yes

@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: typ-2026-frontend
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: 'https://gitlab.com/NguyenTuKien/typ_2026_fe_config.git'
+      targetRevision: HEAD
+      ref: values
+    - repoURL: 'https://gitlab.com/NguyenTuKien/typ_2026_frontend.git'
+      targetRevision: HEAD
+      path: 'frontend-chart'
+      helm:
+        valueFiles:
+        - $values/helm-values/values-prod.yml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: typ-app
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,133 @@
+{% extends "auth/auth_base.html" %}
+{% load static %}
+
+{% block title %}STEMIND - Hoàn thiện thông tin{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'style/auth/complete_profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Auth Brand -->
+<div class="auth-brand">
+    <h1>
+        <a href="{% url 'home' %}"><image src="{% static "images/Logo_text.png" %}" style="width:300px"></a>
+    </h1>
+    <p class="subtitle">Hoàn thiện thông tin cá nhân để hoàn tất đăng ký</p>
+</div>
+
+<!-- Profile Completion Form -->
+<form method="post" action="{% url 'complete_profile' %}" id="completeProfileForm" novalidate enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <!-- Error Messages -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags|default:'danger' }}" role="alert">
+                <i class="fas fa-{% if message.tags == 'success' %}check-circle{% elif message.tags == 'warning' %}exclamation-triangle{% else %}exclamation-triangle{% endif %} me-2"></i>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+    <!-- Form Progress Indicator -->
+    <div class="form-progress mb-4">
+        <div class="progress-bar" id="formProgress"></div>
+        <div class="progress-steps">
+            <div class="step completed" data-step="1">
+                <i class="fas fa-user"></i>
+                <span>Đăng ký</span>
+            </div>
+            <div class="step completed" data-step="2">
+                <i class="fas fa-id-card"></i>
+                <span>Thông tin cơ bản</span>
+            </div>
+            <div class="step active" data-step="3">
+                <i class="fas fa-check"></i>
+                <span>Hoàn thành</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Message -->
+    <div class="alert alert-success mb-4" role="alert">
+        <i class="fas fa-check-circle me-2"></i>
+        <strong>Thông tin cơ bản đã hoàn tất!</strong> Bạn có thể bổ sung thêm thông tin tùy chọn bên dưới hoặc bỏ qua để hoàn tất đăng ký.
+    </div>
+    
+    <!-- Bio Field (Optional) -->
+    <div class="form-floating">
+        <textarea class="form-control" 
+                  id="{{ form.bio.id_for_label }}" 
+                  name="bio" 
+                  placeholder="Giới thiệu về bản thân... (tùy chọn)"
+                  rows="3"
+                  maxlength="200">{{ form.bio.value|default:'' }}</textarea>
+        <label for="{{ form.bio.id_for_label }}">
+            <i class="fas fa-user-edit me-2"></i>Giới thiệu về bản thân (tùy chọn)
+        </label>
+        <div class="field-requirements">
+            <small class="text-muted">Tối đa 200 ký tự - có thể bỏ qua</small>
+        </div>
+        {% if form.bio.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.bio.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Avatar Field (Optional) -->
+    <div class="form-floating">
+        <input type="file" 
+               class="form-control" 
+               id="{{ form.avatar.id_for_label }}" 
+               name="avatar" 
+               accept="image/*">
+        <label for="{{ form.avatar.id_for_label }}">
+            <i class="fas fa-camera me-2"></i>Ảnh đại diện (tùy chọn)
+        </label>
+        <div class="field-requirements">
+            <small class="text-muted">Chọn ảnh JPG, PNG hoặc GIF (tối đa 5MB) - có thể bỏ qua</small>
+        </div>
+        {% if form.avatar.errors %}
+            <div class="invalid-feedback">
+                {% for error in form.avatar.errors %}
+                    {{ error }}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- Current Avatar Preview -->
+    {% if profile.avatar %}
+    <div class="current-avatar mb-3">
+        <label class="form-label">Ảnh đại diện hiện tại:</label>
+        <div class="avatar-preview">
+            <img src="{{ profile.avatar.url }}" alt="Avatar" class="rounded-circle" style="width: 100px; height: 100px; object-fit: cover;">
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Submit Buttons -->
+    <div class="d-flex gap-3">
+        <button type="submit" class="btn btn-primary flex-fill" id="submitBtn">
+            <i class="fas fa-check me-2"></i>Hoàn tất đăng ký
+        </button>
+    </div>
+    
+    <!-- Back to Basic Info -->
+    <div class="text-center mt-3">
+        <small class="text-muted">
+            <a href="{% url 'basic_info' %}" class="text-decoration-none">
+                <i class="fas fa-arrow-left me-1"></i>Quay lại thông tin cơ bản
+            </a>
+        </small>
+    </div>
+</form>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'script/auth/complete_profile.js' %}"></script>
+{% endblock %} 

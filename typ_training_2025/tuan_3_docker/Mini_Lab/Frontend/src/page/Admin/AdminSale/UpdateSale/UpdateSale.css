@@ -1,0 +1,286 @@
+/* Update Modal - wider than create modal */
+.update-modal {
+    max-width: 700px;
+}
+
+/* Search Box */
+.search-box {
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+    pointer-events: none;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem 0.6rem 2.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.search-input::placeholder {
+    color: #adb5bd;
+}
+
+/* Products with Value Input */
+.products-list-with-value {
+    padding: 0.5rem;
+}
+
+.product-value-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem;
+    margin-bottom: 0.3rem;
+    border-radius: 4px;
+    transition: background 0.15s ease;
+    gap: 1rem;
+}
+
+.product-value-item:hover {
+    background: #f8f9fa;
+}
+
+.product-value-item:last-child {
+    margin-bottom: 0;
+}
+
+.product-checkbox-inline {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.product-checkbox-inline input[type="checkbox"] {
+    margin: 0;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.product-name-inline {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.value-input {
+    width: 150px;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease;
+}
+
+.value-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Products Container - no scroll here */
+.products-container {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    overflow: visible;
+}
+
+/* Products Grid for Sale Modal */
+.products-grid-sale {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.product-card-sale {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.product-card-sale:hover {
+    border-color: #1976d2;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
+}
+
+.product-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 0.5rem;
+}
+
+.product-checkbox-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.product-image-sale {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.product-image-sale img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-image-placeholder-sale {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+    background: #f8f9fa;
+}
+
+.product-info-sale {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.product-title-sale {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+}
+
+.product-price-sale {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d32f2f;
+    margin: 0;
+}
+
+.product-desc-sale {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.3;
+}
+
+.btn-view-product-sale {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-view-product-sale:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+}
+
+/* Value Input for Update Sale */
+.value-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #f0f7ff;
+    border-radius: 4px;
+    border: 1px solid #1976d2;
+}
+
+.value-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.value-input-inline {
+    flex: 1;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    min-width: 100px;
+}
+
+.value-input-inline:focus {
+    outline: none;
+    border-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+    .update-modal {
+        width: 95%;
+    }
+
+    .product-value-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .value-input {
+        width: 100%;
+    }
+
+    .products-grid-sale {
+        grid-template-columns: 1fr;
+    }
+}
+
